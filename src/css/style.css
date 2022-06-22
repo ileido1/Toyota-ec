@@ -334,3 +334,19 @@ ul#menu-galeria > li > span{
     padding: 50px;
     padding-bottom: 100px;
 }
+
+.titulo-galeria{
+    margin-top: 80px;
+    padding-left:0px;
+    padding-right: 0px;
+}
+
+.pestana-galeria{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.pestana-cuerpo-galeria{
+    padding-left: 0px;
+    padding-right: 0px;
+}
