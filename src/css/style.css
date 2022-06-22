@@ -41,6 +41,10 @@
 
 }
 
+.bannerhome {
+    width: 100%;
+}
+
 .navbar .navbar-nav .nav-link:hover {
     color: #E20B2A;
 }
@@ -59,9 +63,9 @@
     height: 56px;
     display: flex;
     align-items: center;
-  }
+}
 
-#menu-producto ul > li {
+#menu-producto ul>li {
 
     color: #ffffff;
     text-decoration: none;
@@ -71,70 +75,70 @@
 
 }
 
-#menu-producto ul > li > a {
+#menu-producto ul>li>a {
     color: #ffffff;
     text-decoration: none;
     font-family: 'Novecentos-DemiBold';
     text-decoration: none;
     display: inline-block;
-  }
+}
 
 .plmenu {
     padding-left: 60px;
 }
 
-#menu-producto div ul{
+#menu-producto div ul {
     margin-bottom: 0px;
 }
 
-.video-cart{
+.video-cart {
     padding-left: 0px;
     padding-right: 0px;
 }
 
-.content-video{
+.content-video {
     padding-left: 0px !important;
     padding-right: 0px !important;
 }
 
-.content_features{
+.content_features {
     margin-top: -370px;
     padding-left: 60px;
 }
 
-.img-logo-feature{
+.img-logo-feature {
     width: 160px;
 }
 
-.img-icono-feature{
+.img-icono-feature {
     width: 80px;
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
 }
 
-.img-icono-feature-frenos{
+.img-icono-feature-frenos {
     width: 60px;
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
 }
 
-.img-icono-feature-motor{
+.img-icono-feature-motor {
     width: 60px;
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
 }
 
-.titulo-feature{        
+.titulo-feature {
     font-family: 'Toyota-DisplayRegular';
     color: #ffffff;
     text-decoration: underline;
     font-size: 32px;
 }
 
-.text-feature{
+.text-feature {
     font-family: 'Radikal-Medium';
     color: #ffffff;
     font-size: 14px;
@@ -142,28 +146,28 @@
     margin-bottom: 20px;
 }
 
-.subtext-feature{
+.subtext-feature {
     font-family: 'Radikal-Light';
     color: #ffffff;
     font-size: 14px;
     text-align: center;
 }
 
-.text-feature-version{
+.text-feature-version {
     font-family: 'Radikal-Bold';
     color: #fff;
     display: inline-block;
     padding-left: 10px;
 }
 
-#menu-producto{
+#menu-producto {
     background: #000;
     height: 56px;
     display: flex;
     align-items: center;
 }
 
-#menu-producto ul > li{
+#menu-producto ul>li {
     color: #ffffff;
     text-decoration: none;
     font-family: 'Novecentos-DemiBold';
@@ -171,7 +175,7 @@
     display: inline-block;
 }
 
-#menu-producto ul > li > a{
+#menu-producto ul>li>a {
     color: #ffffff;
     text-decoration: none;
     font-family: 'Novecentos-DemiBold';
@@ -179,20 +183,20 @@
     display: inline-block;
 }
 
-.plmenu{
+.plmenu {
     padding-left: 60px;
 }
 
-.cp{
+.cp {
     cursor: pointer;
 }
 
-.text-color-diseno{
+.text-color-diseno {
     text-align: center;
     font-weight: 600;
 }
 
-.text-color-diseno2{
+.text-color-diseno2 {
     text-align: center;
     font-weight: 600;
     color: #000 !important;
@@ -200,77 +204,76 @@
     font-family: 'Toyota-DisplayBold';
 }
 
-.text-color-tecnologia{
+.text-color-tecnologia {
     color: #000;
 }
 
-.icono-color{
+.icono-color {
     cursor: pointer;
     display: block;
     margin: 0 auto;
 }
 
-.icono-color:hover{
+.icono-color:hover {
     opacity: 0.9;
 }
 
-#diseno{
+#diseno {
     padding-top: 100px;
     margin-bottom: 60px;
 }
 
-.btn-cotizar{
+.btn-cotizar {
 
     border: 1px solid #E50021;
     background: #E50021;
     border-radius: 19px;
     width: 247px;
     font-family: 'Toyota-DisplayRegular';
-    color:#fff
-   
+    color: #fff
 }
 
-.text-cotizar{
+.text-cotizar {
     font-family: 'Radikal-Medium';
     font-size: 22px;
-    color:#817F7F;
+    color: #817F7F;
     max-width: 360px;
     margin-top: 30px;
     margin-bottom: 60px;
 }
 
-.content-cotizar{
+.content-cotizar {
     margin-top: 20px;
     margin-bottom: 50px;
 }
 
-.text-descargar-catalogo{
+.text-descargar-catalogo {
     font-family: 'Toyota-DisplayRegular';
     font-size: 16px;
     color: #B9BFC1;
     cursor: pointer;
 }
 
-.secciones-subtitulos{
+.secciones-subtitulos {
 
-   font-family: 'Toyota-DisplayBold';
-   color: #817F7F;
-   font-size: 24px;
+    font-family: 'Toyota-DisplayBold';
+    color: #817F7F;
+    font-size: 24px;
 }
 
-#menu-galeria{
+#menu-galeria {
     text-align: center;
     margin-top: 20px;
     padding-left: 0px;
 }
 
-ul#menu-galeria > li{
+ul#menu-galeria>li {
     display: inline-block;
     text-decoration: none;
     padding-left: 80px;
 }
 
-ul#menu-galeria > li > span{
+ul#menu-galeria>li>span {
     cursor: pointer;
     color: #817F7F;
     font-size: 16px;
@@ -283,54 +286,54 @@ ul#menu-galeria > li > span{
 
 }
 
-#tecnologia{
+#tecnologia {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.icono-tecnologia{
+.icono-tecnologia {
     display: block;
     margin: 0 auto;
 }
 
 .text-color-tecnologia {
-   display: block;
-   text-align: center;
-   color: #000;
-   font-family: 'Toyota-DisplayBold';
-   font-size: 28px;
-   margin-bottom: 40px;
+    display: block;
+    text-align: center;
+    color: #000;
+    font-family: 'Toyota-DisplayBold';
+    font-size: 28px;
+    margin-bottom: 40px;
 }
 
-.text-tecnologia{
-   display: block;
-   text-align: center;
-   color: #817F7F;
-   max-width: 340px;
-   font-family: 'Radikal-Medium';
+.text-tecnologia {
+    display: block;
+    text-align: center;
+    color: #817F7F;
+    max-width: 340px;
+    font-family: 'Radikal-Medium';
     font-size: 18px;
     margin: 0 auto;
     margin-top: 10px;
 }
 
-.fuente-black{
+.fuente-black {
     color: #000;
     font-family: 'Radikal-Medium';
     font-size: 18px;
 }
 
-.img-footer{
+.img-footer {
     margin-top: 80px;
     width: 100%;
 }
 
 
-.pd100{
+.pd100 {
     padding-left: 100px;
     padding-right: 100px;
 }
 
-.pd{
+.pd {
     padding: 50px;
     padding-bottom: 100px;
 }
