@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Novecentos-DemiBold';
+    src: local('Novecentos-DemiBold'), url(../fonts/Novecentosanswide-DemiBold.otf) format('opentype');
+}
+
+
+.navbar .navbar-nav .nav-link {
+    color: #817F7F;
+    font-size: 0.9em;
+    padding: 20px;
+    font-family: 'Novecentos-DemiBold';
+
+}
+
+.navbar-logo-centered .navbar-nav .nav-link {
+    padding: .5em 1em;
+
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #E20B2A;
+}
+
+.navbar {
+    height: 100px;
+}
+
+.navbar-nav {
+    justify-content: space-between !important;
+    width: 100% !important;
+}
