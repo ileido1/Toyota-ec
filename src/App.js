@@ -1,16 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import './css/style.css'
 import './css/bootstrap.min.css';
-
+import './css/style.css';
 import Header from './Header'
-import Car from './Car'
+import Cart from './Cart'
 
-const App = () => (
-  <>
-    <Header />
-    {window.location.pathname === "/car" && <Car />}
-  </>
+const App = () => ( 
+    <>
+      <Header />
+      {window.location.pathname === "/cart" &&  <Cart /> }
+    </>
 )
 
 export default App;
+
