@@ -88,8 +88,10 @@ const Cart = () => (
                             <div className="col-6">
                                 <div className="row">
                                     <div className="col-12">
-                                            
-                                            <img className="img-logo-feature  animated fadeInLeft delay3 duration4" src={logo_raize} alt="Logo Raize" /><span className="text-feature-version animated fadeInLeft delay2 duration4 " > 4X2CVT</span>
+                                            <p className="titulo-feature  animated fadeInLeft delay2 duration4" > </p>
+                                            <br></br>
+                                            <br></br>
+                                           <img className="img-logo-feature  animated fadeInLeft delay3 duration4" src={logo_raize} alt="Logo Raize" /><span className="text-feature-version animated fadeInLeft delay2 duration4 " > 4X2CVT</span>
                                             <p className="text-feature animated fadeInLeft delay4 duration4">Transmisión automática CVT Compacta, para una alta eficiencia mecánica. con 7 relaciones de cambio simuladas</p>
                                         </div>
 
@@ -196,7 +198,7 @@ const Cart = () => (
             </div>
         </div> 
 
-        <div class="row">
+        <div className="row">
         
         <div className="col-12 col-sm-12 content-automovil-video pestaba-cuerpo-galeria"  >
             <div >
