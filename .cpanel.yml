@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home1/twofowg1/public_html/toyota-ec
+    - /bin/rsync -av public/ $DEPLOYPATH
