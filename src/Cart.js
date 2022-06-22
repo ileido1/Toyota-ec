@@ -179,12 +179,6 @@ const Cart = () => (
             </div>
         </div>
 
-        <div id="footer" className="container-fluid">
-            <div className="row">
-                <img src={footer} alt="Footer" className="img-footer" />
-            </div>
-        </div>
-
     </>
 )
 
