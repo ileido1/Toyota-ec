@@ -3,6 +3,30 @@
     src: local('Novecentos-DemiBold'), url(../fonts/Novecentosanswide-DemiBold.otf) format('opentype');
 }
 
+@font-face {
+    font-family: 'Toyota-DisplayRegular';
+    src: local('Toyota-DisplayRegular'), url(../fonts/TOYOTADISPLAY-REGULAR.TTF) format('opentype');
+}
+
+@font-face {
+    font-family: 'Toyota-DisplayBold';
+    src: local('Toyota-DisplayBold'), url(../fonts/TOYOTADISPLAY-BOLD.TTF) format('opentype');
+}
+
+@font-face {
+    font-family: 'Radikal-Medium';
+    src: local('Radikal-Medium'), url("../fonts/Nootype - Radikal-Medium.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'Radikal-Light';
+    src: local('Radikal-Light'), url("../fonts/Nootype - Radikal-Light.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'Radikal-Bold';
+    src: local('Radikal-Bold'), url("../fonts/Nootype - Radikal Bold.otf") format('opentype');
+}
 
 .navbar .navbar-nav .nav-link {
     color: #817F7F;
@@ -69,14 +93,13 @@
 }
 
 .content-video{
-    padding-left: 0px;
-    padding-right: 0px; 
-    height: 80vh;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
 
-.content-features{
-    margin-top: -340px;
-    padding-left: 100px;
+.content_features{
+    margin-top: -370px;
+    padding-left: 60px;
 }
 
 .img-logo-feature{
@@ -294,4 +317,20 @@ ul#menu-galeria > li > span{
     color: #000;
     font-family: 'Radikal-Medium';
     font-size: 18px;
+}
+
+.img-footer{
+    margin-top: 80px;
+    width: 100%;
+}
+
+
+.pd100{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.pd{
+    padding: 50px;
+    padding-bottom: 100px;
 }
