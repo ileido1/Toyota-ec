@@ -1,4 +1,5 @@
 import video from "./videos/video-raize-portada-1920x650.mp4"
+import video_galeria_play from "./videos/video-raize-galeria.mp4"
 import logo_raize from "./images/logo-raize-white.svg"
 import hac from "./images/icon-hac-white.svg"
 import frenos from "./images/freno-de-disco.svg"
@@ -87,8 +88,10 @@ const Cart = () => (
                             <div className="col-6">
                                 <div className="row">
                                     <div className="col-12">
-                                            <p className="titulo-feature  animated fadeInLeft delay4 duration4" >VERSIONES</p>
-                                            <img className="img-logo-feature  animated fadeInLeft delay3 duration4" src={logo_raize} alt="Logo Raize" /><span className="text-feature-version animated fadeInLeft delay2 duration4 " > 4X2CVT</span>
+                                            <p className="titulo-feature  animated fadeInLeft delay2 duration4" > </p>
+                                            <br></br>
+                                            <br></br>
+                                           <img className="img-logo-feature  animated fadeInLeft delay3 duration4" src={logo_raize} alt="Logo Raize" /><span className="text-feature-version animated fadeInLeft delay2 duration4 " > 4X2CVT</span>
                                             <p className="text-feature animated fadeInLeft delay4 duration4">Transmisión automática CVT Compacta, para una alta eficiencia mecánica. con 7 relaciones de cambio simuladas</p>
                                         </div>
 
@@ -179,8 +182,59 @@ const Cart = () => (
             </div>
         </div>
 
+        <div className="row">
+            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-galeria" >
+                <p className="text-color-diseno2 secciones-subtitulos" >GALERIA RAIZE</p> 
+            </div>
+        </div>
+
+        <div className="row">
+            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pestana-galeria"  >
+                <ul id="menu-galeria" >
+                    <li> <span id="automovil-video cp" onClick={video_galeria} >VIDEO</span> </li>
+                    <li> <span id="automovil-exterior cp" onClick={video_galeria} >EXTERIOR</span> </li>
+                    <li> <span id="automovil-interior cp" onClick={video_galeria} >INTERIOR</span> </li>
+                </ul>
+            </div>
+        </div> 
+
+        <div className="row">
+        
+        <div className="col-12 col-sm-12 content-automovil-video pestaba-cuerpo-galeria"  >
+            <div >
+
+                <video width="100%" controls >
+                    <source src={video_galeria_play} type="video/mp4" />
+                    Your browser does not support HTML video.
+                </video>
+
+            </div>
+
+        </div>
+
+        <div className="col-12 col-sm-12 content-automovil-exterior hide"  >
+
+
+            
+            
+
+        </div>
+
+        
+        <div className="col-12 col-sm-12 content-automovil-interior hide" >
+        
+            
+
+        </div>
+    
+    </div>
+
+
     </>
 )
 
+function video_galeria(){
+    console.log('video_galeria');
+}
 
 export default Cart
