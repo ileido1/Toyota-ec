@@ -4,9 +4,9 @@ import Header from './Header'
 import Car from './Car'
 
 const App = () => ( 
-    <>    
+    <>
       <Header />
-      <Car />
+      {window.location.pathname === "/car" &&  <Car /> }
     </>
 )
 
