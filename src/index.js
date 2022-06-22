@@ -1,13 +1,12 @@
-import { StrictMode } from 'react';
-import ReactDOM from 'react-dom/client';
-import './css/bootstrap.min.css';
-import './css/style.css';
-import Header from './Header';
+import { StrictMode } from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <StrictMode>
-    <Header />
+  <StrictMode>    
+      <App />
   </StrictMode>
 );
 
