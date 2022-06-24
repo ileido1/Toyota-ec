@@ -1,0 +1,364 @@
+.section {
+  height: 70vh;
+}
+
+.background-video {
+  height: 100%;
+}
+
+.btn {
+  display: block;
+  margin-top: -31px;
+  margin-left: 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #fff;
+  border-radius: 9px;
+  background-color: transparent;
+  font-family: Montserrat, sans-serif;
+}
+
+.btn:hover {
+  background-color: #fff;
+  font-family: Montserrat, sans-serif;
+  color: #f60000;
+  font-weight: 700;
+}
+
+.content__hero {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 491px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header {
+  height: 70vh;
+}
+
+.main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.image {
+  position: relative;
+  top: 53px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.slide {
+  left: 185px;
+  right: -23px;
+  bottom: -99px;
+  padding-bottom: 0px;
+}
+
+.slider {
+  height: 40rem;
+  margin-bottom: 29px;
+  padding-bottom: 0px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+}
+
+.slide-2 {
+  left: -762px;
+  bottom: -150px;
+}
+
+.slide-3 {
+  left: -1699px;
+  top: 146px;
+  right: 1759px;
+}
+
+.left-arrow {
+  right: 1484px;
+}
+
+.slide-4 {
+  left: -2764px;
+  top: 35px;
+  right: 3534px;
+}
+
+.heading {
+  font-family: 'Toyota-DisplayRegular', sans-serif;
+}
+
+.h1 {
+  padding-top: 47px;
+}
+
+.paragraph {
+  font-family: 'Radikal-Medium', sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.mask {
+  top: -88px;
+}
+
+.image-2 {
+  position: relative;
+  left: 114px;
+  top: 113px;
+}
+
+.section-2 {
+  height: 70vw;
+}
+
+.background-video-2 {
+  height: 70%;
+  margin-top: 0px;
+}
+
+.section-3 {
+  position: relative;
+  top: -42px;
+  height: auto;
+  margin-top: -287px;
+  padding-top: 0px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.horizontal-section {
+  position: static;
+  height: 300vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 60px 80px;
+}
+
+.container.sticky-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.track {
+  height: 500vw;
+}
+
+.camera {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.frame {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.item {
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.image-3 {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  padding: 0px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.image-4 {
+  position: static;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  padding: 0px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.image-5 {
+  width: 100%;
+  height: 110.680009%;
+  max-width: none;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.image-6 {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  padding: 0px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.image-7 {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.image-8 {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.image-9 {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.image-10 {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.track-1 {
+  height: 400vw;
+  padding-right: 0px;
+  padding-bottom: 0px;
+}
+
+.camera-1 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.frame-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.item-1 {
+  width: auto;
+  height: 100vh;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.image-11 {
+  margin-left: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.image-12 {
+  margin-left: 0px;
+}
+
+.image-13 {
+  margin-left: 0px;
+}
+
+.image-14 {
+  margin-left: 0px;
+  padding-left: 0px;
+}
