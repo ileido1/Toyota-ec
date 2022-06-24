@@ -4,7 +4,7 @@ import d from './images/D.png';
 import r from './images/R.png';
 import esla from './images/Es-la-marca.png'
 import { Helmet } from "react-helmet";
-import testjs from "./js/webflow"
+
 import './css/normalize.css'
 import './css/prueba-0d12ec.webflow.css'
 import './css/webflow.css'
@@ -28,10 +28,11 @@ const urd = () => (
                 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
                 crossorigin="anonymous"
             />
-            {/* <script src={testjs} type='javascript' /> */}
+
         </Helmet>
 
     </div>
 
 )
+
 export default urd;
