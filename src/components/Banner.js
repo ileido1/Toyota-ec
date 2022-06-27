@@ -1,4 +1,4 @@
-import banner from "./images/portada-web-raize.jpg"
+import banner from "../images/portada-web-raize.jpg"
 function Bannerhome() {
     return (
         <div>

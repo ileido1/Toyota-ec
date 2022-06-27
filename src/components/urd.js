@@ -1,13 +1,13 @@
-import porque from './images/Por-que.png';
-import q from './images/Q.png';
-import d from './images/D.png';
-import r from './images/R.png';
-import esla from './images/Es-la-marca.png'
+import porque from '../images/Por-que.png';
+import q from '../images/Q.png';
+import d from '../images/D.png';
+import r from '../images/R.png';
+import esla from '../images/Es-la-marca.png'
 import { Helmet } from "react-helmet";
 
-import './css/normalize.css'
-import './css/prueba-0d12ec.webflow.css'
-import './css/webflow.css'
+import '../css/normalize.css'
+import '../css/prueba-0d12ec.webflow.css'
+import '../css/webflow.css'
 
 
 

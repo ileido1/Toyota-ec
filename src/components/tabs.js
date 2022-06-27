@@ -1,5 +1,5 @@
-import bg from './images/bg.svg'
-import bg2 from './images/auto.png'
+import bg from '../images/bg.svg'
+import bg2 from '../images/auto.png'
 import Slider from './slider';
 const tabs = () => (
     <div className="contenedortabs" style={{ backgroundImage: `url(${bg})` }} >

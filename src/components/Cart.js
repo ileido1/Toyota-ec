@@ -1,24 +1,24 @@
-import video from "./videos/video-raize-portada-1920x650.mp4"
-import video_galeria_play from "./videos/video-raize-galeria.mp4"
-import logo_raize from "./images/logo-raize-white.svg"
-import hac from "./images/icon-hac-white.svg"
-import frenos from "./images/freno-de-disco.svg"
-import motor from "./images/motor.svg"
-import footer from "./images/foot.png"
+import video from "../videos/video-raize-portada-1920x650.mp4"
+import video_galeria_play from "../videos/video-raize-galeria.mp4"
+import logo_raize from "../images/logo-raize-white.svg"
+import hac from "../images/icon-hac-white.svg"
+import frenos from "../images/freno-de-disco.svg"
+import motor from "../images/motor.svg"
+import footer from "../images/foot.png"
 
-import logo_raize_2 from "./images/diseno/logo-raize.svg"
-import documento from "./images/diseno/icono-documento.svg"
+import logo_raize_2 from "../images/diseno/logo-raize.svg"
+import documento from "../images/diseno/icono-documento.svg"
 
-import negro from "./images/diseno/negro.svg"
-import plata from "./images/diseno/plata.svg"
-import gris from "./images/diseno/gris.svg"
-import blanco from "./images/diseno/blanco.svg"
-import turquesa from "./images/diseno/turquesa.svg"
-import rojo from "./images/diseno/rojo.svg"
+import negro from "../images/diseno/negro.svg"
+import plata from "../images/diseno/plata.svg"
+import gris from "../images/diseno/gris.svg"
+import blanco from "../images/diseno/blanco.svg"
+import turquesa from "../images/diseno/turquesa.svg"
+import rojo from "../images/diseno/rojo.svg"
 
-import raize_negro from "./images/diseno/raize-negro.png"
+import raize_negro from "../images/diseno/raize-negro.png"
 
-import './css/style.css';
+
 
 const Cart = () => (
     <>
