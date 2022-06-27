@@ -427,3 +427,20 @@ ul#menu-galeria>li>span {
     border: 0px !important;
 
 }
+
+.Tbanner {
+    font-size: 40px;
+    font-family: 'Toyota-DisplayRegular';
+    color: #000;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../images/bg1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
