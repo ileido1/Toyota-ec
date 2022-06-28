@@ -4,7 +4,6 @@ import logo_raize from "../images/logo-raize-white.svg"
 import hac from "../images/icon-hac-white.svg"
 import frenos from "../images/freno-de-disco.svg"
 import motor from "../images/motor.svg"
-import footer from "../images/foot.png"
 
 import logo_raize_2 from "../images/diseno/logo-raize.svg"
 import documento from "../images/diseno/icono-documento.svg"
@@ -191,50 +190,38 @@ const Cart = () => (
         <div className="row">
             <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pestana-galeria"  >
                 <ul id="menu-galeria" >
-                    <li> <span id="automovil-video cp" onClick={video_galeria} >VIDEO</span> </li>
-                    <li> <span id="automovil-exterior cp" onClick={video_galeria} >EXTERIOR</span> </li>
-                    <li> <span id="automovil-interior cp" onClick={video_galeria} >INTERIOR</span> </li>
+                    <li> <span id="automovil-video cp" onClick={videoGaleria} >VIDEO</span> </li>
+                    <li> <span id="automovil-exterior cp" onClick={videoGaleria} >EXTERIOR</span> </li>
+                    <li> <span id="automovil-interior cp" onClick={videoGaleria} >INTERIOR</span> </li>
                 </ul>
             </div>
         </div>
 
         <div className="row">
-
             <div className="col-12 col-sm-12 content-automovil-video pestaba-cuerpo-galeria"  >
                 <div >
-
                     <video width="100%" controls >
                         <source src={video_galeria_play} type="video/mp4" />
                         Your browser does not support HTML video.
                     </video>
-
                 </div>
-
             </div>
 
             <div className="col-12 col-sm-12 content-automovil-exterior hide"  >
-
-
-
-
-
             </div>
-
-
-            <div className="col-12 col-sm-12 content-automovil-interior hide" >
-
-
-
+                <div className="col-12 col-sm-12 content-automovil-interior hide" >
             </div>
-
         </div>
 
 
     </>
 )
 
-function video_galeria() {
-    console.log('video_galeria');
+export default Cart;
+
+function videoGaleria(){ 
+    
+    let automovil = document.getElementById('automovil-video cp')
+    console.log(automovil)
 }
 
-export default Cart
