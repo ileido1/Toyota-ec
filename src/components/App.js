@@ -17,19 +17,29 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import { useEffect, useState } from 'react';
 
-const App = () => (
-  <>
-    <BrowserRouter>
-      <Header></Header>
-      <Routes>
-        <Route path="cart" element={<Cart />} />
-        <Route path="/" element={<Home />} />
-      </Routes>
-      <Footer></Footer>
-    </BrowserRouter>
-  </>
-)
+const App = () => {
+
+  const [footer, setFooter] = useState();
+
+  useEffect(() => {
+    fetch("https://pokeapi.co/api/v2/pokemon/ditto").then(response => response.json())
+      .then(data => setFooter(data));
+  }, [])
+  return (
+    <>
+      <BrowserRouter>
+        <Header></Header>
+        <Routes>
+          <Route path="cart" element={<Cart />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+        <Footer></Footer>
+      </BrowserRouter>
+    </>
+  )
+}
 
 export default App;
 

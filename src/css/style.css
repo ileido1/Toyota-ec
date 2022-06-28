@@ -444,3 +444,20 @@ ul#menu-galeria>li>span {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.tfooter {
+    font-family: 'Novecentos-DemiBold';
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.lifooter {
+    padding: 0px;
+}
+
+.lifooter li {
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Toyota-DisplayRegular';
+    text-transform: capitalize;
+}
