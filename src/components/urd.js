@@ -5,12 +5,6 @@ import r from '../images/R.png';
 import esla from '../images/Es-la-marca.png'
 import { Helmet } from "react-helmet";
 
-import '../css/normalize.css'
-import '../css/prueba-0d12ec.webflow.css'
-import '../css/webflow.css'
-
-
-
 const urd = () => (
     <div data-w-id="52432a1b-449f-0cf1-3f48-41aa8a432955" className="track-1 wf-section">
         <div className="camera-1">

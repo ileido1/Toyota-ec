@@ -7,11 +7,6 @@ import Cart from './Cart'
 import Footer from './sections/Footer';
 import Home from './pages/home'
 
-import Baneer from './Banner'
-import Urd from './urd';
-import { Link } from "react-router-dom";
-
-import Tabs from './tabs';
 import {
   BrowserRouter,
   Routes,
@@ -33,7 +28,7 @@ const App = () => {
       <BrowserRouter>
         <Header></Header>
         <Routes>
-          <Route path="cart" element={<Cart />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/" element={<Home />} />
         </Routes>
         {

@@ -20,7 +20,7 @@ function Header() {
 						<li className="nav-item">
 							<a className="nav-link" href="#">POSTVENTA</a>
 						</li>
-						<a className="d-none d-lg-block" href="http://toyota-site.247.com.ec/"><img src={logo} /></a>
+						<a className="d-none d-lg-block" href="https://toyota-ec.247.com.ec/"><img src={logo} /></a>
 						<li className="nav-item">
 							<a className="nav-link" href="#">TOYOTA SIEMPRE NUEVO</a>
 						</li>
