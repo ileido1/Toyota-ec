@@ -456,13 +456,18 @@ ul#menu-galeria>li>span {
 }
 
 .footersup {
-    padding: 20px;
+    padding-top: 20px;
     background-color: #817f7f;
+    padding-left: 60px;
+    padding-right: 60px;
 
 }
 
 .footerdown {
     background-color: #b9bfc1;
+    padding-left: 60px;
+    padding-top: 20px;
+    padding-right: 60px;
 }
 
 .lifooter li {
