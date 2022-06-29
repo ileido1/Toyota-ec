@@ -455,6 +455,16 @@ ul#menu-galeria>li>span {
     padding: 0px;
 }
 
+.footersup {
+    padding: 20px;
+    background-color: #817f7f;
+
+}
+
+.footerdown {
+    background-color: #b9bfc1;
+}
+
 .lifooter li {
     text-decoration: none;
     list-style: none;

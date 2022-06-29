@@ -24,8 +24,9 @@ const App = () => {
   const [footer, setFooter] = useState();
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon/ditto").then(response => response.json())
-      .then(data => setFooter(data));
+    fetch("https://backend-toyota.247.com.ec/api/global/toyota-info").then(response => response.json())
+      .then(data => setFooter(data))
+      .then(data => console.log(data));
   }, [])
   return (
     <>
@@ -35,7 +36,24 @@ const App = () => {
           <Route path="cart" element={<Cart />} />
           <Route path="/" element={<Home />} />
         </Routes>
-        <Footer></Footer>
+        {
+          footer ? (
+            <section>
+              {
+
+                footer.map(c => {
+                  let urls = c.logos_footer.split(',');
+                  return < Footer logotoyota={'https://backend-toyota.247.com.ec/' + urls[0]} toyotago={'https://backend-toyota.247.com.ec/' + urls[1].trim()} toyotasiempre={'https://backend-toyota.247.com.ec/' + urls[2].trim()}
+                  />
+                }
+                )
+              }
+            </section>
+          ) : (
+            <span> Cargando...</span>
+          )
+        }
+
       </BrowserRouter>
     </>
   )
