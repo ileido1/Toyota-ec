@@ -2,6 +2,7 @@
 
 import '../css/bootstrap.min.css'
 import '../css/style.css';
+import '../css/all.css'
 import Header from './sections/Header'
 import Cart from './Cart'
 import Footer from './sections/Footer';
@@ -16,7 +17,9 @@ import useFetch from '../hooks/useFetch';
 
 const App = () => {
   let peticion = "global/toyota-info"
-  const [footer, error] = useFetch(peticion)
+
+  const [footer, error] = useFetch(peticion);
+
   return (
     <>
       <BrowserRouter>

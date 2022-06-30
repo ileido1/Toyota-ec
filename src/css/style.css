@@ -438,17 +438,19 @@ ul#menu-galeria>li>span {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-image: url('../images/bg1.jpg');
+    flex-direction: column;
+
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 .tfooter {
     font-family: 'Novecentos-DemiBold';
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 14px;
+    color: #fff;
 }
 
 .lifooter {
@@ -470,9 +472,113 @@ ul#menu-galeria>li>span {
     padding-right: 60px;
 }
 
+.spango {
+    color: #E20B2A;
+}
+
+.iconsearch {
+    padding-right: 5px;
+}
+
+.btn-raize {
+    text-transform: uppercase;
+    background-color: #E20B2A;
+    margin-bottom: 20px;
+    border: 0px;
+    /* padding: 20px; */
+    font-family: 'Toyota-DisplayBold';
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.btnhome {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.mtopbanner {
+    margin-top: 100px;
+}
+
 .lifooter li {
     text-decoration: none;
     list-style: none;
     font-family: 'Toyota-DisplayRegular';
     text-transform: capitalize;
+    color: #fff;
+    cursor: pointer;
+}
+
+.carrobanner {
+    width: 100%;
+}
+
+.hrfooter {
+    width: 100%;
+    color: #fff !important;
+    background-color: #fff;
+    height: 1px;
+}
+
+.input-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.inputemail {
+    background: no-repeat;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    font-family: 'Toyota-DisplayRegular';
+    color: #fff;
+    width: 100%;
+}
+
+.inputemail:focus-visible {
+    outline: none;
+}
+
+.inputemail::placeholder {
+    color: #fff;
+}
+
+.form-check {
+    align-self: baseline;
+}
+
+.input-wrapper:after {
+    font-family: 'FontAwesome';
+    content: '\f0e0';
+    color: #fff;
+    position: absolute;
+    right: 5px;
+    top: 2px;
+}
+
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-check-input {
+    position: absolute;
+    margin-top: .4rem;
+    margin-left: -1.25rem;
+}
+
+.form-check-label {
+    margin-bottom: 0;
+    color: #fff;
+    font-family: 'Toyota-DisplayRegular';
+    font-size: 12px;
+}
+
+.spanckeck {
+    font-weight: bold;
 }
