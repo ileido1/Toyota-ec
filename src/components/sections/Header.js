@@ -1,5 +1,6 @@
 import logo from '../../images/logo.png'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 function Header() {
 	return (
 
@@ -25,10 +26,10 @@ function Header() {
 							<a className="nav-link" href="#">TOYOTA SIEMPRE NUEVO</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="#">TOYOTA <span >GO</span></a>
+							<a className="nav-link" href="#">TOYOTA <span className='spango' >GO</span></a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="#"><i className="fa-solid fa-magnifying-glass" ></i>BUSCAR</a>
+							<a className="nav-link" href="#"><FontAwesomeIcon icon={faMagnifyingGlass} className='iconsearch'></FontAwesomeIcon>BUSCAR</a>
 						</li>
 					</ul>
 				</div>

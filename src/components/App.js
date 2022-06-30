@@ -2,26 +2,24 @@
 
 import '../css/bootstrap.min.css'
 import '../css/style.css';
+import '../css/all.css'
 import Header from './sections/Header'
 import Cart from './Cart'
 import Footer from './sections/Footer';
 import Home from './pages/home'
-
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
-import { useEffect, useState } from 'react';
+import useFetch from '../hooks/useFetch';
+
 
 const App = () => {
+  let peticion = "global/toyota-info"
 
-  const [footer, setFooter] = useState();
+  const [footer, error] = useFetch(peticion);
 
-  useEffect(() => {
-    fetch("https://backend-toyota.247.com.ec/api/global/menu-principal").then(response => response.json())
-      .then(data => setFooter(data));
-  }, [])
   return (
     <>
       <BrowserRouter>
@@ -30,7 +28,24 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/" element={<Home />} />
         </Routes>
-        <Footer></Footer>
+        {
+          footer ? (
+            <section>
+              {
+
+                footer.map(c => {
+                  let urls = c.logos_footer.split(',');
+                  return < Footer key='1' logotoyota={'https://backend-toyota.247.com.ec/' + urls[0]} toyotago={'https://backend-toyota.247.com.ec/' + urls[1].trim()} toyotasiempre={'https://backend-toyota.247.com.ec/' + urls[2].trim()}
+                  />
+                }
+                )
+              }
+            </section>
+          ) : (
+            <span> Cargando...</span>
+          )
+        }
+
       </BrowserRouter>
     </>
   )
