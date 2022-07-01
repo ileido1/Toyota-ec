@@ -19,7 +19,7 @@ export default function App() {
             <Swiper
                 direction={"horizontal"}
                 slidesPerView={1}
-                spaceBetween={80}
+                spaceBetween={0}
                 mousewheel={true}
                 modules={[Mousewheel]}
                 className=""
@@ -31,31 +31,35 @@ export default function App() {
                             {banner.map((c, i) => (
                                 <SwiperSlide>
                                     {i === 0 &&
-                                        <h1>TOYOTA</h1>
+                                        <div className="fraseizq">
+                                            <h1 className="Textobanner"> POR QUÉ UN<br></br> TOYOTA?</h1>
+                                        </div>
                                     }
 
 
-                                    <div className="container-fluid contenedor " style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_slider_qdr})` }} >
-                                        <div className="">
-                                            <div className="row" >
-                                                <div className="col-6">
-                                                </div>
-                                                <div className="col-6">
-                                                    <h1 className="Tbanner rojo">{c.titulo_slider_qdr}</h1>
-                                                    <h2 className="Textobanner">
-                                                        {c.texto_slider_qdr}
-                                                    </h2>
-                                                    <h3>{c.enlace_texto_slider_qdr}</h3>
-                                                    <img src={'https://backend-toyota.247.com.ec/' + c.imagen_slider_qdr}></img>
+                                    <div className="container-fluid  " style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_slider_qdr})` }} >
 
-                                                </div>
+                                        <div className="row" >
+                                            <div className="col-6">
                                             </div>
+                                            <div className="col-6 contenido-slider" >
+                                                <h1 className="Tbanner rojo">{c.titulo_slider_qdr}</h1>
+                                                <h2 className="Textobanner">
+                                                    {c.texto_slider_qdr}
+                                                </h2>
+                                                <h2 className="Textobanner rojo">{c.enlace_texto_slider_qdr}</h2>
+                                                <img src={'https://backend-toyota.247.com.ec/' + c.imagen_slider_qdr}></img>
+
+                                            </div>
+
 
                                         </div>
 
                                     </div>
                                     {i === 2 &&
-                                        <h1>TOYOTA</h1>
+                                        <div className="fraseizq">
+                                            <h1 className="Textobanner"> ES LA MARCA MAS CONFIABLE</h1>
+                                        </div>
                                     }
 
                                 </SwiperSlide>

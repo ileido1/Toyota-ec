@@ -428,11 +428,25 @@ ul#menu-galeria>li>span {
 
 }
 
+.fraseizq {
+    width: 250px;
+    padding: 20px;
+}
+
 .Tbanner {
     font-size: 50px;
     font-family: 'Toyota-DisplayBold';
     color: #000;
     text-transform: uppercase;
+}
+
+.contenido-slider {
+    margin-top: 80px;
+}
+
+.Textobanner {
+    font-family: 'Toyota-DisplayBold';
+    font-size: 28px;
 }
 
 .contenedor {
@@ -515,6 +529,11 @@ ul#menu-galeria>li>span {
 .firtslide {
     width: 30% !important;
 }
+
+.rojo {
+    color: #E20B2A;
+}
+
 
 .ocultar {
     display: none;
