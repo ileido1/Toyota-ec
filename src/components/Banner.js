@@ -1,29 +1,79 @@
-import banner from "../images/bg1.jpg"
-import carro from "../images/auto-raize-completo (1).png"
-import logo from "../images/logo-raize (1).svg"
-function Bannerhome() {
+import React, { useEffect, useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+
+// import required modules
+import { Autoplay } from "swiper";
+import useFetch from "../hooks/useFetch";
+
+export default function Bannerhome() {
+    let llenarbanner = 'home/banner'
+    const [banner, error] = useFetch(llenarbanner);
     return (
-        <div>
-            <div className="container-fluid contenedor " style={{ backgroundImage: `url(${banner})` }} >
-                <div className="mtopbanner">
-                    <div className="row" >
-                        <div className="col-6">
-                            <img src={carro} className="carrobanner"></img>
-                        </div>
-                        <div className="col-6">
-                            <h1 className="Tbanner">NUEVO</h1>
-                            <img src={logo}></img>
+        <>
+            <Swiper
+                spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                modules={[Autoplay]}
+                className="mySwiper"
+            >
+                {
+                    banner ? (
+                        <>
+                            {
 
-                        </div>
-                    </div>
-                    <div className="row btnhome" >
-                        <button className="btn-raize"> descubre el nuevo raize </button>
-                    </div>
-                </div>
+                                banner.map(c => (
+                                    <SwiperSlide>
+                                        <div className="container-fluid contenedor " style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_banner})` }} >
+                                            <div className="mtopbanner">
+                                                <div className="row" >
+                                                    <div className="col-6">
+                                                        <img src={'https://backend-toyota.247.com.ec/' + c.imagen_vehiculo} className="carrobanner"></img>
+                                                    </div>
+                                                    <div className="col-6">
+                                                        <h1 className="Tbanner">{c.texto_alternativo}</h1>
+                                                        <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo}></img>
 
-            </div>
-        </div >
-    )
+                                                    </div>
+                                                </div>
+                                                <div className="row btnhome" >
+                                                    <button className="btn-raize"> {c.texto_del_enlace} </button>
+                                                </div>
+                                            </div>
 
+                                        </div>
+                                    </SwiperSlide>
+
+                                )
+
+                                )
+                            }
+                        </>
+                    ) : (
+                        <span> Cargando...</span>
+                    )
+
+                }
+
+
+            </Swiper>
+        </>
+    );
 }
-export default Bannerhome;
+
+
+
+
+
+
+

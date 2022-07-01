@@ -18,13 +18,13 @@ const Footer = ({ logotoyota, toyotago, toyotasiempre }) => {
                     </div>
                     <div className="col-3 centrar" >
 
-                        <div class="input-wrapper">
+                        <div className="input-wrapper">
                             <input type="text" className="inputemail" placeholder="E-mail" />
 
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                            <label class="form-check-label" for="flexCheckDefault">
+                        <div className="form-check">
+                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                            <label className="form-check-label" htmlFor="flexCheckDefault">
                                 Acepto <span className="spanckeck">aviso de privacidad</span>
                             </label>
                         </div>
