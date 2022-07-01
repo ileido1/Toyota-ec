@@ -6,7 +6,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
+import {
+    NavLink
+} from "react-router-dom";
 
 // import required modules
 import { Autoplay } from "swiper";
@@ -47,7 +49,8 @@ export default function Bannerhome() {
                                                     </div>
                                                 </div>
                                                 <div className="row btnhome" >
-                                                    <button className="btn-raize"> {c.texto_del_enlace} </button>
+                                                    <NavLink to="/cart"> <button className="btn-raize"> {c.texto_del_enlace} </button></NavLink>
+
                                                 </div>
                                             </div>
 
