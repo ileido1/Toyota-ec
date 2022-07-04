@@ -1,17 +1,19 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import useFetch from "../hooks/useFetch";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
-import "./styles.css";
 
 // import required modules
 import { Pagination } from "swiper";
 
-export default function App() {
+export default function Sliderscars() {
+    let llenarbanner = 'home/carousel'
+    const [banner, error] = useFetch(llenarbanner);
     return (
         <>
             <Swiper
@@ -22,16 +24,65 @@ export default function App() {
                 }}
                 modules={[Pagination]}
                 className="mySwiper"
-            >
-                <SwiperSlide>Slide 1</SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 5</SwiperSlide>
-                <SwiperSlide>Slide 6</SwiperSlide>
-                <SwiperSlide>Slide 7</SwiperSlide>
-                <SwiperSlide>Slide 8</SwiperSlide>
-                <SwiperSlide>Slide 9</SwiperSlide>
+            > {
+                    banner ? (
+                        <>
+
+
+                            {banner.map((c, i) => (
+                                <SwiperSlide>
+                                    <div className="container-fluid  " style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.field_fondo_del_vehiculo})` }} >
+
+                                        <div className="row" >
+                                            <div className="col-12">
+                                                <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo}></img>
+
+                                            </div>
+                                            <div className="col-12">
+                                                <p>
+                                                    {c.anio_del_vehiculo}
+                                                </p>
+                                                <div className="row">
+                                                    <div className="col-6">
+                                                        <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo}></img>
+                                                    </div>
+                                                    <div className="col-6">
+                                                        <p>{c.texto_ver_vehiculos}</p>
+                                                    </div>
+
+                                                </div>
+                                                <div className="row">
+                                                    <div className="col-4"> 
+                                                    <p>{c.texto_info_box_1}</p>
+                                                    </div>
+                                                    <div className="col-4">
+                                                    <p>{c.titulo_info_box_2}</p>
+                                                    <p>{c.texto_info_box_2}</p> </div>
+                                                    <div className="col-4"> 
+                                                    <p>{c.texto_cotizar_vehiculo}</p>
+                                                    <p>{c.texto_test_drive_vehiculo}</p>
+                                                    
+                                                    </div>
+                                                    </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </SwiperSlide>
+
+
+
+                            ))}
+
+                        </>) : (
+                        <span> Cargando...</span>
+                    )
+                }
+
             </Swiper>
         </>
     );
