@@ -450,6 +450,15 @@ ul#menu-galeria>li>span {
     margin-bottom: 20px;
 }
 
+.mySwiper {
+    background-size: cover;
+    background-position: center;
+}
+
+.slider-cars {
+    background: transparent;
+}
+
 .border-right-slider {
     border-right: 2px solid #817F7F;
 }
