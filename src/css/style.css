@@ -428,6 +428,66 @@ ul#menu-galeria>li>span {
 
 }
 
+.imagencarro {
+    width: 100%;
+}
+
+.pslidercarro {
+    font-family: 'Toyota-DisplayRegular';
+    color: #000;
+    text-transform: uppercase;
+}
+
+.textoabajo {
+    display: flex;
+    align-items: baseline;
+    jUSTIFY-CONTENT: flex-end;
+    FLEX-DIRECTION: column;
+}
+
+.carddetallesslider {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.border-right-slider {
+    border-right: 2px solid #817F7F;
+}
+
+.btnslider {
+    background-color: #E20B2A;
+    color: #fff;
+    font-size: 12px;
+    border: none;
+    margin-bottom: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    font-family: 'Toyota-DisplayBold';
+
+}
+
+.vertodos {
+    font-family: 'Toyota-DisplayRegular';
+    color: #000;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.rendimientoslider {
+    font-family: 'Toyota-DisplayBold';
+    color: #817F7F;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 0;
+
+}
+
+.logoslider {
+    width: 100%;
+}
+
 .fraseizq {
     width: 250px;
     padding: 20px;
