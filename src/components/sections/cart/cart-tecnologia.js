@@ -6,7 +6,7 @@ import icon_vsc from '../../../images/tecnologia/icon-vsc.svg'
 const Carttecnologia = () => (
 
 <>
-
+<div className="container-fluid " id="content-galeria" >
 
         <div class="row mt40" id="tecnologia " >
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sin-padding-lr" >
@@ -46,7 +46,8 @@ const Carttecnologia = () => (
             <img className="img-fluid" src={banner_tsn} width="100%" alt="Banner Tecnologia" />
             </div>
         </div>
-
+        
+</div>
 </>
 
 

@@ -17,7 +17,8 @@ import raize_rojo from "../../../images/diseno/raize-rojo.png"
 
 const Cartdiseno = () => (
 <>
-    <div className="row" id="content-diseno" >
+<div className="container-fluid " id="content-diseno" >
+<div className="row"  >
     <div className="col-12">
             <div id="diseno" className="row pd100"  >
                 <div className="col-4">
@@ -69,7 +70,7 @@ const Cartdiseno = () => (
             </div>
         </div>
     </div>
-
+</div>
 </>
 
 )
