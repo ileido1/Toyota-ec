@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Novecentos-DemiBold';
-    src: local('Novecentos-DemiBold'), url(../fonts/Novecentosanswide-DemiBold.otf) format('opentype');
+    src: local('Novecentos-DemiBold'), url(../fonts/Novecentosanswide-DemiBold.otf);
 }
 
 @font-face {
@@ -842,23 +842,50 @@ a#btn-cotizar {
     font-weight: bold;
 }
 
-.cart-imagen-caracteristica{
+.cart-imagen-caracteristica {
     display: block;
     margin: 0 auto;
 }
 
-.cart-titulo-caracteristicas{
+.cart-titulo-caracteristicas {
     font-family: 'Radikal-Bold';
     font-size: 44px;
     font-weight: bold;
 }
 
-.cart-texto-caracteristicas{
+.cart-texto-caracteristicas {
     font-family: 'Radikal-Medium';
     font-size: 18px;
 }
 
-ul.cart-item-caracteristicas{
+ul.cart-item-caracteristicas {
     font-family: 'Radikal-Medium';
     font-size: 18px;
+}
+
+.mundotoyota {
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Novecentos-DemiBold';
+    text-transform: uppercase;
+    color: #E20B2A;
+}
+
+.noticia {
+    background: #000;
+    padding: 60px !important;
+}
+
+.noticia p,
+.noticia h4 {
+    color: #fff;
+    font-family: 'Novecentos-DemiBold';
+}
+
+.noticia img {
+
+    border: 1px solid #fff;
+    width: 100%;
+    margin-bottom: 20px;
+
 }
