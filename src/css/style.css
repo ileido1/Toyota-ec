@@ -38,6 +38,7 @@
     font-size: 0.9em;
     padding: 20px;
     font-family: 'Novecentos-DemiBold';
+    text-transform: uppercase;
 
 }
 
@@ -421,6 +422,7 @@ ul#menu-galeria>li>span {
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
     color: #817F7F;
+    text-transform: uppercase;
 }
 
 .nav-tabs {

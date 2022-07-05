@@ -9,6 +9,7 @@ import {
 import TabContainer from "./TabContext";
 import TabHeader from "./TabHeader";
 import TabPanel from "./Tabpanel";
+import Sliderscars from "../slidercars";
 
 
 const Tab = () => {
@@ -28,11 +29,8 @@ const Tab = () => {
                         ))}
                     </TabHeaderContainer>
                     <TabPanelContainer>
-                        {listafooter?.map(({ nid }) => (
-                            <TabPanel whenActive={nid.map(h => h.value)} key={nid.map(h => h.value)}>
-                                <TabPanelItem>{nid.map(h => h.value)}</TabPanelItem>
-                            </TabPanel>
-                        ))}
+
+                        <Sliderscars></Sliderscars>
                     </TabPanelContainer>
                 </TabContainer>
             </GlobalContainer>

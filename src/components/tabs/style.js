@@ -14,7 +14,7 @@ to {
 export const TabHeaderItem = styled.li` padding: 0.5rem 3rem;
 cursor: pointer;
 border-bottom: 3px solid;
-border-color: ${({ isActive }) => (isActive ? "tomato" : "transparent")
+border-color: ${({ isActive }) => (isActive ? "tomato" : "black")
     }
 
 ;
@@ -38,10 +38,9 @@ export const TabPanelItem = styled.div` animation: ${fadeIn} 0.5s ease-in;
 margin-bottom: 1rem;
 `;
 
-export const GlobalContainer = styled.div` background: #20232a;
-width: max-content;
+export const GlobalContainer = styled.div` background: transparent;
+width: 100%;
 margin: auto;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 padding: 1rem;
 margin-top: 2rem;
 

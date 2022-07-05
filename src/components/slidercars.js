@@ -26,8 +26,7 @@ export default function Sliderscars() {
                 style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + background})` }}
                 modules={[Pagination]}
                 className="mySwiper"
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
+
 
             > {
                     banner ? (
