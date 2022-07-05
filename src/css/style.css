@@ -839,3 +839,8 @@ a#btn-cotizar {
 .spanckeck {
     font-weight: bold;
 }
+
+.cart-imagen-caracteristica{
+    display: block;
+    margin: 0 auto;
+}
