@@ -24,7 +24,7 @@ export default function Cartslider() {
                 spaceBetween={30}
                 centeredSlides={true}
                 autoplay={{
-                    delay: 2500,
+                    delay: 4500,
                     disableOnInteraction: false,
                 }}
                 modules={[Autoplay]}
@@ -41,13 +41,13 @@ export default function Cartslider() {
                                 <div className="container-fluid contenedor swiper-slide" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas})` }} >
                                     <div className="mtopbanner">
                                         <div className="row" >
-                                            <div className="col-2">
+                                            <div className="col-3">
 
                                                 <p className="cart-titulo-caracteristicas" >{c.titulo_potencia}</p>
                                                 <p className="cart-texto-caracteristicas" >{c.texto_potencia}</p>
                                                 
                                             </div>
-                                            <div className="col-7">
+                                            <div className="col-6">
 
                                                 <img src={'https://backend-toyota.247.com.ec/' + c.imagen_potencia} className="cart-imagen-caracteristica"></img>
                                                 
@@ -71,13 +71,13 @@ export default function Cartslider() {
                                 <div className="container-fluid contenedor swiper-slide" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas})` }} >
                                     <div className="mtopbanner">
                                         <div className="row" >
-                                            <div className="col-2">
+                                            <div className="col-3">
 
                                                 <p className="cart-titulo-caracteristicas" >{c.titulo_seguridad}</p>
                                                 <p className="cart-texto-caracteristicas" >{c.texto_seguridad}</p>
                                                 
                                             </div>
-                                            <div className="col-7">
+                                            <div className="col-6">
 
                                                 <img src={'https://backend-toyota.247.com.ec/' + c.imagen_seguridad} className="cart-imagen-caracteristica"></img>
                                                 
@@ -102,13 +102,13 @@ export default function Cartslider() {
                                 <div className="container-fluid contenedor swiper-slide" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas})` }} >
                                     <div className="mtopbanner">
                                         <div className="row" >
-                                            <div className="col-2">
+                                            <div className="col-3">
 
                                                 <p className="cart-titulo-caracteristicas" >{c.titulo_equipamento_exterior}</p>
-                                                <p className="cart-texto-caracteristicas" >{c.texto_equipoamento_exterior}</p>
+                                                <p className="cart-texto-caracteristicas" >{c.texto_equipamento_exterior}</p>
                                                 
                                             </div>
-                                            <div className="col-7">
+                                            <div className="col-6">
 
                                                 <img src={'https://backend-toyota.247.com.ec/' + c.imagen_equipamento_exterior} className="cart-imagen-caracteristica"></img>
                                                 
@@ -130,18 +130,18 @@ export default function Cartslider() {
                             </SwiperSlide>          
 
                             <SwiperSlide>
-                                <div className="container-fluid contenedor swiper-slide"  >
+                                <div className="container-fluid contenedor swiper-slide" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas})` }} >
                                     <div className="mtopbanner">
                                         <div className="row" >
-                                            <div className="col-2">
+                                            <div className="col-3">
 
                                                 <p className="cart-titulo-caracteristicas" >{c.titulo_equipamento_interior}</p>
-                                                <p className="cart-texto-caracteristicas" >{c.texto_equipoamento_interior}</p>
+                                                <p className="cart-texto-caracteristicas" >{c.texto_equipamento_interior}</p>
                                                 
                                             </div>
-                                            <div className="col-7">
+                                            <div className="col-6">
 
-                                                <img src={'https://backend-toyota.247.com.ec/' + c.imagen_equipamento_interior} className="cart-imagen-caracteristica"></img>
+                                                <img src={'https://backend-toyota.247.com.ec/' + c.imagen_equipamento_interior} className="cart-imagen-caracteristica img-fluid"></img>
                                                 
                                             </div>
                                             <div className="col-3">

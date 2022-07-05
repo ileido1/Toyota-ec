@@ -12,8 +12,8 @@ const Cart = () => (
 
         <Cartmenu />
         <Cartbanner />
-        <Cartslider />
         <Cartexonerados />
+        <Cartslider />    
         <Cartdiseno />
         <Cartgaleria />
         <Carttecnologia />

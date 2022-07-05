@@ -844,3 +844,19 @@ a#btn-cotizar {
     display: block;
     margin: 0 auto;
 }
+
+.cart-titulo-caracteristicas{
+    font-family: 'Radikal-Bold';
+    font-size: 44px;
+    font-weight: bold;
+}
+
+.cart-texto-caracteristicas{
+    font-family: 'Radikal-Medium';
+    font-size: 18px;
+}
+
+ul.cart-item-caracteristicas{
+    font-family: 'Radikal-Medium';
+    font-size: 18px;
+}
