@@ -34,7 +34,8 @@ class Cartgaleria extends Component {
 
         return(
         <>
-            <div className="row">
+        <div className="container-fluid " id="content-galeria" >
+            <div className="row ">
                 <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-galeria" >
                     <p className="text-color-diseno2 secciones-subtitulos" >GALERIA RAIZE</p>
                 </div>
@@ -52,23 +53,25 @@ class Cartgaleria extends Component {
 
             <div className="row">
 
-            <div id="content-automovil-video" className="col-12 col-sm-12 content-automovil-video pestaba-cuerpo-galeria mostrar" >
-                <div>
-                    <video width="100%" controls >
-                        <source src={video_galeria_play} type="video/mp4" />
-                        Your browser does not support HTML video.
-                    </video>
+                <div id="content-automovil-video" className="col-12 col-sm-12 content-automovil-video pestaba-cuerpo-galeria mostrar" >
+                        <div>
+                            <video width="100%" controls >
+                                <source src={video_galeria_play} type="video/mp4" />
+                                Your browser does not support HTML video.
+                            </video>
+                        </div>
+                </div>     
+                    
+                <div id="content-automovil-exterior" className="col-12 col-sm-12 content-automovil-exterior ocultar"  >
+                
                 </div>
-            </div>     
-            
-            <div id="content-automovil-exterior" className="col-12 col-sm-12 content-automovil-exterior ocultar"  >
-            
-            </div>
-            <div id="content-automovil-interior" className="col-12 col-sm-12 content-automovil-interior ocultar" >
+                
+                <div id="content-automovil-interior" className="col-12 col-sm-12 content-automovil-interior ocultar" >
+
+                </div>
 
             </div>
         </div>
-        
         </>
         )
     }
