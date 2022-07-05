@@ -5,6 +5,7 @@ import Cartgaleria from "./sections/cart/cart-galeria"
 import Cartexonerados from "./sections/cart/cart-exonerados"
 import Carttecnologia from "./sections/cart/cart-tecnologia"
 import Cartcta from "./sections/cart/cart-cta"
+import Cartslider from "./sections/cart/cart-slider"
 
 const Cart = () => (
     <>
@@ -12,6 +13,7 @@ const Cart = () => (
         <Cartmenu />
         <Cartbanner />
         <Cartexonerados />
+        <Cartslider />    
         <Cartdiseno />
         <Cartgaleria />
         <Carttecnologia />
