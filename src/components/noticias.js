@@ -19,7 +19,7 @@ export default function Noticias() {
                             <>
                                 {
 
-                                    info.map(c => (
+                                    info.slice(0, 3).map(c => (
                                         <div className=" col-4 ">
                                             <img src={'https://backend-toyota.247.com.ec/' + c.image_post} className=""></img>
                                             <h4 className="titulo_post">{c.titulo_post}</h4>
