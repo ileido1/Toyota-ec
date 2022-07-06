@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from 'framer-motion'
 
 // Import Swiper styles
 import "swiper/css";
@@ -17,6 +18,14 @@ import useFetch from "../hooks/useFetch";
 export default function Bannerhome() {
     let llenarbanner = 'home/banner'
     const [banner, error] = useFetch(llenarbanner);
+    const boxVariant = {
+        visible: { opacity: 1, scale: 1, x: 0 },
+        hidden: { opacity: 0, scale: 0, x: -200 },
+    }
+    const btnVariant = {
+        visible: { opacity: 1, scale: 1, y: 0 },
+        hidden: { opacity: 0, scale: 0, y: 200 },
+    }
 
     return (
         <>
@@ -40,19 +49,36 @@ export default function Bannerhome() {
                                         <div className="container-fluid contenedor " style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_banner})` }} >
                                             <div className="mtopbanner">
                                                 <div className="row" >
-                                                    <div className="col-6">
+                                                    <motion.div
+                                                        animate={{
+                                                            x: 0
+                                                        }}
+                                                        initial={{ x: 200 }} transition={{ delay: 0.5, default: { duration: 1 } }}
+                                                        className="col-6">
                                                         <img src={'https://backend-toyota.247.com.ec/' + c.imagen_vehiculo} className="carrobanner"></img>
-                                                    </div>
-                                                    <div className="col-6">
+                                                    </motion.div>
+                                                    <motion.div className="col-6 m20"
+                                                        variants={boxVariant}
+                                                        initial="hidden"
+                                                        animate="visible"
+                                                        transition={{ delay: 0.5, default: { duration: 1 } }}
+                                                    >
                                                         <h1 className="Tbanner">{c.texto_alternativo}</h1>
                                                         <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo}></img>
 
-                                                    </div>
+                                                    </motion.div>
                                                 </div>
-                                                <div className="row btnhome" >
+
+                                                <motion.div
+                                                    className="row btnhome"
+                                                    variants={btnVariant}
+                                                    initial="hidden"
+                                                    animate="visible"
+                                                    transition={{ delay: 0.5, default: { duration: 1 } }} >
                                                     <NavLink to="/cart"> <button className="btn-raize"> {c.texto_del_enlace} </button></NavLink>
 
-                                                </div>
+                                                </motion.div>
+
                                             </div>
 
                                         </div>

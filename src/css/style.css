@@ -47,6 +47,10 @@
 
 }
 
+.m20 {
+    margin-top: 20px;
+}
+
 .bannerhome {
     width: 100%;
 }
@@ -1002,9 +1006,8 @@ ul.cart-item-caracteristicas {
 }
 
 .fondoqdr {
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
 }
 
 .imgqdr {
