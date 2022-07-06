@@ -12,7 +12,28 @@ export default function Noticias() {
     return (
         <>
             <div className="container-fluid noticia">
+
                 <div className="row">
+                    <div className="col-12">
+                        <ul class="nav nav-tabs tabsnoticias ">
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="#">Toyota Go</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Toyota News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Toyota Gazoo Racing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Toyota Híbrido</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div className="row">
+
 
                     {
                         info ? (

@@ -20,7 +20,7 @@ export default function MundoToyota() {
                                 info.map(c => (
                                     <div className="row">
                                         <div className="col-4">
-                                            <img src={'https://backend-toyota.247.com.ec/' + c.imagen_square_box_1} className="carrobanner"></img>
+                                            <img src={'https://backend-toyota.247.com.ec/' + c.imagen_square_box_1} className="mundotoyotaimgsupi"></img>
                                             <img src={'https://backend-toyota.247.com.ec/' + c.imagen_square_box_3} className="carrobanner"></img>
 
                                         </div>
@@ -28,7 +28,7 @@ export default function MundoToyota() {
                                             <h1 className="mundotoyota">{c.title_square_box}</h1>
                                         </div>
                                         <div className="col-4">
-                                            <img src={'https://backend-toyota.247.com.ec/' + c.imagen_square_box_2} className="carrobanner"></img>
+                                            <img src={'https://backend-toyota.247.com.ec/' + c.imagen_square_box_2} className="mundotoyotaimgsupd"></img>
                                             <img src={'https://backend-toyota.247.com.ec/' + c.imagen_square_box_4} className="carrobanner"></img>
 
                                         </div>

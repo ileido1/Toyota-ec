@@ -22,7 +22,7 @@ export default function App() {
                 spaceBetween={0}
                 mousewheel={true}
                 modules={[Mousewheel]}
-                className=""
+                className="sliderqdr"
             > {
                     banner ? (
                         <>
@@ -37,7 +37,7 @@ export default function App() {
                                     }
 
 
-                                    <div className="container-fluid  " style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.field_fondo_slider_r})` }} >
+                                    <div className="container fondoqdr  " style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.field_fondo_slider_r})` }} >
 
                                         <div className="row" >
                                             <div className="col-6">
@@ -48,7 +48,7 @@ export default function App() {
                                                     {c.texto_slider_qdr}
                                                 </h2>
                                                 <h2 className="Textobanner rojo">{c.enlace_texto_slider_qdr}</h2>
-                                                <img src={'https://backend-toyota.247.com.ec/' + c.imagen_slider_qdr}></img>
+                                                <img src={'https://backend-toyota.247.com.ec/' + c.imagen_slider_qdr} className="imgqdr"></img>
 
                                             </div>
 
