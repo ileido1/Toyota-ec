@@ -11,7 +11,7 @@ export default function MundoToyota() {
     const [info, error] = useFetch(endpoint);
     return (
         <>
-            <div className="container">
+            <div className="container mundotoyotacontainer">
                 {
                     info ? (
                         <>

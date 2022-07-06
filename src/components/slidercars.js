@@ -24,7 +24,7 @@ export default function Sliderscars() {
                 loop={true}
                 style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + background})` }}
 
-                className="mySwiper"
+                className="mySwipercar"
 
 
             > {
@@ -41,7 +41,7 @@ export default function Sliderscars() {
                                             <div>{isActive ? setBackground(c.field_fondo_del_vehiculo) : ''}</div>
 
                                             <div className="row" >
-                                                <div className="col-12">
+                                                <div className="col-12 centrarbaseline">
                                                     <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro"></img>
 
                                                 </div>

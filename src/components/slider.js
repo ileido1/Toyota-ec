@@ -37,7 +37,7 @@ export default function App() {
                                     }
 
 
-                                    <div className="container-fluid  " style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_slider_qdr})` }} >
+                                    <div className="container-fluid  " style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.field_fondo_slider_r})` }} >
 
                                         <div className="row" >
                                             <div className="col-6">

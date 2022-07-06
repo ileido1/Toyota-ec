@@ -431,7 +431,14 @@ ul#menu-galeria>li>span {
 }
 
 .imagencarro {
-    width: 100%;
+    width: 60%;
+    margin-top: 60px;
+
+}
+
+.swiper-slide-next .imagencarro {
+    width: 120%;
+    margin-top: 0px;
 }
 
 .pslidercarro {
@@ -452,9 +459,17 @@ ul#menu-galeria>li>span {
     margin-bottom: 20px;
 }
 
-.mySwiper {
+.mySwipercar {
     background-size: cover;
     background-position: center;
+}
+
+.mySwipercar .swiper-wrapper {
+    margin-top: 200px;
+}
+
+.mundotoyotacontainer {
+    padding: 40px;
 }
 
 .slider-cars {
@@ -583,6 +598,7 @@ ul#menu-galeria>li>span {
     display: flex;
     justify-content: center;
     align-self: center;
+    padding-top: 60px;
 }
 
 .mtopbanner {
@@ -825,6 +841,14 @@ a#btn-cotizar {
     flex-direction: column;
 }
 
+.centrarbaseline {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 .form-check-input {
     position: absolute;
     margin-top: .4rem;
@@ -864,11 +888,16 @@ ul.cart-item-caracteristicas {
 }
 
 .mundotoyota {
-    font-size: 80px;
+    font-size: 150px;
+    z-index: 99999;
     text-align: center;
     font-family: 'Novecentos-DemiBold';
     text-transform: uppercase;
     color: #E20B2A;
+}
+
+.mundotoyotacontainer img {
+    margin-bottom: 20px;
 }
 
 .noticia {
@@ -908,5 +937,5 @@ ul.cart-item-caracteristicas {
 }
 
 .logocarroprev {
-    width: 50%;
+    width: 30%;
 }
