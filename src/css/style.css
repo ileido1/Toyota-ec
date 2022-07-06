@@ -420,7 +420,7 @@ ul#menu-galeria>li>span {
 
 .nav-tabs .nav-link {
     border: 1px solid transparent;
-    font-family: 'Novecentos-DemiBold';
+    font-family: 'Novecentos-DemiBold' , sans-serif;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
     color: #817F7F;
@@ -966,7 +966,6 @@ ul.cart-item-caracteristicas {
     width: 30%;
 }
 
-<<<<<<< HEAD
 .supcarslider {
 
     /* display: flex; */
@@ -1022,10 +1021,32 @@ ul.cart-item-caracteristicas {
 .tabsnoticias .nav-link {
     color: #fff !important;
 }
-=======
 
 .navbar {
     height: 100px;
     padding: 0 49px !important;
   }
->>>>>>> f18408285a0aef31e27c8bb0cd408a5af6039ede
+
+  .swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #3e3d3d !important;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    border: 2px solid#3e3d3d !important;
+    border-radius: 50% !important;
+    padding: 10px 18px !important;
+    height: 40px !important;
+    font-size: 12px !important;
+  }
+
+  .swiper-button-next:hover, .swiper-button-prev:hover {
+    border: 2px solid#e50021 !important;
+
+  }
+
+  .swiper-button-next:hover > .swiper-button-next::after, .swiper-button-prev:hover > .swiper-button-prev::after {
+    color: #e50021 !important;
+  }
+
