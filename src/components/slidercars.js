@@ -21,21 +21,21 @@ export default function Sliderscars() {
 
 
                 <h1 className="h1Conoce">CONOCE NUESTROS VEHÍCULOS</h1>
-                <ul class="nav nav-tabs ">
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#">Automoviles</a>
+                <ul className="nav nav-tabs ">
+                    <li className="nav-item">
+                        <a className="nav-link " aria-current="page" href="#">Automoviles</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">SUV</a>
+                    <li className="nav-item">
+                        <a className="nav-link active" href="#">SUV</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">HÍBRIDOS</a>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">HÍBRIDOS</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">CAMIONETAS</a>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">CAMIONETAS</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">EXONERADOS</a>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">EXONERADOS</a>
                     </li>
 
                 </ul>
