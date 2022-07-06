@@ -46,19 +46,14 @@ export default function Sliderscars() {
                 navigation={true}
                 speed={1000}
                 modules={[Navigation]}
-
                 loop={true}
                 style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + background})` }}
-
                 className="mySwipercar"
-
 
             >
                 {
                     banner ? (
                         <>
-
-
                             {banner.map((c, i) => (
                                 <SwiperSlide className="slider-cars" >
                                     {({ isActive }) => (
