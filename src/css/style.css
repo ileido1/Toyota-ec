@@ -893,3 +893,24 @@ ul.cart-item-caracteristicas {
 .fuente-blanco{
     color: #ffffff;
 }
+    
+.infocarro {
+    display: none;
+}
+
+.swiper-slide-next .infocarro {
+    display: block;
+}
+
+.logocarro {
+    display: none;
+}
+
+.swiper-slide:not(.swiper-slide-next) .logocarro {
+    display: flex;
+    justify-content: center;
+}
+
+.logocarroprev {
+    width: 50%;
+}

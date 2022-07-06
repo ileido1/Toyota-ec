@@ -20,11 +20,10 @@ export default function Sliderscars() {
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
-                pagination={{
-                    clickable: true,
-                }}
+
+                loop={true}
                 style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + background})` }}
-                modules={[Pagination]}
+
                 className="mySwiper"
 
 
@@ -46,7 +45,11 @@ export default function Sliderscars() {
                                                     <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro"></img>
 
                                                 </div>
-                                                <div className="col-12">
+                                                <div className="col-12 logocarro">
+                                                    <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo} className="logocarroprev"></img>
+
+                                                </div>
+                                                <div className="col-12 infocarro">
                                                     <p className="pslidercarro">
                                                         {c.anio_del_vehiculo}
                                                     </p>
