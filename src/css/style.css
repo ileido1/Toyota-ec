@@ -441,6 +441,7 @@ ul#menu-galeria>li>span {
 .swiper-slide-next .imagencarro {
     width: 120%;
     margin-top: 0px;
+    transition: width 2s;
 }
 
 .pslidercarro {
@@ -966,7 +967,6 @@ ul.cart-item-caracteristicas {
     width: 30%;
 }
 
-<<<<<<< HEAD
 .supcarslider {
 
     /* display: flex; */
@@ -1022,10 +1022,8 @@ ul.cart-item-caracteristicas {
 .tabsnoticias .nav-link {
     color: #fff !important;
 }
-=======
 
 .navbar {
     height: 100px;
     padding: 0 49px !important;
-  }
->>>>>>> f18408285a0aef31e27c8bb0cd408a5af6039ede
+}

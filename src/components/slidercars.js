@@ -44,6 +44,7 @@ export default function Sliderscars() {
                 slidesPerView={3}
                 spaceBetween={30}
                 navigation={true}
+                speed={1000}
                 modules={[Navigation]}
 
                 loop={true}

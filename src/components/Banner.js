@@ -17,6 +17,7 @@ import useFetch from "../hooks/useFetch";
 export default function Bannerhome() {
     let llenarbanner = 'home/banner'
     const [banner, error] = useFetch(llenarbanner);
+
     return (
         <>
             <Swiper
