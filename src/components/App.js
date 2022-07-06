@@ -25,7 +25,7 @@ const App = () => {
       <BrowserRouter>
         <Header></Header>
         <Routes>
-          <Route path="/raize" element={<Cart />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/" element={<Home />} />
         </Routes>
         {
