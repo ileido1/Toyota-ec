@@ -81,11 +81,9 @@ export default function Cartslider() {
                                     </div>
                                     <div className="col-4 animated ">
                                         <img className="img-icono-feature-frenos" src={frenos} alt="Frenos" />
-
                                     </div>
                                     <div className="col-4 animated ">
                                         <img className="img-icono-feature-motor" src={motor} alt="Motor" />
-
                                     </div>
 
                                     <div className="col-4 ">
