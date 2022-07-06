@@ -35,7 +35,7 @@
 
 .navbar .navbar-nav .nav-link {
     color: #817F7F;
-    font-size: 0.9em;
+    font-size: 1em;
     padding: 20px;
     font-family: 'Novecentos-DemiBold';
     text-transform: uppercase;
@@ -914,3 +914,8 @@ ul.cart-item-caracteristicas {
 .logocarroprev {
     width: 50%;
 }
+
+.navbar {
+    height: 100px;
+    padding: 0 49px !important;
+  }
