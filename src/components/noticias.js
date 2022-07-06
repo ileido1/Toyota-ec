@@ -15,18 +15,18 @@ export default function Noticias() {
 
                 <div className="row">
                     <div className="col-12">
-                        <ul class="nav nav-tabs tabsnoticias ">
-                            <li class="nav-item">
-                                <a class="nav-link " aria-current="page" href="#">Toyota Go</a>
+                        <ul className="nav nav-tabs tabsnoticias ">
+                            <li className="nav-item">
+                                <a className="nav-link " aria-current="page" href="#">Toyota Go</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">Toyota News</a>
+                            <li className="nav-item">
+                                <a className="nav-link active" href="#">Toyota News</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Toyota Gazoo Racing</a>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Toyota Gazoo Racing</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Toyota Híbrido</a>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Toyota Híbrido</a>
                             </li>
 
                         </ul>

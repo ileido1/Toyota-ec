@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-syntax-flow": "^7.18.6",
+    "@babel/plugin-transform-react-jsx": "^7.18.6",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
@@ -11,13 +13,10 @@
     "framer-motion": "^6.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "react-photo-gallery": "^8.0.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
-    "react-slick": "^0.29.0",
-    "styled-components": "^5.3.5",
     "swiper": "^8.2.4",
+    "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },
   "homepage": "https://toyota-ec.247.com.ec/",
@@ -44,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.6"
   }
 }
