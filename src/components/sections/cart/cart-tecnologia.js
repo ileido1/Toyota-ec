@@ -8,9 +8,9 @@ const Carttecnologia = () => (
 <>
 <div className="container-fluid " id="content-galeria" >
 
-        <div class="row mt40" id="tecnologia " >
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sin-padding-lr" >
-                <p class="text-color-tecnologia" >TECNOLOGIA RAIZE</p> 
+        <div className="row mt40" id="tecnologia " >
+            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sin-padding-lr" >
+                <p className="text-color-tecnologia" >TECNOLOGIA RAIZE</p> 
             </div>
         </div>
 

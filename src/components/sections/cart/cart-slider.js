@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -10,14 +8,12 @@ import {
     NavLink
 } from "react-router-dom";
 
-// import required modules
 import { Autoplay } from "swiper";
 import useFetch from "../../../hooks/useFetch";
-let sliders_ag = ""
 
 export default function Cartslider() {
-    let datos_api = 'v1/features_vehicle/28'
-    const [respuesta, error] = useFetch(datos_api);
+    let url_api = 'v1/features_vehicle/28'
+    const [respuesta, error] = useFetch(url_api);
     return (
         <>
          <Swiper
@@ -130,26 +126,26 @@ export default function Cartslider() {
                             </SwiperSlide>          
 
                             <SwiperSlide>
-                                <div className="container-fluid contenedor swiper-slide" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas})` }} >
+                                <div className="container-fluid contenedor swiper-slide" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.imagen_equipamento_interior})` }} >
                                     <div className="mtopbanner">
                                         <div className="row" >
                                             <div className="col-3">
 
-                                                <p className="cart-titulo-caracteristicas" >{c.titulo_equipamento_interior}</p>
-                                                <p className="cart-texto-caracteristicas" >{c.texto_equipamento_interior}</p>
+                                                <p className="cart-titulo-caracteristicas fuente-blanco" >{c.titulo_equipamento_interior}</p>
+                                                <p className="cart-texto-caracteristicas fuente-blanco" >{c.texto_equipamento_interior}</p>
                                                 
                                             </div>
                                             <div className="col-6">
 
-                                                <img src={'https://backend-toyota.247.com.ec/' + c.imagen_equipamento_interior} className="cart-imagen-caracteristica img-fluid"></img>
+                                                
                                                 
                                             </div>
                                             <div className="col-3">
                                                 <ul className="cart-item-caracteristicas"  >
-                                                    <li>{c.items_equipamento_interior[0]}</li>
-                                                    <li>{c.items_equipamento_interior[1]}</li>
-                                                    <li>{c.items_equipamento_interior[2]}</li>
-                                                    <li>{c.items_equipamento_interior[3]}</li>
+                                                    <li className="fuente-blanco" >{c.items_equipamento_interior[0]}</li>
+                                                    <li className="fuente-blanco" >{c.items_equipamento_interior[1]}</li>
+                                                    <li className="fuente-blanco" >{c.items_equipamento_interior[2]}</li>
+                                                    <li className="fuente-blanco" >{c.items_equipamento_interior[3]}</li>
                                                 </ul>
                                                 
                                             </div>
@@ -178,13 +174,6 @@ export default function Cartslider() {
                     )
                     
                 }
-
-                
-
-                    {sliders_ag}               
-
-                
-
 
             </Swiper>
         </>

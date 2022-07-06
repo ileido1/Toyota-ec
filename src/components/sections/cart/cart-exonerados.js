@@ -8,12 +8,12 @@ const Cartexonerados = () => (
         <div className="row" id="auto-exonerados" >
 
             <div className="col-12 col-sm-6"  >
-               <img src={raize_exonerados} Alt="logo raize exonerados" />
+               <img src={raize_exonerados} alt="logo auto exonerados" />
             </div>
 
             <div className="col-12 col-sm-6 logo-exonerados "  >
                 <div className='contenedor-logo-exonerados'>
-                    <img src={logo_exonerados} Alt="logo exonerados" />
+                    <img src={logo_exonerados} alt="Logo exonerados" />
                     <p className='text-exonerados' >Cotizar vehículo como Exonerado</p>
                 </div>
             </div>
