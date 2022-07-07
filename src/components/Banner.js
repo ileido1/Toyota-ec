@@ -18,15 +18,30 @@ import useFetch from "../hooks/useFetch";
 export default function Bannerhome() {
     let llenarbanner = 'home/banner'
     const [banner, error] = useFetch(llenarbanner);
+
+    const [lastyPos, setLastYPost] = useState(0);
+    const [Actions, SetActions] = useState(true);
+    useEffect(() => {
+        function handleScroll() {
+            const ypos = window.scrollY;
+            const isScrollingUp = ypos < lastyPos;
+            SetActions(isScrollingUp);
+            setLastYPost(ypos);
+        }
+        window.addEventListener('scroll', handleScroll, false);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll, false);
+        }
+    }, [lastyPos]);
     const boxVariant = {
-        visible: { opacity: 1, scale: 1, x: 0 },
+        visible: { opacity: 1, scale: 1, x: 0, x: Actions ? 0 : 200 },
         hidden: { opacity: 0, scale: 0, x: -200 },
     }
     const btnVariant = {
         visible: { opacity: 1, scale: 1, y: 0 },
         hidden: { opacity: 0, scale: 0, y: 200 },
     }
-
     return (
         <>
             <Swiper
@@ -51,7 +66,8 @@ export default function Bannerhome() {
                                                 <div className="row" >
                                                     <motion.div
                                                         animate={{
-                                                            x: 0
+                                                            x: 0,
+                                                            x: Actions ? 0 : -200
                                                         }}
                                                         initial={{ x: 200 }} transition={{ delay: 0.5, default: { duration: 1 } }}
                                                         className="col-6">
