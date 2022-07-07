@@ -47,9 +47,9 @@ export default function Cartslider() {
                                         <div className="row" >
                                             <div className="col-3">
                                 
-                                            { isActive && <motion.p className="cart-titulo-caracteristicas"  initial="hidden" animate="visible" variants={variants} transition={{ delay: 0.5, default: { duration: 0.8 }, }} >{c.titulo_potencia}</motion.p> }
+                                            { isActive && <motion.p className="cart-titulo-caracteristicas" initial="hidden" animate="visible" variants={variants} transition={{ delay: 0.5, default: { duration: 0.8 }, }} >{c.titulo_potencia}</motion.p> }
                                              
-                                            { isActive && <motion.p className="cart-texto-caracteristicas" >{c.texto_potencia}</motion.p> }
+                                            { isActive && <motion.p className="cart-texto-caracteristicas" initial="hidden" animate="visible" variants={variants} transition={{ delay: 0.5, default: { duration: 0.8 }, }}  >{c.texto_potencia}</motion.p> }
                                                 
                                             </div>
                                             <div className="col-6">
