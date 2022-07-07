@@ -8,7 +8,7 @@ const Cartcta = () => (
 
                 <div className="col-12 col-sm-6 contenedor-cta-testdrive"  >
                     <div className='contenedor-cta'>
-                        <img src={icono_testdrive} alt="Icono test drive" className='iconos-cta' />
+                        <img src={icono_testdrive} alt="Icono test drive" className='iconos-cta'  />
                         <p>Compruébalo tu mismo y déjate encantar por un TOYOTA. Solicita tu prueba de manejo</p>
                         <a href="#" id='btn-testdrive' className='btn' >SOLICITAR TEST DRIVE</a>
                     </div>
@@ -16,7 +16,7 @@ const Cartcta = () => (
 
                 <div className="col-12 col-sm-6 contenedor-cta-cotizar"  >
                     <div className='contenedor-cta'>
-                        <img src={icono_cotizar} alt="Icono cotizar" className='iconos-cta' />
+                        <img src={icono_cotizar} alt="Icono cotizar" className='iconos-cta'  />
                         <p>Estas a un paso de tener el auto De tus sueños, un TOYOTA. Haz clic para cotizar este vehículo.</p>
                         <a href="#" id='btn-cotizar' className='btn' >COTIZAR</a>
                     </div>

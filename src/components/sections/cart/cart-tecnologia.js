@@ -3,6 +3,12 @@ import icon_hac from '../../../images/tecnologia/icon-HAC.svg'
 import icon_trc from '../../../images/tecnologia/icon-trc.svg'
 import icon_vsc from '../../../images/tecnologia/icon-vsc.svg'
 
+import { motion } from "framer-motion"
+const variants = {
+    hidden: { opacity: 0.1 },
+    visible: { opacity: 1 },
+}
+
 const Carttecnologia = () => (
 
 <>
@@ -43,7 +49,7 @@ const Carttecnologia = () => (
 
         <div className="row" >
             <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sin-padding-lr"  >
-            <img className="img-fluid" src={banner_tsn} width="100%" alt="Banner Tecnologia" />
+            <motion.img className="img-fluid" src={banner_tsn} width="100%" alt="Banner Tecnologia" variants={variants} initial={{ x: -200, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.5, default: { duration: 1.1 } }} />
             </div>
         </div>
         
