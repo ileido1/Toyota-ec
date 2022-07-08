@@ -11,7 +11,7 @@ export default function Noticias() {
     let endpoint = 'home/post'
     const [info, error] = useFetch(endpoint);
     const ref2 = useRef(null);
-    const isInView = useInView(ref2, { once: false });
+    const isInView2 = useInView(ref2, { once: false });
     return (
         <>
             <div className="container-fluid noticia">
@@ -19,8 +19,8 @@ export default function Noticias() {
                 <div className="row">
                     <div className="col-12">
                         <h1 ref={ref2} style={{
-                            transform: isInView ? "none" : "translateY(-400px)",
-                            opacity: isInView ? 1 : 0,
+                            transform: isInView2 ? "none" : "translateY(10px)",
+                            opacity: isInView2 ? 1 : 0,
                             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                         }} className="mundotoyotapequeno">Mundo <br></br>Toyota</h1>
                         <ul className="nav nav-tabs tabsnoticias ">
