@@ -1,7 +1,10 @@
 import icono_testdrive from '../../../images/cta/icono-test-drive.svg'
 import icono_cotizar from '../../../images/cta/icono-cotizar.svg'
 
-const Cartcta = () => (
+
+const Cartcta = () => {
+
+    return( 
     <>
         <div className="auto-individual container-fluid" >
             <div className="row" id="auto-cta" >
@@ -25,7 +28,7 @@ const Cartcta = () => (
             </div>
         </div>
     </>
-
-)
+    )
+}
 
 export default Cartcta
