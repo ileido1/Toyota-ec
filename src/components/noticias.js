@@ -10,15 +10,15 @@ import { useInView } from "framer-motion";
 export default function Noticias() {
     let endpoint = 'home/post'
     const [info, error] = useFetch(endpoint);
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: false });
+    const ref2 = useRef(null);
+    const isInView = useInView(ref2, { once: false });
     return (
         <>
             <div className="container-fluid noticia">
 
                 <div className="row">
                     <div className="col-12">
-                        <h1 ref={ref} style={{
+                        <h1 ref={ref2} style={{
                             transform: isInView ? "none" : "translateY(-400px)",
                             opacity: isInView ? 1 : 0,
                             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
