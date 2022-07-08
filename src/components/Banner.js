@@ -60,6 +60,7 @@ export default function Bannerhome() {
                             {
 
                                 banner.map(c => (
+                                    <>    
                                     <SwiperSlide>
                                         <div className="container-fluid contenedor " style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_banner})` }} >
                                             <div className="mtopbanner">
@@ -99,9 +100,9 @@ export default function Bannerhome() {
 
                                         </div>
                                     </SwiperSlide>
-
+                            </>  
                                 )
-
+                                                               
                                 )
                             }
                         </>
