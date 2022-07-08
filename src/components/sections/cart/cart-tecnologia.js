@@ -1,20 +1,45 @@
+import React, { useRef } from "react";
+import { motion,  useInView} from "framer-motion";
+
+
 import banner_tsn from '../../../images/tecnologia/banner-tsn.png'
 import icon_hac from '../../../images/tecnologia/icon-HAC.svg'
 import icon_trc from '../../../images/tecnologia/icon-trc.svg'
 import icon_vsc from '../../../images/tecnologia/icon-vsc.svg'
 
-import { motion, useViewportScroll, useTransform } from "framer-motion"
+const sin_padding = {
+    div:{padding-left:0}
+}
 
 const variants = {
     hidden: { opacity: 0.1 },
     visible: { opacity: 1 },
 }
 
+function Tecnologia({ children }) {
+
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+  
+    return (
+      <div ref={ref}
+        
+          style={{
+            transform: isInView ? "none" : "translateX(-200px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+          }}
+        >
+        {children}
+      </div>
+    );
+  }
+
 const Carttecnologia = () => { 
 
-const { scrollYProgress } = useViewportScroll()
-const yPosAnim = useTransform(scrollYProgress, [0, 0.1, 1], [0, -500, 0])
-
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+  
 return( 
     <>
         <div className="container-fluid " id="content-galeria" >
@@ -51,13 +76,20 @@ return(
                         <p className="text-tecnologia" >Actúa frenando individualmente las ruedas en situaciones de riesgo para evitar derrapes.</p>
                     </div>
                 </div>
-
+                
                 <div className="row" >
-                    <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sin-padding-lr"  >
-                    <motion.img className="img-fluid" src={banner_tsn} width="100%" alt="Banner Tecnologia" style={{x: yPosAnim}} />
+                    <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sin-padding-lr" style={{
+          fontWeight: 300
+        }} >
+                    <Tecnologia>
+                        <div ref={ref} >   
+                            <img className="img-fluid bannertec" src={banner_tsn} width="100%" alt="Banner Tecnologia" />
+                        </div> 
+                    </Tecnologia>
                     </div>
                 </div>
                 
+
     </div>
     </>
 
