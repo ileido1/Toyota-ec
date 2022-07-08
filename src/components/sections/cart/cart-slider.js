@@ -31,7 +31,7 @@ export default function Cartslider() {
                 speed={1000}
                 autoplay={{
                     delay: 4500,
-                    disableOnInteraction: false,
+                    disableOnInteraction: true,
                 }}
                 modules={[Autoplay,Navigation]}
                 className="mySwiper"

@@ -7,6 +7,7 @@ import Header from './sections/Header'
 import Cart from './Cart'
 import Footer from './sections/Footer';
 import Home from './pages/home'
+
 import {
   BrowserRouter,
   Routes,
