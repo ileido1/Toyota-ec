@@ -1068,3 +1068,8 @@ ul.cart-item-caracteristicas {
 .swiper-button-prev:hover>.swiper-button-prev::after {
     color: #e50021 !important;
 }
+
+.sinpadding {   
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
