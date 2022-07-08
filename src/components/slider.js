@@ -29,7 +29,7 @@ export default function App() {
                 slidesPerView={1}
                 spaceBetween={0}
                 speed={1000}
-                draggable={true}
+
                 mousewheel={true}
                 modules={[Mousewheel]}
                 className="sliderqdr"
