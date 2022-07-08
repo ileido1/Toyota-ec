@@ -29,7 +29,7 @@ export default function MundoToyota() {
                                         <div ref={ref} style={{
                                             transform: isInView ? "none" : "translateX(-400px)",
                                             opacity: isInView ? 1 : 0,
-                                            transition: "all 0.8s cubic-bezier(0.17, 0.85, 0.85, 1) 1.5s"
+                                            transition: "all 0.8s cubic-bezier(0.17, 0.85, 0.85, 1) 2.5s"
                                         }}
 
                                             className="col-4">
@@ -40,7 +40,7 @@ export default function MundoToyota() {
                                         <div ref={ref} style={{
                                             transform: isInView ? "none" : "translateY(200px)",
                                             opacity: isInView ? 1 : 0,
-                                            transition: "all 0.8s cubic-bezier(0.17, 0.85, 0.85, 1) 1.5s"
+                                            transition: "all 0.8s cubic-bezier(0.17, 0.85, 0.85, 1) 2.5s"
                                         }}
 
                                             className="col-4 centrar" >
@@ -50,7 +50,7 @@ export default function MundoToyota() {
                                             ref={ref} style={{
                                                 transform: isInView ? "none" : "translateX(400px)",
                                                 opacity: isInView ? 1 : 0,
-                                                transition: "all 0.8s cubic-bezier(0.17, 0.85, 0.85, 1) 1.5s"
+                                                transition: "all 0.8s cubic-bezier(0.17, 0.85, 0.85, 1) 2.5s"
                                             }}
                                         >
                                             <img src={'https://backend-toyota.247.com.ec/' + c.imagen_square_box_2} className="mundotoyotaimgsupd"></img>

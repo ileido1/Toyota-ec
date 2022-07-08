@@ -53,8 +53,8 @@ export default function App() {
                                         >
                                             <div className="col-6">
                                             </div>
-                                            <motion.div className="col-6 contenido-slider" initial={{ y: 200 }} transition={{ delay: 0.2, default: { duration: 0.5 } }}
-                                                whileInView={{ y: 0 }}
+                                            <motion.div className="col-6 contenido-slider" initial={{ y: 200, x: 50 }} transition={{ delay: 0.2, default: { duration: 0.5 } }}
+                                                whileInView={{ y: 0, x: 0 }}
                                                 viewport={{ once: true }}>
                                                 <h1 className="Tbanner rojo">{c.titulo_slider_qdr}</h1>
                                                 <h2 className="Textobanner">

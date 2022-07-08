@@ -469,6 +469,7 @@ ul#menu-galeria>li>span {
 .mySwipercar {
     background-size: cover;
     background-position: center;
+    margin-bottom: 120px;
 }
 
 .mySwipercar .swiper-wrapper {
@@ -981,6 +982,11 @@ ul.cart-item-caracteristicas {
     width: 30%;
 }
 
+.sliderqdr {
+
+    margin-bottom: 120px;
+}
+
 .supcarslider {
 
     /* display: flex; */
@@ -1069,7 +1075,7 @@ ul.cart-item-caracteristicas {
     color: #e50021 !important;
 }
 
-.sinpadding {   
+.sinpadding {
     padding-left: 0px !important;
     padding-right: 0px !important;
 }
