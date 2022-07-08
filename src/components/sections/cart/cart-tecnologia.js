@@ -28,7 +28,8 @@ function Tecnologia({ children }) {
         {children}
       </div>
     );
-  }
+
+}
 
 const Carttecnologia = () => { 
 
@@ -73,14 +74,12 @@ return(
                 </div>
                 
                 <div className="row" >
-                    <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sinpadding" style={{
-          fontWeight: 300
-        }} >
-                    <Tecnologia>
-                        <div ref={ref} >   
-                            <img className="img-fluid bannertec" src={banner_tsn} width="100%" alt="Banner Tecnologia" />
-                        </div> 
-                    </Tecnologia>
+                    <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sinpadding" style={{ fontWeight: 300 }} >
+                        <Tecnologia>
+                            <div ref={ref} >   
+                                <img className="img-fluid bannertec" src={banner_tsn} width="100%" alt="Banner Tecnologia" />
+                            </div> 
+                        </Tecnologia>
                     </div>
                 </div>
                 
