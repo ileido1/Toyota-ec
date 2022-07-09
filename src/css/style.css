@@ -1095,3 +1095,10 @@ ul.cart-item-caracteristicas {
 .cart-item-caracteristicas > li{
     list-style: none;
 }
+
+.circulo-color{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: block;
+}

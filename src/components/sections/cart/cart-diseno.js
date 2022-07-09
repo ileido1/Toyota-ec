@@ -43,6 +43,9 @@ let hex_dc_vehiculo_color_4 =''
 let imagen_dc_vehiculo_color_5 =''
 let hex_dc_vehiculo_color_5 =''
 
+let imagen_dc_vehiculo_color_6 =''
+let hex_dc_vehiculo_color_6 =''
+
 const Cartdiseno = () => { 
 
     let url_api = 'v1/vehicle_data_sheet'
@@ -92,6 +95,9 @@ const Cartdiseno = () => {
 
             imagen_dc_vehiculo_color_5 = url_backend+v.imagen_dc_vehiculo_color_5
             hex_dc_vehiculo_color_5 = v.hex_dc_vehiculo_color_5
+            
+            imagen_dc_vehiculo_color_6 = url_backend+v.imagen_dc_vehiculo_color_6
+            hex_dc_vehiculo_color_6 = v.hex_dc_vehiculo_color_6
       
             
             }
@@ -119,7 +125,7 @@ return (
                     </div>
 
                     <div className="content-descarga">
-                        <img src={documento} width="28px" className=" " alt="Boton descarga PDF" /> <span className="text-descargar-catalogo" >{texto_pdf_dc_vehiculo}</span>
+                        <img src={documento} width="28px" className=" " alt="Boton descarga PDF" /> <span className="text-descargar-catalogo" > DESCARGAR CATALOGO</span>
                     </div>
 
                 </div>
@@ -134,23 +140,22 @@ return (
             </div>
             <div className="row pd50" >
                 <div className="col-2">
-                    <span className="circulo-color" ></span>
-                    <img className="icono-color" data-auto={raize_negro}  src={negro} width="50px" alt="Negro" onClick={cambiarAuto} />
+                    <span className="circulo-color icono-color" data-auto={raize_negro} style={{background: hex_dc_vehiculo_color_1 }} onClick={cambiarAuto} ></span>                   
                 </div>
                 <div className="col-2">
-                    <img className="icono-color" data-auto={raize_gris}  src={gris} width="50px" alt="Gris" onClick={cambiarAuto} />
+                    <span className="circulo-color icono-color" data-auto={raize_gris} style={{background: hex_dc_vehiculo_color_2 }} onClick={cambiarAuto} ></span> 
                 </div>
                 <div className="col-2">
-                    <img className="icono-color" data-auto={raize_plata}  src={plata} width="50px" alt="Plata" onClick={cambiarAuto} />
+                    <span className="circulo-color icono-color" data-auto={raize_plata} style={{background: hex_dc_vehiculo_color_3 }} onClick={cambiarAuto} ></span> 
                 </div>
                 <div className="col-2">
-                    <img className="icono-color" data-auto={raize_blanco}  src={blanco} width="50px" alt="Blanco" onClick={cambiarAuto} />
+                    <span className="circulo-color icono-color" data-auto={raize_blanco} style={{background: hex_dc_vehiculo_color_4 }} onClick={cambiarAuto} ></span> 
                 </div>
                 <div className="col-2">
-                    <img className="icono-color" data-auto={raize_turquesa}  src={turquesa} width="50px" alt="Turquesa" onClick={cambiarAuto} />
+                    <span className="circulo-color icono-color" data-auto={raize_turquesa} style={{background: hex_dc_vehiculo_color_5 }} onClick={cambiarAuto} ></span> 
                 </div>
                 <div className="col-2">
-                    <img className="icono-color" data-auto={raize_rojo} src={rojo} width="50px" alt="Rojo" onClick={cambiarAuto} />
+                    <span className="circulo-color icono-color" data-auto={raize_rojo} style={{background: hex_dc_vehiculo_color_6 }} onClick={cambiarAuto} ></span> 
                 </div>
             </div>
         </div>
