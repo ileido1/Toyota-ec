@@ -30,8 +30,8 @@ export default function Cartslider() {
                 navigation={true}
                 speed={1000}
                 autoplay={{
-                    delay: 4500,
-                    disableOnInteraction: true,
+                    delay: 4000,
+                    disableOnInteraction: false,
                 }}
                 modules={[Autoplay,Navigation]}
                 className="mySwiper"
@@ -45,14 +45,14 @@ export default function Cartslider() {
                         <>
                               <SwiperSlide>
                               {({ isActive }) => (
-                                <div className="container-fluid contenedor " style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas})` }} >
+                                <div id="content-feature" className="container-fluid contenedor " style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas})` }} >
                                     <div className="mtopbanner">
                                         <div className="row" >
                                             <div className="col-3">
                                 
-                                            { isActive && <motion.p className="cart-titulo-caracteristicas" initial="hidden" animate="visible" variants={variants} transition={{ delay: 1.5, default: { duration: 0.8 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} >{c.titulo_potencia}</motion.p> }
+                                            { isActive && <motion.p className="cart-titulo-caracteristicas" variants={variants} transition={{ delay: 1.5, default: { duration: 0.8 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} >{c.titulo_potencia}</motion.p> }
                                              
-                                            { isActive && <motion.p className="cart-texto-caracteristicas" initial="hidden" animate="visible" variants={variants} transition={{ delay: 1.5, default: { duration: 0.8 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} >{c.texto_potencia}</motion.p> }
+                                            { isActive && <motion.p className="cart-texto-caracteristicas"variants={variants} transition={{ delay: 1.5, default: { duration: 0.8 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} >{c.texto_potencia}</motion.p> }
                                                 
                                             </div>
                                             <div className="col-6">

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import useFetch from "../../../hooks/useFetch";
+import { useLocation } from 'react-router-dom';
 
 /* end web service */
 
@@ -11,7 +12,31 @@ import hac from "../../../images/icon-hac-white.svg"
 import frenos from "../../../images/freno-de-disco.svg"
 import motor from "../../../images/motor.svg"
 
+import { motion } from "framer-motion"
+
+let url_backend = 'https://backend-toyota.247.com.ec'
+
 export default function Cartslider() {
+
+    let url_api = 'v1/vehicle_data_sheet'
+    const [respuesta, error] = useFetch(url_api);
+    let video = ''
+    const location = useLocation()
+
+    if(respuesta){
+                            
+        respuesta.map(c => { 
+                //console.log(('/' + c.name_vehicle.toLowerCase()))
+                if ( ('/' + c.name_vehicle.toLowerCase()) == location.pathname ){
+                    video = c.video_vehicle
+                }
+                                    
+                console.log('nothing to do','/' + c.name_vehicle.toLowerCase())
+
+            }
+        )
+        
+    }
  
     return (
 <> 
@@ -21,7 +46,7 @@ export default function Cartslider() {
             <div className="row">
                 <div className="col-12 col-sm-12 content-video"  >
                     <video width="100%" autoPlay muted loop controls="0" >
-                        <source src={video} type="video/mp4" />
+                        <source src={url_backend+video} type="video/mp4" />
                         Your browser does not support HTML video.
                     </video>
                 </div>
@@ -31,7 +56,7 @@ export default function Cartslider() {
                 <div className="col-6">
                     <div className="content_features" id="content-features" >
                         <div className="row">
-                            <div className="col-6 col-sm-6 border-right-filled">
+                            <motion.div  transition={{ delay: 0.5, default: { duration: 0.8 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} className="col-6 col-sm-6 border-right-filled">
                                 <div className="row">
                                     <div className="col-12">
                                         <p className="titulo-feature animated fadeInLeft delay2 duration4" >VERSIONES</p>
@@ -63,9 +88,9 @@ export default function Cartslider() {
                                     </div>
 
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <div className="col-6">
+                            <motion.div transition={{ delay: 1, default: { duration: 0.8 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} className="col-6">
                                 <div className="row">
                                     <div className="col-12">
                                         <p className="titulo-feature " > </p>
@@ -97,7 +122,7 @@ export default function Cartslider() {
                                     </div>
 
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
