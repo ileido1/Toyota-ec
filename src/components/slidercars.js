@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useMemo, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import useFetch from "../hooks/useFetch";
@@ -14,7 +14,22 @@ import "swiper/css/navigation";
 export default function Sliderscars() {
     let llenarbanner = 'home/carousel'
     const [banner, error] = useFetch(llenarbanner);
+    const [categories, error2] = useFetch(llenarbanner);
+    const menuItems = [...new Set(categories.map((Val) => Val.categoria_del_vehiculo))];
+    const [selectedCategory, setSelectedCategory] = useState();
     const [background, setBackground] = useState('');
+
+    function handleCategoryChange(event) {
+        setSelectedCategory(event.currentTarget.textContent);
+    }
+
+    function getFilteredList() {
+        if (!selectedCategory) {
+            return banner;
+        }
+        return banner.filter((item) => item.categoria_del_vehiculo === selectedCategory);
+    }
+    var filteredList = useMemo(getFilteredList, [selectedCategory, banner]);
     return (
         <>
             <div className="supcarslider">
@@ -22,22 +37,26 @@ export default function Sliderscars() {
 
                 <h1 className="h1Conoce">CONOCE NUESTROS VEHÍCULOS</h1>
                 <ul className="nav nav-tabs ">
-                    <li className="nav-item">
-                        <a className="nav-link " aria-current="page" href="#">Automoviles</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link active" href="#">SUV</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">HÍBRIDOS</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">CAMIONETAS</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">EXONERADOS</a>
-                    </li>
+                    <>
+                        {
+                            menuItems ? (
+                                <>
+                                    {
 
+                                        menuItems.map(c => (
+
+                                            <li className="nav-item">
+                                                <a className="nav-link " aria-current="page" onClick={handleCategoryChange}  >{c}</a>
+                                            </li>
+                                        )
+                                        )
+                                    }
+                                </>
+                            ) : (
+                                <span> Cargando...</span>
+                            )
+                        }
+                    </>
                 </ul>
             </div>
             <Swiper
@@ -52,9 +71,9 @@ export default function Sliderscars() {
 
             >
                 {
-                    banner ? (
+                    filteredList ? (
                         <>
-                            {banner.map((c, i) => (
+                            {filteredList.map((c, i) => (
                                 <SwiperSlide className="slider-cars" >
                                     {({ isActive }) => (
 

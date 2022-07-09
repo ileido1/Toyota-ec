@@ -19,6 +19,7 @@ export default function Bannerhome() {
     let llenarbanner = 'home/banner'
     const [banner, error] = useFetch(llenarbanner);
 
+
     const [lastyPos, setLastYPost] = useState(0);
     const [Actions, SetActions] = useState(true);
     useEffect(() => {
