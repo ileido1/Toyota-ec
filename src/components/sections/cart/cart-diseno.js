@@ -1,4 +1,6 @@
-import logo_raize_2 from "../../../images/diseno/logo-raize.svg"
+import useFetch from "../../../hooks/useFetch";
+import { useLocation } from 'react-router-dom';
+
 import documento from "../../../images/diseno/icono-documento.svg"
 
 import negro from "../../../images/diseno/negro.svg"
@@ -15,7 +17,89 @@ import raize_blanco from "../../../images/diseno/raize-blanco.png"
 import raize_turquesa from "../../../images/diseno/raize-turquesa.png"
 import raize_rojo from "../../../images/diseno/raize-rojo.png"
 
-const Cartdiseno = () => (
+let url_backend = 'https://backend-toyota.247.com.ec'
+
+let logo_dc_vehiculo =''
+let texto_dc_vechiculo =''
+
+let texto_boton_dc_vehiculo =''
+let url_boton_dc_vechiculo =''
+
+let texto_pdf_dc_vehiculo =''
+let url_pdf_dc_vehiculo =''
+
+let imagen_dc_vehiculo_color_1 =''
+let hex_dc_vehiculo_color_1 =''
+
+let imagen_dc_vehiculo_color_2 =''
+let hex_dc_vehiculo_color_2 =''
+
+let imagen_dc_vehiculo_color_3 =''
+let hex_dc_vehiculo_color_3 =''
+
+let imagen_dc_vehiculo_color_4 =''
+let hex_dc_vehiculo_color_4 =''
+
+let imagen_dc_vehiculo_color_5 =''
+let hex_dc_vehiculo_color_5 =''
+
+const Cartdiseno = () => { 
+
+    let url_api = 'v1/vehicle_data_sheet'
+    const [respuesta, error] = useFetch(url_api);
+    let url_detalle = ''
+    const location = useLocation()
+
+    if(respuesta){
+                            
+        respuesta.map(c => { 
+                
+                if ( ('/' + c.name_vehicle.toLowerCase()) == location.pathname ){
+                    url_detalle = 'v1/diseno_color_vehicle/'+ c.diseno_color_vehicle
+                }
+                                    
+            }
+        )
+        
+    }
+
+    const [detalle, error_detalle] = useFetch(url_detalle);
+
+    if(detalle){
+        console.log(detalle)
+        detalle.map(v => { 
+                
+            logo_dc_vehiculo = url_backend+v.logo_dc_vehiculo
+            texto_dc_vechiculo = v.texto_dc_vehiculo
+
+            texto_boton_dc_vehiculo = v.texto_boton_dc_vehiculo
+            url_boton_dc_vechiculo = v.url_boton_dc_vechiculo
+
+            texto_pdf_dc_vehiculo = url_backend+v.texto_pdf_dc_vehiculo
+            url_pdf_dc_vehiculo = v.url_pdf_dc_vehiculo
+
+            imagen_dc_vehiculo_color_1 = url_backend+v.imagen_dc_vehiculo_color_1
+            hex_dc_vehiculo_color_1 = v.hex_dc_vehiculo_color_1
+
+            imagen_dc_vehiculo_color_2 = url_backend+v.imagen_dc_vehiculo_color_2
+            hex_dc_vehiculo_color_2 = v.hex_dc_vehiculo_color_2
+
+            imagen_dc_vehiculo_color_3 = url_backend+v.imagen_dc_vehiculo_color_3
+            hex_dc_vehiculo_color_3 = v.hex_dc_vehiculo_color_3  
+
+            imagen_dc_vehiculo_color_4 = url_backend+v.imagen_dc_vehiculo_color_4
+            hex_dc_vehiculo_color_4 = v.hex_dc_vehiculo_color_4
+
+            imagen_dc_vehiculo_color_5 = url_backend+v.imagen_dc_vehiculo_color_5
+            hex_dc_vehiculo_color_5 = v.hex_dc_vehiculo_color_5
+      
+            
+            }
+        )
+        
+    }
+
+return ( 
 <>
 <div className="container-fluid " id="content-diseno" >
 <div className="row"  >
@@ -25,17 +109,17 @@ const Cartdiseno = () => (
 
                     <div className="content-text">
 
-                        <img src={logo_raize_2} width="200px" alt="" className="  " />
-                        <p className="text-cotizar " > El nuevo Toyota Raize llega para expresar la energía y fuerza de quien lo conduce.</p>
+                        <img src={logo_dc_vehiculo} width="200px" alt="" className="  " />
+                        <p className="text-cotizar " > {texto_dc_vechiculo} </p>
 
                     </div>
 
                     <div className="content-cotizar">
-                        <a href="#" className="btn btn-cotizar " >COTIZAR</a>
+                        <a href={url_boton_dc_vechiculo} className="btn btn-cotizar " >{texto_boton_dc_vehiculo}</a>
                     </div>
 
                     <div className="content-descarga">
-                        <img src={documento} width="28px" className="  " alt="" /> <span className="text-descargar-catalogo" >DESCARGAR CATÁLOGO</span>
+                        <img src={documento} width="28px" className=" " alt="Boton descarga PDF" /> <span className="text-descargar-catalogo" >{texto_pdf_dc_vehiculo}</span>
                     </div>
 
                 </div>
@@ -50,7 +134,8 @@ const Cartdiseno = () => (
             </div>
             <div className="row pd50" >
                 <div className="col-2">
-                    <img className="icono-color"  data-auto={raize_negro}  src={negro} width="50px" alt="Negro" onClick={cambiarAuto} />
+                    <span className="circulo-color" ></span>
+                    <img className="icono-color" data-auto={raize_negro}  src={negro} width="50px" alt="Negro" onClick={cambiarAuto} />
                 </div>
                 <div className="col-2">
                     <img className="icono-color" data-auto={raize_gris}  src={gris} width="50px" alt="Gris" onClick={cambiarAuto} />
@@ -72,8 +157,8 @@ const Cartdiseno = () => (
     </div>
 </div>
 </>
-
-)
+);
+}
 
 export default Cartdiseno;
 

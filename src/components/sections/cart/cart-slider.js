@@ -61,11 +61,11 @@ export default function Cartslider() {
                                                 
                                             </div>
                                             <div className="col-3">
-                                            { isActive && <motion.ul className="cart-item-caracteristicas" variants={variants} transition={{ delay: 1.5, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} >
-                                                    <li>{c.items_potencia[0]}</li>
-                                                    <li>{c.items_potencia[1]}</li>
-                                                    <li>{c.items_potencia[2]}</li>
-                                                    <li>{c.items_potencia[3]}</li>
+                                            { isActive && <motion.ul className="cart-item-caracteristicas fa-ul" variants={variants} transition={{ delay: 1.5, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} >
+                                                    <li><span class="fa-li"><i class="fa-solid fa-check"></i></span> {c.items_potencia[0]}</li>
+                                                    <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>  {c.items_potencia[1]}</li>
+                                                    <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>  {c.items_potencia[2]}</li>
+                                                    <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>  {c.items_potencia[3]}</li>
                                                 </motion.ul> }
                                                 
                                             </div>
@@ -93,11 +93,11 @@ export default function Cartslider() {
                                                 
                                             </div>
                                             <div className="col-3">
-                                            { isActive && <motion.ul className="cart-item-caracteristicas" variants={variants} transition={{ delay: 1.5, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} >
-                                                    <li>{c.items_seguridad[0]}</li>
-                                                    <li>{c.items_seguridad[1]}</li>
-                                                    <li>{c.items_seguridad[2]}</li>
-                                                    <li>{c.items_seguridad[3]}</li>
+                                            { isActive && <motion.ul className="cart-item-caracteristicas fa-ul" variants={variants} transition={{ delay: 1.5, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} >
+                                                    <li><span class="fa-li"><i class="fa-solid fa-check"></i></span> {c.items_seguridad[0]}</li>
+                                                    <li><span class="fa-li"><i class="fa-solid fa-check"></i></span> {c.items_seguridad[1]}</li>
+                                                    <li><span class="fa-li"><i class="fa-solid fa-check"></i></span> {c.items_seguridad[2]}</li>
+                                                    <li><span class="fa-li"><i class="fa-solid fa-check"></i></span> {c.items_seguridad[3]}</li>
                                                 </motion.ul> }
                                                 
                                             </div>
@@ -126,11 +126,11 @@ export default function Cartslider() {
                                                 
                                             </div>
                                             <div className="col-3">
-                                            { isActive && <motion.ul className="cart-item-caracteristicas" variants={variants} transition={{ delay: 1.5, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }}  >
-                                                    <li>{c.items_equipamento_exterior[0]}</li>
-                                                    <li>{c.items_equipamento_exterior[1]}</li>
-                                                    <li>{c.items_equipamento_exterior[2]}</li>
-                                                    <li>{c.items_equipamento_exterior[3]}</li>
+                                            { isActive && <motion.ul className="cart-item-caracteristicas fa-ul" variants={variants} transition={{ delay: 1.5, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }}  >
+                                                    <li><span class="fa-li"><i class="fa-solid fa-check"></i></span> {c.items_equipamento_exterior[0]}</li>
+                                                    <li><span class="fa-li"><i class="fa-solid fa-check"></i></span> {c.items_equipamento_exterior[1]}</li>
+                                                    <li><span class="fa-li"><i class="fa-solid fa-check"></i></span> {c.items_equipamento_exterior[2]}</li>
+                                                    <li><span class="fa-li"><i class="fa-solid fa-check"></i></span> {c.items_equipamento_exterior[3]}</li>
                                                 </motion.ul> }
                                                 
                                             </div>
@@ -158,11 +158,11 @@ export default function Cartslider() {
                                                 
                                             </div>
                                             <div className="col-3">
-                                            { isActive && <motion.ul className="cart-item-caracteristicas"  initial="hidden" animate="visible" variants={variants} transition={{ delay: 0.5, default: { duration: 1 }, }} >
-                                                    <li className="fuente-blanco" >{c.items_equipamento_interior[0]}</li>
-                                                    <li className="fuente-blanco" >{c.items_equipamento_interior[1]}</li>
-                                                    <li className="fuente-blanco" >{c.items_equipamento_interior[2]}</li>
-                                                    <li className="fuente-blanco" >{c.items_equipamento_interior[3]}</li>
+                                            { isActive && <motion.ul className="cart-item-caracteristicas fa-ul"  initial="hidden" animate="visible" variants={variants} transition={{ delay: 0.5, default: { duration: 1 }, }} >
+                                                    <li className="fuente-blanco" ><span class="fa-li"><i class="fa-solid fa-check"></i></span> {c.items_equipamento_interior[0]}</li>
+                                                    <li className="fuente-blanco" ><span class="fa-li"><i class="fa-solid fa-check"></i></span> {c.items_equipamento_interior[1]}</li>
+                                                    <li className="fuente-blanco" ><span class="fa-li"><i class="fa-solid fa-check"></i></span> {c.items_equipamento_interior[2]}</li>
+                                                    <li className="fuente-blanco" ><span class="fa-li"><i class="fa-solid fa-check"></i></span> {c.items_equipamento_interior[3]}</li>
                                                 </motion.ul> }
                                                 
                                             </div>

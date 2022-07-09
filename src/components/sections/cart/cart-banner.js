@@ -11,8 +11,12 @@ import motor from "../../../images/motor.svg"
 import { motion } from "framer-motion"
 
 let url_backend = 'https://backend-toyota.247.com.ec'
+
 let logo_modelo_1 = ""
 let texto_modelo_1 = ""
+
+let logo_modelo_2 = ""
+let texto_modelo_2 = ""
 
 let uno_icono_versiones = ''
 let uno_titulo_versiones = ''
@@ -70,6 +74,9 @@ export default function Cartslider() {
             tres_icono_versiones = url_backend+v.tres_icono_versiones
             tres_titulo_versiones = v.tres_titulo_versiones
 
+            logo_modelo_2= url_backend+v.b_logo_versiones
+            texto_modelo_2 = v.b_texto_versiones            
+
             cuatro_icono_versiones = url_backend+v.cuatro_icono_versiones
             cuatro_titulo_versiones = v.cuatro_titulo_versiones
 
@@ -109,20 +116,20 @@ export default function Cartslider() {
                                 <div className="row">
                                     <div className="col-12">
                                         <p className="titulo-feature animated fadeInLeft delay2 duration4" >VERSIONES</p>
-                                        <img className="img-logo-feature " src={logo_modelo_1} alt="Logo Raize" /><span className="text-feature-version " > 4X2 TM</span>
+                                        <img className="img-logo-feature " src={logo_modelo_1} alt="Logo Raize" /><span className="text-feature-version " ></span>
                                         <p className="text-feature ">{texto_modelo_1}</p>
                                     </div>
 
                                     <div className="col-4 ">
-                                        <img className="img-icono-feature" src={uno_icono_versiones} alt="Hac" />
+                                        <img className="img-icono-feature" src={uno_icono_versiones} alt={uno_titulo_versiones} />
 
                                     </div>
                                     <div className="col-4 ">
-                                        <img className="img-icono-feature-frenos" src={dos_icono_versiones} alt="Frenos" />
+                                        <img className="img-icono-feature-frenos" src={dos_icono_versiones} alt={dos_titulo_versiones} />
 
                                     </div>
                                     <div className="col-4 ">
-                                        <img className="img-icono-feature-motor" src={tres_icono_versiones} alt="Motor" />
+                                        <img className="img-icono-feature-motor" src={tres_icono_versiones} alt={tres_titulo_versiones} />
 
                                     </div>
 
@@ -139,35 +146,33 @@ export default function Cartslider() {
                                 </div>
                             </motion.div>
 
-                            <motion.div transition={{ delay: 1, default: { duration: 0.8 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} className="col-6">
+                            <motion.div transition={{ delay: 1, default: { duration: 0.8 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} className="col-6 padding-logo-versiones ">
                                 <div className="row">
                                     <div className="col-12">
-                                        <p className="titulo-feature " > </p>
-                                        <br></br>
-                                        <br></br>
-                                        <img className="img-logo-feature " src={logo_raize} alt="Logo Raize" /><span className="text-feature-version " > 4X2CVT</span>
-                                        <p className="text-feature animated fadeInLeft delay4 duration4">Transmisión automática CVT Compacta, para una alta eficiencia mecánica. con 7 relaciones de cambio simuladas</p>
+ 
+                                        <img className="img-logo-feature " src={logo_modelo_2} alt="Logo Automovil" /><span className="text-feature-version " > </span>
+                                        <p className="text-feature animated fadeInLeft delay4 duration4">{texto_modelo_2}</p>
                                     </div>
 
                                     <div className="col-4 animated ">
-                                        <img className="img-icono-feature" src={hac} alt="Hac" />
+                                        <img className="img-icono-feature" src={cuatro_icono_versiones} alt={cuatro_titulo_versiones} />
 
                                     </div>
                                     <div className="col-4 animated ">
-                                        <img className="img-icono-feature-frenos" src={frenos} alt="Frenos" />
+                                        <img className="img-icono-feature-frenos" src={cinco_icono_versiones} alt={cinco_titulo_versiones} />
                                     </div>
                                     <div className="col-4 animated ">
-                                        <img className="img-icono-feature-motor" src={motor} alt="Motor" />
+                                        <img className="img-icono-feature-motor" src={seis_icono_versiones} alt={seis_titulo_versiones} />
                                     </div>
 
                                     <div className="col-4 ">
-                                        <p className="subtext-feature animated " >Arranque en Pendiente HAC</p>
+                                        <p className="subtext-feature animated " >{cuatro_titulo_versiones}</p>
                                     </div>
                                     <div className="col-4 ">
-                                        <p className="subtext-feature animated " >Frenos ABC + EBD</p>
+                                        <p className="subtext-feature animated " >{cinco_titulo_versiones}</p>
                                     </div>
                                     <div className="col-4 ">
-                                        <p className="subtext-feature animated " >Motor 1.2Lt</p>
+                                        <p className="subtext-feature animated " >{seis_titulo_versiones}</p>
                                     </div>
 
                                 </div>

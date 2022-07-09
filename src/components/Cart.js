@@ -10,7 +10,7 @@ import Carttest from "./sections/cart/cart-test"
 
 const Cart = () => (
     <>
-        <Carttest />
+        
         <Cartmenu />
         <Cartbanner />
         <Cartexonerados />
