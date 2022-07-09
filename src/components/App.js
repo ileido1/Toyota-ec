@@ -27,6 +27,7 @@ const App = () => {
         <Header></Header>
         <Routes>
           <Route path="/raize" element={<Cart />} />
+          <Route path="/rav4" element={<Cart />} />
           <Route path="/" element={<Home />} />
         </Routes>
         {
@@ -40,7 +41,7 @@ const App = () => {
                   />
                 }
                 )
-                
+
               }
             </section>
           ) : (
