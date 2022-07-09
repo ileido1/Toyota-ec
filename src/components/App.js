@@ -26,7 +26,8 @@ const App = () => {
       <BrowserRouter>
         <Header></Header>
         <Routes>
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/raize" element={<Cart />} />
+          <Route path="/rav4" element={<Cart />} />
           <Route path="/" element={<Home />} />
         </Routes>
         {
@@ -40,6 +41,7 @@ const App = () => {
                   />
                 }
                 )
+
               }
             </section>
           ) : (

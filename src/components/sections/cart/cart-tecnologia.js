@@ -38,7 +38,7 @@ const Carttecnologia = () => {
   
 return( 
     <>
-        <div className="container-fluid " id="content-galeria" >
+        <div className="container-fluid " id="tecnologia" >
 
                 <div className="row mt40" id="tecnologia " >
                     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sinpadding" >
