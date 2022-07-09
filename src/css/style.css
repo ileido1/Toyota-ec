@@ -469,6 +469,7 @@ ul#menu-galeria>li>span {
 .mySwipercar {
     background-size: cover;
     background-position: center;
+    margin-bottom: 120px;
 }
 
 .mySwipercar .swiper-wrapper {
@@ -894,7 +895,8 @@ a#btn-cotizar {
 
 .cart-titulo-caracteristicas {
     font-family: 'Radikal-Bold';
-    font-size: 44px;
+    font-size: 64px;
+    text-transform: uppercase;
     font-weight: bold;
 }
 
@@ -910,6 +912,15 @@ ul.cart-item-caracteristicas {
 
 .mundotoyota {
     font-size: 150px;
+    z-index: 99999;
+    text-align: center;
+    font-family: 'Novecentos-DemiBold';
+    text-transform: uppercase;
+    color: #E20B2A;
+}
+
+.mundotoyotapequeno {
+    font-size: 40px;
     z-index: 99999;
     text-align: center;
     font-family: 'Novecentos-DemiBold';
@@ -969,6 +980,11 @@ ul.cart-item-caracteristicas {
 
 .logocarroprev {
     width: 30%;
+}
+
+.sliderqdr {
+
+    margin-bottom: 120px;
 }
 
 .supcarslider {
@@ -1061,4 +1077,9 @@ ul.cart-item-caracteristicas {
 
 .border-right-filled{
     border-right: 3px solid #ffffff;
+} 
+
+.sinpadding {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }

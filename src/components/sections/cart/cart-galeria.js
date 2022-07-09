@@ -36,13 +36,13 @@ class Cartgaleria extends Component {
         <>
         <div className="container-fluid " id="content-galeria" >
             <div className="row ">
-                <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-galeria" >
+                <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-galeria sinpadding" >
                     <p className="text-color-diseno2 secciones-subtitulos" >GALERIA RAIZE</p>
                 </div>
             </div>
 
             <div className="row">
-                <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pestana-galeria"  >
+                <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pestana-galeria sinpadding"  >
                     <ul id="menu-galeria" >
                         <li> <span id="automovil-video cp" onClick={videoGaleria} >VIDEO</span> </li>
                         <li> <span id="automovil-exterior cp" onClick={exteriorGaleria} >EXTERIOR</span> </li>
@@ -53,7 +53,7 @@ class Cartgaleria extends Component {
 
             <div className="row">
 
-                <div id="content-automovil-video" className="col-12 col-sm-12 content-automovil-video pestaba-cuerpo-galeria mostrar" >
+                <div id="content-automovil-video" className="col-12 col-sm-12 content-automovil-video pestaba-cuerpo-galeria mostrar sinpadding" >
                         <div>
                             <video width="100%" controls >
                                 <source src={video_galeria_play} type="video/mp4" />
