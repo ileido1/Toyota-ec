@@ -1021,6 +1021,10 @@ ul.cart-item-caracteristicas {
     margin-right: 16px;
 }
 
+.nav-tabs .nav-link:hover {
+    color: #E20B2A;
+}
+
 .fondoqdr {
     background-size: contain;
     background-repeat: no-repeat;

@@ -1,4 +1,4 @@
-import React, { useRef, useMemo, useState } from "react";
+import React, { useRef, useMemo, useState, useEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import useFetch from "../hooks/useFetch";
@@ -15,8 +15,8 @@ export default function Sliderscars() {
     let llenarbanner = 'home/carousel'
     const [banner, error] = useFetch(llenarbanner);
     const [categories, error2] = useFetch(llenarbanner);
-    const menuItems = [...new Set(categories.map((Val) => Val.categoria_del_vehiculo))];
-    const [selectedCategory, setSelectedCategory] = useState();
+
+    const [selectedCategory, setSelectedCategory] = useState('');
     const [background, setBackground] = useState('');
 
     function handleCategoryChange(event) {
@@ -30,6 +30,8 @@ export default function Sliderscars() {
         return banner.filter((item) => item.categoria_del_vehiculo === selectedCategory);
     }
     var filteredList = useMemo(getFilteredList, [selectedCategory, banner]);
+
+
     return (
         <>
             <div className="supcarslider">
@@ -39,11 +41,13 @@ export default function Sliderscars() {
                 <ul className="nav nav-tabs ">
                     <>
                         {
-                            menuItems ? (
+
+                            categories ? (
                                 <>
                                     {
 
-                                        menuItems.map(c => (
+
+                                        [...new Set(categories.map((Val) => Val.categoria_del_vehiculo))].map(c => (
 
                                             <li className="nav-item">
                                                 <a className="nav-link " aria-current="page" onClick={handleCategoryChange}  >{c}</a>
