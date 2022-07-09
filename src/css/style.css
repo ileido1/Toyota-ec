@@ -805,7 +805,7 @@ a#btn-cotizar {
     max-width: 360px;
     margin-top: 30px;
     margin-bottom: 60px;
-    color: #fff;
+    color: #939292;
     cursor: pointer;
 }
 
@@ -1079,7 +1079,19 @@ ul.cart-item-caracteristicas {
     color: #e50021 !important;
 }
 
+.border-right-filled{
+    border-right: 3px solid #ffffff;
+} 
+
 .sinpadding {
     padding-left: 0px !important;
     padding-right: 0px !important;
+}
+
+.padding-logo-versiones{
+    padding-top: 65px;
+}
+
+.cart-item-caracteristicas > li{
+    list-style: none;
 }
