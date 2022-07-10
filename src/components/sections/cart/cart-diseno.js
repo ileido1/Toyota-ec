@@ -3,20 +3,6 @@ import { useLocation } from 'react-router-dom';
 
 import documento from "../../../images/diseno/icono-documento.svg"
 
-import negro from "../../../images/diseno/negro.svg"
-import plata from "../../../images/diseno/plata.svg"
-import gris from "../../../images/diseno/gris.svg"
-import blanco from "../../../images/diseno/blanco.svg"
-import turquesa from "../../../images/diseno/turquesa.svg"
-import rojo from "../../../images/diseno/rojo.svg"
-
-import raize_negro from "../../../images/diseno/raize-negro.png"
-import raize_gris from "../../../images/diseno/raize-gris.png"
-import raize_plata from "../../../images/diseno/raize-plata.png"
-import raize_blanco from "../../../images/diseno/raize-blanco.png"
-import raize_turquesa from "../../../images/diseno/raize-turquesa.png"
-import raize_rojo from "../../../images/diseno/raize-rojo.png"
-
 let url_backend = 'https://backend-toyota.247.com.ec'
 
 let logo_dc_vehiculo =''
@@ -69,16 +55,16 @@ const Cartdiseno = () => {
     const [detalle, error_detalle] = useFetch(url_detalle);
 
     if(detalle){
-        console.log(detalle)
+        
         detalle.map(v => { 
                 
             logo_dc_vehiculo = url_backend+v.logo_dc_vehiculo
             texto_dc_vechiculo = v.texto_dc_vehiculo
 
             texto_boton_dc_vehiculo = v.texto_boton_dc_vehiculo
-            url_boton_dc_vechiculo = v.url_boton_dc_vechiculo
+            url_boton_dc_vechiculo = v.url_boton_dc_vehiculo
 
-            texto_pdf_dc_vehiculo = url_backend+v.texto_pdf_dc_vehiculo
+            texto_pdf_dc_vehiculo = v.texto_pdf_dc_vehiculo
             url_pdf_dc_vehiculo = v.url_pdf_dc_vehiculo
 
             imagen_dc_vehiculo_color_1 = url_backend+v.imagen_dc_vehiculo_color_1
@@ -121,41 +107,41 @@ return (
                     </div>
 
                     <div className="content-cotizar">
-                        <a href={url_boton_dc_vechiculo} className="btn btn-cotizar " >{texto_boton_dc_vehiculo}</a>
+                        <a href={url_boton_dc_vechiculo} data-auto="cotizar-auto" className="btn btn-cotizar " >{texto_boton_dc_vehiculo}</a>
                     </div>
 
                     <div className="content-descarga">
-                        <img src={documento} width="28px" className=" " alt="Boton descarga PDF" /> <span className="text-descargar-catalogo" > DESCARGAR CATALOGO</span>
+                        <img src={documento} width="28px" className="" alt="Boton descarga PDF" /> <span className="text-descargar-catalogo" ><a href={url_pdf_dc_vehiculo} target="_blank" className="cart-link" >{texto_pdf_dc_vehiculo}</a> </span>
                     </div>
 
                 </div>
                 <div className="col-8">
-                    <img id="imagen-auto-diseno" className=" img-fluid   " src={raize_negro} alt="" />
+                    <img id="imagen-auto-diseno" className=" img-fluid "  src={imagen_dc_vehiculo_color_1} alt="" />
                 </div>
             </div>
             <div className="row">
                 <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <p className="text-color-diseno secciones-subtitulos" >COLOR</p>
+                    <p className="text-color-diseno secciones-subtitulos " id="titulo-colores" >COLOR</p>
                 </div>
             </div>
             <div className="row pd50" >
                 <div className="col-2">
-                    <span className="circulo-color icono-color" data-auto={raize_negro} style={{background: hex_dc_vehiculo_color_1 }} onClick={cambiarAuto} ></span>                   
+                    <span className="circulo-color icono-color" data-auto={imagen_dc_vehiculo_color_1} data-color={hex_dc_vehiculo_color_1} style={{background: hex_dc_vehiculo_color_1 }} onClick={cambiarAuto} ></span>                   
                 </div>
                 <div className="col-2">
-                    <span className="circulo-color icono-color" data-auto={raize_gris} style={{background: hex_dc_vehiculo_color_2 }} onClick={cambiarAuto} ></span> 
+                    <span className="circulo-color icono-color" data-auto={imagen_dc_vehiculo_color_2} data-color={hex_dc_vehiculo_color_2} style={{background: hex_dc_vehiculo_color_2 }} onClick={cambiarAuto} ></span> 
                 </div>
                 <div className="col-2">
-                    <span className="circulo-color icono-color" data-auto={raize_plata} style={{background: hex_dc_vehiculo_color_3 }} onClick={cambiarAuto} ></span> 
+                    <span className="circulo-color icono-color" data-auto={imagen_dc_vehiculo_color_3} data-color={hex_dc_vehiculo_color_3} style={{background: hex_dc_vehiculo_color_3 }} onClick={cambiarAuto} ></span> 
                 </div>
                 <div className="col-2">
-                    <span className="circulo-color icono-color" data-auto={raize_blanco} style={{background: hex_dc_vehiculo_color_4 }} onClick={cambiarAuto} ></span> 
+                    <span className="circulo-color icono-color" data-auto={imagen_dc_vehiculo_color_4}  data-color={hex_dc_vehiculo_color_4} style={{background: hex_dc_vehiculo_color_4 }} onClick={cambiarAuto} ></span> 
                 </div>
                 <div className="col-2">
-                    <span className="circulo-color icono-color" data-auto={raize_turquesa} style={{background: hex_dc_vehiculo_color_5 }} onClick={cambiarAuto} ></span> 
+                    <span className="circulo-color icono-color" data-auto={imagen_dc_vehiculo_color_5}  data-color={hex_dc_vehiculo_color_5} style={{background: hex_dc_vehiculo_color_5 }} onClick={cambiarAuto} ></span> 
                 </div>
                 <div className="col-2">
-                    <span className="circulo-color icono-color" data-auto={raize_rojo} style={{background: hex_dc_vehiculo_color_6 }} onClick={cambiarAuto} ></span> 
+                    <span className="circulo-color icono-color" data-auto={imagen_dc_vehiculo_color_6}  data-color={hex_dc_vehiculo_color_6} style={{background: hex_dc_vehiculo_color_6 }} onClick={cambiarAuto} ></span> 
                 </div>
             </div>
         </div>
@@ -168,7 +154,14 @@ return (
 export default Cartdiseno;
 
 function cambiarAuto(e){
-    var imagen = e.target.dataset.auto   
+    
+    var imagen = e.target.dataset.auto
+    var color = e.target.dataset.color
     var automovil = document.getElementById('imagen-auto-diseno')
+    automovil.setAttribute('style', 'transition:all 0.5s 0s ease','-webkit-transition: all 0.5s 0s ease','-moz-transition: all 0.5s 0s ease','-o-transition: all 0.5s 0s ease');
+    var titulo_colores = document.getElementById('titulo-colores')
     automovil.src = imagen
+    titulo_colores.setAttribute('style', 'color: '+color);
+    
+
 }

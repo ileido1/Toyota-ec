@@ -27,7 +27,7 @@ function Video(){
 
     useEffect(() => {    
         videoRef.current?.load();
-      }, [video]);
+    }, [video]);
 
    return(
         <>

@@ -1,9 +1,6 @@
 import useFetch from "../../../hooks/useFetch";
 import { useLocation } from 'react-router-dom';
 
-import logo_exonerados from '../../../images/exonerados/logo-exonerados.svg'
-import raize_exonerados from '../../../images/exonerados/raize-exonerados.png'
-
 import { motion } from "framer-motion"
 
 import React, { useEffect, useRef, useState } from "react";
@@ -13,11 +10,7 @@ const variants = {
     visible: { opacity: 1 },
 }
 
-
-
-
 let url_backend = 'https://backend-toyota.247.com.ec'
-
 
 export default function Cartexonerados() {
     
@@ -37,7 +30,7 @@ export default function Cartexonerados() {
         respuesta.map(c => { 
                 
                 if ( ('/' + c.name_vehicle.toLowerCase()) == location.pathname ){
-                    url_detalle = 'api/v1/exempt_vehicle/' + c.exempt_vehicle
+                    url_detalle = 'v1/exempt_vehicle/' + c.exempt_vehicle
                 }
                                     
             }
@@ -61,7 +54,6 @@ export default function Cartexonerados() {
         
     }
 
-
     return (
 
             <>
@@ -69,14 +61,14 @@ export default function Cartexonerados() {
                     <div className="row" id="auto-exonerados" >
 
                         <div className="col-12 col-sm-6"  >
-                            <motion.img src={raize_exonerados} alt="logo auto exonerados" variants={variants} initial={{ x: -200, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.5, default: { duration: 1 } }} />
+                            <motion.img src={banner1} alt="logo auto exonerados" variants={variants} initial={{ x: -200, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.5, default: { duration: 1 } }} />
                         </div>
 
                         <div className="col-12 col-sm-6 logo-exonerados "  >                                  
                             <div className='contenedor-logo-exonerados'>
 
-                            <motion.img src={logo_exonerados} variants={variants} initial={{ x: 200, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.5, default: { duration: 1 } }} />                    
-                            <motion.p className='text-exonerados' variants={variants} initial={{ x: 200, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.5, default: { duration: 1 } }} >Cotizar vehículo como Exonerado</motion.p>
+                            <motion.img src={banner2} variants={variants} initial={{ x: 200, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.5, default: { duration: 1 } }} />                    
+                            <motion.p className='text-exonerados' variants={variants} initial={{ x: 200, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.5, default: { duration: 1 } }} > <a className="cart-link" href={link_cotizar}>{texto_cotizar}</a></motion.p>
 
                             </div>
                         </div>
