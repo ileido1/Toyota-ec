@@ -1079,26 +1079,31 @@ ul.cart-item-caracteristicas {
     color: #e50021 !important;
 }
 
-.border-right-filled{
+.border-right-filled {
     border-right: 3px solid #ffffff;
-} 
+}
 
 .sinpadding {
     padding-left: 0px !important;
     padding-right: 0px !important;
 }
 
-.padding-logo-versiones{
+.padding-logo-versiones {
     padding-top: 65px;
 }
 
-.cart-item-caracteristicas > li{
+.cart-item-caracteristicas>li {
     list-style: none;
 }
 
-.circulo-color{
+.circulo-color {
     height: 60px;
     width: 60px;
     border-radius: 50%;
     display: block;
+}
+
+a:hover {
+    color: transparent;
+    text-decoration: none !important;
 }

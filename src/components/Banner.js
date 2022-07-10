@@ -93,7 +93,7 @@ export default function Bannerhome() {
                                                         initial="hidden"
                                                         animate="visible"
                                                         transition={{ delay: 0.5, default: { duration: 1 } }} >
-                                                        <NavLink to="/raize"> <button className="btn-raize"> {c.texto_del_enlace} </button></NavLink>
+                                                        <NavLink to={c.enlace_del_vehiculo}> <button className="btn-raize"> {c.texto_del_enlace} </button></NavLink>
 
                                                     </motion.div>
 

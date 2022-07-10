@@ -7,6 +7,7 @@ import { Navigation } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import { NavLink } from "react-router-dom";
 
 
 // import required modules
@@ -32,6 +33,8 @@ export default function Sliderscars() {
     var filteredList = useMemo(getFilteredList, [selectedCategory, banner]);
 
 
+
+
     return (
         <>
             <div className="supcarslider">
@@ -47,7 +50,8 @@ export default function Sliderscars() {
                                     {
 
 
-                                        [...new Set(categories.map((Val) => Val.categoria_del_vehiculo))].map(c => (
+
+                                        [...new Set(categories.map((Val, i) => Val.categoria_del_vehiculo))].map(c => (
 
                                             <li className="nav-item">
                                                 <a className="nav-link " aria-current="page" onClick={handleCategoryChange}  >{c}</a>
@@ -105,7 +109,7 @@ export default function Sliderscars() {
                                                             <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo} className="logoslider"></img>
                                                         </div>
                                                         <div className="col-6 textoabajo align-items ">
-                                                            <p className="vertodos">{c.texto_ver_vehiculos}</p>
+                                                            <NavLink to={c.enlace_todos_los_vehiculos}> <p className="vertodos">{c.texto_ver_vehiculos}</p></NavLink>
                                                         </div>
 
                                                     </div>
@@ -117,8 +121,8 @@ export default function Sliderscars() {
                                                             <p className="rendimientoslidertitulo">{c.titulo_info_box_2}</p>
                                                             <p className="rendimientoslider">{c.texto_info_box_2}</p> </div>
                                                         <div className="col-4 textoabajo">
-                                                            <button className="btnslider">{c.texto_cotizar_vehiculo}</button>
-                                                            <button className="btnslider">{c.texto_test_drive_vehiculo}</button>
+                                                            <NavLink to={c.enlace_cotizar_vehiculo}><button className="btnslider">{c.texto_cotizar_vehiculo}</button></NavLink>
+                                                            <NavLink to={c.enlace_test_drive_vehiculo}><button className="btnslider">{c.texto_test_drive_vehiculo}</button></NavLink>
 
 
                                                         </div>
