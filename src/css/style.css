@@ -1102,3 +1102,22 @@ ul.cart-item-caracteristicas {
     border-radius: 50%;
     display: block;
 }
+
+a.cart-link{
+    text-decoration: none;
+    color: #939292;
+}
+
+#titulo-colores{
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
+}
+
+#imagen-auto-diseno{
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
+}
