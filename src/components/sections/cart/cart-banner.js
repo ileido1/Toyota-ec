@@ -116,7 +116,7 @@ export default function Cartslider() {
                                 <div className="row">
                                     <div className="col-12">
                                         <p className="titulo-feature animated fadeInLeft delay2 duration4" >VERSIONES</p>
-                                        <img className="img-logo-feature " src={logo_modelo_1} alt="Logo Raize" /><span className="text-feature-version " ></span>
+                                        <img className="img-logo-feature " src={logo_modelo_1} alt="Logo versiones" /><span className="text-feature-version " ></span>
                                         <p className="text-feature ">{texto_modelo_1}</p>
                                     </div>
 
