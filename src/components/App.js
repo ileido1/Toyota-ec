@@ -26,6 +26,18 @@ const App = () => {
         <Routes>
           <Route path="/raize" element={<Cart />} />
           <Route path="/rav4" element={<Cart />} />
+          <Route path="/hilux" element={<Cart />} />
+          <Route path="/yaris-sedan" element={<Cart />} />
+          <Route path="/yaris-cross" element={<Cart />} />
+          <Route path="/rush" element={<Cart />} />
+          <Route path="/rush" element={<Cart />} />
+          <Route path="/land-cruiser-prado" element={<Cart />} />
+          <Route path="/land-cruiser-prado" element={<Cart />} />
+          <Route path="/land-cruiser-300" element={<Cart />} />
+          <Route path="/hilux-cd" element={<Cart />} />
+          <Route path="/hilux-cs" element={<Cart />} />
+          <Route path="/hilux-cs" element={<Cart />} />
+          <Route path="/corolla-sedan" element={<Cart />} />
           <Route path="/" element={<Home />} />
         </Routes>
         {

@@ -55,7 +55,7 @@ const Cartdiseno = () => {
     const [detalle, error_detalle] = useFetch(url_detalle);
 
     if(detalle){
-        console.log(detalle)
+        
         detalle.map(v => { 
                 
             logo_dc_vehiculo = url_backend+v.logo_dc_vehiculo

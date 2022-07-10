@@ -269,6 +269,7 @@
     font-family: 'Toyota-DisplayBold';
     color: #817F7F;
     font-size: 24px;
+    text-transform: uppercase;
 }
 
 #menu-galeria {
@@ -298,7 +299,7 @@ ul#menu-galeria>li>span {
 
 #tecnologia {
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .icono-tecnologia {
@@ -313,6 +314,7 @@ ul#menu-galeria>li>span {
     font-family: 'Toyota-DisplayBold';
     font-size: 28px;
     margin-bottom: 40px;
+    text-transform: uppercase;
 }
 
 .text-tecnologia {
@@ -717,7 +719,6 @@ ul#menu-galeria>li>span {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #000;
     color: #ffffff;
     height: 600px;
 }
@@ -1051,6 +1052,7 @@ ul.cart-item-caracteristicas {
     padding: 0 49px !important;
 }
 
+/* next prev */
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
@@ -1071,13 +1073,59 @@ ul.cart-item-caracteristicas {
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
     border: 2px solid#e50021 !important;
-
 }
 
 .swiper-button-next:hover>.swiper-button-next::after,
 .swiper-button-prev:hover>.swiper-button-prev::after {
     color: #e50021 !important;
 }
+
+#content-automovil-video .swiper-button-next,
+.swiper-button-prev {
+    border: 2px solid#ffffff !important;
+}
+
+#content-automovil-video .swiper-button-next::after,
+.swiper-button-prev::after {
+    color: #ffffff !important;
+}
+
+#content-automovil-video .swiper-button-next:hover,
+.swiper-button-prev:hover {
+    border: 2px solid#ffffff !important;
+}
+
+#content-automovil-exterior .swiper-button-next,
+.swiper-button-prev {
+    border: 2px solid#ffffff !important;
+}
+
+#content-automovil-exterior .swiper-button-next::after,
+.swiper-button-prev::after {
+    color: #ffffff !important;
+}
+
+#content-automovil-exterior .swiper-button-next:hover,
+.swiper-button-prev:hover {
+    border: 2px solid#ffffff !important;
+}
+
+#content-automovil-interior .swiper-button-next,
+.swiper-button-prev {
+    border: 2px solid#ffffff !important;
+}
+
+#content-automovil-interior .swiper-button-next::after,
+.swiper-button-prev::after {
+    color: #ffffff !important;
+}
+
+#content-automovil-interior .swiper-button-next:hover,
+.swiper-button-prev:hover {
+    border: 2px solid#ffffff !important;
+}
+
+/* next prev */
 
 .border-right-filled{
     border-right: 3px solid #ffffff;
@@ -1108,6 +1156,11 @@ a.cart-link{
     color: #939292;
 }
 
+a.cart-link:hover{
+    text-decoration: none;
+    color: #939292;
+}
+
 #titulo-colores{
     -webkit-transition: all 0.5s 0s ease;
     -moz-transition: all 0.5s 0s ease;
@@ -1120,4 +1173,63 @@ a.cart-link{
     -moz-transition: all 0.5s 0s ease;
     -o-transition: all 0.5s 0s ease;
     transition: all 0.5s 0s ease;
+}
+
+.titulo-autos-similares{
+    text-align: center;
+    font-family: 'Toyota-DisplayBold';
+    color: #817F7F;
+    font-size: 26px;
+}
+
+.autos-similares {
+    display: block;
+    margin: 0 auto;
+    max-width: 340px !important;
+}
+
+.content-btn-similares{
+    text-align: center;
+}
+
+.boton-saber-mas-similares{
+    background-color: #817f7f;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.boton-cta-similares{
+    background-color: #e50021;
+    color: #ffffff; 
+    text-transform: uppercase;
+}
+
+.boton-saber-mas-similares,
+.boton-cta-similares
+{
+    text-decoration: none;
+    padding: 3px;
+    border-radius: 4px;
+    font-family: 'Radikal-Medium';
+    width: 140px;
+    display: block;
+    margin: 0 auto;
+}
+
+.boton-saber-mas-similares:hover,
+.boton-cta-similares:hover
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#autos-similares{
+    padding: 100px 20px;
+}
+
+.text-color-similares {
+    color: #000 !important;
+    text-align: center;
+    margin-bottom: 80px;
 }

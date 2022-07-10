@@ -10,6 +10,7 @@ import {
 
 import { Autoplay,Navigation } from "swiper";
 import useFetch from "../../../hooks/useFetch";
+import { useLocation } from 'react-router-dom';
 
 import { motion } from "framer-motion"
 
@@ -19,8 +20,26 @@ const variants = {
 }
 
 export default function Cartslider() {
-    let url_api = 'v1/features_vehicle/28'
+    
+    let url_api = 'v1/vehicle_data_sheet'
     const [respuesta, error] = useFetch(url_api);
+    let url_detalle = ''
+    const location =  useLocation()
+
+    if(respuesta){
+                            
+        respuesta.map(c => { 
+                
+                if ( ('/' + c.name_vehicle.toLowerCase()) == location.pathname ){
+                    url_detalle = 'v1/features_vehicle/'+ c.features_vehicle
+                }
+                                    
+            }
+        )
+        
+    }
+
+    const [detalle_respuesta, error_detalle] = useFetch(url_detalle);
     
     return (
         <>
@@ -29,6 +48,7 @@ export default function Cartslider() {
                 centeredSlides={true}
                 navigation={true}
                 speed={1000}
+                loop={true}
                 autoplay={{
                     delay: 4000,
                     disableOnInteraction: false,
@@ -37,11 +57,11 @@ export default function Cartslider() {
                 className="mySwiper"
             >
                 {
-                    respuesta ? (
+                    detalle_respuesta ? (
                         <>
                             {
                                 
-                                respuesta.map(c => (
+                                detalle_respuesta.map(c => (
                         <>
                               <SwiperSlide>
                               {({ isActive }) => (

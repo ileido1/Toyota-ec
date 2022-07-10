@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import { motion,  useInView} from "framer-motion";
 
-import banner_tsn from '../../../images/tecnologia/banner-tsn.png'
-import icon_hac from '../../../images/tecnologia/icon-HAC.svg'
-import icon_trc from '../../../images/tecnologia/icon-trc.svg'
-import icon_vsc from '../../../images/tecnologia/icon-vsc.svg'
+import useFetch from "../../../hooks/useFetch";
+import { useLocation } from 'react-router-dom';
+
+let url_backend = 'https://backend-toyota.247.com.ec'
 
 const variants = {
     hidden: { opacity: 0.1 },
@@ -35,6 +35,61 @@ const Carttecnologia = () => {
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
+
+    let url_api = 'v1/vehicle_data_sheet'
+    const [respuesta, error] = useFetch(url_api);
+    let url_detalle = ''
+    const location =  useLocation()
+
+    let titulo_tecnologia_vehiculo = ""  
+
+    let icono_1_tecnologia_vehiculo = ""                      
+    let icono_2_tecnologia_vehiculo = "" 
+    let icono_3_tecnologia_vehiculo = "" 
+
+    let titulo_1_tecnologia_vehiculo = ""      
+    let titulo_2_tecnologia_vehiculo = ""      
+    let titulo_3_tecnologia_vehiculo = "" 
+
+    let texto_1_tecnologia_vehiculo = ""   
+    let texto_2_tecnologia_vehiculo = ""          
+    let texto_3_tecnologia_vehiculo = ""   
+        
+    let banner_tecnologia_vehiculo = "" 
+
+    if(respuesta){
+                            
+        respuesta.map(c => { 
+                
+                if ( ('/' + c.name_vehicle.toLowerCase()) == location.pathname ){
+                    url_detalle = 'v1/technology_vehicle/'+ c.technology_vehiculo
+                }
+                                    
+            }
+        )
+        
+    }
+
+    const [detalle_respuesta, error_detalle] = useFetch(url_detalle);
+    
+    if(detalle_respuesta){
+
+        titulo_tecnologia_vehiculo = detalle_respuesta[0]['titulo_tecnologia_vehiculo']  
+
+        icono_1_tecnologia_vehiculo = url_backend+detalle_respuesta[0]['icono_1_tecnologia_vehiculo']                     
+        icono_2_tecnologia_vehiculo = url_backend+detalle_respuesta[0]['icono_2_tecnologia_vehiculo']
+        icono_3_tecnologia_vehiculo = url_backend+detalle_respuesta[0]['icono_3_tecnologia_vehiculo']
+
+        titulo_1_tecnologia_vehiculo = detalle_respuesta[0]['titulo_1_tecnologia_vehiculo']      
+        titulo_2_tecnologia_vehiculo = detalle_respuesta[0]['titulo_2_tecnologia_vehiculo']       
+        titulo_3_tecnologia_vehiculo = detalle_respuesta[0]['titulo_tecnologia_vehiculo']
+
+        texto_1_tecnologia_vehiculo = detalle_respuesta[0]['texto_2_tecnologia_vehiculo']  
+        texto_2_tecnologia_vehiculo = detalle_respuesta[0]['texto_2_tecnologia_vehiculo']          
+        texto_3_tecnologia_vehiculo = detalle_respuesta[0]['texto_3_tecnologia_vehiculo']       
+               
+        banner_tecnologia_vehiculo = url_backend+detalle_respuesta[0]['banner_tecnologia_vehiculo']       
+    }
   
 return( 
     <>
@@ -42,34 +97,34 @@ return(
 
                 <div className="row mt40" id="tecnologia " >
                     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sinpadding" >
-                        <p className="text-color-tecnologia" >TECNOLOGIA RAIZE</p> 
+                        <p className="text-color-tecnologia" >{titulo_tecnologia_vehiculo}</p> 
                     </div>
                 </div>
 
                 <div className="row">
                     <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 sinpadding"  >
-                        <img className="img-fluid icono-tecnologia" src={icon_hac} width="120px" alt="Icono Hac" />
+                        <img className="img-fluid icono-tecnologia" src={icono_1_tecnologia_vehiculo} width="120px" alt="Icono Hac" />
                     </div>
                     <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 sinpadding" >
-                        <img className="img-fluid icono-tecnologia" src={icon_trc} width="100px" alt="Icono Trc" />
+                        <img className="img-fluid icono-tecnologia" src={icono_2_tecnologia_vehiculo} width="100px" alt="Icono Trc" />
                     </div>
                     <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 sinpaddingr" >
-                        <img className="img-fluid icono-tecnologia" src={icon_vsc} width="100px" alt="Icono Vsc" />
+                        <img className="img-fluid icono-tecnologia" src={icono_3_tecnologia_vehiculo} width="100px" alt="Icono Vsc" />
                     </div>
                 </div> 
 
                 <div className="row mb40" >
                     <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 sinpadding" >
-                        <p className="text-tecnologia" ><strong className="fuente-black" >Asistente de Arranque HAC</strong></p>
-                        <p className="text-tecnologia" >Diseñado para reducir riesgos de retroceso al momento de arrancar en pendiente.</p>
+                        <p className="text-tecnologia" ><strong className="fuente-black" >{titulo_1_tecnologia_vehiculo}</strong></p>
+                        <p className="text-tecnologia" >{texto_1_tecnologia_vehiculo}</p>
                     </div>
                     <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 sinpadding" >
-                        <p className="text-tecnologia" ><strong className="fuente-black" >Control de tracción TRC</strong></p>
-                        <p className="text-tecnologia">Previene la pérdida de adherencia de las ruedas, y que no patinen cuándo se acelera.</p>
+                        <p className="text-tecnologia" ><strong className="fuente-black" >{titulo_2_tecnologia_vehiculo}</strong></p>
+                        <p className="text-tecnologia">{texto_2_tecnologia_vehiculo}</p>
                     </div>
                     <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 sinpadding" >
-                        <p className="text-tecnologia" ><strong className="fuente-black" >Control electrónico de estabilidad (VSC)</strong></p>
-                        <p className="text-tecnologia" >Actúa frenando individualmente las ruedas en situaciones de riesgo para evitar derrapes.</p>
+                        <p className="text-tecnologia" ><strong className="fuente-black" >{titulo_3_tecnologia_vehiculo}</strong></p>
+                        <p className="text-tecnologia" >{texto_3_tecnologia_vehiculo}</p>
                     </div>
                 </div>
                 
@@ -77,7 +132,7 @@ return(
                     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sinpadding" style={{ fontWeight: 300 }} >
                         <Tecnologia>
                             <div ref={ref} >   
-                                <img className="img-fluid bannertec" src={banner_tsn} width="100%" alt="Banner Tecnologia" />
+                                <img className="img-fluid bannertec" src={banner_tecnologia_vehiculo} width="100%" alt="Banner Tecnologia" />
                             </div> 
                         </Tecnologia>
                     </div>
