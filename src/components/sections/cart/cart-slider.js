@@ -48,11 +48,6 @@ export default function Cartslider() {
                 centeredSlides={true}
                 navigation={true}
                 speed={1000}
-                loop={true}
-                autoplay={{
-                    delay: 4000,
-                    disableOnInteraction: false,
-                }}
                 modules={[Autoplay,Navigation]}
                 className="mySwiper"
             >
