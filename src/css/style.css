@@ -1347,3 +1347,7 @@ a.cart-link:hover {
     font-size: 1.6em;
     color: #000000;
 }
+
+.nav-link {
+    cursor: pointer;
+  }
