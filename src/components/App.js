@@ -42,6 +42,11 @@ const App = () => {
           <Route path="/corolla-cross" element={<Cart />} />
           <Route path="/c-hr" element={<Cart />} /> 
           <Route path="/fortuner" element={<Cart />} />
+          <Route path="/hilux-cd-4x2" element={<Cart />} />
+          <Route path="/hilux-cd-4x4" element={<Cart />} />
+          <Route path="/hilux-cd-4x4-at" element={<Cart />} />
+          <Route path="/hilux-cd-4x4-mt" element={<Cart />} />
+          <Route path="/corolla-hybrid" element={<Cart />} />
           <Route path="/vehiculos" element={<Vehiculos />} />
           <Route path="/" element={<Home />} />
         </Routes>

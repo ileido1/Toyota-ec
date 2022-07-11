@@ -7,10 +7,11 @@ import Carttecnologia from "./sections/cart/cart-tecnologia"
 import Cartcta from "./sections/cart/cart-cta"
 import Cartslider from "./sections/cart/cart-slider"
 import Cartmodelossimilares from "./sections/cart/cart-modelos-similares"
+import Modalcotizacion from "./sections/cart/cart-modal-cotizacion"
 
 const Cart = () => (
     <>
-        
+        <Modalcotizacion />
         <Cartmenu />
         <Cartbanner />
         <Cartexonerados />
