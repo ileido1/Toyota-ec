@@ -3,8 +3,10 @@ import '../css/style.css';
 import '../css/all.css'
 import Header from './sections/Header'
 import Cart from './Cart'
+import Vehiculos from './pages/vehiculos';
 import Footer from './sections/Footer';
 import Home from './pages/home'
+
 
 import {
   BrowserRouter,
@@ -27,20 +29,20 @@ const App = () => {
           <Route path="/raize" element={<Cart />} />
           <Route path="/rav4" element={<Cart />} />
           <Route path="/hilux" element={<Cart />} />
-          <Route path="/yaris-sedan" element={<Cart />} />
-          <Route path="/yaris-cross" element={<Cart />} />
-          <Route path="/rush" element={<Cart />} />
-          <Route path="/rush" element={<Cart />} />
-          <Route path="/land-cruiser-prado" element={<Cart />} />
-          <Route path="/land-cruiser-prado" element={<Cart />} />
-          <Route path="/land-cruiser-300" element={<Cart />} />
           <Route path="/hilux-cd" element={<Cart />} />
           <Route path="/hilux-cs" element={<Cart />} />
-          <Route path="/hilux-cs" element={<Cart />} />
+          <Route path="/yaris-sedan" element={<Cart />} />
+          <Route path="/yaris-cross" element={<Cart />} />
+          <Route path="/yaris-sport" element={<Cart />} />
+          <Route path="/rush" element={<Cart />} />
+          <Route path="/rush" element={<Cart />} />
+          <Route path="/land-cruiser-prado" element={<Cart />} />
+          <Route path="/land-cruiser-300" element={<Cart />} />
           <Route path="/corolla-sedan" element={<Cart />} />
-          <Route path="/c-hr" element={<Cart />} /> /fortuner
           <Route path="/corolla-cross" element={<Cart />} />
+          <Route path="/c-hr" element={<Cart />} /> 
           <Route path="/fortuner" element={<Cart />} />
+          <Route path="/vehiculos" element={<Vehiculos />} />
           <Route path="/" element={<Home />} />
         </Routes>
         {

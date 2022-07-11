@@ -43,8 +43,6 @@ const Cartcta = () => {
 
     if(detalle){
 
-        console.log(detalle)
-
         detalle.map(v => { 
                 
             icono_1_cta_vehiculo = url_backend+v.icono_1_cta_vehiculo

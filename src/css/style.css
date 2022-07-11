@@ -268,7 +268,7 @@
 
     font-family: 'Toyota-DisplayBold';
     color: #817F7F;
-    font-size: 24px;
+    font-size: 1.9em;
     text-transform: uppercase;
 }
 
@@ -281,6 +281,9 @@
 ul#menu-galeria>li {
     display: inline-block;
     text-decoration: none;
+}
+
+.galeria-menu-padding{
     padding-left: 80px;
 }
 
@@ -439,8 +442,8 @@ ul#menu-galeria>li>span {
 }
 
 .imagencarro {
-    width: 60%;
-    margin-top: 60px;
+    width: 45%;
+    margin-top: 200px;
 
 }
 
@@ -869,6 +872,7 @@ a#btn-cotizar {
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
+    margin-top: 200px;
 }
 
 
@@ -1236,4 +1240,55 @@ a.cart-link:hover {
     color: #000 !important;
     text-align: center;
     margin-bottom: 80px;
+    font-size: 2em;
+}
+
+.enlace-vehiculos{
+
+    font-family: 'Radikal-Medium';
+    text-align: center;
+    display: block;
+    text-decoration: underline;
+    color: #393838;
+    font-size: 1.2em;
+
+}
+
+.enlace-vehiculos:hover{
+
+    color: #393838;
+
+}
+
+.titulo-filtro-sidebar{
+    
+    font-family: 'Radikal-Medium';
+    text-align: left;
+    display: block;
+    color: #393838;
+    font-size: 1.4em;
+
+}
+
+.titulo-botones-sidebar{
+
+    font-family: 'Radikal-Medium';
+    text-align: left;
+    display: block;
+    color: #817f7f;
+    font-size: 1.6em;
+
+}
+
+.content-botones-sidebar{  
+    background: #ffffff;
+    padding: 20px 15px;
+}
+
+#pagina-vehiculos{
+    background: #EDEDED;
+}
+
+#titulo-vehiculos  .secciones-subtitulos{
+    color: #000000;
 }

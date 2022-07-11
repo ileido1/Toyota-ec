@@ -49,9 +49,9 @@ const Cartgaleria = () => {
             <div className="row">
                 <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pestana-galeria sinpadding"  >
                     <ul id="menu-galeria" >
-                        <li> <span id="automovil-video cp" onClick={videoGaleria} >VIDEO</span> </li>
-                        <li> <span id="automovil-exterior cp" onClick={exteriorGaleria} >EXTERIOR</span> </li>
-                        <li> <span id="automovil-interior cp" onClick={interiorGaleria} >INTERIOR</span> </li>
+                        <li> <span id="automovil-video" onClick={videoGaleria} >VIDEO</span> </li>
+                        <li> <span id="automovil-exterior cp " className="cp galeria-menu-padding" onClick={exteriorGaleria} >EXTERIOR</span> </li>
+                        <li> <span id="automovil-interior" className="cp galeria-menu-padding" onClick={interiorGaleria} >INTERIOR</span> </li>
                     </ul>
                 </div>
             </div>
@@ -86,11 +86,6 @@ const Cartgaleria = () => {
 
 export default Cartgaleria;
 
-function importAll(r) {
-    let images = {};
-     r.keys().forEach((item, index) => { images[item.replace('./', '')] = r(item); });
-    return images
-}
 
 function videoGaleria(){   
 
