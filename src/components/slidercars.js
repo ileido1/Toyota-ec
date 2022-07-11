@@ -1,4 +1,5 @@
 import React, { useRef, useMemo, useState, useEffect } from "react";
+import { get } from 'axios';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import useFetch from "../hooks/useFetch";
@@ -13,9 +14,16 @@ import { NavLink } from "react-router-dom";
 // import required modules
 
 export default function Sliderscars() {
-    let llenarbanner = 'home/carousel'
-    const [banner, error] = useFetch(llenarbanner);
-    const [categories, error2] = useFetch(llenarbanner);
+    let endpoint = 'home/carousel'
+    const [banner, error] = useFetch(endpoint);
+    const [categories, error2] = useFetch(endpoint);
+
+    const [data, setData] = useState()
+    useEffect(() => {
+        get(`${process.env.REACT_APP_URL_API}${endpoint}`)
+            .then(({ data }) => setData(data.filter((item) => item.categoria_del_vehiculo === data[0].categoria_del_vehiculo)));
+    }, [endpoint])
+
 
     const [selectedCategory, setSelectedCategory] = useState('');
     const [background, setBackground] = useState('');
@@ -26,7 +34,7 @@ export default function Sliderscars() {
 
     function getFilteredList() {
         if (!selectedCategory) {
-            return banner;
+            return data;
         }
         return banner.filter((item) => item.categoria_del_vehiculo === selectedCategory);
     }
