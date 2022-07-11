@@ -2,9 +2,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import useFetch from '../../hooks/useFetch';
 import Headerli from './Headerli'
+import Navlinkheader from './navlinkheader';
 
 function Header() {
-	let llenar_header = 'global/menu-principal'
+	let llenar_header = 'v1/global/menu-principal'
 	const [menu, error2] = useFetch(llenar_header);
 	return (
 		<>
@@ -14,23 +15,43 @@ function Header() {
 						<span className="navbar-toggler-icon">.</span>
 					</button>
 					<div className="collapse navbar-collapse" id="navbarNav">
+						<ul className="navbar-nav mx-auto">
 
-						{
-							menu ? (
-								<>
-									{
 
-										menu.map(c => {
+							{
 
-											return <Headerli menu={c.field_url_menu_principal}></Headerli>
+								menu ? (
+									<>
+
+										{
+
+
+
+											menu.map((c, i) => {
+
+												return (
+
+
+													< Navlinkheader key={i} uri={c.url_menu_principal} title={c.nombre_menu_superior} iteracion={i} >
+
+													</Navlinkheader>
+
+												)
+
+											}
+											)
+
+
 										}
-										)
-									}
-								</>
-							) : (
-								<span> Cargando...</span>
-							)
-						}
+
+
+
+									</>
+								) : (
+									<span> Cargando...</span>
+								)
+							}
+						</ul>
 
 
 					</div>
