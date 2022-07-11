@@ -15,7 +15,7 @@ function Headerli({ menu }) {
                                 return (
 
 
-                                    < Navlinkheader uri={c.uri} title={c.title} iteracion={i} >
+                                    < Navlinkheader key={i} uri={c.uri} title={c.title} iteracion={i} >
 
                                     </Navlinkheader>
 
