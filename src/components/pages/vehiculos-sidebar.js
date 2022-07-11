@@ -23,7 +23,7 @@ export default function Vehiculossidebar() {
                 respuesta ? (
                     <>
                     <div className="content-filtros-sidebar" >
-                        <p className="titulo-filtro-sidebar" >Ordenar por</p>
+                        <p className="titulo-filtro-sidebar titulo-filtro-sidebar-bb" >Ordenar por</p>
                         <p className="titulo-filtro-sidebar" >Exonerados</p>
                         <p className="titulo-filtro-sidebar" >Híbridos</p>
                         <p className="titulo-filtro-sidebar" >Todos los vehículos</p>

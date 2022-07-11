@@ -1260,6 +1260,20 @@ a.cart-link:hover {
 
 }
 
+.content-filtros-sidebar{
+    margin-top: 80px;
+    padding-left: 15px;
+}
+
+.titulo-filtro-sidebar-bb{
+    border-bottom: 2px solid #c5c5c5;
+}
+
+.contenedor-secciones-autos{
+    border-bottom: 2px solid #c5c5c5;
+    
+}
+
 .titulo-filtro-sidebar{
     
     font-family: 'Radikal-Medium';
@@ -1268,6 +1282,8 @@ a.cart-link:hover {
     color: #393838;
     font-size: 1.4em;
     cursor: pointer;
+    line-height: 1.5em;
+    
 }
 
 .titulo-filtro-sidebar:hover{
@@ -1313,6 +1329,8 @@ a.cart-link:hover {
 
 #pagina-vehiculos{
     background: #EDEDED;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 #titulo-vehiculos  .secciones-subtitulos{
@@ -1321,4 +1339,13 @@ a.cart-link:hover {
 
 .iconos-sidebar img{
     width: 40px;
+}
+
+.subtitulos-vehiculos{
+    margin-top: 80px;
+    font-family: 'Toyota-DisplayBold';
+    padding-left: 120px;
+    text-transform: uppercase;
+    font-size: 1.6em;
+    color: #000000;
 }
