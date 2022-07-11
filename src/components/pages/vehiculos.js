@@ -1,9 +1,8 @@
 import useFetch from "../../hooks/useFetch";
 import { useLocation } from 'react-router-dom';
-
 import { motion } from "framer-motion"
-
 import React, { useEffect, useRef, useState } from "react";
+import Vehiculossidebar from "./vehiculos-sidebar";
 
 const variants = {
     hidden: { opacity: 0.1 },
@@ -57,19 +56,7 @@ export default function Vehiculos() {
                     </div>
                 </div>
                 <div id="sidebar-vehiculos" class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 sinpadding" >
-                <div className="content-filtros-sidebar" >
-                   <p className="titulo-filtro-sidebar" >Ordenar por</p>
-                   <p className="titulo-filtro-sidebar" >Exonerados</p>
-                   <p className="titulo-filtro-sidebar" >Híbridos</p>
-                   <p className="titulo-filtro-sidebar" >Todos los vehículos</p>
-                </div>
-                <div className="content-botones-sidebar" >
-                   <p className="titulo-botones-sidebar" >COTIZAR</p>
-                   <p className="titulo-botones-sidebar" >TEST DRIVE</p>
-                   <p className="titulo-botones-sidebar" >BUSCAR CONCESIONARIOS</p>
-                   <p className="titulo-botones-sidebar" >MUNDO HÍBRIDOS</p>               
-                </div>
-
+                    <Vehiculossidebar />
                 </div>
             
             </div>

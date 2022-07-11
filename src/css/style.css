@@ -1267,22 +1267,47 @@ a.cart-link:hover {
     display: block;
     color: #393838;
     font-size: 1.4em;
-
+    cursor: pointer;
 }
 
-.titulo-botones-sidebar{
+.titulo-filtro-sidebar:hover{
+    color:#cc2132;
+}
 
-    font-family: 'Radikal-Medium';
-    text-align: left;
-    display: block;
-    color: #817f7f;
-    font-size: 1.6em;
-
+.content-botones-sidebar-general{
+    background: #ffffff;
 }
 
 .content-botones-sidebar{  
     background: #ffffff;
-    padding: 20px 15px;
+    padding: 12px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #c5c5c5;
+    padding-left: 20px;
+    align-items: center;
+}
+
+.titulo-botones-sidebar {
+    flex-basis: 80%;
+}
+
+.iconos-sidebar {
+    flex-basis: 20%;
+}
+
+
+.titulo-botones-sidebar a{
+
+    font-family: 'Radikal-Medium';
+    text-align: left;
+    color: #817f7f !important;
+    font-size: 1.1em;
+    line-height: 1.4em;
+    cursor: pointer;
+    text-transform: uppercase;
+
 }
 
 #pagina-vehiculos{
@@ -1291,4 +1316,8 @@ a.cart-link:hover {
 
 #titulo-vehiculos  .secciones-subtitulos{
     color: #000000;
+}
+
+.iconos-sidebar img{
+    width: 40px;
 }
