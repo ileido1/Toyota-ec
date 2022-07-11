@@ -3,12 +3,8 @@ import useFetch from "../../../hooks/useFetch";
 import { useLocation } from 'react-router-dom';
 import Video from './cart-video-portada'
 
-import logo_raize from "../../../images/logo-raize-white.svg"
-import hac from "../../../images/icon-hac-white.svg"
-import frenos from "../../../images/freno-de-disco.svg"
-import motor from "../../../images/motor.svg"
-
 import { motion } from "framer-motion"
+import { faCircleRight } from "@fortawesome/free-regular-svg-icons";
 
 let url_backend = 'https://backend-toyota.247.com.ec'
 
@@ -41,6 +37,8 @@ export default function Cartslider() {
     let url_api = 'v1/vehicle_data_sheet'
     const [respuesta, error] = useFetch(url_api);
     let url_detalle = ''
+    let estilo_borde = ''
+    let flag_version_2 = null
     const location = useLocation()
 
     if(respuesta){
@@ -74,7 +72,8 @@ export default function Cartslider() {
             tres_icono_versiones = url_backend+v.tres_icono_versiones
             tres_titulo_versiones = v.tres_titulo_versiones
 
-            logo_modelo_2= url_backend+v.b_logo_versiones
+            flag_version_2 = v.b_logo_versiones
+            logo_modelo_2 = url_backend+v.b_logo_versiones
             texto_modelo_2 = v.b_texto_versiones            
 
             cuatro_icono_versiones = url_backend+v.cuatro_icono_versiones
@@ -94,6 +93,8 @@ export default function Cartslider() {
         )
         
     }
+
+    flag_version_2 ? estilo_borde = 'border-right: 3px solid #FFFFFF' : estilo_borde = ''
  
     return (
 <> 
@@ -112,7 +113,7 @@ export default function Cartslider() {
                 <div className="col-6">
                     <div className="content_features" id="content-features" >
                         <div className="row">
-                            <motion.div  transition={{ delay: 0.5, default: { duration: 0.8 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} className="col-6 col-sm-6 border-right-filled">
+                            <motion.div  transition={{ delay: 0.5, default: { duration: 0.8 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} className="col-6 col-sm-6 border-right-filled" >
                                 <div className="row">
                                     <div className="col-12">
                                         <p className="titulo-feature animated fadeInLeft delay2 duration4" >VERSIONES</p>
@@ -145,7 +146,7 @@ export default function Cartslider() {
 
                                 </div>
                             </motion.div>
-
+{ flag_version_2 ?   
                             <motion.div transition={{ delay: 1, default: { duration: 0.8 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} className="col-6 padding-logo-versiones ">
                                 <div className="row">
                                     <div className="col-12">
@@ -177,6 +178,9 @@ export default function Cartslider() {
 
                                 </div>
                             </motion.div>
+
+ :  console.log('...') }
+
                         </div>
                     </div>
                 </div>

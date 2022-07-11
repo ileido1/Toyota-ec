@@ -872,7 +872,7 @@ a#btn-cotizar {
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
-    margin-top: 200px;
+    margin-top: 60%;
 }
 
 
@@ -1057,9 +1057,9 @@ ul.cart-item-caracteristicas {
 }
 
 /* next prev */
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
+.swiper-button-prev::after,
+.swiper-button-next::after 
+{
     font-size: 18px !important;
     font-weight: bold !important;
     color: #3e3d3d !important;
@@ -1079,9 +1079,46 @@ ul.cart-item-caracteristicas {
     border: 2px solid#e50021 !important;
 }
 
+.mySwipercar .swiper-button-next::after,
+.mySwipercar .swiper-button-prev::after {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #3e3d3d !important;
+}
+
+.mySwipercar .swiper-button-next,
+.mySwipercar .swiper-button-prev {
+    border: 2px solid#3e3d3d !important;
+    border-radius: 50% !important;
+    padding: 10px 18px !important;
+    height: 40px !important;
+    font-size: 12px !important;
+}
+
+.mySwipercar .swiper-button-next:hover,
+.mySwipercar .swiper-button-prev:hover {
+    border: 2px solid#e50021 !important;
+}
+
 .swiper-button-next:hover>.swiper-button-next::after,
 .swiper-button-prev:hover>.swiper-button-prev::after {
     color: #e50021 !important;
+}
+
+#content-automovil-exterior .swiper-button-next::after,
+#content-automovil-interior .swiper-button-prev::after {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #fff !important;
+}
+
+#content-automovil-exterior .swiper-button-next,
+#content-automovil-interior .swiper-button-prev {
+    border: 2px solid#fff !important;
+    border-radius: 50% !important;
+    padding: 10px 18px !important;
+    height: 40px !important;
+    font-size: 12px !important;
 }
 
 #content-automovil-video .swiper-button-next,
@@ -1127,6 +1164,14 @@ ul.cart-item-caracteristicas {
 #content-automovil-interior .swiper-button-next:hover,
 .swiper-button-prev:hover {
     border: 2px solid#ffffff !important;
+}
+
+#content-automovil-interior .swiper-button-prev::after,
+#content-automovil-exterior .swiper-button-next::after 
+{
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #3e3d3d !important;
 }
 
 /* next prev */
@@ -1352,4 +1397,12 @@ a.cart-link:hover {
 
 .nav-link {
     cursor: pointer;
-  }
+}
+
+.fila-vehiculos{
+    margin-top: 40px;
+}
+
+img.autos-similares{
+    margin-top: -40px;
+}

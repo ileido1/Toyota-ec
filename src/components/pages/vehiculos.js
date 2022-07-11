@@ -46,7 +46,7 @@ export default function Vehiculos() {
         <>
         <div id="pagina-vehiculos" className="container-fluid" >
         
-              <div className="row" >
+              <div className="row fila-vehiculos" >
                 <div className="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 sinpadding">
                 <div id="contenedor-autos-automoviles" className="contenedor-secciones-autos" >
                     <div className="row" id="titulo-vehiculos" >
