@@ -22,7 +22,7 @@ export default function Sliderscars() {
     useEffect(() => {
         get(`${process.env.REACT_APP_URL_API}${endpoint}`)
             .then(({ data }) => setData(data.filter((item) => item.categoria_del_vehiculo === data[0].categoria_del_vehiculo)));
-    }, [endpoint])
+    });
 
 
     const [selectedCategory, setSelectedCategory] = useState('');
