@@ -1149,6 +1149,7 @@ ul.cart-item-caracteristicas {
     width: 60px;
     border-radius: 50%;
     display: block;
+    border: 1px solid #999;
 }
 
 a:hover {
