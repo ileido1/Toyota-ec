@@ -47,7 +47,7 @@ export default function Cartslider() {
                             
         respuesta.map(c => { 
                 
-                if ( ('/' + c.name_vehicle.toLowerCase()) == location.pathname ){
+                if ( (c.name_vehicle.toLowerCase()) == location.pathname ){
                     url_detalle = 'v1/vehicle_versions/'+ c.versions_vehicle
                 }
                                     
