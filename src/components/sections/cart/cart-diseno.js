@@ -65,7 +65,7 @@ const Cartdiseno = () => {
             url_boton_dc_vechiculo = v.url_boton_dc_vehiculo
 
             texto_pdf_dc_vehiculo = v.texto_pdf_dc_vehiculo
-            url_pdf_dc_vehiculo = v.url_pdf_dc_vehiculo
+            url_pdf_dc_vehiculo = url_backend+v.url_pdf_dc_vehiculo
 
             imagen_dc_vehiculo_color_1 = url_backend+v.imagen_dc_vehiculo_color_1
             hex_dc_vehiculo_color_1 = v.hex_dc_vehiculo_color_1
