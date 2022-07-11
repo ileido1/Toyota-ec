@@ -461,7 +461,6 @@ ul#menu-galeria>li>span {
 
 .textoabajo {
     display: flex;
-    align-items: baseline;
     jUSTIFY-CONTENT: flex-end;
     FLEX-DIRECTION: column;
 }
@@ -477,7 +476,9 @@ ul#menu-galeria>li>span {
     margin-bottom: 120px;
 }
 
-
+.centrarbaseline a {
+    text-align: center;
+}
 
 .mundotoyotacontainer {
     padding: 40px;
@@ -525,13 +526,14 @@ ul#menu-galeria>li>span {
     align-items: flex-end !important;
 }
 
+
 .rendimientoslider {
-    font-family: 'Toyota-DisplayBold';
+    font-family: 'Radikal-Bold';
     color: #817F7F;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 0;
-
+    font-weight: bold;
 }
 
 .logoslider {
