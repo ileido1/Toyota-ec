@@ -283,7 +283,7 @@ ul#menu-galeria>li {
     text-decoration: none;
 }
 
-.galeria-menu-padding{
+.galeria-menu-padding {
     padding-left: 80px;
 }
 
@@ -477,9 +477,7 @@ ul#menu-galeria>li>span {
     margin-bottom: 120px;
 }
 
-.mySwipercar .swiper-wrapper {
-    margin-top: 200px;
-}
+
 
 .mundotoyotacontainer {
     padding: 40px;
@@ -1243,7 +1241,7 @@ a.cart-link:hover {
     font-size: 2em;
 }
 
-.enlace-vehiculos{
+.enlace-vehiculos {
 
     font-family: 'Radikal-Medium';
     text-align: center;
@@ -1254,28 +1252,28 @@ a.cart-link:hover {
 
 }
 
-.enlace-vehiculos:hover{
+.enlace-vehiculos:hover {
 
     color: #393838;
 
 }
 
-.content-filtros-sidebar{
+.content-filtros-sidebar {
     margin-top: 80px;
     padding-left: 15px;
 }
 
-.titulo-filtro-sidebar-bb{
+.titulo-filtro-sidebar-bb {
     border-bottom: 2px solid #c5c5c5;
 }
 
-.contenedor-secciones-autos{
+.contenedor-secciones-autos {
     border-bottom: 2px solid #c5c5c5;
-    
+
 }
 
-.titulo-filtro-sidebar{
-    
+.titulo-filtro-sidebar {
+
     font-family: 'Radikal-Medium';
     text-align: left;
     display: block;
@@ -1283,19 +1281,19 @@ a.cart-link:hover {
     font-size: 1.4em;
     cursor: pointer;
     line-height: 1.5em;
-    
+
 }
 
-.titulo-filtro-sidebar:hover{
-    color:#cc2132;
+.titulo-filtro-sidebar:hover {
+    color: #cc2132;
 }
 
-.content-botones-sidebar-general{
+.content-botones-sidebar-general {
     background: #ffffff;
     padding-left: 15px;
 }
 
-.content-botones-sidebar{  
+.content-botones-sidebar {
     background: #ffffff;
     padding: 12px 0px;
     display: flex;
@@ -1315,7 +1313,7 @@ a.cart-link:hover {
 }
 
 
-.titulo-botones-sidebar a{
+.titulo-botones-sidebar a {
 
     font-family: 'Radikal-Medium';
     text-align: left;
@@ -1327,21 +1325,21 @@ a.cart-link:hover {
 
 }
 
-#pagina-vehiculos{
+#pagina-vehiculos {
     background: #EDEDED;
     padding-left: 40px;
     padding-right: 40px;
 }
 
-#titulo-vehiculos  .secciones-subtitulos{
+#titulo-vehiculos .secciones-subtitulos {
     color: #000000;
 }
 
-.iconos-sidebar img{
+.iconos-sidebar img {
     width: 40px;
 }
 
-.subtitulos-vehiculos{
+.subtitulos-vehiculos {
     margin-top: 80px;
     font-family: 'Toyota-DisplayBold';
     padding-left: 120px;
