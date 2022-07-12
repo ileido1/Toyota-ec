@@ -23,7 +23,7 @@ export default function Sliderscars() {
 
     const [selectedCategory, setSelectedCategory] = useState('');
     const [background, setBackground] = useState('');
-
+    const [defecto, setDefault] = useState('');
     function handleCategoryChange(event) {
         setSelectedCategory(event.currentTarget.textContent);
     }
@@ -33,7 +33,9 @@ export default function Sliderscars() {
 
             const result = await get(`${process.env.REACT_APP_URL_API}${endpoint}`);
             const allItems = result.data;
+            setDefault('');
             if (!selectedCategory) {
+                setDefault(allItems[0].categoria_del_vehiculo);
                 const categoryItems = allItems.filter(item => item.categoria_del_vehiculo === allItems[0].categoria_del_vehiculo);
                 setItems(categoryItems)
             } else {
@@ -64,10 +66,10 @@ export default function Sliderscars() {
 
 
 
-                                        [...new Set(categories.map((Val, i) => Val.categoria_del_vehiculo))].map(c => (
+                                        [...new Set(categories.map((Val, i) => Val.categoria_del_vehiculo))].map((c, i) => (
 
                                             <li className="nav-item">
-                                                <a className="nav-link " aria-current="page" onClick={handleCategoryChange}  >{c}</a>
+                                                <a className={selectedCategory == c || defecto == c ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{c}</a>
                                             </li>
                                         )
                                         )
