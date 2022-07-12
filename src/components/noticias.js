@@ -6,24 +6,45 @@ import {
 
 import useFetch from "../hooks/useFetch";
 import { useInView } from "framer-motion";
+import { get } from 'axios';
+
 
 export default function Noticias() {
     let endpoint = 'home/post'
     const [info, error] = useFetch(endpoint);
     const [categories, error2] = useFetch(endpoint);
+    const [items, setItems] = useState('');
+    const [defecto, setDefault] = useState('');
+
     const [selectedCategory, setSelectedCategory] = useState('');
 
     function handleCategoryChange(event) {
         setSelectedCategory(event.currentTarget.textContent);
     }
 
-    function getFilteredList() {
-        if (!selectedCategory) {
-            return info;
+    useEffect(() => {
+        const getItems = async () => {
+
+            const result = await get(`${process.env.REACT_APP_URL_API}${endpoint}`);
+            const allItems = result.data;
+            setDefault('');
+            if (!selectedCategory) {
+                setDefault(allItems[0].tag);
+                const categoryItems = allItems.filter(item => item.tag === allItems[0].tag);
+                setItems(categoryItems)
+            } else {
+                const categoryItems = allItems.filter(item => item.tag === selectedCategory);
+                setItems(categoryItems)
+            }
         }
-        return info.filter((item) => item.tag === selectedCategory);
-    }
-    var filteredList = useMemo(getFilteredList, [selectedCategory, info]);
+        getItems()
+    }, [selectedCategory])
+
+
+
+
+
+
     const ref2 = useRef(null);
     const isInView2 = useInView(ref2, { once: false });
     return (
@@ -49,7 +70,7 @@ export default function Noticias() {
                                                 [...new Set(categories.map((Val) => Val.tag))].map(c => (
 
                                                     <li className="nav-item">
-                                                        <a className="nav-link " aria-current="page" onClick={handleCategoryChange}  >{c}</a>
+                                                        <a className={selectedCategory == c || defecto == c ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{c}</a>
                                                     </li>
                                                 )
                                                 )
@@ -68,11 +89,11 @@ export default function Noticias() {
 
 
                     {
-                        filteredList ? (
+                        items ? (
                             <>
                                 {
 
-                                    filteredList.slice(0, 3).map(c => (
+                                    items.slice(0, 3).map(c => (
                                         <div className=" col-4 ">
                                             <img src={'https://backend-toyota.247.com.ec/' + c.image_post} className=""></img>
                                             <h4 className="titulo_post">{c.titulo_post}</h4>
