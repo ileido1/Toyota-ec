@@ -7,9 +7,9 @@ const Cartmenu = () => (
             <div className="col-12"  >
                 <ul >
                     <li><a href="#versiones">VERSIONES</a></li>
-                    <li className="plmenu" >  <a href="#content-feature">CARACTERISTICAS</a> </li>
-                    <li className="plmenu" ><a href="#content-diseno">DISENO</a></li>
-                    <li className="plmenu" > <a href="#tecnologia">TECNOLOGIA</a> </li>
+                    <li className="plmenu" >  <a href="#content-feature">CARACTERÍSTICAS</a> </li>
+                    <li className="plmenu" ><a href="#content-diseno">DISEÑO</a></li>
+                    <li className="plmenu" > <a href="#tecnologia">TECNOLOGÍA</a> </li>
                 </ul>
             </div>
         </div>

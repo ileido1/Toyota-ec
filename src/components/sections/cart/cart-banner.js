@@ -113,13 +113,21 @@ export default function Cartslider() {
                 <div className="col-6">
                     <div className="content_features" id="content-features" >
                         <div className="row">
-                            <motion.div  transition={{ delay: 0.5, default: { duration: 0.8 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} className="col-6 col-sm-6 border-right-filled" >
-                                <div className="row">
+                            <motion.div  transition={{ delay: 0.5, default: { duration: 0.8 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} className="col-6 col-sm-6 " >
+
+                                <div className="row" >
                                     <div className="col-12">
                                         <p className="titulo-feature animated fadeInLeft delay2 duration4" >VERSIONES</p>
+                                    </div>
+                                </div>
+
+                                <div className="row border-right-filled">
+
+                                <div className="col-12">
                                         <img className="img-logo-feature " src={logo_modelo_1} alt="Logo versiones" /><span className="text-feature-version " ></span>
                                         <p className="text-feature ">{texto_modelo_1}</p>
                                     </div>
+
 
                                     <div className="col-4 ">
                                         <img className="img-icono-feature" src={uno_icono_versiones} alt={uno_titulo_versiones} />

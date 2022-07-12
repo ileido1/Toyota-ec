@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Novecentos-DemiBold';
-    src: local('Novecentos-DemiBold'), url(../fonts/Novecentosanswide-DemiBold.otf);
+    src: local('Novecentos-DemiBold'), url(../fonts/unb_pro_bold.otf);
 }
 
 @font-face {
@@ -98,7 +98,7 @@
 }
 
 #menu-producto div ul {
-    margin-bottom: 0px;
+    margin-bottom: 0.8em;
 }
 
 .video-cart {
@@ -1432,7 +1432,7 @@ img.autos-similares{
     flex-direction: column;
     width: 594px !important;
     pointer-events: auto;
-    background-color: #E20B2A !important;
+    background-color: #e6e6e6 !important;
     background-clip: padding-box;
     border-radius: .3rem;
     outline: 0;
@@ -1491,7 +1491,7 @@ img.autos-similares{
     font-family: 'Radikal-Light'  !important;
     opacity: 1 !important;
     letter-spacing: 2px;
-
+    margin-top: 5px;
 }
 
 .content-formulario-campos label
@@ -1505,10 +1505,10 @@ img.autos-similares{
 
 .content-formulario-campos input
 {
-    height: 46px;
+    height: 39px;
     border-radius: 7px;
     border: 1px solid #fff;
-    margin-bottom: 30px;
+    margin-bottom: 16px;
     width: 360px;
 }
 
@@ -1538,11 +1538,6 @@ img.autos-similares{
 .content-checkbox{
     display: flex;
     justify-content: center;
-}
-
-.barra-botones{
-   background: #e6e6e6;
-   padding: 0;
 }
 
 .formulario-boton-enviar{
@@ -1596,8 +1591,21 @@ img.autos-similares{
     align-items: center;
     position: inherit;
     justify-items: center;
-    margin-top: 280px;
-    margin-bottom: 354px;
+}
+
+.barra-botones{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: #e6e6e6;
+    padding: 0;
+}
+
+.barra-formulario{
+    background:#E20B2A ;
 }
 
 .texto-icono-testdrive{
@@ -1629,14 +1637,45 @@ img.autos-similares{
     cursor: pointer;
 }
 
-.formulario-logo img{
-    margin-top: 20px !important;
-    width: 80px;
-    display: block;
-    margin: 0 auto;
+.expansion-fondo-formulario{
+    display: inherit !important;
+    height: 100% !important;
+
 }
 
+.formulario-logo img{
+    width: 98px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 20px;
+    left: 28px;  
+}
 
+.navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .navbar-nav a > img{
+    padding-top: 15px;
+  }
+
+  .ocultar-icono{
+    display: none !important;
+  }
+
+.text-experiencia-testdrive{
+    font-size: 20px;
+    font-family: 'Radikal-Light';
+    line-height: 20px;
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-align: center;
+}
 
 /* ag modal */
 
