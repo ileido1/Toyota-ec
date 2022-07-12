@@ -27,7 +27,7 @@ export default function Modalcotizacion() {
                                         
                                         <img id='img-icono-cotizar-blanco' src={icono_cotizacion_blanco} alt="Icono cotizacion." onClick={activarCotizar} />
                                         <img id='img-icono-cotizar-gris' src={icono_cotizacion_gris} alt="Icono cotizacion." onClick={activarCotizar} className="ocultar-icono" />
-                                        <p id="texto-icono-cotizar" className='texto-icono-cotizar' >SOLICITAR COTIZACIÓN</p>
+                                        <p id="texto-icono-cotizar" className='texto-icono-cotizar' onClick={activarCotizar} >SOLICITAR COTIZACIÓN</p>
                                     
                                     </div>
 
@@ -36,7 +36,7 @@ export default function Modalcotizacion() {
                                         <img id="img-testdrive-cotizar-gris" src={icono_test_drive_gris} alt="Icono testdrive" onClick={activarTestdrive} />
                                         <img id="img-testdrive-cotizar-blanco" src={icono_test_drive_blanco} alt="Icono testdrive" className='ocultar-icono' onClick={activarTestdrive} />
                                                                               
-                                        <p id="texto-icono-testdrive" className='texto-icono-testdrive' >QUIERO UN TEST DRIVE</p></div>  
+                                        <p id="texto-icono-testdrive" className='texto-icono-testdrive' onClick={activarTestdrive} >QUIERO UN TEST DRIVE</p></div>  
                                        
                                 </div>
 

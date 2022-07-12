@@ -1363,7 +1363,6 @@ a.cart-link:hover {
     flex-basis: 20%;
 }
 
-
 .titulo-botones-sidebar a {
 
     font-family: 'Radikal-Medium';
@@ -1373,6 +1372,19 @@ a.cart-link:hover {
     line-height: 1.4em;
     cursor: pointer;
     text-transform: uppercase;
+
+}
+
+.titulo-botones-sidebar p {
+
+    font-family: 'Radikal-Medium';
+    text-align: left;
+    color: #817f7f !important;
+    font-size: 1.1em;
+    line-height: 1.4em;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-bottom: 0px;
 
 }
 
@@ -1678,6 +1690,14 @@ img.autos-similares{
     color: #FFFFFF;
     text-decoration: underline;
     text-align: center;
+}
+
+.boton-cta-similares{
+    cursor: pointer;
+}
+
+.textoabajo p{
+    margin-bottom: 0px;
 }
 
 /* ag modal */

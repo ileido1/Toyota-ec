@@ -10,6 +10,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { NavLink } from "react-router-dom";
 
+import Modalcotizacion from "./sections/cart/cart-modal-cotizacion"
+
 
 // import required modules
 
@@ -136,8 +138,8 @@ export default function Sliderscars() {
                                                             <p className="rendimientoslidertitulo">{c.titulo_info_box_2}</p>
                                                             <p className="rendimientoslider">{c.texto_info_box_2}</p> </div>
                                                         <div className="col-4 textoabajo">
-                                                            <NavLink to={c.enlace_cotizar_vehiculo}><button className="btnslider">{c.texto_cotizar_vehiculo}</button></NavLink>
-                                                            <NavLink to={c.enlace_test_drive_vehiculo}><button className="btnslider">{c.texto_test_drive_vehiculo}</button></NavLink>
+                                                            <p onClick={abrirModal} ><button className="btnslider">{c.texto_cotizar_vehiculo}</button></p>
+                                                            <p onClick={abrirModal} ><button className="btnslider">{c.texto_test_drive_vehiculo}</button></p>
 
 
                                                         </div>
@@ -163,6 +165,16 @@ export default function Sliderscars() {
                 }
 
             </Swiper>
+
+            <Modalcotizacion />
         </>
     );
+}
+
+function abrirModal(){
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    // Get the button that opens the modal
+    var btn = document.getElementById("cotizar-vehiculo");
+    modal.style.display = "block";
 }

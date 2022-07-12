@@ -41,7 +41,8 @@ export default function Vehiculossidebar() {
                         </div>
                         <div className="titulo-botones-sidebar" >
                             
-                            <a src={c.url_sidebar_vehiculos} >{c.texto_sidebar_vehiculos}</a>
+                            <p onClick={abrirModal} >{c.texto_sidebar_vehiculos}</p>
+                            
                         </div>
                     </div>                        
               
@@ -67,5 +68,56 @@ export default function Vehiculossidebar() {
 
         </>
     );                  
+
+}
+
+function abrirModal(){
+
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("cotizar-vehiculo");
+    modal.style.display = "block";
+
+}
+
+function abrirModalTestDrive(){
+
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("cotizar-vehiculo");
+    modal.style.display = "block";
+    activarTestdrive()
+
+}
+
+function activarTestdrive(){
+
+    var testdrive = document.getElementById("formulario-testdrive-contenedor");
+    var cotizar = document.getElementById("formulario-cotizar-contenedor");
+
+    var iconotestdrive = document.getElementById("icono-testdrive");
+    var iconocotizar = document.getElementById("icono-cotizacion");
+    var textoiconocotizar = document.getElementById("texto-icono-cotizar");
+    var textoiconotestdrive = document.getElementById("texto-icono-testdrive");
+    var img_icono_cotizarblanco = document.getElementById("img-icono-cotizar-blanco");
+    var img_icono_cotizargris = document.getElementById("img-icono-cotizar-gris");
+
+    var img_testdrive_cotizarblanco = document.getElementById("img-testdrive-cotizar-blanco");
+    var img_testdrive_cotizargris = document.getElementById("img-testdrive-cotizar-gris");
+
+    img_icono_cotizarblanco.classList.add("ocultar-icono");
+    img_icono_cotizargris.classList.remove("ocultar-icono");
+    img_testdrive_cotizargris.classList.add("ocultar-icono");
+    img_testdrive_cotizarblanco.classList.remove("ocultar-icono");
+
+    cotizar.classList.add("ocultar");
+    testdrive.classList.remove("ocultar");
+
+    iconotestdrive.style.background = "#E20B2A";
+
+    iconocotizar.style.background = "transparent"; 
+    iconocotizar.style.borderTop = "1px solid #817F7F";
+    iconotestdrive.style.borderBottom = "0px solid #817F7F";
+    textoiconocotizar.style.color = "#817F7F";
+    textoiconotestdrive.style.color = "#FFFFFF";
+    
 
 }

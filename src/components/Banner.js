@@ -86,7 +86,6 @@ export default function Bannerhome() {
 
                                                         </motion.div>
                                                     </div>
-
                                                     <motion.div
                                                         className="row btnhome"
                                                         variants={btnVariant}
@@ -115,6 +114,7 @@ export default function Bannerhome() {
 
 
             </Swiper>
+            
         </>
     );
 }

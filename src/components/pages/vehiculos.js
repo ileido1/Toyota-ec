@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { motion } from "framer-motion"
 import React, { useEffect, useRef, useState } from "react";
 import Vehiculossidebar from "./vehiculos-sidebar";
+import Modalcotizacion from "../sections/cart/cart-modal-cotizacion"
 
 const variants = {
     hidden: { opacity: 0.1 },
@@ -183,6 +184,9 @@ export default function Vehiculos() {
             
             </div>
         </div>
+
+        <Modalcotizacion />
+
         </>
     );                  
 

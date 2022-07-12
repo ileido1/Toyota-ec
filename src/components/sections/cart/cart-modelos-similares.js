@@ -33,7 +33,7 @@ export default function Cartmodelossimilares() {
                            <p className="titulo-autos-similares" >{c.name_vehicle}</p>
                            <img className="img-fluid autos-similares" src={url_backend+c.image_model_vehicle} alt={c.name_vehicle} />
                            <p className="content-btn-similares " ><a className="boton-saber-mas-similares" href={c.url_button_model_de_vehicle} >{c.text_button_model_vehicle}</a></p>
-                           <p className="content-btn-similares " ><a className="boton-cta-similares" href={c.url_button_cta_model_vehicle} >{c.text_button_cta_model}</a></p>
+                           <p className="content-btn-similares " ><p className="boton-cta-similares" href={c.url_button_cta_model_vehicle} onClick={abrirModal} >{c.text_button_cta_model}</p></p>
                         </div>
 
                     </>
@@ -54,3 +54,12 @@ export default function Cartmodelossimilares() {
     );                  
 
 }
+
+function abrirModal(){
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    // Get the button that opens the modal
+    var btn = document.getElementById("cotizar-vehiculo");
+    modal.style.display = "block";
+}
+

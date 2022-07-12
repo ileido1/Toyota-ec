@@ -1,8 +1,6 @@
 import useFetch from "../../../hooks/useFetch";
 import { useLocation } from 'react-router-dom';
-
-import icono_testdrive from '../../../images/cta/icono-test-drive.svg'
-import icono_cotizar from '../../../images/cta/icono-cotizar.svg'
+import Modalcotizacion from "./cart-modal-cotizacion"
 
 let url_backend = 'https://backend-toyota.247.com.ec'
 
@@ -71,7 +69,7 @@ const Cartcta = () => {
                     <div className='contenedor-cta'>
                         <img src={icono_1_cta_vehiculo} alt="Icono test drive" className='iconos-cta'  />
                         <p>{texto_1_cta_vehiculo}</p>
-                        <a href={url_test_drive_cta_vehiculo} id='btn-testdrive' className='btn' >{boton_1_cta_vehiculo}</a>
+                        <a  id='btn-testdrive' className='btn' onClick={abrirModal} >{boton_1_cta_vehiculo}</a>
                     </div>
                 </div>
 
@@ -79,14 +77,24 @@ const Cartcta = () => {
                     <div className='contenedor-cta'>
                         <img src={icono_2_cta_vehiculo} alt="Icono cotizar" className='iconos-cta' style={{background: hexadecimal_2_cta_vehiculo}}  />
                         <p>{texto_2_cta_vehiculo}</p>
-                        <a href={url_cotizar_cta_vehiculo} id='btn-cotizar' className='btn' >{boton_2_cta_vehiculo}</a>
+                        <a  id='btn-cotizar' className='btn' onClick={abrirModal} >{boton_2_cta_vehiculo}</a>
                     </div>
                 </div>
 
             </div>
         </div>
+        <Modalcotizacion />
     </>
     )
 }
 
 export default Cartcta
+
+
+function abrirModal(){
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    // Get the button that opens the modal
+    var btn = document.getElementById("cotizar-vehiculo");
+    modal.style.display = "block";
+}
