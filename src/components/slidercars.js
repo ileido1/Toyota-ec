@@ -15,15 +15,11 @@ import { NavLink } from "react-router-dom";
 
 export default function Sliderscars() {
     let endpoint = 'home/carousel'
-    const [banner, error] = useFetch(endpoint);
+
     const [categories, error2] = useFetch(endpoint);
 
-    const [data, setData] = useState()
-    useEffect(() => {
-        get(`${process.env.REACT_APP_URL_API}${endpoint}`)
-            .then(({ data }) => setData(data.filter((item) => item.categoria_del_vehiculo === data[0].categoria_del_vehiculo)));
-    });
 
+    const [items, setItems] = useState('');
 
     const [selectedCategory, setSelectedCategory] = useState('');
     const [background, setBackground] = useState('');
@@ -32,13 +28,22 @@ export default function Sliderscars() {
         setSelectedCategory(event.currentTarget.textContent);
     }
 
-    function getFilteredList() {
-        if (!selectedCategory) {
-            return data;
+    useEffect(() => {
+        const getItems = async () => {
+
+            const result = await get(`${process.env.REACT_APP_URL_API}${endpoint}`);
+            const allItems = result.data;
+            if (!selectedCategory) {
+                const categoryItems = allItems.filter(item => item.categoria_del_vehiculo === allItems[0].categoria_del_vehiculo);
+                setItems(categoryItems)
+            } else {
+                const categoryItems = allItems.filter(item => item.categoria_del_vehiculo === selectedCategory);
+                setItems(categoryItems)
+            }
         }
-        return banner.filter((item) => item.categoria_del_vehiculo === selectedCategory);
-    }
-    var filteredList = useMemo(getFilteredList, [selectedCategory, banner]);
+        getItems()
+    }, [selectedCategory])
+
 
 
 
@@ -87,9 +92,9 @@ export default function Sliderscars() {
 
             >
                 {
-                    filteredList ? (
+                    items ? (
                         <>
-                            {filteredList.map((c, i) => (
+                            {items.map((c, i) => (
                                 <SwiperSlide className="slider-cars" >
                                     {({ isActive }) => (
 
