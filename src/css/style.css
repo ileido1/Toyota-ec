@@ -1407,3 +1407,237 @@ a.cart-link:hover {
 img.autos-similares{
     margin-top: -40px;
 }
+
+/* */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 0px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 594px; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 594px !important;
+    pointer-events: auto;
+    background-color: #E20B2A !important;
+    background-clip: padding-box;
+    border-radius: .3rem;
+    outline: 0;
+    left: 0px !important;
+    height: 100%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* ag modal */ 
+
+.titulo-formulario-cotizar{
+    /*font-family: 'Toyota-DisplayBold';*/
+    font-family: 'Radikal-Medium';
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.parrafo-formulario-cotizar{
+    /*font-family: 'Toyota-DisplayBold';*/
+    font-family: 'Radikal-Light';
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.content-formulario-campos{
+    text-align: center;
+}
+
+.content-selects{
+    width: 360px;
+    text-align: right;
+    margin: 0 auto;
+}
+
+.cerrar-modal{
+    font-size: 12px !important;
+    color: #ffffff  !important;
+    font-family: 'Radikal-Light'  !important;
+    opacity: 1 !important;
+    letter-spacing: 2px;
+
+}
+
+.content-formulario-campos label
+{
+    font-family: 'Radikal-Medium';
+    color: #ffffff;
+    text-align: left;
+    padding-right: 10px;
+    font-size: 12px;
+}
+
+.content-formulario-campos input
+{
+    height: 46px;
+    border-radius: 7px;
+    border: 1px solid #fff;
+    margin-bottom: 30px;
+    width: 360px;
+}
+
+.content-formulario-campos select
+{
+    height: 38px;
+    border-radius: 7px;
+    background: #ffffff;
+    border: 1px solid #fff;
+    margin-bottom: 15px;
+    width: 160px;
+    text-align: right;
+}
+
+#terminos{
+    height: 20px;
+    width: 20px;
+}
+
+.content-checkbox label{
+    padding-left: 10px;
+    font-size: 20px;
+    font-family: 'Radikal-Light';
+    line-height: 20px;
+}
+
+.content-checkbox{
+    display: flex;
+    justify-content: center;
+}
+
+.barra-botones{
+   background: #e6e6e6;
+   padding: 0;
+}
+
+.formulario-boton-enviar{
+    background: #fff !important;
+    color: #E20B2A !important;
+    border: 1px solid #fff !important;
+    font-weight: bold !important;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+        
+}
+
+.icono-cotizacion{
+    background: #E20B2A;
+    flex-basis: 100%;
+    height: 100px;
+    cursor: pointer;
+}
+
+.icono-testdrive{
+    background: transparent;
+    border-bottom: 1px solid #817F7F;
+    flex-basis: 100%;
+    height: 100px;
+    cursor: pointer;
+}
+
+.icono-cotizacion img{
+    padding: 20px 0px;
+    width: 40px;
+    display: block;
+    margin: 0 auto;
+}
+
+.icono-testdrive img{
+    padding: 20px 0px;
+    width: 50px;    
+    display: block;
+    margin: 0 auto;
+}
+
+.nopadding-cotizacion {
+    padding: 0px !important;
+  }
+
+.flexbotones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: inherit;
+    justify-items: center;
+    margin-top: 280px;
+    margin-bottom: 354px;
+}
+
+.texto-icono-testdrive{
+    text-align: center;
+    font-size: 10px;
+    color: #817f7f;
+    margin-bottom: 0px;
+    line-height: 12px;
+    margin-top: -28px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    cursor: pointer;
+
+}
+
+.texto-icono-cotizar{
+    text-align: center;
+    font-size: 10px;
+    color: #ffffff;
+    margin-bottom: 0px;
+    line-height: 12px;
+    margin-top: -13px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.formulario-logo img{
+    margin-top: 20px !important;
+    width: 80px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/* ag modal */
+
+/* */

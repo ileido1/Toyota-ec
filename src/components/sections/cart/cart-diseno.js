@@ -1,5 +1,6 @@
 import useFetch from "../../../hooks/useFetch";
 import { useLocation } from 'react-router-dom';
+import Modalcotizacion from "./cart-modal-cotizacion"
 
 import documento from "../../../images/diseno/icono-documento.svg"
 
@@ -107,7 +108,7 @@ return (
                     </div>
 
                     <div className="content-cotizar">
-                        <a href={url_boton_dc_vechiculo} data-auto="cotizar-auto" className="btn btn-cotizar " >{texto_boton_dc_vehiculo}</a>
+                        <p data-auto="cotizar-auto" className="btn btn-cotizar " id="cotizar-vehiculo" onClick={abrirModal} >{texto_boton_dc_vehiculo}</p>
                     </div>
 
                     <div className="content-descarga">
@@ -147,6 +148,9 @@ return (
         </div>
     </div>
 </div>
+
+<Modalcotizacion />
+
 </>
 );
 }
@@ -163,5 +167,28 @@ function cambiarAuto(e){
     automovil.src = imagen
     titulo_colores.setAttribute('style', 'color: '+color);
     
+}
 
+function abrirModal(){
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    // Get the button that opens the modal
+    var btn = document.getElementById("cotizar-vehiculo");
+    modal.style.display = "block";
+}
+
+function cerrarModal(){
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+    modal.style.display = "none";
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
