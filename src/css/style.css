@@ -453,7 +453,6 @@ ul#menu-galeria>li>span {
 .swiper-slide-next .imagencarro {
     width: 120%;
     margin-top: 0px;
-    transition: 2s;
 }
 
 .pslidercarro {

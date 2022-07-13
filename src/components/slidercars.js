@@ -43,7 +43,7 @@ export default function Sliderscars() {
                 setItems(categoryItems)
             } else {
                 const categoryItems = allItems.filter(item => item.categoria_del_vehiculo === selectedCategory);
-                setBackground(allItems[0].field_fondo_del_vehiculo);
+                setBackground(categoryItems[0].field_fondo_del_vehiculo);
                 setItems(categoryItems)
             }
         }
