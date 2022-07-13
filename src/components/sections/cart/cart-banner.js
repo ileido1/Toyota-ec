@@ -110,7 +110,7 @@ export default function Cartslider() {
             </div>
 
             <div className="row">
-                <div className="col-6">
+                <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div className="content_features" id="content-features" >
                         <div className="row">
                             <motion.div  transition={{ delay: 0.5, default: { duration: 0.8 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} className="col-6 col-sm-6 " >
@@ -124,7 +124,7 @@ export default function Cartslider() {
                                 <div className="row border-right-filled">
 
                                 <div className="col-12">
-                                        <img className="img-logo-feature " src={logo_modelo_1} alt="Logo versiones" /><span className="text-feature-version " ></span>
+                                        <img className="img-logo-feature " src={logo_modelo_1} alt="Logo versiones" /><span className="text-feature-version " >mmm</span>
                                         <p className="text-feature ">{texto_modelo_1}</p>
                                     </div>
 
