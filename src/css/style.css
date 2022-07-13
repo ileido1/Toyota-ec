@@ -1673,15 +1673,15 @@ img.autos-similares{
     align-items: center;
     display: flex;
     margin-bottom: 20px;
-  }
+}
 
-  .navbar-nav a > img{
-    padding-top: 15px;
-  }
+.navbar-nav a > img{
+padding-top: 15px;
+}
 
-  .ocultar-icono{
-    display: none !important;
-  }
+.ocultar-icono{
+display: none !important;
+}
 
 .text-experiencia-testdrive{
     font-size: 20px;
@@ -1698,6 +1698,12 @@ img.autos-similares{
 
 .textoabajo p{
     margin-bottom: 0px;
+}
+
+.mensaje-formulario{
+    font-size: 18px;
+    font-family: 'Radikal-Light';
+    color: #ffffff;
 }
 
 /* ag modal */
