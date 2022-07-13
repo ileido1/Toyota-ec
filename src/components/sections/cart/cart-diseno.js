@@ -98,7 +98,7 @@ return (
 <div className="row"  >
     <div className="col-12">
             <div id="diseno" className="row pd100"  >
-                <div className="col-4">
+                <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 
                     <div className="content-text">
 
@@ -116,7 +116,7 @@ return (
                     </div>
 
                 </div>
-                <div className="col-8">
+                <div className="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                     <img id="imagen-auto-diseno" className=" img-fluid "  src={imagen_dc_vehiculo_color_1} alt="" />
                 </div>
             </div>

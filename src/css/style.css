@@ -951,10 +951,16 @@ ul.cart-item-caracteristicas {
     padding: 60px !important;
 }
 
-.noticia p,
 .noticia h4 {
+    color: #ffffff;
+    font-family: 'Novecentos-DemiBold';
+    text-align: justify;
+}
+
+.noticia p{
     color: #adadad;
     font-family: 'Novecentos-DemiBold';
+    text-align: justify;
 }
 
 .noticia img {
@@ -1709,3 +1715,19 @@ display: none !important;
 /* ag modal */
 
 /* */
+
+/* Responsive */
+
+@media only screen and (max-width: 600px) {
+    
+    .content_features{
+        background: #000;
+        margin-top: 0px !important;
+        padding-left: 0px !important;
+    }
+
+  }
+
+
+
+/* Responsive */
