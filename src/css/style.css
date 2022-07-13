@@ -419,10 +419,6 @@ ul#menu-galeria>li>span {
     padding-bottom: 3px;
 }
 
-.supcarslider .nav-tabs .nav-item.show .nav-link,
-.nav-tabs .nav-link.active {
-    border-bottom: 0px solid #E50021 !important;
-}
 
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover {
@@ -956,7 +952,7 @@ ul.cart-item-caracteristicas {
     text-align: justify;
 }
 
-.noticia p{
+.noticia p {
     color: #adadad;
     font-family: 'Novecentos-DemiBold';
     text-align: justify;
@@ -1722,14 +1718,14 @@ img.autos-similares {
 /* Responsive */
 
 @media only screen and (max-width: 600px) {
-    
-    .content_features{
+
+    .content_features {
         background: #000;
         margin-top: 0px !important;
         padding-left: 0px !important;
     }
 
-  }
+}
 
 
 
