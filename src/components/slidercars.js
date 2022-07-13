@@ -38,10 +38,12 @@ export default function Sliderscars() {
             setDefault('');
             if (!selectedCategory) {
                 setDefault(allItems[0].categoria_del_vehiculo);
+                setBackground(allItems[0].field_fondo_del_vehiculo);
                 const categoryItems = allItems.filter(item => item.categoria_del_vehiculo === allItems[0].categoria_del_vehiculo);
                 setItems(categoryItems)
             } else {
                 const categoryItems = allItems.filter(item => item.categoria_del_vehiculo === selectedCategory);
+                setBackground(allItems[0].field_fondo_del_vehiculo);
                 setItems(categoryItems)
             }
         }
@@ -104,9 +106,7 @@ export default function Sliderscars() {
 
 
                                         <div className="container-fluid  "  >
-                                            <div>{isActive ? setBackground(c.field_fondo_del_vehiculo) : ''}
 
-                                            </div>
 
                                             <div className="row" >
                                                 <div className="col-12 centrarbaseline">
@@ -171,7 +171,7 @@ export default function Sliderscars() {
     );
 }
 
-function abrirModal(){
+function abrirModal() {
     // Get the modal
     var modal = document.getElementById("myModal");
     // Get the button that opens the modal

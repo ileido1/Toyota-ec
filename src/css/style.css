@@ -453,7 +453,7 @@ ul#menu-galeria>li>span {
 .swiper-slide-next .imagencarro {
     width: 120%;
     margin-top: 0px;
-    transition: width 2s;
+    transition: 2s;
 }
 
 .pslidercarro {
@@ -1068,8 +1068,7 @@ ul.cart-item-caracteristicas {
 
 /* next prev */
 .swiper-button-prev::after,
-.swiper-button-next::after 
-{
+.swiper-button-next::after {
     font-size: 18px !important;
     font-weight: bold !important;
     color: #3e3d3d !important;
@@ -1177,8 +1176,7 @@ ul.cart-item-caracteristicas {
 }
 
 #content-automovil-interior .swiper-button-prev::after,
-#content-automovil-exterior .swiper-button-next::after 
-{
+#content-automovil-exterior .swiper-button-next::after {
     font-size: 18px !important;
     font-weight: bold !important;
     color: #3e3d3d !important;
@@ -1421,11 +1419,11 @@ a.cart-link:hover {
     cursor: pointer;
 }
 
-.fila-vehiculos{
+.fila-vehiculos {
     margin-top: 40px;
 }
 
-img.autos-similares{
+img.autos-similares {
     margin-top: -40px;
 }
 
@@ -1433,21 +1431,30 @@ img.autos-similares{
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 0px; /* Location of the box */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 0px;
+    /* Location of the box */
     left: 0;
     top: 0;
-    width: 594px; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
+    width: 594px;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1459,26 +1466,26 @@ img.autos-similares{
     outline: 0;
     left: 0px !important;
     height: 100%;
-  }
-  
-  /* The Close Button */
-  .close {
+}
+
+/* The Close Button */
+.close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
-/* ag modal */ 
+/* ag modal */
 
-.titulo-formulario-cotizar{
+.titulo-formulario-cotizar {
     /*font-family: 'Toyota-DisplayBold';*/
     font-family: 'Radikal-Medium';
     text-transform: uppercase;
@@ -1487,7 +1494,7 @@ img.autos-similares{
     color: #FFFFFF;
 }
 
-.parrafo-formulario-cotizar{
+.parrafo-formulario-cotizar {
     /*font-family: 'Toyota-DisplayBold';*/
     font-family: 'Radikal-Light';
     font-size: 24px;
@@ -1496,27 +1503,26 @@ img.autos-similares{
     color: #FFFFFF;
 }
 
-.content-formulario-campos{
+.content-formulario-campos {
     text-align: center;
 }
 
-.content-selects{
+.content-selects {
     width: 360px;
     text-align: right;
     margin: 0 auto;
 }
 
-.cerrar-modal{
+.cerrar-modal {
     font-size: 12px !important;
-    color: #ffffff  !important;
-    font-family: 'Radikal-Light'  !important;
+    color: #ffffff !important;
+    font-family: 'Radikal-Light' !important;
     opacity: 1 !important;
     letter-spacing: 2px;
     margin-top: 5px;
 }
 
-.content-formulario-campos label
-{
+.content-formulario-campos label {
     font-family: 'Radikal-Medium';
     color: #ffffff;
     text-align: left;
@@ -1524,8 +1530,7 @@ img.autos-similares{
     font-size: 12px;
 }
 
-.content-formulario-campos input
-{
+.content-formulario-campos input {
     height: 39px;
     border-radius: 7px;
     border: 1px solid #fff;
@@ -1533,8 +1538,7 @@ img.autos-similares{
     width: 360px;
 }
 
-.content-formulario-campos select
-{
+.content-formulario-campos select {
     height: 38px;
     border-radius: 7px;
     background: #ffffff;
@@ -1544,24 +1548,24 @@ img.autos-similares{
     text-align: right;
 }
 
-#terminos{
+#terminos {
     height: 20px;
     width: 20px;
 }
 
-.content-checkbox label{
+.content-checkbox label {
     padding-left: 10px;
     font-size: 20px;
     font-family: 'Radikal-Light';
     line-height: 20px;
 }
 
-.content-checkbox{
+.content-checkbox {
     display: flex;
     justify-content: center;
 }
 
-.formulario-boton-enviar{
+.formulario-boton-enviar {
     background: #fff !important;
     color: #E20B2A !important;
     border: 1px solid #fff !important;
@@ -1569,17 +1573,17 @@ img.autos-similares{
     width: 200px;
     display: block;
     margin: 0 auto;
-        
+
 }
 
-.icono-cotizacion{
+.icono-cotizacion {
     background: #E20B2A;
     flex-basis: 100%;
     height: 100px;
     cursor: pointer;
 }
 
-.icono-testdrive{
+.icono-testdrive {
     background: transparent;
     border-bottom: 1px solid #817F7F;
     flex-basis: 100%;
@@ -1587,25 +1591,25 @@ img.autos-similares{
     cursor: pointer;
 }
 
-.icono-cotizacion img{
+.icono-cotizacion img {
     padding: 20px 0px;
     width: 40px;
     display: block;
     margin: 0 auto;
 }
 
-.icono-testdrive img{
+.icono-testdrive img {
     padding: 20px 0px;
-    width: 50px;    
+    width: 50px;
     display: block;
     margin: 0 auto;
 }
 
 .nopadding-cotizacion {
     padding: 0px !important;
-  }
+}
 
-.flexbotones{
+.flexbotones {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1614,7 +1618,7 @@ img.autos-similares{
     justify-items: center;
 }
 
-.barra-botones{
+.barra-botones {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1625,11 +1629,11 @@ img.autos-similares{
     padding: 0;
 }
 
-.barra-formulario{
-    background:#E20B2A ;
+.barra-formulario {
+    background: #E20B2A;
 }
 
-.texto-icono-testdrive{
+.texto-icono-testdrive {
     text-align: center;
     font-size: 10px;
     color: #817f7f;
@@ -1644,7 +1648,7 @@ img.autos-similares{
 
 }
 
-.texto-icono-cotizar{
+.texto-icono-cotizar {
     text-align: center;
     font-size: 10px;
     color: #ffffff;
@@ -1658,19 +1662,19 @@ img.autos-similares{
     cursor: pointer;
 }
 
-.expansion-fondo-formulario{
+.expansion-fondo-formulario {
     display: inherit !important;
     height: 100% !important;
 
 }
 
-.formulario-logo img{
+.formulario-logo img {
     width: 98px;
     display: block;
     margin: 0 auto;
     position: absolute;
     top: 20px;
-    left: 28px;  
+    left: 28px;
 }
 
 .navbar-expand-lg .navbar-nav {
@@ -1681,15 +1685,15 @@ img.autos-similares{
     margin-bottom: 20px;
 }
 
-.navbar-nav a > img{
-padding-top: 15px;
+.navbar-nav a>img {
+    padding-top: 15px;
 }
 
-.ocultar-icono{
-display: none !important;
+.ocultar-icono {
+    display: none !important;
 }
 
-.text-experiencia-testdrive{
+.text-experiencia-testdrive {
     font-size: 20px;
     font-family: 'Radikal-Light';
     line-height: 20px;
@@ -1698,15 +1702,15 @@ display: none !important;
     text-align: center;
 }
 
-.boton-cta-similares{
+.boton-cta-similares {
     cursor: pointer;
 }
 
-.textoabajo p{
+.textoabajo p {
     margin-bottom: 0px;
 }
 
-.mensaje-formulario{
+.mensaje-formulario {
     font-size: 18px;
     font-family: 'Radikal-Light';
     color: #ffffff;
