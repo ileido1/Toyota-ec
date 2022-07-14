@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-// Import Swiper React components
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from 'framer-motion'
+
+import banner_portada from '../images/bg-portada5.jpg'
 
 // Import Swiper styles
 import "swiper/css";
@@ -63,7 +65,7 @@ export default function Bannerhome() {
                                 banner.map(c => (
                                     <>
                                         <SwiperSlide>
-                                            <div className="container-fluid contenedor " style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_banner})` }} >
+                                            <div className="container-fluid contenedor " style={{ backgroundImage: `url(${'' + banner_portada})` }} >
                                                 <div className="mtopbanner">
                                                     <div className="row" >
                                                         <motion.div
