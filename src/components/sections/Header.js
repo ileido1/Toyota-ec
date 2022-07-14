@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import useFetch from '../../hooks/useFetch';
-import Headerli from './Headerli'
 import Navlinkheader from './navlinkheader';
 
 function Header() {
@@ -48,7 +47,7 @@ function Header() {
 
 									</>
 								) : (
-									<span> Cargando...</span>
+									null
 								)
 							}
 						</ul>

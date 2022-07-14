@@ -1,4 +1,4 @@
-import '../css/bootstrap.min.css'
+
 import '../css/style.css';
 import '../css/all.css'
 import Header from './sections/Header'
@@ -14,16 +14,24 @@ import {
   Route,
 } from "react-router-dom";
 import useFetch from '../hooks/useFetch';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState, useEffect } from 'react';
+import LoadingSpinner from './sections/loading';
 
 const App = () => {
   let peticion = "global/toyota-info"
 
   const [footer, error] = useFetch(peticion);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
 
   return (
     <>
-      <BrowserRouter>
+      {loading ? <LoadingSpinner></LoadingSpinner> : <>  <BrowserRouter>
         <Header></Header>
         <Routes>
           <Route path="/post-venta" element={<Posventa />} />
@@ -71,7 +79,8 @@ const App = () => {
           )
         }
 
-      </BrowserRouter>
+      </BrowserRouter></>}
+
     </>
   )
 }
