@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import useFetch from "../hooks/useFetch";
 import { Navigation } from "swiper";
 
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -57,34 +58,26 @@ export default function Sliderscars() {
     return (
         <>
             <div className="supcarslider">
-
-
-                <h1 className="h1Conoce">CONOCE NUESTROS VEHÍCULOS</h1>
-                <ul className="nav nav-tabs ">
+                {categories ? (
                     <>
-                        {
+                        <h1 className="h1Conoce">CONOCE NUESTROS VEHÍCULOS</h1>
+                        <ul className="nav nav-tabs ">
+                            {
+                                [...new Set(categories.map((Val, i) => Val.categoria_del_vehiculo))].map((c, i) => (
 
-                            categories ? (
-                                <>
-                                    {
+                                    <li className="nav-item">
+                                        <a className={selectedCategory == c || defecto == c ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{c}</a>
+                                    </li>
+                                ))}
 
 
+                        </ul>
 
-                                        [...new Set(categories.map((Val, i) => Val.categoria_del_vehiculo))].map((c, i) => (
-
-                                            <li className="nav-item">
-                                                <a className={selectedCategory == c || defecto == c ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{c}</a>
-                                            </li>
-                                        )
-                                        )
-                                    }
-                                </>
-                            ) : (
-                                <span> Cargando...</span>
-                            )
-                        }
                     </>
-                </ul>
+                ) : (
+                    <span> </span>
+                )
+                }
             </div>
             <Swiper
                 slidesPerView={3}
@@ -121,7 +114,7 @@ export default function Sliderscars() {
                                                     <p className="pslidercarro">
                                                         {c.anio_del_vehiculo}
                                                     </p>
-                                                    <div className="row">
+                                                    <div className="row infosupslider">
                                                         <div className="col-6">
                                                             <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo} className="logoslider"></img>
                                                         </div>
@@ -132,6 +125,7 @@ export default function Sliderscars() {
                                                     </div>
                                                     <div className="row carddetallesslider">
                                                         <div className="col-4 textoabajo border-right-slider ">
+                                                            <p className="rendimientoslidertitulo">{c.titulo_info_box_1}</p>
                                                             <p className="rendimientoslider">{c.texto_info_box_1}</p>
                                                         </div>
                                                         <div className="col-4 textoabajo border-right-slider ">
@@ -160,7 +154,7 @@ export default function Sliderscars() {
                             ))}
 
                         </>) : (
-                        <span> Cargando...</span>
+                        null
                     )
                 }
 

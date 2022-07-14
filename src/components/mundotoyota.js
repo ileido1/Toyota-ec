@@ -65,7 +65,7 @@ export default function MundoToyota() {
                             }
                         </>
                     ) : (
-                        <span> Cargando...</span>
+                        <span> </span>
                     )
                 }
 

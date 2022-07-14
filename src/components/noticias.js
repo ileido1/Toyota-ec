@@ -77,7 +77,7 @@ export default function Noticias() {
                                             }
                                         </>
                                     ) : (
-                                        <span> Cargando...</span>
+                                        <span> </span>
                                     )
                                 }
                             </>

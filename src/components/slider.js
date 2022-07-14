@@ -85,7 +85,7 @@ export default function App() {
                             ))}
 
                         </>) : (
-                        <span> Cargando...</span>
+                        <span> </span>
                     )
                 }
 

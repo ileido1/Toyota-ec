@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from 'framer-motion'
+import Spinner from 'react-bootstrap/Spinner';
+
 
 import banner_portada from '../images/bg-portada5.jpg'
 
@@ -91,10 +93,9 @@ export default function Bannerhome() {
                                                     <motion.div
                                                         className="row btnhome"
                                                         variants={btnVariant}
-                                                        initial="hidden"
                                                         animate="visible"
                                                         transition={{ delay: 0.5, default: { duration: 1 } }} >
-                                                        <NavLink to="/raize" > <button className="btn-raize"> {c.texto_del_enlace} </button></NavLink>
+                                                        <NavLink to="/raize" className="abanner" > <button className="btn-raize"> {c.texto_del_enlace} </button></NavLink>
 
                                                     </motion.div>
 
@@ -109,14 +110,14 @@ export default function Bannerhome() {
                             }
                         </>
                     ) : (
-                        <span> Cargando...</span>
+                        null
                     )
 
                 }
 
 
             </Swiper>
-            
+
         </>
     );
 }
