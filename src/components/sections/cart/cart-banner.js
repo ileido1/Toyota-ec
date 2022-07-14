@@ -16,9 +16,11 @@ let texto_modelo_2 = ""
 
 let uno_icono_versiones = ''
 let uno_titulo_versiones = ''
+let a_subtitulo_versiones = ''
 
 let dos_icono_versiones = ''
 let dos_titulo_versiones = ''
+let b_subtitulo_versiones = ''
 
 let tres_icono_versiones = ''
 let tres_titulo_versiones = ''
@@ -65,9 +67,11 @@ export default function Cartslider() {
 
             uno_icono_versiones = url_backend+v.uno_icono_versiones
             uno_titulo_versiones = v.uno_titulo_versiones
+            a_subtitulo_versiones = v.a_subtitulo_versiones
 
             dos_icono_versiones = url_backend+v.dos_icono_versiones
             dos_titulo_versiones = v.dos_titulo_versiones
+            b_subtitulo_versiones = v.b_subtitulo_versiones
 
             tres_icono_versiones = url_backend+v.tres_icono_versiones
             tres_titulo_versiones = v.tres_titulo_versiones
@@ -124,7 +128,7 @@ export default function Cartslider() {
                                 <div className="row border-right-filled">
 
                                 <div className="col-12">
-                                        <img className="img-logo-feature " src={logo_modelo_1} alt="Logo versiones" /><span className="text-feature-version " >mmm</span>
+                                        <img className="img-logo-feature " src={logo_modelo_1} alt="Logo versiones" /><span className="text-feature-version " >{a_subtitulo_versiones}</span>
                                         <p className="text-feature ">{texto_modelo_1}</p>
                                     </div>
 
@@ -159,7 +163,7 @@ export default function Cartslider() {
                                 <div className="row">
                                     <div className="col-12">
  
-                                        <img className="img-logo-feature " src={logo_modelo_2} alt="Logo Automovil" /><span className="text-feature-version " > </span>
+                                        <img className="img-logo-feature " src={logo_modelo_2} alt="Logo Automovil" /><span className="text-feature-version " >{b_subtitulo_versiones}</span>
                                         <p className="text-feature animated fadeInLeft delay4 duration4">{texto_modelo_2}</p>
                                     </div>
 
