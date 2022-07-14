@@ -6,7 +6,7 @@ import Cart from './Cart'
 import Vehiculos from './pages/vehiculos';
 import Footer from './sections/Footer';
 import Home from './pages/home'
-
+import Posventa from './pages/post-venta'
 
 import {
   BrowserRouter,
@@ -26,6 +26,8 @@ const App = () => {
       <BrowserRouter>
         <Header></Header>
         <Routes>
+          <Route path="/post-venta" element={<Posventa />} />
+
           <Route path="/raize" element={<Cart />} />
           <Route path="/rav4" element={<Cart />} />
           <Route path="/hilux" element={<Cart />} />
@@ -40,7 +42,7 @@ const App = () => {
           <Route path="/land-cruiser-300" element={<Cart />} />
           <Route path="/corolla-sedan" element={<Cart />} />
           <Route path="/corolla-cross" element={<Cart />} />
-          <Route path="/c-hr" element={<Cart />} /> 
+          <Route path="/c-hr" element={<Cart />} />
           <Route path="/fortuner" element={<Cart />} />
           <Route path="/hilux-cd-4x2" element={<Cart />} />
           <Route path="/hilux-cd-4x4" element={<Cart />} />

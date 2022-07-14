@@ -28,7 +28,7 @@ export default function App() {
                 modules={[Mousewheel]}
                 direction={"vertical"}
                 slidesPerView={1}
-                spaceBetween={0}
+                spaceBetween={30}
                 speed={2000}
                 mousewheel={{
                     sensitivity: 1,
