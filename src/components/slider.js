@@ -26,7 +26,7 @@ export default function App() {
         <>
             <Swiper
                 modules={[Mousewheel]}
-                direction={"horizontal"}
+                direction={"vertical"}
                 slidesPerView={1}
                 spaceBetween={0}
                 speed={2000}

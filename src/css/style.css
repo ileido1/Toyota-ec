@@ -992,7 +992,7 @@ ul.cart-item-caracteristicas {
 }
 
 .sliderqdr {
-
+    height: 100vh;
     margin-bottom: 120px;
 }
 
