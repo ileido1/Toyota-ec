@@ -114,7 +114,7 @@ export default function Sliderscars() {
                                                     <p className="pslidercarro">
                                                         {c.anio_del_vehiculo}
                                                     </p>
-                                                    <div className="row">
+                                                    <div className="row infosupslider">
                                                         <div className="col-6">
                                                             <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo} className="logoslider"></img>
                                                         </div>
@@ -125,6 +125,7 @@ export default function Sliderscars() {
                                                     </div>
                                                     <div className="row carddetallesslider">
                                                         <div className="col-4 textoabajo border-right-slider ">
+                                                            <p className="rendimientoslidertitulo">{c.titulo_info_box_1}</p>
                                                             <p className="rendimientoslider">{c.texto_info_box_1}</p>
                                                         </div>
                                                         <div className="col-4 textoabajo border-right-slider ">

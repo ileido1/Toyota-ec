@@ -63,6 +63,14 @@
     height: 100px;
 }
 
+.textoabajo a {
+    text-decoration: none !important;
+}
+
+.infosupslider {
+    margin-bottom: 10px;
+}
+
 .spinner-container {
     position: fixed;
     top: 0;
