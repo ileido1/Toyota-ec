@@ -50,7 +50,7 @@ export default function App() {
                                         }
 
 
-                                        <div className="container fondoqdr  " style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.field_fondo_slider_r})` }} >
+                                        <div className="container fondoqdr  " style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_slider_r})` }} >
 
                                             <div className="row"
                                             >
