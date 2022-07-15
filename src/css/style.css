@@ -1500,6 +1500,10 @@ img.autos-similares {
     cursor: pointer;
 }
 
+ul.tabsnoticias > li {
+    padding-left: 40px;
+}
+
 /* ag modal */
 
 .titulo-formulario-cotizar {
@@ -1748,7 +1752,5 @@ img.autos-similares {
     }
 
 }
-
-
 
 /* Responsive */
