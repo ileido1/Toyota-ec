@@ -140,21 +140,21 @@
 }
 
 .img-icono-feature {
-    width: 80px;
+   
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
 }
 
 .img-icono-feature-frenos {
-    width: 60px;
+   
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
 }
 
 .img-icono-feature-motor {
-    width: 60px;
+    
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
@@ -1758,3 +1758,9 @@ ul.tabsnoticias > li {
 }
 
 /* Responsive */
+
+.lifooter section a{
+    color: #ffffff;
+    line-height: 20px;
+    text-decoration: none;
+}

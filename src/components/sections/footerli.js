@@ -11,7 +11,7 @@ function Footerli({ title, field_url_menu_secundario }) {
                             {
 
                                 field_url_menu_secundario.map(c => {
-                                    return < Navlinkfooter key={c.uri} title={c.title} ></Navlinkfooter>
+                                    return < Navlinkfooter key={c.uri} url={c.uri} title={c.title} ></Navlinkfooter>
                                 }
                                 )
                             }
