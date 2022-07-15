@@ -23,7 +23,6 @@ export default function Bannerhome() {
     let llenarbanner = 'home/banner'
     const [banner, error] = useFetch(llenarbanner);
 
-
     const [lastyPos, setLastYPost] = useState(0);
     const [Actions, SetActions] = useState(true);
     useEffect(() => {
@@ -45,7 +44,7 @@ export default function Bannerhome() {
     }
     const btnVariant = {
         visible: { opacity: 1, scale: 1, y: 0 },
-        hidden: { opacity: 0, scale: 0, y: 200 },
+        hidden: { opacity: 0, scale: 0, y: 0 },
     }
     return (
         <>
@@ -75,7 +74,7 @@ export default function Bannerhome() {
                                                                 x: 0,
                                                                 x: Actions ? 0 : -400
                                                             }}
-                                                            initial={{ x: 200 }} transition={{ delay: 0.5, default: { duration: 1 } }}
+                                                            initial={{ x: 200}} transition={{ delay: 0.2, default: { duration: 0.7 } }}
                                                             className="col-6">
                                                             <img src={'https://backend-toyota.247.com.ec/' + c.imagen_vehiculo} className="carrobanner"></img>
                                                         </motion.div>
@@ -83,7 +82,7 @@ export default function Bannerhome() {
                                                             variants={boxVariant}
                                                             initial="hidden"
                                                             animate="visible"
-                                                            transition={{ delay: 0.5, default: { duration: 1 } }}
+                                                            transition={{ delay: 0.2, default: { duration: 0.7 } }}
                                                         >
                                                             <h1 className="Tbanner">{c.texto_alternativo}</h1>
                                                             <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo}></img>
@@ -94,7 +93,7 @@ export default function Bannerhome() {
                                                         className="row btnhome"
                                                         variants={btnVariant}
                                                         animate="visible"
-                                                        transition={{ delay: 0.5, default: { duration: 1 } }} >
+                                                        transition={{ delay: 0.2, default: { duration: 0.7 } }} initial={{ opacity:0}} >
                                                         <NavLink to="/raize" className="abanner" > <button className="btn-raize"> {c.texto_del_enlace} </button></NavLink>
 
                                                     </motion.div>
