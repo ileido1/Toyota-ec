@@ -136,7 +136,7 @@ export default function Sliderscars() {
                                                             <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo} className="logoslider"></img>
                                                         </div>
                                                         <div className="col-6 textoabajo align-items ">
-                                                            <NavLink to={c.enlace_todos_los_vehiculos}> <p className="vertodos">{c.texto_ver_vehiculos}</p></NavLink>
+                                                            <NavLink to={c.enlace_todos_los_vehiculos}> <p className="vertodos">{c.texto_ver_vehiculos} <i className="fa-solid fa-arrow-up-right-from-square"></i></p></NavLink>
                                                         </div>
 
                                                     </div>
