@@ -9,7 +9,7 @@ import { Navigation } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import { NavLink } from "react-router-dom";
+import { NavLink, Navigate } from "react-router-dom";
 
 import Modalcotizacion from "./sections/cart/cart-modal-cotizacion"
 
@@ -29,6 +29,21 @@ export default function Sliderscars() {
     const [defecto, setDefault] = useState('');
     function handleCategoryChange(event) {
         setSelectedCategory(event.currentTarget.textContent);
+    }
+
+    function handleClick(event) {
+        const swiper = document.querySelector('.mySwipercar').swiper;
+        if (event.currentTarget.classList.contains('swiper-slide-next')) {
+            console.log(event.currentTarget.getAttribute("data-url"))
+            window.location.href = event.currentTarget.getAttribute("data-url")
+
+
+        } else if (event.currentTarget.classList.contains('swiper-slide-active')) {
+            swiper.slidePrev();
+
+        } else {
+            swiper.slideNext()
+        }
     }
 
     useEffect(() => {
@@ -84,8 +99,10 @@ export default function Sliderscars() {
                 spaceBetween={30}
                 navigation={true}
                 speed={1000}
+                clickable={true}
                 modules={[Navigation]}
                 loop={true}
+
                 style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + background})` }}
                 className="mySwipercar"
 
@@ -94,7 +111,7 @@ export default function Sliderscars() {
                     items ? (
                         <>
                             {items.map((c, i) => (
-                                <SwiperSlide className="slider-cars" >
+                                <SwiperSlide className="slider-cars" onClick={handleClick} data-url={c.enlace_ver_vehiculos}>
                                     {({ isActive }) => (
 
 
@@ -103,8 +120,8 @@ export default function Sliderscars() {
 
                                             <div className="row" >
                                                 <div className="col-12 centrarbaseline">
-                                                    <a href={c.enlace_ver_vehiculos}> <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro"></img>
-                                                    </a>
+                                                    <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro"></img>
+
                                                 </div>
                                                 <div className="col-12 logocarro">
                                                     <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo} className="logocarroprev"></img>
