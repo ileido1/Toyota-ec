@@ -469,7 +469,7 @@ ul#menu-galeria>li>span {
 
 .swiper-slide-next .imagencarro {
     width: 120%;
-    margin-top: 260px;
+    margin-top: 180px;
     -webkit-transition: all 1.5s 0s ease;
     -moz-transition: all 1.5s 0s ease;
     -o-transition: all 1.5s 0s ease;
@@ -1792,7 +1792,7 @@ ul.tabsnoticias > li {
   }
 
   .SliderQDR{
-    margin-top: 120px;
+    margin-top: 160px;
     margin-bottom: 120px;
   }
 
