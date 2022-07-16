@@ -131,19 +131,20 @@
 }
 
 .content_features {
-    margin-top: -370px;
+    margin-top: -380px;
     padding-left: 60px;
 }
 
 .img-logo-feature {
     width: 160px;
+    width: 70%;
 }
 
-.img-icono-feature {
-   
+.img-icono-feature { 
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
+    width: 70%;
 }
 
 .img-icono-feature-frenos {
@@ -151,6 +152,7 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
+    width: 70%;
 }
 
 .img-icono-feature-motor {
@@ -158,13 +160,14 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
+    width: 80%;
 }
 
 .titulo-feature {
-    font-family: 'Toyota-DisplayRegular';
+    font-family: 'Toyota-DisplayBold';
     color: #ffffff;
     text-decoration: underline;
-    font-size: 32px;
+    font-size: 44px;
 }
 
 .text-feature {
@@ -273,7 +276,7 @@
 
 .content-cotizar {
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .text-descargar-catalogo {
@@ -286,7 +289,7 @@
 .secciones-subtitulos {
 
     font-family: 'Toyota-DisplayBold';
-    color: #817F7F;
+    color: #222222;
     font-size: 1.9em;
     text-transform: uppercase;
 }
@@ -373,7 +376,7 @@ ul#menu-galeria>li>span {
 }
 
 .titulo-galeria {
-    margin-top: 80px;
+    margin-top:120px !important;
     padding-left: 0px;
     padding-right: 0px;
 }
@@ -462,12 +465,15 @@ ul#menu-galeria>li>span {
 .imagencarro {
     width: 45%;
     margin-top: 400px;
-
 }
 
 .swiper-slide-next .imagencarro {
     width: 120%;
     margin-top: 200px;
+    -webkit-transition: all 1.5s 0s ease;
+    -moz-transition: all 1.5s 0s ease;
+    -o-transition: all 1.5s 0s ease;
+    transition: all 1.5s 0s ease;
 }
 
 .pslidercarro {
@@ -510,7 +516,7 @@ ul#menu-galeria>li>span {
 }
 
 .rendimientoslidertitulo {
-    font-size: 10px;
+    font-size: 16px;
     font-family: 'Toyota-DisplayBold';
     color: #817F7F;
     text-transform: uppercase;
@@ -1249,6 +1255,8 @@ a.cart-link:hover {
     -moz-transition: all 0.5s 0s ease;
     -o-transition: all 0.5s 0s ease;
     transition: all 0.5s 0s ease;
+    margin: 0 auto;
+    display: block; 
 }
 
 .titulo-autos-similares {
@@ -1764,3 +1772,25 @@ ul.tabsnoticias > li {
     line-height: 20px;
     text-decoration: none;
 }
+
+.fondoqdr{
+    max-width: 100% !important;
+    background-size: contain;
+    background-position: center;
+}
+
+.lifooter section a:hover {
+    color: #e50021;
+    line-height: 20px;
+    text-decoration: none;
+  }
+
+  .content-descarga{
+    text-align: center;
+    width: 250px;
+  }
+
+  .SliderQDR{
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }

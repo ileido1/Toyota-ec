@@ -18,6 +18,7 @@ let url_pdf_dc_vehiculo =''
 let imagen_dc_vehiculo_color_1 =''
 let hex_dc_vehiculo_color_1 =''
 
+
 let imagen_dc_vehiculo_color_2 =''
 let hex_dc_vehiculo_color_2 =''
 
@@ -32,6 +33,29 @@ let hex_dc_vehiculo_color_5 =''
 
 let imagen_dc_vehiculo_color_6 =''
 let hex_dc_vehiculo_color_6 =''
+
+let imagen_dc_vehiculo_color_7 =''
+let hex_dc_vehiculo_color_7 =''
+
+let imagen_dc_vehiculo_color_8 =''
+let hex_dc_vehiculo_color_8 =''
+
+let imagen_dc_vehiculo_color_9 =''
+let hex_dc_vehiculo_color_9 =''
+
+let imagen_dc_vehiculo_color_10 =''
+let hex_dc_vehiculo_color_10 =''
+
+let nombre_color_1 = ""
+let nombre_color_2 = ""
+let nombre_color_3 = ""
+let nombre_color_4 = ""
+let nombre_color_5 = ""
+let nombre_color_6 = ""
+let nombre_color_7 = ""
+let nombre_color_8 = ""
+let nombre_color_9 = ""
+let nombre_color_10 = ""
 
 const Cartdiseno = () => { 
 
@@ -70,22 +94,44 @@ const Cartdiseno = () => {
 
             imagen_dc_vehiculo_color_1 = url_backend+v.imagen_dc_vehiculo_color_1
             hex_dc_vehiculo_color_1 = v.hex_dc_vehiculo_color_1
+            nombre_color_1 = nombreColor(hex_dc_vehiculo_color_1)
 
             imagen_dc_vehiculo_color_2 = url_backend+v.imagen_dc_vehiculo_color_2
             hex_dc_vehiculo_color_2 = v.hex_dc_vehiculo_color_2
+            nombre_color_2 = nombreColor(hex_dc_vehiculo_color_2)
 
             imagen_dc_vehiculo_color_3 = url_backend+v.imagen_dc_vehiculo_color_3
-            hex_dc_vehiculo_color_3 = v.hex_dc_vehiculo_color_3  
+            hex_dc_vehiculo_color_3 = v.hex_dc_vehiculo_color_3
+            nombre_color_3 = nombreColor(hex_dc_vehiculo_color_3) 
 
             imagen_dc_vehiculo_color_4 = url_backend+v.imagen_dc_vehiculo_color_4
             hex_dc_vehiculo_color_4 = v.hex_dc_vehiculo_color_4
+            nombre_color_4 = nombreColor(hex_dc_vehiculo_color_4)
 
             imagen_dc_vehiculo_color_5 = url_backend+v.imagen_dc_vehiculo_color_5
             hex_dc_vehiculo_color_5 = v.hex_dc_vehiculo_color_5
+            nombre_color_5 = nombreColor(hex_dc_vehiculo_color_5)
             
             imagen_dc_vehiculo_color_6 = url_backend+v.imagen_dc_vehiculo_color_6
             hex_dc_vehiculo_color_6 = v.hex_dc_vehiculo_color_6
-      
+            nombre_color_6 = nombreColor(hex_dc_vehiculo_color_6)
+
+            imagen_dc_vehiculo_color_7 = url_backend+v.imagen_dc_vehiculo_color_7
+            hex_dc_vehiculo_color_7 = v.hex_dc_vehiculo_color_7
+            nombre_color_7 = nombreColor(hex_dc_vehiculo_color_7)
+
+            imagen_dc_vehiculo_color_8 = url_backend+v.imagen_dc_vehiculo_color_8
+            hex_dc_vehiculo_color_8 = v.hex_dc_vehiculo_color_8
+            nombre_color_8 = nombreColor(hex_dc_vehiculo_color_8)  
+
+            imagen_dc_vehiculo_color_9 = url_backend+v.imagen_dc_vehiculo_color_9
+            hex_dc_vehiculo_color_9 = v.hex_dc_vehiculo_color_9
+            nombre_color_9 = nombreColor(hex_dc_vehiculo_color_9)
+
+            imagen_dc_vehiculo_color_10 = url_backend+v.imagen_dc_vehiculo_color_10
+            hex_dc_vehiculo_color_10 = v.hex_dc_vehiculo_color_10
+            nombre_color_10 = nombreColor(hex_dc_vehiculo_color_10)
+                  
             
             }
         )
@@ -112,7 +158,7 @@ return (
                     </div>
 
                     <div className="content-descarga">
-                        <img src={documento} width="28px" className="" alt="Boton descarga PDF" /> <span className="text-descargar-catalogo" ><a href={url_pdf_dc_vehiculo} target="_blank" className="cart-link" >{texto_pdf_dc_vehiculo}</a> </span>
+                        <img src={documento} className="" alt="Boton descarga PDF" /> <span className="text-descargar-catalogo" ><a href={url_pdf_dc_vehiculo} target="_blank" className="cart-link" >{texto_pdf_dc_vehiculo}</a> </span>
                     </div>
 
                 </div>
@@ -122,28 +168,35 @@ return (
             </div>
             <div className="row">
                 <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <p className="text-color-diseno secciones-subtitulos " id="titulo-colores" >COLOR</p>
+                    <p className="text-color-diseno secciones-subtitulos " id="titulo-colores" >Negro</p>
                 </div>
             </div>
             <div className="row pd50" >
                 <div className="col-2">
-                    <span className="circulo-color icono-color" data-auto={imagen_dc_vehiculo_color_1} data-color={hex_dc_vehiculo_color_1} style={{background: hex_dc_vehiculo_color_1 }} onClick={cambiarAuto} ></span>                   
+                    <span className="circulo-color icono-color" data-nombre={nombre_color_1}  data-auto={imagen_dc_vehiculo_color_1} data-color={hex_dc_vehiculo_color_1} style={{background: hex_dc_vehiculo_color_1 }} onClick={cambiarAuto} ></span>                   
                 </div>
                 <div className="col-2">
-                    <span className="circulo-color icono-color" data-auto={imagen_dc_vehiculo_color_2} data-color={hex_dc_vehiculo_color_2} style={{background: hex_dc_vehiculo_color_2 }} onClick={cambiarAuto} ></span> 
+                    <span className="circulo-color icono-color" data-nombre={nombre_color_2} data-auto={imagen_dc_vehiculo_color_2} data-color={hex_dc_vehiculo_color_2} style={{background: hex_dc_vehiculo_color_2 }} onClick={cambiarAuto} ></span> 
                 </div>
                 <div className="col-2">
-                    <span className="circulo-color icono-color" data-auto={imagen_dc_vehiculo_color_3} data-color={hex_dc_vehiculo_color_3} style={{background: hex_dc_vehiculo_color_3 }} onClick={cambiarAuto} ></span> 
+                    <span className="circulo-color icono-color" data-nombre={nombre_color_3} data-auto={imagen_dc_vehiculo_color_3} data-color={hex_dc_vehiculo_color_3} style={{background: hex_dc_vehiculo_color_3 }} onClick={cambiarAuto} ></span> 
                 </div>
                 <div className="col-2">
-                    <span className="circulo-color icono-color" data-auto={imagen_dc_vehiculo_color_4}  data-color={hex_dc_vehiculo_color_4} style={{background: hex_dc_vehiculo_color_4 }} onClick={cambiarAuto} ></span> 
+                    <span className="circulo-color icono-color" data-nombre={nombre_color_4} data-auto={imagen_dc_vehiculo_color_4}  data-color={hex_dc_vehiculo_color_4} style={{background: hex_dc_vehiculo_color_4 }} onClick={cambiarAuto} ></span> 
                 </div>
                 <div className="col-2">
-                    <span className="circulo-color icono-color" data-auto={imagen_dc_vehiculo_color_5}  data-color={hex_dc_vehiculo_color_5} style={{background: hex_dc_vehiculo_color_5 }} onClick={cambiarAuto} ></span> 
+                    <span className="circulo-color icono-color" data-nombre={nombre_color_5} data-auto={imagen_dc_vehiculo_color_5}  data-color={hex_dc_vehiculo_color_5} style={{background: hex_dc_vehiculo_color_5 }} onClick={cambiarAuto} ></span> 
                 </div>
                 <div className="col-2">
-                    <span className="circulo-color icono-color" data-auto={imagen_dc_vehiculo_color_6}  data-color={hex_dc_vehiculo_color_6} style={{background: hex_dc_vehiculo_color_6 }} onClick={cambiarAuto} ></span> 
+                    <span className="circulo-color icono-color" data-nombre={nombre_color_6} data-auto={imagen_dc_vehiculo_color_6}  data-color={hex_dc_vehiculo_color_6} style={{background: hex_dc_vehiculo_color_6 }} onClick={cambiarAuto} ></span> 
                 </div>
+            </div>
+            <div className="row pd50" >
+             
+                <div className="col-2">                  
+                    <span className="circulo-color icono-color" data-nombre={nombre_color_7}  data-auto={imagen_dc_vehiculo_color_7} data-color={hex_dc_vehiculo_color_7} style={{background: hex_dc_vehiculo_color_7 }} onClick={cambiarAuto} ></span>                   
+                </div>
+             
             </div>
         </div>
     </div>
@@ -160,12 +213,15 @@ export default Cartdiseno;
 function cambiarAuto(e){
     
     var imagen = e.target.dataset.auto
-    var color = e.target.dataset.color
+    //var color = e.target.dataset.color
+    var nombre_color = e.target.dataset.nombre
     var automovil = document.getElementById('imagen-auto-diseno')
+
     automovil.setAttribute('style', 'transition:all 0.5s 0s ease','-webkit-transition: all 0.5s 0s ease','-moz-transition: all 0.5s 0s ease','-o-transition: all 0.5s 0s ease');
     var titulo_colores = document.getElementById('titulo-colores')
     automovil.src = imagen
-    titulo_colores.setAttribute('style', 'color: '+color);
+    //titulo_colores.setAttribute('style', 'color: '+color);
+    document.getElementById("titulo-colores").innerHTML = nombre_color; 
     
 }
 
@@ -182,6 +238,32 @@ function cerrarModal(){
     var modal = document.getElementById("myModal");
     var span = document.getElementsByClassName("close")[0];
     modal.style.display = "none";
+}
+
+function nombreColor(color){
+
+    let nombre_color = "Color"
+
+    if ( color == "#0a0a0a" ) {
+       
+        nombre_color = "Negro"
+
+    }
+
+    if ( color == "#525252" ) {
+       
+        nombre_color = "Gris"
+
+    }
+
+    if ( color == "#bababa" ) {
+       
+        nombre_color = "Plata"
+
+    }
+
+    return nombre_color
+
 }
 
 // Get the modal
