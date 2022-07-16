@@ -361,6 +361,206 @@ function nombreColor(color){
         nombre_color = "Rojo"
     }
 
+    if ( color == "#000002" ) {
+        nombre_color = "Negro"
+    }
+
+    if ( color == "#2aafcc" ) {
+        nombre_color = "Celeste"
+    }
+
+    if ( color ==  "#7e9898" ) {
+        nombre_color = "Verde"
+    }
+
+    if ( color ==  "#7e9898" ) {
+        nombre_color = "Verde"
+    }
+    
+    if ( color ==  "#c83942" ) {
+        nombre_color = "Rojo"
+    }
+       
+    if ( color ==  "#324959" ) {
+        nombre_color = "Azul"
+    }
+
+    if ( color ==  "#414b4f" ) {
+        nombre_color = "Gris"
+    }
+
+    if ( color ==  "#a8b1b6" ) {
+        nombre_color = "Blanco"
+    }
+
+    if ( color ==  "#a8b1b6" ) {
+        nombre_color = "Plata"
+    }
+
+    if ( color ==  "#c96a58" ) {
+        nombre_color = "Anaranjado"
+    }
+
+    if ( color ==  "#305394" ) {
+        nombre_color = "Azul"
+    }
+
+    if ( color ==  "#818690" ) {
+        nombre_color = "Celeste"
+    }
+
+    if ( color ==  "#898275" ) {
+        nombre_color = "Cobre"
+    }
+
+    if ( color ==  "#262729" ) {
+        nombre_color = "Negro"
+    }
+
+    if ( color ==  "#b2b1b4" ) {
+        nombre_color = "Plateado"
+    }
+    
+    if ( color ==  "#5a5c60" ) {
+        nombre_color = "Plomo"
+    }
+
+    if ( color ==  "#b2434b" ) {
+        nombre_color = "Rojo"
+    }
+    
+    if ( color ==  "#27407b" ) {
+        nombre_color = "Azul"
+    }    
+
+    if ( color ==  "#ededed" ) {
+        nombre_color = "Perla"
+    } 
+
+    if ( color ==  "#3e4547" ) {
+        nombre_color = "Gris"
+    }
+
+    if ( color ==  "#000002" ) {
+        nombre_color = "Negro"
+    }
+
+    if ( color ==  "#99a1a3" ) {
+        nombre_color = "Plata"
+    }
+
+    if ( color ==  "#db2633" ) {
+        nombre_color = "Rojo"
+    }
+
+    if ( color ==  "#564943" ) {
+        nombre_color = "Café"
+    }
+
+    if ( color ==  "#6b7787" ) {
+        nombre_color = "Celeste"
+    }
+
+    if ( color ==  "#231f20" ) {
+        nombre_color = "Negro"
+    }
+
+    if ( color ==  "#898a8f" ) {
+        nombre_color = "Plata"
+    } 
+
+    if ( color ==  "#982738" ) {
+        nombre_color = "Rojo"
+    }
+
+    if ( color ==  "#f5f4f3" ) {
+        nombre_color = "Perla"
+    }
+    
+    if ( color ==  "#6e6967" ) {
+        nombre_color = "Bronce"
+    }
+
+    if ( color ==  "#473734" ) {
+        nombre_color = "Café"
+    }
+
+    if ( color ==  "#939ea4" ) {
+        nombre_color = "Plateado"
+    }
+
+    if ( color ==  "#4a5454" ) {
+        nombre_color = "Plomo"
+    }
+
+    if ( color ==  "#8d313b" ) {
+        nombre_color = "Rojo"
+    }
+
+    if ( color ==  "#8d313b" ) {
+        nombre_color = "Rojo"
+    }
+
+    if ( color ==  "#231f20" ) {
+        nombre_color = "Negro"
+    }
+
+    if ( color ==  "#371e28" ) {
+        nombre_color = "Vino"
+    }
+
+    if ( color ==  "#564943" ) {
+        nombre_color = "Cobre"
+    }
+
+    if ( color ==  "#cacbcd" ) {
+        nombre_color = "Plateado"
+    }
+
+    if ( color ==  "#cacbcd" ) {
+        nombre_color = "Plateado"
+    }
+
+    if ( color ==  "#305394" ) {
+        nombre_color = "Azul"
+    }
+
+    if ( color ==  "#3365b5" ) {
+        nombre_color = "Azul"
+    }
+
+    if ( color ==  "#b0953d" ) {
+        nombre_color = "Cobre"
+    }
+
+    if ( color ==  "#5a5c60" ) {
+        nombre_color = "Gris"
+    }
+
+    if ( color ==  "#b2434b" ) {
+        nombre_color = "Rojo"
+    }
+
+    if ( color ==  "#b2434b" ) {
+        nombre_color = "Rojo"
+    }
+
+    if ( color ==  "#9f562f" ) {
+        nombre_color = "Anaranjado"
+    }
+
+
+    
+    
+    
+
+    
+
+    
+
+    
+    
+
     
     return nombre_color
 

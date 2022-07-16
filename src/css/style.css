@@ -137,7 +137,7 @@
 
 .img-logo-feature {
     width: 160px;
-    width: 70%;
+    width: 60%;
 }
 
 .img-icono-feature { 
@@ -252,7 +252,7 @@
 
 #diseno {
     padding-top: 100px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .btn-cotizar {
@@ -1214,7 +1214,7 @@ ul.cart-item-caracteristicas {
 }
 
 .padding-logo-versiones {
-    padding-top: 65px;
+    padding-top: 80px;
 }
 
 .cart-item-caracteristicas>li {
@@ -1265,6 +1265,7 @@ a.cart-link:hover {
     font-family: 'Toyota-DisplayBold';
     color: #817F7F;
     font-size: 26px;
+    margin-top: 40px;
 }
 
 .autos-similares {

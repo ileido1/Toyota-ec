@@ -9,7 +9,7 @@ import { Navigation } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import { NavLink } from "react-router-dom";
+import { NavLink, Navigate } from "react-router-dom";
 
 import Modalcotizacion from "./sections/cart/cart-modal-cotizacion"
 
@@ -29,6 +29,21 @@ export default function Sliderscars() {
     const [defecto, setDefault] = useState('');
     function handleCategoryChange(event) {
         setSelectedCategory(event.currentTarget.textContent);
+    }
+
+    function handleClick(event) {
+        const swiper = document.querySelector('.mySwipercar').swiper;
+        if (event.currentTarget.classList.contains('swiper-slide-next')) {
+            console.log(event.currentTarget.getAttribute("data-url"))
+            window.location.href = event.currentTarget.getAttribute("data-url")
+
+
+        } else if (event.currentTarget.classList.contains('swiper-slide-active')) {
+            swiper.slidePrev();
+
+        } else {
+            swiper.slideNext()
+        }
     }
 
     useEffect(() => {
@@ -94,7 +109,9 @@ export default function Sliderscars() {
                     items ? (
                         <>
                             {items.map((c, i) => (
-                                <SwiperSlide className="slider-cars" >
+
+                                 <SwiperSlide className="slider-cars" onClick={handleClick} data-url={c.enlace_ver_vehiculos}>
+                                
                                     {({ isActive }) => (
 
 
@@ -103,8 +120,8 @@ export default function Sliderscars() {
 
                                             <div className="row" >
                                                 <div className="col-12 centrarbaseline">
-                                                    <a href={c.enlace_ver_vehiculos}> <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro"></img>
-                                                    </a>
+                                                   <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro"></img>
+                                                    
                                                 </div>
                                                 <div className="col-12 logocarro">
                                                     <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo} className="logocarroprev"></img>
@@ -119,9 +136,8 @@ export default function Sliderscars() {
                                                             <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo} className="logoslider"></img>
                                                         </div>
                                                         <div className="col-6 textoabajo align-items ">
-                                                            <NavLink to={c.enlace_todos_los_vehiculos}> <p className="vertodos">{c.texto_ver_vehiculos}</p></NavLink>
-                                                        </div>
-
+                                                            <NavLink to={c.enlace_todos_los_vehiculos}> <p className="vertodos">{c.texto_ver_vehiculos} <i className="fa-solid fa-arrow-up-right-from-square"></i></p></NavLink>
+                                                       </div>
                                                     </div>
                                                     <div className="row carddetallesslider">
                                                         <div className="col-4 textoabajo border-right-slider ">
@@ -134,8 +150,6 @@ export default function Sliderscars() {
                                                         <div className="col-4 textoabajo">
                                                             <p onClick={abrirModal} ><button className="btnslider">{c.texto_cotizar_vehiculo}</button></p>
                                                             <p onClick={abrirModal} ><button className="btnslider">{c.texto_test_drive_vehiculo}</button></p>
-
-
                                                         </div>
                                                     </div>
 
