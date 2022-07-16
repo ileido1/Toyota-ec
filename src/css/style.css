@@ -464,12 +464,12 @@ ul#menu-galeria>li>span {
 
 .imagencarro {
     width: 45%;
-    margin-top: 400px;
+    margin-top: 260px;
 }
 
 .swiper-slide-next .imagencarro {
     width: 120%;
-    margin-top: 200px;
+    margin-top: 260px;
     -webkit-transition: all 1.5s 0s ease;
     -moz-transition: all 1.5s 0s ease;
     -o-transition: all 1.5s 0s ease;
@@ -497,6 +497,7 @@ ul#menu-galeria>li>span {
     background-size: cover;
     background-position: center;
     margin-bottom: 120px;
+    height: 800px;
 }
 
 .centrarbaseline a {
@@ -1793,4 +1794,8 @@ ul.tabsnoticias > li {
   .SliderQDR{
     margin-top: 120px;
     margin-bottom: 120px;
+  }
+
+  .pd50{
+    margin-top: 30px !important;
   }

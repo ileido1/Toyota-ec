@@ -192,10 +192,32 @@ return (
                 </div>
             </div>
             <div className="row pd50" >
-             
+
+            {hex_dc_vehiculo_color_7 &&
                 <div className="col-2">                  
-                    <span className="circulo-color icono-color" data-nombre={nombre_color_7}  data-auto={imagen_dc_vehiculo_color_7} data-color={hex_dc_vehiculo_color_7} style={{background: hex_dc_vehiculo_color_7 }} onClick={cambiarAuto} ></span>                   
+                <span className="circulo-color icono-color" data-nombre={nombre_color_7}  data-auto={imagen_dc_vehiculo_color_7} data-color={hex_dc_vehiculo_color_7} style={{background: hex_dc_vehiculo_color_7 }} onClick={cambiarAuto} >
+                </span>                   
                 </div>
+            }
+            {hex_dc_vehiculo_color_8 &&
+                <div className="col-2">                  
+                <span className="circulo-color icono-color" data-nombre={nombre_color_8}  data-auto={imagen_dc_vehiculo_color_8} data-color={hex_dc_vehiculo_color_8} style={{background: hex_dc_vehiculo_color_8 }} onClick={cambiarAuto} >
+                </span>                   
+                </div>
+            }
+            {hex_dc_vehiculo_color_9 &&
+                <div className="col-2">                  
+                <span className="circulo-color icono-color" data-nombre={nombre_color_9}  data-auto={imagen_dc_vehiculo_color_9} data-color={hex_dc_vehiculo_color_9} style={{background: hex_dc_vehiculo_color_9 }} onClick={cambiarAuto} >
+                </span>                   
+                </div>
+            }    
+            {hex_dc_vehiculo_color_10 &&
+                <div className="col-2">                  
+                <span className="circulo-color icono-color" data-nombre={nombre_color_10}  data-auto={imagen_dc_vehiculo_color_10} data-color={hex_dc_vehiculo_color_10} style={{background: hex_dc_vehiculo_color_10 }} onClick={cambiarAuto} >
+                </span>                   
+                </div>
+            }         
+
              
             </div>
         </div>
@@ -250,6 +272,12 @@ function nombreColor(color){
 
     }
 
+    if ( color == "#ffffff" ) {
+       
+        nombre_color = "Blanco"
+
+    }
+
     if ( color == "#525252" ) {
        
         nombre_color = "Gris"
@@ -262,6 +290,78 @@ function nombreColor(color){
 
     }
 
+    if ( color == "#807259" ) {
+       
+        nombre_color = "Bronce"
+
+    }
+
+    if ( color == "#64534b" ) {
+       
+        nombre_color = "Café"
+
+    }   
+
+    if ( color == "#6c737f" ) {
+       
+        nombre_color = "Gris Metálitoc"
+
+    }  
+
+
+    if ( color == "#30515e" ) {
+       
+        nombre_color = "Negro Azulado"
+
+    }
+
+    if ( color == "#232c2e" ) {
+       
+        nombre_color = "Negro Mica"
+
+    }
+
+    if ( color == "#231f20" ) {
+       
+        nombre_color = "Negro"
+
+    }
+
+    if ( color == "#ececee" ) {
+       
+        nombre_color = "Perla"
+
+    }
+
+    if ( color == "#a0a2a3" ) {
+       
+        nombre_color = "Plata Metálico"
+
+    }
+
+    if ( color == "#a0a2a3" ) {
+       
+        nombre_color = "Plata Metálico"
+
+    }
+
+    if ( color == "#bababa" ) {
+        nombre_color = "Plata"
+    }
+
+    if ( color == "#edebeb" ) {
+        nombre_color = "Blanco"
+    }
+
+    if ( color == "#2bd1fd" ) {
+        nombre_color = "Turquesa"
+    }
+
+    if ( color == "#fc0d1b" ) {
+        nombre_color = "Rojo"
+    }
+
+    
     return nombre_color
 
 }
