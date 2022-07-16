@@ -131,7 +131,7 @@
 }
 
 .content_features {
-    margin-top: -380px;
+    margin-top: -426px;
     padding-left: 60px;
 }
 
@@ -1800,3 +1800,158 @@ ul.tabsnoticias > li {
   .pd50{
     margin-top: 30px !important;
   }
+
+/* Pagina de campanias */
+
+.content-campanias{
+    padding: 0 20%;
+    background: #ededed;
+    height: 460px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.texto-titulo-campanias{
+    font-family: 'Toyota-DisplayBold';
+    font-size: 40px;
+    text-align: center;
+    color: #000;
+}
+
+.texto-campanias{
+    font-family: 'Radikal-Medium';
+    text-align: center;
+    font-size: 40px;
+    color: #000;
+}
+
+.content-campanias-takata{
+    background: url('../images/campanias/campania-airbag.png');
+    height: 460px;
+    -webkit-transition: all 1.5s 0s ease;
+    -moz-transition: all 1.5s 0s ease;
+    -o-transition: all 1.5s 0s ease;
+    transition: all 1.5s 0s ease;
+    cursor: pointer;
+}
+
+.content-campanias-takata:hover{
+    background: url('../images/campanias/campania-airbag-hover.png');
+    height: 460px;
+}
+
+.content-campanias-prius4{
+    background: url('../images/campanias/prius-4g_.png');
+    height: 460px;
+    -webkit-transition: all 1.5s 0s ease;
+    -moz-transition: all 1.5s 0s ease;
+    -o-transition: all 1.5s 0s ease;
+    transition: all 1.5s 0s ease;
+    cursor: pointer;
+}
+
+.content-campanias-prius4:hover{
+    background: url('../images/campanias/prius-4g.png');
+    height: 460px;
+}
+
+.content-campanias-prius3{
+    background: url('../images/campanias/prius-3g.png');
+    height: 460px;
+    -webkit-transition: all 1.5s 0s ease;
+    -moz-transition: all 1.5s 0s ease;
+    -o-transition: all 1.5s 0s ease;
+    transition: all 1.5s 0s ease;
+    cursor: pointer;
+}
+
+.content-campanias-prius3:hover{
+    background: url('../images/campanias/prius-3g_.png');
+    height: 460px;
+}
+
+.content-campanias-rav4{
+    background: url('../images/campanias/rav-4.png');
+    height: 460px;
+    -webkit-transition: all 1.5s 0s ease;
+    -moz-transition: all 1.5s 0s ease;
+    -o-transition: all 1.5s 0s ease;
+    transition: all 1.5s 0s ease;
+    cursor: pointer;
+}
+
+.content-campanias-rav4:hover{
+    background: url('../images/campanias/rav-4_.png');
+    height: 460px;
+}
+
+.content-campanias-global{
+    background: url('../images/campanias/camapana-global.png');
+    height: 460px;
+    -webkit-transition: all 1.5s 0s ease;
+    -moz-transition: all 1.5s 0s ease;
+    -o-transition: all 1.5s 0s ease;
+    transition: all 1.5s 0s ease;
+    cursor: pointer;
+}
+
+.content-campanias-global:hover{
+    background: url('../images/campanias/camapana-global_.png');
+    height: 460px;
+}
+
+#myModalTakata .modal-content{
+    width: 633px !important;
+    height: 398px;
+    margin: 0 auto;
+    background: rgb(224, 9, 9);
+    background-color: rgb(224, 9, 9) !important;
+    border-radius: 40px;
+    top: 80px;
+    padding: 20px 20px;
+}
+
+#myModalTakata p{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Radikal-Medium';
+    color: #ffffff;
+    line-height: 22px;
+    margin-bottom: 5px;
+}
+
+#myModalTakata input{
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 40px;
+    border-radius: 6px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 1px solid #fff;
+}
+
+#myModalTakata .boton-enviar{
+    margin-top: 20px;
+    background: #ffffff;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-family: 'Radikal-Medium';
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    color: #cc2132;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.mt40{
+    margin-top: 40px;
+}
+
+.cerrar-modal-takata{
+    font-size: 16px !important;
+}

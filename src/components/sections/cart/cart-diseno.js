@@ -304,7 +304,7 @@ function nombreColor(color){
 
     if ( color == "#6c737f" ) {
        
-        nombre_color = "Gris Metálitoc"
+        nombre_color = "Gris Metálito"
 
     }  
 
@@ -549,17 +549,101 @@ function nombreColor(color){
         nombre_color = "Anaranjado"
     }
 
+    if ( color ==  "#1b264b" ) {
+        nombre_color = "Azul"
+    }
 
-    
-    
-    
+    if ( color ==  "#cdcfce" ) {
+        nombre_color = "Plata"
+    }
 
-    
+    if ( color ==  "#909ba1" ) {
+        nombre_color = "Plomo"
+    }
 
-    
+    if ( color ==  "#bc273f" ) {
+        nombre_color = "Rojo"
+    }
 
-    
-    
+    if ( color ==  "  #313272" ) {
+        nombre_color = "Azul"
+    }
+
+    if ( color ==  "#a8a49f" ) {
+        nombre_color = "Café"
+    }
+
+    if ( color ==  "#617a8c" ) {
+        nombre_color = "Azul"
+    }
+
+    if ( color ==  "#3e3e3f" ) {
+        nombre_color = "Gris"
+    }
+
+    if ( color ==  "#231f20" ) {
+        nombre_color = "Negro"
+    }
+
+    if ( color ==  "#a0a2a3" ) {
+        nombre_color = "Plata"
+    }
+
+    if ( color ==  "#b9702c" ) {
+        nombre_color = "Anaranjado"
+    }
+
+    if ( color ==  "#3e3e3f" ) {
+        nombre_color = "Gris"
+    }
+
+    if ( color ==  "#231f2" ) {
+        nombre_color = "Negro"
+    }
+
+    if ( color ==  "#a0a2a3" ) {
+        nombre_color = "Plata"
+    }
+
+    if ( color ==  "#bd273d" ) {
+        nombre_color = "Rojo"
+    }
+
+    if ( color ==  "#c2baad" ) {
+        nombre_color = "Baigue"
+    }
+
+    if ( color ==  "#e6e1e1" ) {
+        nombre_color = "Perla Blanco"
+    }
+
+    if ( color ==  "#313133" ) {
+        nombre_color = "Gris"
+    }
+
+    if ( color ==  "#0a0a0a" ) {
+        nombre_color = "Negro"
+    }
+
+    if ( color ==  "#898c93" ) {
+        nombre_color = "Plomo"
+    }
+
+    if ( color ==  "#81282e" ) {
+        nombre_color = "Rojo"
+    }
+
+    if ( color ==  "#807259" ) {
+        nombre_color = "Bronce"
+    }
+
+    if ( color ==  "#64534b" ) {
+        nombre_color = "Café"
+    }
+
+    if ( color ==  "#8a969c" ) {
+        nombre_color = "Plomo"
+    }
 
     
     return nombre_color

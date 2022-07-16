@@ -17,6 +17,7 @@ import useFetch from '../hooks/useFetch';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from 'react';
 import LoadingSpinner from './sections/loading';
+import Campanaservicios from './pages/campana-servicios';
 
 const App = () => {
   let peticion = "global/toyota-info"
@@ -34,7 +35,7 @@ const App = () => {
       {loading ? <LoadingSpinner></LoadingSpinner> : <>  <BrowserRouter>
         <Header></Header>
         <Routes>
-          <Route path="/post-venta" element={<Posventa />} />
+          <Route path="/post-venta-en-stand-by" element={<Posventa />} />
 
           <Route path="/raize" element={<Cart />} />
           <Route path="/rav4" element={<Cart />} />
@@ -58,6 +59,7 @@ const App = () => {
           <Route path="/hilux-cd-4x4-mt" element={<Cart />} />
           <Route path="/corolla-hybrid" element={<Cart />} />
           <Route path="/vehiculos" element={<Vehiculos />} />
+          <Route path="/post-venta" element={<Campanaservicios />} />
           <Route path="/" element={<Home />} />
         </Routes>
         {
