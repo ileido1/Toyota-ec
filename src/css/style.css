@@ -1056,7 +1056,7 @@ ul.cart-item-caracteristicas {
     position: absolute;
     z-index: 999;
     margin: auto;
-    MAX-width: 700px;
+    MAX-width: 7300px;
     left: 0;
     right: 0;
     /* text-align: center; */
@@ -1788,7 +1788,7 @@ ul.tabsnoticias>li {
     display: none;
 }
 
-.fila-colores{
+.fila-colores {
     justify-content: center;
 }
 
@@ -1840,9 +1840,25 @@ ul.tabsnoticias>li {
         margin: auto;
         MAX-width: 700px;
         left: 0;
-        top: 730px;
+        top: 550px;
+
         right: 0;
         /* text-align: center; */
+    }
+
+    .navbar-light .navbar-toggler {
+        color: #E20B2A;
+        border-color: transparent !important;
+    }
+
+    .nav-tabs .nav-item.show .nav-link,
+    .nav-tabs .nav-link.active {
+        color: #E50021 !important;
+        background-color: transparent !important;
+        border: 0px;
+        font-family: 'Novecentos-DemiBold';
+        border-bottom: 2px solid #E50021 !important;
+        padding-bottom: 1px;
     }
 
     .tabsnoticias {
@@ -1862,7 +1878,7 @@ ul.tabsnoticias>li {
 
     .imagencarro2 {
         width: 100%;
-        margin-top: 0;
+        margin-top: 40px;
     }
 
     .SliderQDR {
@@ -1982,18 +1998,19 @@ ul.tabsnoticias>li {
         margin-top: 200px !important;
     }
 
-      .swiper-button-prev, .swiper-button-next {
+    .swiper-button-prev,
+    .swiper-button-next {
         margin-top: -300px !important;
-      }
-    
-    .content-diseno{
+    }
+
+    .content-diseno {
         background: #e3e3e3;
     }
 
-    #diseno2{
+    #diseno2 {
         padding: 10px;
-       
-    }  
+
+    }
 
     .circulo-color {
         height: 30px;
@@ -2004,7 +2021,7 @@ ul.tabsnoticias>li {
         margin-right: 20px !important;
     }
 
-    .content-descarga{
+    .content-descarga {
         text-align: left;
     }
 
@@ -2015,91 +2032,91 @@ ul.tabsnoticias>li {
         max-width: 200px;
         margin-top: 20px;
         margin-bottom: 0px;
-      }
+    }
 
-     .logo-mobile-colores{
+    .logo-mobile-colores {
         max-width: 140px;
         margin-top: 20px;
-     }
+    }
 
-     .btn-cotizar {
+    .btn-cotizar {
         width: 100px !important;
         display: flex !important;
-        justify-content: center !important; 
-      }
+        justify-content: center !important;
+    }
 
-      .content-cotizar {
+    .content-cotizar {
         display: flex;
         align-items: end;
         height: 100%;
-      }
+    }
 
-      #imagen-auto-diseno {
+    #imagen-auto-diseno {
         transition: all 0.5s 0s ease;
         margin: 0 auto;
-          margin-top: 0px;
+        margin-top: 0px;
         display: block;
         margin-top: 20px;
-      }
+    }
 
-      #titulo-colores {
+    #titulo-colores {
         transition: all 0.5s 0s ease;
         font-size: 20px;
-      }
+    }
 
-      .content-descarga {
+    .content-descarga {
         text-align: left !important;
         margin-top: 20px !important;
-      } 
+    }
 
-      .pd50 {
+    .pd50 {
         margin-top: 15px !important;
-      }
+    }
 
-      .icono-documento-descarga{
+    .icono-documento-descarga {
         padding-left: 30px;
-      }
+    }
 
-      .text-descargar-catalogo{
+    .text-descargar-catalogo {
         color: #000000;
         text-transform: uppercase;
-      }
+    }
 
-      .icono-tecnologia {
+    .icono-tecnologia {
         margin-bottom: 20px;
         margin-top: 0px;
-      }
+    }
 
-      .bloque-text-tecnologia {
+    .bloque-text-tecnologia {
         margin-bottom: 30px;
-      }
+    }
 
-      .contenedor-cta p {
+    .contenedor-cta p {
         padding: 5% 20px;
         text-align: center;
         font-size: 20px;
         line-height: 26px;
         font-family: 'Radikal-Medium';
-      }
+    }
 
-      .contenedor-cta-testdrive {
+    .contenedor-cta-testdrive {
         display: flex;
         align-items: center;
         justify-content: center;
         color: #ffffff;
         height: 300px;
-      }
+    }
 
-      .contenedor-cta-cotizar {
+    .contenedor-cta-cotizar {
         display: flex;
         align-items: center;
         justify-content: center;
         background: #E50021;
         color: #ffffff;
         height: 300px;
-      }
+    }
 
-      .text-tecnologia {
+    .text-tecnologia {
         display: block;
         text-align: center;
         color: #817F7F;
@@ -2107,11 +2124,11 @@ ul.tabsnoticias>li {
         font-family: 'Radikal-Medium';
         font-size: 16px;
         margin: 0 auto;
-      }
+    }
 
-      .contenedor {
+    .contenedor {
         min-height: 560px !important;
-      }
+    }
 
 }
 
