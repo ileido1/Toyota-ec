@@ -30,6 +30,21 @@ const Footer = ({ logotoyota, toyotago, toyotasiempre }) => {
                         </div>
                     </div>
                 </div>
+                <div className="row footersupmobile mobile">
+                    <h3>No te pierdas de nada</h3>
+                    <p>Registrate para recibir las ultimas actualizaciones </p>
+                    <div className="input-wrapper">
+                        <input type="text" className="inputemail" placeholder="E-mail" />
+
+                    </div>
+                    <div className="form-check">
+                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        <label className="form-check-label" htmlFor="flexCheckDefault">
+                            Acepto <span className="spanckeck">aviso de privacidad</span>
+                        </label>
+                    </div>
+
+                </div>
                 <div className="row footerdown" >
 
                     {
