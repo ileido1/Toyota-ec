@@ -140,7 +140,7 @@
     width: 60%;
 }
 
-.img-icono-feature { 
+.img-icono-feature {
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
@@ -148,7 +148,7 @@
 }
 
 .img-icono-feature-frenos {
-   
+
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
@@ -156,7 +156,7 @@
 }
 
 .img-icono-feature-motor {
-    
+
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
@@ -376,7 +376,7 @@ ul#menu-galeria>li>span {
 }
 
 .titulo-galeria {
-    margin-top:120px !important;
+    margin-top: 120px !important;
     padding-left: 0px;
     padding-right: 0px;
 }
@@ -968,12 +968,12 @@ ul.cart-item-caracteristicas {
 }
 
 .mundotoyotaimgsupd {
-    margin-bottom: 300px;
+    margin-bottom: 150px;
     width: 100%;
 }
 
 .mundotoyotaimgsupi {
-    margin-bottom: 250px;
+    margin-bottom: 150px;
     width: 100%;
 }
 
@@ -1267,7 +1267,7 @@ a.cart-link:hover {
     -o-transition: all 0.5s 0s ease;
     transition: all 0.5s 0s ease;
     margin: 0 auto;
-    display: block; 
+    display: block;
 }
 
 .titulo-autos-similares {
@@ -1524,7 +1524,7 @@ ul.tabsnoticias>li {
     padding-left: 40px;
 }
 
-.swiper-slide{
+.swiper-slide {
     cursor: pointer;
 }
 
@@ -1807,6 +1807,14 @@ ul.tabsnoticias>li {
         /* text-align: center; */
     }
 
+    .tabsnoticias {
+        justify-content: flex-start;
+        /* padding: 80px; */
+        margin-bottom: 80px !important;
+        margin-top: 80px;
+        flex-direction: column;
+    }
+
     .mySwipercar {
         background-size: contain;
         background-repeat: no-repeat;
@@ -1818,17 +1826,35 @@ ul.tabsnoticias>li {
         width: 100%;
         margin-top: 0;
     }
+
+    .SliderQDR {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .navbar {
+        height: 100%;
+        padding: 20px !important;
+    }
 }
 
 /* Responsive */
 
-.lifooter section a{
+.lifooter section a {
     color: #ffffff;
     line-height: 20px;
     text-decoration: none;
 }
 
-.fondoqdr{
+.fondoqdr {
     max-width: 100% !important;
     background-size: contain;
     background-position: center;
@@ -1838,25 +1864,25 @@ ul.tabsnoticias>li {
     color: #e50021;
     line-height: 20px;
     text-decoration: none;
-  }
+}
 
-  .content-descarga{
+.content-descarga {
     text-align: center;
     width: 250px;
-  }
+}
 
-  .SliderQDR{
+.SliderQDR {
     margin-top: 160px;
     margin-bottom: 120px;
-  }
+}
 
-  .pd50{
+.pd50 {
     margin-top: 30px !important;
-  }
+}
 
 /* Pagina de campanias */
 
-.content-campanias{
+.content-campanias {
     padding: 0 20%;
     background: #ededed;
     height: 460px;
@@ -1865,21 +1891,21 @@ ul.tabsnoticias>li {
     align-items: center;
 }
 
-.texto-titulo-campanias{
+.texto-titulo-campanias {
     font-family: 'Toyota-DisplayBold';
     font-size: 40px;
     text-align: center;
     color: #000;
 }
 
-.texto-campanias{
+.texto-campanias {
     font-family: 'Radikal-Medium';
     text-align: center;
     font-size: 40px;
     color: #000;
 }
 
-.content-campanias-takata{
+.content-campanias-takata {
     background: url('../images/campanias/campania-airbag.png');
     height: 460px;
     -webkit-transition: all 1.5s 0s ease;
@@ -1889,12 +1915,12 @@ ul.tabsnoticias>li {
     cursor: pointer;
 }
 
-.content-campanias-takata:hover{
+.content-campanias-takata:hover {
     background: url('../images/campanias/campania-airbag-hover.png');
     height: 460px;
 }
 
-.content-campanias-prius4{
+.content-campanias-prius4 {
     background: url('../images/campanias/prius-4g_.png');
     height: 460px;
     -webkit-transition: all 1.5s 0s ease;
@@ -1904,12 +1930,12 @@ ul.tabsnoticias>li {
     cursor: pointer;
 }
 
-.content-campanias-prius4:hover{
+.content-campanias-prius4:hover {
     background: url('../images/campanias/prius-4g.png');
     height: 460px;
 }
 
-.content-campanias-prius3{
+.content-campanias-prius3 {
     background: url('../images/campanias/prius-3g.png');
     height: 460px;
     -webkit-transition: all 1.5s 0s ease;
@@ -1919,12 +1945,12 @@ ul.tabsnoticias>li {
     cursor: pointer;
 }
 
-.content-campanias-prius3:hover{
+.content-campanias-prius3:hover {
     background: url('../images/campanias/prius-3g_.png');
     height: 460px;
 }
 
-.content-campanias-rav4{
+.content-campanias-rav4 {
     background: url('../images/campanias/rav-4.png');
     height: 460px;
     -webkit-transition: all 1.5s 0s ease;
@@ -1934,12 +1960,12 @@ ul.tabsnoticias>li {
     cursor: pointer;
 }
 
-.content-campanias-rav4:hover{
+.content-campanias-rav4:hover {
     background: url('../images/campanias/rav-4_.png');
     height: 460px;
 }
 
-.content-campanias-global{
+.content-campanias-global {
     background: url('../images/campanias/camapana-global.png');
     height: 460px;
     -webkit-transition: all 1.5s 0s ease;
@@ -1949,12 +1975,12 @@ ul.tabsnoticias>li {
     cursor: pointer;
 }
 
-.content-campanias-global:hover{
+.content-campanias-global:hover {
     background: url('../images/campanias/camapana-global_.png');
     height: 460px;
 }
 
-#myModalTakata .modal-content{
+#myModalTakata .modal-content {
     width: 633px !important;
     height: 398px;
     margin: 0 auto;
@@ -1965,7 +1991,7 @@ ul.tabsnoticias>li {
     padding: 20px 20px;
 }
 
-#myModalTakata p{
+#myModalTakata p {
     text-align: center;
     font-size: 20px;
     font-family: 'Radikal-Medium';
@@ -1974,7 +2000,7 @@ ul.tabsnoticias>li {
     margin-bottom: 5px;
 }
 
-#myModalTakata input{
+#myModalTakata input {
     width: 70%;
     display: block;
     margin: 0 auto;
@@ -1987,7 +2013,7 @@ ul.tabsnoticias>li {
     border: 1px solid #fff;
 }
 
-#myModalTakata .boton-enviar{
+#myModalTakata .boton-enviar {
     margin-top: 20px;
     background: #ffffff;
     text-transform: uppercase;
@@ -2001,10 +2027,10 @@ ul.tabsnoticias>li {
     border-radius: 10px;
 }
 
-.mt40{
+.mt40 {
     margin-top: 40px;
 }
 
-.cerrar-modal-takata{
+.cerrar-modal-takata {
     font-size: 16px !important;
 }
