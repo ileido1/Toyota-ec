@@ -143,7 +143,7 @@ return (
 <div className="container-fluid " id="content-diseno" >
 <div className="row"  >
     <div className="col-12">
-            <div id="diseno" className="row pd100 d-none d-sm-none "  >
+            <div id="diseno" className="row pd100 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex"  >
                 <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 ">
 
                     <div className="content-text">

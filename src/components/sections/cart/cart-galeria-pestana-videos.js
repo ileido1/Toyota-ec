@@ -62,7 +62,7 @@ const Cartgaleriapestanavideo = () => {
                               <>
                               <SwiperSlide>
                                     
-                                    <div className='player-wrapper d-none d-sm-none'  >
+                                    <div className='player-wrapper d-none d-sm-none d-md-flex d-lg-flex d-xl-flex'  >
                                         <ReactPlayer
                                             className='react-player'
                                             width='1920px'
@@ -72,7 +72,7 @@ const Cartgaleriapestanavideo = () => {
 
                                     </div>
 
-                                    <div className='player-wrapper  d-md-none d-xl-none d-lg-none'  >
+                                    <div className='player-wrapper d-md-none d-xl-none d-lg-none'  >
                                         <ReactPlayer
                                             className='react-player'
                                             width='100%'

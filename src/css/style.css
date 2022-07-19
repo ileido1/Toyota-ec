@@ -2069,6 +2069,10 @@ ul.tabsnoticias>li {
         margin: 0 auto;
       }
 
+      .contenedor {
+        min-height: 560px !important;
+      }
+
 }
 
 /* Responsive */
