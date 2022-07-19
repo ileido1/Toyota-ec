@@ -7,6 +7,10 @@ import {
 import useFetch from "../hooks/useFetch";
 import { useInView } from "framer-motion";
 import { get } from 'axios';
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
 
 
 export default function Noticias() {
@@ -51,7 +55,7 @@ export default function Noticias() {
         <>
             <div className="container-fluid noticia">
 
-                <div className="row">
+                <div className="row  ">
                     <div className="col-12">
                         <h1 ref={ref2} style={{
                             transform: isInView2 ? "none" : "translateY(10px)",
@@ -85,7 +89,7 @@ export default function Noticias() {
                         </ul>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row d-none d-sm-block">
 
 
                     {
@@ -112,6 +116,39 @@ export default function Noticias() {
                         )
                     }
                 </div>
+
+                <Swiper
+                    slidesPerView={1.5}
+                    spaceBetween={30}
+
+                    className="mySwiperNoticias d-block d-sm-none"
+                >
+                    {
+                        items ? (
+                            <>
+                                {
+
+                                    items.slice(0, 3).map(c => (
+                                        <SwiperSlide>
+
+                                            <div className=" col-sm-4 col-12">
+                                                <img src={'https://backend-toyota.247.com.ec/' + c.image_post} className=""></img>
+                                                <h4 className="titulo_post">{c.titulo_post}</h4>
+                                                <p className="body_post">{c.body_post}</p>
+                                            </div>
+
+                                        </SwiperSlide>
+
+                                    )
+
+                                    )
+                                }
+                            </>
+                        ) : (
+                            <span> Cargando...</span>
+                        )
+                    }
+                </Swiper>
 
             </div>
 
