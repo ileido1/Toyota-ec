@@ -57,7 +57,7 @@ export default function Cartexonerados() {
     return (
 
             <>
-                <div className="auto-individual container-fluid" >
+                <div className="auto-individual container-fluid d-none d-sm-none d-md-block d-xl-block d-lg-block" >
                     <div className="row" id="auto-exonerados" >
 
                         <div className="col-12 col-sm-6"  >

@@ -1774,8 +1774,7 @@ ul.tabsnoticias>li {
 @media only screen and (max-width: 600px) {
 
     .content_features {
-        background: #000;
-        margin-top: 0px !important;
+        margin-top: -170px;
         padding-left: 0px !important;
     }
 
@@ -1827,6 +1826,7 @@ ul.tabsnoticias>li {
         margin-top: 0;
     }
 
+<<<<<<< HEAD
     .SliderQDR {
         margin-top: 0px;
         margin-bottom: 0px;
@@ -1844,6 +1844,103 @@ ul.tabsnoticias>li {
         height: 100%;
         padding: 20px !important;
     }
+=======
+    .img-logo-feature{
+        width: 110px;
+    }
+
+    .subtext-feature {
+        display: contents;
+        font-family: 'Radikal-Light';
+        color: #ffffff;
+        font-size: 10px;
+        text-align: left;
+        margin-bottom: 10px;
+        margin-bottom: 0px;
+        line-height: 12px;      
+    }
+
+    .contenedor-versiones-features{
+        padding-top: 15px;
+    }
+
+    .iconos-features{
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .mtopft{
+        margin-top: 10px !important;
+        padding-left: 0px !important;
+    }
+
+    .prcero{
+        padding-right: 0px;
+    }
+
+    .img-logo-marca{
+        padding: 20px;
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+
+    .boton-cotizar-mobile{
+        background: #E20B2A;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Radikal-Light';
+        font-size: 24px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .mtopbanner {
+        margin-top: 0px;
+        width: 90%;
+    }
+
+      .bg-features-mobile{
+        background-size: contain;
+        background-position: top;
+      }
+
+      .cart-imagen-caracteristica {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        padding: 44px;
+      }
+
+      .content-cart-texto-caracteristicas {
+        padding-left: 30px;
+      }
+
+      .cart-titulo-caracteristicas {
+        font-family: 'Radikal-Bold';
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      .cart-texto-caracteristicas {
+        font-family: 'Radikal-Medium';
+        font-size: 14px;
+      }
+
+      ul.cart-item-caracteristicas {
+        font-family: 'Radikal-Medium';
+        font-size: 14px;
+      }
+
+      .mt200px{
+        margin-top: 200px !important;
+      }
+
+>>>>>>> d13dd9d4f885494fbe2d5f310684137474df0a1d
 }
 
 /* Responsive */
@@ -1879,6 +1976,7 @@ ul.tabsnoticias>li {
 .pd50 {
     margin-top: 30px !important;
 }
+
 
 /* Pagina de campanias */
 
@@ -2033,4 +2131,9 @@ ul.tabsnoticias>li {
 
 .cerrar-modal-takata {
     font-size: 16px !important;
+}
+
+.react-player{
+    width: 1920px;
+    height: 800px;
 }
