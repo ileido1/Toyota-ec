@@ -30,7 +30,7 @@ const Footer = ({ logotoyota, toyotago, toyotasiempre }) => {
                         </div>
                     </div>
                 </div>
-                <div className="row footersupmobile mobile">
+                <div className="row footersupmobile d-block d-sm-none">
                     <h3>No te pierdas de nada</h3>
                     <p>Registrate para recibir las ultimas actualizaciones </p>
                     <div className="input-wrapper">

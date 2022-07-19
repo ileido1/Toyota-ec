@@ -37,22 +37,56 @@ export default function App() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper SliderQDR"
+        className="mySwiper SliderQDR mobile"
       >
         <SwiperSlide>
 
-          <img className="img-fluid" src={imagenqm} srcSet={`${imagenqm} 300w, ${imagenq} 768w, ${imagenq} 1280w, ${imagenq} 3200w`} alt="imagen q" />
+          <img className="img-fluid" src={imagenqm} alt="imagen q" />
 
         </SwiperSlide>
         <SwiperSlide>
 
-          <img className="img-fluid" src={imagendm} srcSet={`${imagenqm} 300w, ${imagend} 768w, ${imagend} 1280w, ${imagend} 3200w`} alt="imagen q" />
+          <img className="img-fluid" src={imagendm} alt="imagen q" />
 
 
         </SwiperSlide>
         <SwiperSlide>
 
-          <img className="img-fluid" src={imagenrm} srcSet={`${imagenr} 300w, ${imagenr} 768w, ${imagenr} 1280w, ${imagenr} 3200w`} alt="imagen q" />
+          <img className="img-fluid" src={imagenrm} alt="imagen q" />
+
+
+        </SwiperSlide>
+
+
+      </Swiper>
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper SliderQDR destopk"
+      >
+        <SwiperSlide>
+
+          <img className="img-fluid" src={imagenq} alt="imagen q" />
+
+        </SwiperSlide>
+        <SwiperSlide>
+
+          <img className="img-fluid" src={imagend} alt="imagen q" />
+
+
+        </SwiperSlide>
+        <SwiperSlide>
+
+          <img className="img-fluid" src={imagenr} alt="imagen q" />
 
 
         </SwiperSlide>

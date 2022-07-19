@@ -89,32 +89,34 @@ export default function Noticias() {
                         </ul>
                     </div>
                 </div>
-                <div className="row d-none d-sm-block">
+                <div className="d-none d-sm-block">
+                    <div className="row ">
 
 
-                    {
-                        items ? (
-                            <>
-                                {
+                        {
+                            items ? (
+                                <>
+                                    {
 
-                                    items.slice(0, 3).map(c => (
-                                        <div className=" col-sm-4 col-12">
-                                            <img src={'https://backend-toyota.247.com.ec/' + c.image_post} className=""></img>
-                                            <h4 className="titulo_post">{c.titulo_post}</h4>
-                                            <p className="body_post">{c.body_post}</p>
-                                        </div>
+                                        items.slice(0, 3).map(c => (
+                                            <div className=" col-sm-4 col-4">
+                                                <img src={'https://backend-toyota.247.com.ec/' + c.image_post} className=""></img>
+                                                <h4 className="titulo_post">{c.titulo_post}</h4>
+                                                <p className="body_post">{c.body_post}</p>
+                                            </div>
 
 
 
-                                    )
+                                        )
 
-                                    )
-                                }
-                            </>
-                        ) : (
-                            <span> Cargando...</span>
-                        )
-                    }
+                                        )
+                                    }
+                                </>
+                            ) : (
+                                <span> Cargando...</span>
+                            )
+                        }
+                    </div>
                 </div>
 
                 <Swiper
@@ -131,7 +133,7 @@ export default function Noticias() {
                                     items.slice(0, 3).map(c => (
                                         <SwiperSlide>
 
-                                            <div className=" col-sm-4 col-12">
+                                            <div className=" col-12">
                                                 <img src={'https://backend-toyota.247.com.ec/' + c.image_post} className=""></img>
                                                 <h4 className="titulo_post">{c.titulo_post}</h4>
                                                 <p className="body_post">{c.body_post}</p>
