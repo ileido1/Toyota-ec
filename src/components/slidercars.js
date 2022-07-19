@@ -99,10 +99,8 @@ export default function Sliderscars() {
                 spaceBetween={30}
                 navigation={true}
                 speed={1000}
-                clickable={true}
                 modules={[Navigation]}
                 loop={true}
-
                 style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + background})` }}
                 className="mySwipercar destopk"
 
@@ -111,7 +109,9 @@ export default function Sliderscars() {
                     items ? (
                         <>
                             {items.map((c, i) => (
-                                <SwiperSlide className="slider-cars" onClick={handleClick} data-url={c.enlace_ver_vehiculos}>
+
+                                 <SwiperSlide className="slider-cars" onClick={handleClick} data-url={c.enlace_ver_vehiculos}>
+                                
                                     {({ isActive }) => (
 
 
@@ -120,8 +120,8 @@ export default function Sliderscars() {
 
                                             <div className="row" >
                                                 <div className="col-12 centrarbaseline">
-                                                    <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro"></img>
-
+                                                   <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro"></img>
+                                                    
                                                 </div>
                                                 <div className="col-12 logocarro">
                                                     <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo} className="logocarroprev"></img>
@@ -137,8 +137,7 @@ export default function Sliderscars() {
                                                         </div>
                                                         <div className="col-6 textoabajo align-items ">
                                                             <NavLink to={c.enlace_todos_los_vehiculos}> <p className="vertodos">{c.texto_ver_vehiculos} <i className="fa-solid fa-arrow-up-right-from-square"></i></p></NavLink>
-                                                        </div>
-
+                                                       </div>
                                                     </div>
                                                     <div className="row carddetallesslider">
                                                         <div className="col-4 textoabajo border-right-slider ">
@@ -151,8 +150,6 @@ export default function Sliderscars() {
                                                         <div className="col-4 textoabajo">
                                                             <p onClick={abrirModal} ><button className="btnslider">{c.texto_cotizar_vehiculo}</button></p>
                                                             <p onClick={abrirModal} ><button className="btnslider">{c.texto_test_drive_vehiculo}</button></p>
-
-
                                                         </div>
                                                     </div>
 

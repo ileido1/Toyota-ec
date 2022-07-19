@@ -69,7 +69,7 @@ export default function Vehiculos() {
                     
                         <div className="col-4" >
                            <p className="titulo-autos-similares" >{c.name_vehicle}</p>
-                           <img className="img-fluid autos-similares" src={url_backend+c.image_vehicle} alt={c.name_vehicle} />
+                           <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend+c.image_vehicle} alt={c.name_vehicle} /></a>
                            <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
                            
                         </div>
@@ -111,7 +111,7 @@ export default function Vehiculos() {
                     
                         <div className="col-4" >
                            <p className="titulo-autos-similares" >{c.name_vehicle}</p>
-                           <img className="img-fluid autos-similares" src={url_backend+c.image_vehicle} alt={c.name_vehicle} />
+                           <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend+c.image_vehicle} alt={c.name_vehicle} /></a>
                            <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
                            
                         </div>
@@ -153,7 +153,7 @@ export default function Vehiculos() {
                     
                         <div className="col-4" >
                            <p className="titulo-autos-similares" >{c.name_vehicle}</p>
-                           <img className="img-fluid autos-similares" src={url_backend+c.image_vehicle} alt={c.name_vehicle} />
+                           <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend+c.image_vehicle} alt={c.name_vehicle} /></a>
                            <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
                            
                         </div>

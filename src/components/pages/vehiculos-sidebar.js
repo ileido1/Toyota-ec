@@ -25,7 +25,7 @@ export default function Vehiculossidebar() {
                     <div className="content-filtros-sidebar" >
                         <p className="titulo-filtro-sidebar titulo-filtro-sidebar-bb" >Ordenar por</p>
                         <p className="titulo-filtro-sidebar" >Exonerados</p>
-                        <p className="titulo-filtro-sidebar" >Híbridos</p>
+                        <p className="titulo-filtro-sidebar" >Mundo Híbrido</p>
                         <p className="titulo-filtro-sidebar" >Todos los vehículos</p>
                     </div>
                    <div className="content-botones-sidebar-general" >

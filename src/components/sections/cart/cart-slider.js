@@ -24,6 +24,7 @@ export default function Cartslider() {
     let url_api = 'v1/vehicle_data_sheet'
     const [respuesta, error] = useFetch(url_api);
     let url_detalle = ''
+    let padding_auto = '0px'
     const location =  useLocation()
 
     if(respuesta){
@@ -37,6 +38,10 @@ export default function Cartslider() {
             }
         )
         
+    }
+
+    if(location.pathname == '/corolla-sedan'){
+        padding_auto = '220px'
     }
 
     const [detalle_respuesta, error_detalle] = useFetch(url_detalle);
@@ -60,7 +65,8 @@ export default function Cartslider() {
                         <>
                               <SwiperSlide>
                               {({ isActive }) => (
-                                <div id="content-feature" className="container-fluid contenedor " style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas})` }} >
+
+                                <div id="content-feature" className="container-fluid contenedor" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas + `` })`, paddingTop: `${padding_auto}` }}  >
                                     <div className="mtopbanner">
                                         <div className="row" >
                                             <div className="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
