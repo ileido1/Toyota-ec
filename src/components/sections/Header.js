@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../../images/logo.png'
+import Container from 'react-bootstrap/Container';
 
 function Header() {
 	let llenar_header = 'v1/global/menu-principal'
@@ -12,49 +13,55 @@ function Header() {
 	return (
 		<>
 			<header>
-				<Navbar bg="light" expand="lg">
-					<Navbar.Toggle aria-controls="basic-navbar-nav" />
-					<Navbar.Collapse id="basic-navbar-nav">
-						<Nav className="me-auto">
-							{
+				<Navbar collapseOnSelect expand="lg" >
+					<Container fluid>
+						<a className="d-block d-sm-none" href="https://toyota-ec.247.com.ec/"><img src={logo} /></a>
 
-								menu ? (
-									<>
+						<Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-										{
+						<Navbar.Collapse id="basic-navbar-nav">
+							<Nav className="me-auto">
+
+								{
+
+									menu ? (
+										<>
+
+											{
 
 
 
-											menu.map((c, i) => {
+												menu.map((c, i) => {
 
-												return (
-													<>
+													return (
+														<>
 
-														<Nav.Link key={i} href={c.url_menu_principal} >{c.nombre_menu_superior}</Nav.Link>
-														{i === 2 &&
-															<a className="d-none d-lg-block" href="https://toyota-ec.247.com.ec/"><img src={logo} /></a>
-														}
-													</>
+															<Nav.Link key={i} href={c.url_menu_principal} >{c.nombre_menu_superior}</Nav.Link>
+															{i === 2 &&
+																<a className="d-none d-lg-block" href="https://toyota-ec.247.com.ec/"><img src={logo} /></a>
+															}
+														</>
 
+													)
+
+												}
 												)
 
+
 											}
-											)
-
-
-										}
 
 
 
-									</>
-								) : (
-									null
-								)
-							}
+										</>
+									) : (
+										null
+									)
+								}
 
 
-						</Nav>
-					</Navbar.Collapse>
+							</Nav>
+						</Navbar.Collapse>
+					</Container>
 				</Navbar>
 
 			</header>
