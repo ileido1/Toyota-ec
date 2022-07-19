@@ -2,7 +2,7 @@
 
 const Cartmenu = () => (
 
-    <div className="auto-individual container-fluid" >
+    <div className="auto-individual container-fluid video-cart d-none d-sm-none d-md-block d-xl-block d-lg-block" >
         <div className="row" id="menu-producto" >
             <div className="col-12"  >
                 <ul >

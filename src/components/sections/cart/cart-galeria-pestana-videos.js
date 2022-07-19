@@ -1,6 +1,7 @@
 import { useEffect, useRef} from "react"
 import { Swiper, SwiperSlide } from "swiper/react";
 import useFetch from "../../../hooks/useFetch";
+import ReactPlayer from "react-player"
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -61,11 +62,14 @@ const Cartgaleriapestanavideo = () => {
                               <>
                               <SwiperSlide>
                                     
-                                    <div>
-                                        <video width="100%" controls ref={videoRef} >
-                                            <source src={url_backend+c.video_galeria_vehiculo} type="video/mp4" />
-                                            Your browser does not support HTML video.
-                                        </video>
+                                    <div className='player-wrapper'  >
+                                        <ReactPlayer
+                                            className='react-player'
+                                            width='1920px'
+                                            height='800px'
+                                            url={c.video_galeria_vehiculo}
+                                        />
+
                                     </div>
 
                               </SwiperSlide>  

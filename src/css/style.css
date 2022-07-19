@@ -1774,8 +1774,7 @@ ul.tabsnoticias>li {
 @media only screen and (max-width: 600px) {
 
     .content_features {
-        background: #000;
-        margin-top: 0px !important;
+        margin-top: -170px;
         padding-left: 0px !important;
     }
 
@@ -1818,6 +1817,41 @@ ul.tabsnoticias>li {
         width: 100%;
         margin-top: 0;
     }
+
+    .img-logo-feature{
+        width: 110px;
+    }
+
+    .subtext-feature {
+        display: contents;
+        font-family: 'Radikal-Light';
+        color: #ffffff;
+        font-size: 10px;
+        text-align: left;
+        margin-bottom: 10px;
+        margin-bottom: 0px;
+        line-height: 12px;      
+    }
+
+    .contenedor-versiones-features{
+        padding-top: 15px;
+    }
+
+    .iconos-features{
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .mtopft{
+        margin-top: 10px !important;
+        padding-left: 0px !important;
+    }
+
+    .prcero{
+        padding-right: 0px;
+    }
+
 }
 
 /* Responsive */
@@ -1853,6 +1887,7 @@ ul.tabsnoticias>li {
   .pd50{
     margin-top: 30px !important;
   }
+
 
 /* Pagina de campanias */
 
@@ -2007,4 +2042,9 @@ ul.tabsnoticias>li {
 
 .cerrar-modal-takata{
     font-size: 16px !important;
+}
+
+.react-player{
+    width: 1920px;
+    height: 800px;
 }
