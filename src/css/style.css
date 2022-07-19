@@ -2007,11 +2007,10 @@ ul.tabsnoticias>li {
         margin-top: 200px !important;
     }
 
-    .swiper-button-prev,
-    .swiper-button-next {
-        margin-top: -300px !important;
-    }
-
+      .swiper-button-prev, .swiper-button-next {
+        margin-top: -200px !important;
+      }
+    
     .content-diseno {
         background: #e3e3e3;
     }
