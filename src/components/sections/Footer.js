@@ -52,8 +52,8 @@ const Footer = ({ logotoyota, toyotago, toyotasiempre }) => {
                             <>
                                 {
 
-                                    listafooter.map(c => {
-                                        return < Footerli title={c.title.map(h => h.value)} field_url_menu_secundario={c.field_url_menu_secundario}></Footerli>
+                                    listafooter.map((c, i) => {
+                                        return < Footerli title={c.title.map(h => h.value)} field_url_menu_secundario={c.field_url_menu_secundario} i={i}></Footerli>
                                     }
                                     )
                                 }

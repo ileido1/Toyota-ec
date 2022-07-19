@@ -1799,6 +1799,20 @@ ul.tabsnoticias>li {
         padding-left: 0px !important;
     }
 
+    .noticia h4 {
+        color: #ffffff;
+        font-family: 'Novecentos-DemiBold';
+        text-align: justify;
+        font-size: 19px;
+    }
+
+    .noticia p {
+        color: #adadad;
+        font-family: 'Novecentos-DemiBold';
+        text-align: justify;
+        font-size: 14px;
+    }
+
     .form-check {
         margin-left: 10px;
     }
@@ -2007,10 +2021,11 @@ ul.tabsnoticias>li {
         margin-top: 200px !important;
     }
 
-    .swipper-automovil .swiper-button-prev, .swipper-automovil .swiper-button-next {
-    margin-top: -200px !important;
+    .swipper-automovil .swiper-button-prev,
+    .swipper-automovil .swiper-button-next {
+        margin-top: -200px !important;
     }
-    
+
     .content-diseno {
         background: #e3e3e3;
     }
@@ -2136,6 +2151,27 @@ ul.tabsnoticias>li {
 
     .contenedor {
         min-height: 560px !important;
+    }
+
+    .accordion-button {
+
+        background: transparent !important;
+        color: #fff !important;
+
+    }
+
+    .accordion-item {
+        background-color: transparent !important;
+        border: none !important;
+        color: #fff !important;
+        border-top: 1px solid #fff !important;
+    }
+
+    .footerdown {
+        background-color: #b9bfc1;
+        padding-left: 0px;
+        padding-top: 20px;
+        padding-right: 0px;
     }
 
 }
