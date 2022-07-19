@@ -54,7 +54,7 @@ export default function Cartslider() {
                 navigation={true}
                 speed={1000}
                 modules={[Autoplay,Navigation]}
-                className="mySwiper "
+                className="mySwiper swipper-automovil"
             >
                 {
                     detalle_respuesta ? (
