@@ -1770,6 +1770,9 @@ ul.tabsnoticias>li {
     display: none;
 }
 
+.fila-colores{
+    justify-content: center;
+}
 
 @media only screen and (max-width: 600px) {
 
@@ -1911,6 +1914,123 @@ ul.tabsnoticias>li {
 
       .mt200px{
         margin-top: 200px !important;
+      }
+
+      .swiper-button-prev, .swiper-button-next {
+        margin-top: -300px !important;
+      }
+    
+    .content-diseno{
+        background: #e3e3e3;
+    }
+
+    #diseno2{
+        padding: 10px;
+       
+    }  
+
+    .circulo-color {
+        height: 30px;
+        width: 30px;
+    }
+
+    .fila-colores .col-1 {
+        margin-right: 20px !important;
+    }
+
+    .content-descarga{
+        text-align: left;
+    }
+
+    .text-cotizar {
+        font-family: 'Radikal-Medium';
+        font-size: 12px;
+        color: #000000;
+        max-width: 200px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+      }
+
+     .logo-mobile-colores{
+        max-width: 140px;
+        margin-top: 20px;
+     }
+
+     .btn-cotizar {
+        width: 100px !important;
+        display: flex !important;
+        justify-content: center !important; 
+      }
+
+      .content-cotizar {
+        display: flex;
+        align-items: end;
+        height: 100%;
+      }
+
+      #imagen-auto-diseno {
+        transition: all 0.5s 0s ease;
+        margin: 0 auto;
+          margin-top: 0px;
+        display: block;
+        margin-top: 20px;
+      }
+
+      #titulo-colores {
+        transition: all 0.5s 0s ease;
+        font-size: 20px;
+      }
+
+      .content-descarga {
+        text-align: left !important;
+        margin-top: 20px !important;
+      } 
+
+      .pd50 {
+        margin-top: 15px !important;
+      }
+
+      .icono-documento-descarga{
+        padding-left: 30px;
+      }
+
+      .text-descargar-catalogo{
+        color: #000000;
+        text-transform: uppercase;
+      }
+
+      .icono-tecnologia {
+        margin-bottom: 20px;
+        margin-top: 0px;
+      }
+
+      .bloque-text-tecnologia {
+        margin-bottom: 30px;
+      }
+
+      .contenedor-cta p {
+        padding: 5% 20px;
+        text-align: center;
+        font-size: 20px;
+        line-height: 26px;
+        font-family: 'Radikal-Medium';
+      }
+
+      .contenedor-cta-testdrive {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        height: 300px;
+      }
+
+      .contenedor-cta-cotizar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #E50021;
+        color: #ffffff;
+        height: 300px;
       }
 
 }

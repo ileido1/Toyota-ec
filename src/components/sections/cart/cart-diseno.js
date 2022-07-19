@@ -143,13 +143,13 @@ return (
 <div className="container-fluid " id="content-diseno" >
 <div className="row"  >
     <div className="col-12">
-            <div id="diseno" className="row pd100"  >
-                <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div id="diseno" className="row pd100 d-none d-sm-none "  >
+                <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 ">
 
                     <div className="content-text">
 
-                        <img src={logo_dc_vehiculo} width="200px" alt="" className="  " />
-                        <p className="text-cotizar " > {texto_dc_vechiculo} </p>
+                    <img src={logo_dc_vehiculo} width="200px" alt="" className="logo-colores" />
+                    <p className="text-cotizar" > {texto_dc_vechiculo} </p>
 
                     </div>
 
@@ -163,63 +163,98 @@ return (
 
                 </div>
                 <div className="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <img id="imagen-auto-diseno" className=" img-fluid "  src={imagen_dc_vehiculo_color_1} alt="Auto Toyota Colores" />
+                </div>
+            </div>
+
+            <div id="diseno2" className="row d-block d-sm-block d-md-none d-xl-none d-lg-none"  >
+
+                <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-block d-sm-block d-md-none d-xl-none d-lg-none">
+                    <div className="row" >
+                        <div className="col-8" >
+                            <div className="content-text">
+
+                                <img src={logo_dc_vehiculo} width="200px" alt="" className="logo-mobile-colores" />
+                                <p className="text-cotizar " > {texto_dc_vechiculo} </p>
+
+                            </div>
+                            
+                        </div>
+            
+                        <div className="col-4" >
+
+                            <div className="content-cotizar">
+                                <p data-auto="cotizar-auto" className="btn btn-cotizar " id="cotizar-vehiculo" onClick={abrirModal} >{texto_boton_dc_vehiculo}</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+                <div className="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                     <img id="imagen-auto-diseno" className=" img-fluid "  src={imagen_dc_vehiculo_color_1} alt="" />
                 </div>
             </div>
+            
             <div className="row">
                 <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <p className="text-color-diseno secciones-subtitulos " id="titulo-colores" >Negro</p>
+                    <p className="text-color-diseno secciones-subtitulos " id="titulo-colores" >{nombre_color_1}</p>
                 </div>
             </div>
-            <div className="row pd50" >
-                <div className="col-2">
+
+            <div className="row pd50 fila-colores"  >
+                <div className="col-1">
                     <span className="circulo-color icono-color" data-nombre={nombre_color_1}  data-auto={imagen_dc_vehiculo_color_1} data-color={hex_dc_vehiculo_color_1} style={{background: hex_dc_vehiculo_color_1 }} onClick={cambiarAuto} ></span>                   
                 </div>
-                <div className="col-2">
+                <div className="col-1">
                     <span className="circulo-color icono-color" data-nombre={nombre_color_2} data-auto={imagen_dc_vehiculo_color_2} data-color={hex_dc_vehiculo_color_2} style={{background: hex_dc_vehiculo_color_2 }} onClick={cambiarAuto} ></span> 
                 </div>
-                <div className="col-2">
+                <div className="col-1">
                     <span className="circulo-color icono-color" data-nombre={nombre_color_3} data-auto={imagen_dc_vehiculo_color_3} data-color={hex_dc_vehiculo_color_3} style={{background: hex_dc_vehiculo_color_3 }} onClick={cambiarAuto} ></span> 
                 </div>
-                <div className="col-2">
+                <div className="col-1">
                     <span className="circulo-color icono-color" data-nombre={nombre_color_4} data-auto={imagen_dc_vehiculo_color_4}  data-color={hex_dc_vehiculo_color_4} style={{background: hex_dc_vehiculo_color_4 }} onClick={cambiarAuto} ></span> 
                 </div>
-                <div className="col-2">
+                <div className="col-1">
                     <span className="circulo-color icono-color" data-nombre={nombre_color_5} data-auto={imagen_dc_vehiculo_color_5}  data-color={hex_dc_vehiculo_color_5} style={{background: hex_dc_vehiculo_color_5 }} onClick={cambiarAuto} ></span> 
                 </div>
-                <div className="col-2">
+                <div className="col-1">
                     <span className="circulo-color icono-color" data-nombre={nombre_color_6} data-auto={imagen_dc_vehiculo_color_6}  data-color={hex_dc_vehiculo_color_6} style={{background: hex_dc_vehiculo_color_6 }} onClick={cambiarAuto} ></span> 
                 </div>
+
+
+
             </div>
-            <div className="row pd50" >
+            <div className="row pd50 fila-colores" >
 
             {hex_dc_vehiculo_color_7 &&
-                <div className="col-2">                  
+                <div className="col-1">                  
                 <span className="circulo-color icono-color" data-nombre={nombre_color_7}  data-auto={imagen_dc_vehiculo_color_7} data-color={hex_dc_vehiculo_color_7} style={{background: hex_dc_vehiculo_color_7 }} onClick={cambiarAuto} >
                 </span>                   
                 </div>
-            }
-            {hex_dc_vehiculo_color_8 &&
-                <div className="col-2">                  
-                <span className="circulo-color icono-color" data-nombre={nombre_color_8}  data-auto={imagen_dc_vehiculo_color_8} data-color={hex_dc_vehiculo_color_8} style={{background: hex_dc_vehiculo_color_8 }} onClick={cambiarAuto} >
-                </span>                   
-                </div>
-            }
-            {hex_dc_vehiculo_color_9 &&
-                <div className="col-2">                  
-                <span className="circulo-color icono-color" data-nombre={nombre_color_9}  data-auto={imagen_dc_vehiculo_color_9} data-color={hex_dc_vehiculo_color_9} style={{background: hex_dc_vehiculo_color_9 }} onClick={cambiarAuto} >
-                </span>                   
-                </div>
             }    
+
+            {hex_dc_vehiculo_color_9 &&
+                    <div className="col-1">                  
+                    <span className="circulo-color icono-color" data-nombre={nombre_color_9}  data-auto={imagen_dc_vehiculo_color_9} data-color={hex_dc_vehiculo_color_9} style={{background: hex_dc_vehiculo_color_9 }} onClick={cambiarAuto} >
+                    </span>                   
+                    </div>
+            }
+
             {hex_dc_vehiculo_color_10 &&
-                <div className="col-2">                  
+                <div className="col-1">                  
                 <span className="circulo-color icono-color" data-nombre={nombre_color_10}  data-auto={imagen_dc_vehiculo_color_10} data-color={hex_dc_vehiculo_color_10} style={{background: hex_dc_vehiculo_color_10 }} onClick={cambiarAuto} >
                 </span>                   
                 </div>
-            }         
-
-             
+            }
+              
             </div>
+            <div className="row d-block d-sm-block d-md-none d-xl-none d-lg-none" >
+                <div className="col-12 content-descarga">
+                    <img src={documento} className="icono-documento-descarga" alt="Boton descarga PDF" /> <span className="text-descargar-catalogo" ><a href={url_pdf_dc_vehiculo} target="_blank" className="cart-link" >{texto_pdf_dc_vehiculo}</a> </span>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

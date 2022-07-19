@@ -65,11 +65,11 @@ const Cartcta = () => {
         <div className="auto-individual container-fluid" >
             <div className="row" id="auto-cta" >
 
-                <div className="col-12 col-sm-6 contenedor-cta-testdrive" style={{background: hexadecimal_cta_vehiculo}} >
+                <div className="col-12 col-sm-6 contenedor-cta-testdrive" style={{background: hexadecimal_cta_vehiculo}} onClick={abrirModal} >
                     <div className='contenedor-cta'>
                         <img src={icono_1_cta_vehiculo} alt="Icono test drive" className='iconos-cta'  />
                         <p>{texto_1_cta_vehiculo}</p>
-                        <a  id='btn-testdrive' className='btn' onClick={abrirModal} >{boton_1_cta_vehiculo}</a>
+                        <a  id='btn-testdrive' className='btn d-none d-sm-none' onClick={abrirModal} >{boton_1_cta_vehiculo}</a>
                     </div>
                 </div>
 
@@ -77,7 +77,7 @@ const Cartcta = () => {
                     <div className='contenedor-cta'>
                         <img src={icono_2_cta_vehiculo} alt="Icono cotizar" className='iconos-cta' style={{background: hexadecimal_2_cta_vehiculo}}  />
                         <p>{texto_2_cta_vehiculo}</p>
-                        <a  id='btn-cotizar' className='btn' onClick={abrirModal} >{boton_2_cta_vehiculo}</a>
+                        <a  id='btn-cotizar' className='btn d-none d-sm-none' onClick={abrirModal} >{boton_2_cta_vehiculo}</a>
                     </div>
                 </div>
 

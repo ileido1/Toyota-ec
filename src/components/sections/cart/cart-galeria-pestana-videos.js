@@ -62,11 +62,21 @@ const Cartgaleriapestanavideo = () => {
                               <>
                               <SwiperSlide>
                                     
-                                    <div className='player-wrapper'  >
+                                    <div className='player-wrapper d-none d-sm-none'  >
                                         <ReactPlayer
                                             className='react-player'
                                             width='1920px'
                                             height='800px'
+                                            url={c.video_galeria_vehiculo}
+                                        />
+
+                                    </div>
+
+                                    <div className='player-wrapper  d-md-none d-xl-none d-lg-none'  >
+                                        <ReactPlayer
+                                            className='react-player'
+                                            width='100%'
+                                            height='300px'
                                             url={c.video_galeria_vehiculo}
                                         />
 
