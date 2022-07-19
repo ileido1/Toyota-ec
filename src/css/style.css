@@ -1826,7 +1826,6 @@ ul.tabsnoticias>li {
         margin-top: 0;
     }
 
-<<<<<<< HEAD
     .SliderQDR {
         margin-top: 0px;
         margin-bottom: 0px;
@@ -1844,8 +1843,8 @@ ul.tabsnoticias>li {
         height: 100%;
         padding: 20px !important;
     }
-=======
-    .img-logo-feature{
+
+    .img-logo-feature {
         width: 110px;
     }
 
@@ -1857,36 +1856,36 @@ ul.tabsnoticias>li {
         text-align: left;
         margin-bottom: 10px;
         margin-bottom: 0px;
-        line-height: 12px;      
+        line-height: 12px;
     }
 
-    .contenedor-versiones-features{
+    .contenedor-versiones-features {
         padding-top: 15px;
     }
 
-    .iconos-features{
+    .iconos-features {
         width: 50%;
         display: block;
         margin: 0 auto;
     }
 
-    .mtopft{
+    .mtopft {
         margin-top: 10px !important;
         padding-left: 0px !important;
     }
 
-    .prcero{
+    .prcero {
         padding-right: 0px;
     }
 
-    .img-logo-marca{
+    .img-logo-marca {
         padding: 20px;
         display: block;
         margin: 0 auto;
         cursor: pointer;
     }
 
-    .boton-cotizar-mobile{
+    .boton-cotizar-mobile {
         background: #E20B2A;
         color: #fff;
         display: flex;
@@ -1903,44 +1902,43 @@ ul.tabsnoticias>li {
         width: 90%;
     }
 
-      .bg-features-mobile{
+    .bg-features-mobile {
         background-size: contain;
         background-position: top;
-      }
+    }
 
-      .cart-imagen-caracteristica {
+    .cart-imagen-caracteristica {
         display: block;
         margin: 0 auto;
         width: 100%;
         padding: 44px;
-      }
+    }
 
-      .content-cart-texto-caracteristicas {
+    .content-cart-texto-caracteristicas {
         padding-left: 30px;
-      }
+    }
 
-      .cart-titulo-caracteristicas {
+    .cart-titulo-caracteristicas {
         font-family: 'Radikal-Bold';
         font-size: 24px;
         text-transform: uppercase;
         font-weight: bold;
-      }
+    }
 
-      .cart-texto-caracteristicas {
+    .cart-texto-caracteristicas {
         font-family: 'Radikal-Medium';
         font-size: 14px;
-      }
+    }
 
-      ul.cart-item-caracteristicas {
+    ul.cart-item-caracteristicas {
         font-family: 'Radikal-Medium';
         font-size: 14px;
-      }
+    }
 
-      .mt200px{
+    .mt200px {
         margin-top: 200px !important;
-      }
+    }
 
->>>>>>> d13dd9d4f885494fbe2d5f310684137474df0a1d
 }
 
 /* Responsive */
@@ -2133,7 +2131,7 @@ ul.tabsnoticias>li {
     font-size: 16px !important;
 }
 
-.react-player{
+.react-player {
     width: 1920px;
     height: 800px;
 }
