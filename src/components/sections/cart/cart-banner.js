@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import useFetch from "../../../hooks/useFetch";
 import { useLocation } from 'react-router-dom';
 import Video from './cart-video-portada'
-import imagen_portada from '../../../images/portada-chr-1.jpg'
+import imagen_portada from '../../../images/portada-chr-1.jpg' 
+import logo_chr from '../../../images/logos/logo-chr-diseno_0.svg' 
 
 import { motion } from "framer-motion"
 import { faCircleRight } from "@fortawesome/free-regular-svg-icons";
@@ -144,7 +145,6 @@ export default function Cartslider() {
                                     </div>
                                     <div className="col-4 ">
                                         <img className="img-icono-feature-motor" src={tres_icono_versiones} alt={tres_titulo_versiones} />
-
                                     </div>
 
                                     <div className="col-4 ">
@@ -242,43 +242,19 @@ export default function Cartslider() {
 
                     </div>
                 </motion.div>
-{ flag_version_2 ?   
-                <motion.div transition={{ delay: 1, default: { duration: 0.8 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} className="col-6 padding-logo-versiones ">
-                    <div className="row">
-                        <div className="col-12">
-
-                            <img className="img-logo-feature " src={logo_modelo_2} alt="Logo Automovil" /><span className="text-feature-version " >{b_subtitulo_versiones}</span>
-                            <p className="text-feature animated fadeInLeft delay4 duration4">{texto_modelo_2}</p>
-                        </div>
-
-                        <div className="col-4 animated ">
-                            <img className="img-icono-feature" src={cuatro_icono_versiones} alt={cuatro_titulo_versiones} />
-
-                        </div>
-                        <div className="col-4 animated ">
-                            <img className="img-icono-feature-frenos" src={cinco_icono_versiones} alt={cinco_titulo_versiones} />
-                        </div>
-                        <div className="col-4 animated ">
-                            <img className="img-icono-feature-motor" src={seis_icono_versiones} alt={seis_titulo_versiones} />
-                        </div>
-
-                        <div className="col-4 ">
-                            <p className="subtext-feature animated " >{cuatro_titulo_versiones}</p>
-                        </div>
-                        <div className="col-4 ">
-                            <p className="subtext-feature animated " >{cinco_titulo_versiones}</p>
-                        </div>
-                        <div className="col-4 ">
-                            <p className="subtext-feature animated " >{seis_titulo_versiones}</p>
-                        </div>
-
-                    </div>
-                </motion.div>
-
-:  console.log('.') }
-
             </div>
+
+
+
         </div>
+    </div>
+</div>
+<div className="row" >
+    <div className="col-6 " >
+        <img className="img-logo-marca img-fluid" src={logo_chr} alt="Logo versiones mobile" />
+    </div>
+    <div className="col-6 boton-cotizar-mobile" >
+        <span>Cotizar</span>
     </div>
 </div>
 </div>
