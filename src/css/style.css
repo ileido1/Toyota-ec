@@ -1846,6 +1846,15 @@ ul.tabsnoticias>li {
         /* text-align: center; */
     }
 
+    .rendimientoslider {
+        font-family: 'Radikal-Bold';
+        color: #817F7F;
+        text-transform: uppercase;
+        font-size: 14px;
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+
     .navbar-light .navbar-toggler {
         color: #E20B2A;
         border-color: transparent !important;
@@ -1858,7 +1867,7 @@ ul.tabsnoticias>li {
         border: 0px;
         font-family: 'Novecentos-DemiBold';
         border-bottom: 2px solid #E50021 !important;
-        padding-bottom: 1px;
+        padding-bottom: 5px;
     }
 
     .tabsnoticias {
