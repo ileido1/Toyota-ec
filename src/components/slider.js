@@ -37,17 +37,17 @@ export default function App() {
       > 
                     <SwiperSlide>
                                                             
-                        <img src={imagenq} alt="imagen q" />
+                        <img className="img-fluid" src={imagenq} alt="imagen q" />
 
                     </SwiperSlide> 
                     <SwiperSlide>
                                                             
-                        <img src={imagend} alt="imagen d" />
+                        <img className="img-fluid" src={imagend} alt="imagen d" />
 
                     </SwiperSlide>
                     <SwiperSlide>
                         
-                        <img src={imagenr} alt="imagen r" />
+                        <img className="img-fluid" src={imagenr} alt="imagen r" />
 
                     </SwiperSlide> 
                                 
