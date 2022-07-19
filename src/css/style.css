@@ -2059,6 +2059,16 @@ ul.tabsnoticias>li {
         height: 300px;
       }
 
+      .text-tecnologia {
+        display: block;
+        text-align: center;
+        color: #817F7F;
+        max-width: 340px;
+        font-family: 'Radikal-Medium';
+        font-size: 16px;
+        margin: 0 auto;
+      }
+
 }
 
 /* Responsive */
