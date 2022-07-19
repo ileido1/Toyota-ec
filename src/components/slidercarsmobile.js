@@ -72,7 +72,7 @@ export default function Sliderscars() {
 
     return (
         <>
-            <div className="supcarslider destopk">
+            <div className="supcarslider mobile">
                 {categories ? (
                     <>
                         <h1 className="h1Conoce">CONOCE NUESTROS VEHÍCULOS</h1>
@@ -95,7 +95,7 @@ export default function Sliderscars() {
                 }
             </div>
             <Swiper
-                slidesPerView={3}
+                slidesPerView={1}
                 spaceBetween={30}
                 navigation={true}
                 speed={1000}
@@ -104,7 +104,7 @@ export default function Sliderscars() {
                 loop={true}
 
                 style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + background})` }}
-                className="mySwipercar destopk"
+                className="mySwipercar mobile"
 
             >
                 {
@@ -120,14 +120,11 @@ export default function Sliderscars() {
 
                                             <div className="row" >
                                                 <div className="col-12 centrarbaseline">
-                                                    <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro"></img>
+                                                    <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro2"></img>
 
                                                 </div>
-                                                <div className="col-12 logocarro">
-                                                    <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo} className="logocarroprev"></img>
 
-                                                </div>
-                                                <div className="col-12 infocarro">
+                                                <div className="col-12 infocarro2">
                                                     <p className="pslidercarro">
                                                         {c.anio_del_vehiculo}
                                                     </p>

@@ -470,6 +470,16 @@ ul#menu-galeria>li>span {
     margin-top: 200px;
 }
 
+.imagencarro2 {
+    width: 100%;
+    margin-top: 200px;
+
+}
+
+.imgfooter {
+    width: 100%;
+}
+
 .pslidercarro {
     font-family: 'Toyota-DisplayRegular';
     color: #000;
@@ -1500,7 +1510,7 @@ img.autos-similares {
     cursor: pointer;
 }
 
-ul.tabsnoticias > li {
+ul.tabsnoticias>li {
     padding-left: 40px;
 }
 
@@ -1742,6 +1752,10 @@ ul.tabsnoticias > li {
 /* */
 
 /* Responsive */
+.mobile {
+    display: none;
+}
+
 
 @media only screen and (max-width: 600px) {
 
@@ -1751,6 +1765,45 @@ ul.tabsnoticias > li {
         padding-left: 0px !important;
     }
 
+    .mobile {
+        display: block;
+    }
+
+    .destopk {
+        display: none;
+    }
+
+    .footersup {
+        display: none !important;
+    }
+
+    .mundotoyota {
+        font-size: 80px;
+    }
+
+    .supcarslider {
+        /* display: flex; */
+        position: absolute;
+        z-index: 999;
+        margin: auto;
+        MAX-width: 700px;
+        left: 0;
+        top: 730px;
+        right: 0;
+        /* text-align: center; */
+    }
+
+    .mySwipercar {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: inherit;
+        margin-bottom: 0px;
+    }
+
+    .imagencarro2 {
+        width: 100%;
+        margin-top: 0;
+    }
 }
 
 /* Responsive */

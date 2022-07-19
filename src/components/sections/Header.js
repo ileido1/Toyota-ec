@@ -1,7 +1,10 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+
 import useFetch from '../../hooks/useFetch';
 import Navlinkheader from './navlinkheader';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import logo from '../../images/logo.png'
 
 function Header() {
 	let llenar_header = 'v1/global/menu-principal'
@@ -9,14 +12,10 @@ function Header() {
 	return (
 		<>
 			<header>
-				<nav className="navbar navbar-expand-lg ">
-					<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-						<span className="navbar-toggler-icon">.</span>
-					</button>
-					<div className="collapse navbar-collapse" id="navbarNav">
-						<ul className="navbar-nav mx-auto">
-
-
+				<Navbar bg="light" expand="lg">
+					<Navbar.Toggle aria-controls="basic-navbar-nav" />
+					<Navbar.Collapse id="basic-navbar-nav">
+						<Nav className="me-auto">
 							{
 
 								menu ? (
@@ -29,11 +28,13 @@ function Header() {
 											menu.map((c, i) => {
 
 												return (
+													<>
 
-
-													< Navlinkheader key={i} uri={c.url_menu_principal} title={c.nombre_menu_superior} iteracion={i} >
-
-													</Navlinkheader>
+														<Nav.Link key={i} href={c.url_menu_principal} >{c.nombre_menu_superior}</Nav.Link>
+														{i === 2 &&
+															<a className="d-none d-lg-block" href="https://toyota-ec.247.com.ec/"><img src={logo} /></a>
+														}
+													</>
 
 												)
 
@@ -50,11 +51,12 @@ function Header() {
 									null
 								)
 							}
-						</ul>
 
 
-					</div>
-				</nav>
+						</Nav>
+					</Navbar.Collapse>
+				</Navbar>
+
 			</header>
 		</>
 	);

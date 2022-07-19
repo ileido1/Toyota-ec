@@ -39,6 +39,8 @@ export default function Bannerhome() {
             window.removeEventListener('scroll', handleScroll, false);
         }
     }, [lastyPos]);
+
+
     const boxVariant = {
         visible: { opacity: 1, scale: 1, x: 0, x: Actions ? 0 : 400 },
         hidden: { opacity: 0, scale: 0, x: -200 },
@@ -68,7 +70,7 @@ export default function Bannerhome() {
                                     <>
                                         <SwiperSlide>
                                             <div className="container-fluid contenedor " style={{ backgroundImage: `url(${'' + banner_portada})` }} >
-                                                <div className="mtopbanner">
+                                                <div className="mtopbanner destopk">
                                                     <div className="row" >
                                                         <motion.div
                                                             animate={{
@@ -98,6 +100,31 @@ export default function Bannerhome() {
                                                         <NavLink to="/raize" className="abanner" > <button className="btn-raize"> {c.texto_del_enlace} </button></NavLink>
 
                                                     </motion.div>
+
+                                                </div>
+                                                <div className="mtopbanner mobile">
+                                                    <div className="row" >
+                                                        <div className="col-12 m20"
+
+                                                        >
+                                                            <h1 className="Tbanner">{c.texto_alternativo}</h1>
+                                                            <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo} className="w-100"></img>
+
+                                                        </div>
+                                                        <div
+                                                            className="col-12">
+                                                            <img src={'https://backend-toyota.247.com.ec/' + c.imagen_vehiculo} className="carrobanner"></img>
+                                                        </div>
+
+                                                    </div>
+                                                    <div
+                                                        className="row btnhome"
+                                                        variants={btnVariant}
+                                                        animate="visible"
+                                                        transition={{ delay: 0.5, default: { duration: 1 } }} >
+                                                        <NavLink to="/raize" className="abanner" > <button className="btn-raize"> {c.texto_del_enlace} </button></NavLink>
+
+                                                    </div>
 
                                                 </div>
 

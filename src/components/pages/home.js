@@ -5,6 +5,7 @@ import useFetch from "../../hooks/useFetch";
 import Sliderscars from "../slidercars";
 import MundoToyota from "../mundotoyota";
 import Noticias from "../noticias";
+import Sliderscars2 from "../slidercarsmobile";
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
         <>
             <Bannerhome></Bannerhome>
             <Sliderscars></Sliderscars>
+            <Sliderscars2></Sliderscars2>
             <Slider></Slider>
             <MundoToyota></MundoToyota>
             <Noticias></Noticias>

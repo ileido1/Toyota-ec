@@ -6,15 +6,15 @@ const Footer = ({ logotoyota, toyotago, toyotasiempre }) => {
     return (
         <footer>
             <div className="container-fluid">
-                <div className="row footersup">
+                <div className="row footersup destopk">
                     <div className="col-3">
-                        <img src={logotoyota}></img>
+                        <img src={logotoyota} className="imgfooter"></img>
                     </div>
                     <div className="col-3">
-                        <img src={toyotago}></img>
+                        <img src={toyotago} className="imgfooter" ></img>
                     </div>
                     <div className="col-3">
-                        <img src={toyotasiempre}></img>
+                        <img src={toyotasiempre} className="imgfooter"></img>
                     </div>
                     <div className="col-3 centrar" >
 
