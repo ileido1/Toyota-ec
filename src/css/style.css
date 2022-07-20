@@ -131,7 +131,7 @@
 }
 
 .content_features {
-    margin-top: -426px;
+    margin-top: -380px;
     padding-left: 60px;
 }
 
@@ -144,7 +144,7 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
-    width: 70%;
+    width: 60%;
 }
 
 .img-icono-feature-frenos {
@@ -152,7 +152,7 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
-    width: 70%;
+    width: 60%;
 }
 
 .img-icono-feature-motor {
@@ -160,7 +160,7 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
-    width: 80%;
+    width: 70%;
 }
 
 .titulo-feature {
@@ -600,7 +600,6 @@ ul#menu-galeria>li>span {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -680,7 +679,7 @@ ul#menu-galeria>li>span {
 }
 
 .mtopbanner {
-    margin-top: 100px;
+    margin-top: 19%;
     width: 90%;
 }
 
@@ -1864,7 +1863,7 @@ ul.tabsnoticias>li {
         font-family: 'Radikal-Bold';
         color: #817F7F;
         text-transform: uppercase;
-        font-size: 14px;
+        font-size: 12px;
         margin-bottom: 0;
         font-weight: bold;
     }
@@ -1882,6 +1881,18 @@ ul.tabsnoticias>li {
         font-family: 'Novecentos-DemiBold';
         border-bottom: 2px solid #E50021 !important;
         padding-bottom: 5px;
+        
+    }
+
+    .noticia .nav-tabs .nav-item.show .nav-link,
+    .noticia .nav-tabs .nav-link.active {
+        color: #E50021 !important;
+        background-color: transparent !important;
+        border: 0px;
+        font-family: 'Novecentos-DemiBold';
+        border-bottom: 3px solid #E50021 !important;
+        padding-bottom: 5px;
+        display: inline;
     }
 
     .tabsnoticias {
@@ -1890,6 +1901,7 @@ ul.tabsnoticias>li {
         margin-bottom: 80px !important;
         margin-top: 80px;
         flex-direction: column;
+        width: 80%;
     }
 
     .mySwipercar {
@@ -1905,7 +1917,7 @@ ul.tabsnoticias>li {
     }
 
     .SliderQDR {
-        margin-top: 4px !important;
+        margin-top: 60px !important;
         margin-bottom: 40px !important;
     }
 
@@ -2174,6 +2186,71 @@ ul.tabsnoticias>li {
         padding-right: 0px;
     }
 
+    .mtopbanner {
+        margin-top: 100px;
+        width: 90%;
+    }
+
+    .mySwiperHome .mtopbanner {
+        margin-top: 0px;
+    }
+
+    #pagina-vehiculos {
+        background: #EDEDED;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .autos-similares {
+        display: block;
+        margin: 0 auto;
+        margin-top: 0px;
+        max-width: 160px !important;
+      }
+
+      .titulo-autos-similares {
+        font-size: 18px;
+        margin-top: 40px;
+      }
+
+      .enlace-vehiculos {
+        font-size: 1em;
+      }
+
+      .subtitulos-vehiculos {
+        margin-top: 40px;
+      }
+
+      .subtitulos-vehiculos {
+
+        padding-left: 0px;
+        font-size: 1.6em;
+        text-align: center;
+
+      }
+
+      .h1Conoce {
+        font-size: 22px;
+      }
+
+      .abanner {
+        margin-bottom: 60px;
+        margin-top: -30px !important;
+      }
+
+      ul.tabsnoticias > li {
+        padding-left: 0px;
+      }
+
+      .noticia {
+        background: #000;
+        padding: 30px !important;
+      }
+
+}
+
+.mySwiperHome .mtopbanner {
+    margin-top: 0px;
 }
 
 /* Responsive */
@@ -2220,6 +2297,7 @@ ul.tabsnoticias>li {
     display: flex;
     justify-items: center;
     align-items: center;
+
 }
 
 .texto-titulo-campanias {
@@ -2232,8 +2310,12 @@ ul.tabsnoticias>li {
 .texto-campanias {
     font-family: 'Radikal-Medium';
     text-align: center;
-    font-size: 40px;
+    font-size: 32px;
     color: #000;
+}
+
+.texto-rojo{
+    color:red
 }
 
 .content-campanias-takata {
@@ -2369,4 +2451,33 @@ ul.tabsnoticias>li {
 .react-player {
     width: 1920px;
     height: 800px;
+}
+    
+  /* Page content */
+  .content {
+    padding: 16px;
+  }
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    top: 1px;
+}
+  
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 0px;
+}
+
+.menu-sticky{
+position: absolute;
+width: 100%;   
+}
+
+.menu-portada-vehiculos{
+    background: #000000;
 }

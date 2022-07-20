@@ -93,7 +93,7 @@ const Carttecnologia = () => {
   
 return( 
     <>
-        <div className="container-fluid d-none d-sm-none" id="tecnologia" >
+        <div className="container-fluid d-none d-sm-none d-md-block d-xl-block d-lg-block" id="tecnologia" >
 
                 <div className="row mt40" id="tecnologia " >
                     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sinpadding" >
@@ -141,7 +141,7 @@ return(
 
     </div>
 
-    <div className="container-fluid d-md-none d-xl-none d-lg-none" id="tecnologia" >
+    <div className="container-fluid d-block d-sm-block d-md-none d-xl-none d-lg-none" id="tecnologia" >
 
         <div className="row mt40" id="tecnologia2 " >
             <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sinpadding" >

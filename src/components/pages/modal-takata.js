@@ -21,8 +21,8 @@ export default function Modaltakata() {
                         <div className="row">
                             <div className='col-12' >
 
-                                <p className='mt40' >POR FAVOR INGRESE LOS 17 NUMEROS DEL CHASIS</p>
-                                <p>(PUEDE ENCONTRARLO EN SU MATRICULA)</p>
+                                <p className='mt40' >POR FAVOR INGRESE LOS 17 NÚMEROS DEL CHASIS</p>
+                                <p>(PUEDE ENCONTRARLO EN SU MATRÍCULA)</p>
 
                                 
 

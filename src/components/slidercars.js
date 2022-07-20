@@ -5,14 +5,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import useFetch from "../hooks/useFetch";
 import { Navigation } from "swiper";
 
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import { NavLink, Navigate } from "react-router-dom";
-
 import Modalcotizacion from "./sections/cart/cart-modal-cotizacion"
-
 
 // import required modules
 
@@ -65,9 +62,6 @@ export default function Sliderscars() {
         }
         getItems()
     }, [selectedCategory])
-
-
-
 
 
     return (
@@ -129,7 +123,7 @@ export default function Sliderscars() {
                                                 </div>
                                                 <div className="col-12 infocarro">
                                                     <p className="pslidercarro">
-                                                        {c.anio_del_vehiculo}
+                                                       
                                                     </p>
                                                     <div className="row infosupslider">
                                                         <div className="col-6">

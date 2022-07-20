@@ -126,7 +126,7 @@ export default function Sliderscars() {
 
                                                 <div className="col-12 infocarro2">
                                                     <p className="pslidercarro">
-                                                        {c.anio_del_vehiculo}
+                                                       
                                                     </p>
                                                     <div className="row infosupslider">
                                                         <div className="col-6">

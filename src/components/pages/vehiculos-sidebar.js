@@ -25,8 +25,8 @@ export default function Vehiculossidebar() {
                     <div className="content-filtros-sidebar" >
                         <p className="titulo-filtro-sidebar titulo-filtro-sidebar-bb" >Ordenar por</p>
                         <p className="titulo-filtro-sidebar" >Exonerados</p>
-                        <p className="titulo-filtro-sidebar" >Mundo Híbrido</p>
-                        <p className="titulo-filtro-sidebar" >Todos los vehículos</p>
+                        <p className="titulo-filtro-sidebar" onClick={soloHibridos}  >Mundo Híbrido</p>
+                        <p className="titulo-filtro-sidebar" onClick={todos}  >Todos los vehículos</p>
                     </div>
                    <div className="content-botones-sidebar-general" >
                     
@@ -118,6 +118,37 @@ function activarTestdrive(){
     iconotestdrive.style.borderBottom = "0px solid #817F7F";
     textoiconocotizar.style.color = "#817F7F";
     textoiconotestdrive.style.color = "#FFFFFF";
-    
+
+}
+
+function soloHibridos(){
+
+    let hibridos = document.getElementById("contenedor-autos-hibridos");
+    let camionetas = document.getElementById("contenedor-autos-camionetas");
+    let suv = document.getElementById("contenedor-autos-suv");
+    let automoviles = document.getElementById("contenedor-autos-automoviles");
+
+    hibridos.classList.remove("ocultar");
+    suv.classList.add("ocultar");
+    camionetas.classList.add("ocultar");
+    automoviles.classList.add("ocultar");
+
+return true;
+
+}
+
+function todos(){
+
+    let hibridos = document.getElementById("contenedor-autos-hibridos");
+    let camionetas = document.getElementById("contenedor-autos-camionetas");
+    let suv = document.getElementById("contenedor-autos-suv");
+    let automoviles = document.getElementById("contenedor-autos-automoviles");
+
+    hibridos.classList.remove("ocultar");
+    suv.classList.remove("ocultar");
+    camionetas.classList.remove("ocultar");
+    automoviles.classList.remove("ocultar");
+
+return true;
 
 }

@@ -36,6 +36,9 @@ let cinco_titulo_versiones = ''
 let seis_icono_versiones = ''
 let seis_titulo_versiones = ''
 
+let logo_versiones = ''
+let portada_versiones = ''
+
 export default function Cartslider() {
 
     let url_api = 'v1/vehicle_data_sheet'
@@ -51,6 +54,8 @@ export default function Cartslider() {
                 
                 if ( ('/' + c.name_vehicle.toLowerCase()) == location.pathname ){
                     url_detalle = 'v1/vehicle_versions/'+ c.versions_vehicle
+                    logo_versiones = c.logo_versiones_vehiculo_mobile
+                    portada_versiones = c.imagen_banner_vehiculo_mobile
                 }
                                     
             }
@@ -201,7 +206,7 @@ export default function Cartslider() {
 
     <div className="row">
         <div className="col-12 col-sm-12 content-video"  >
-           <img src={imagen_portada} alt="Imagen Portada" className="img-fluid" />
+           <img src={url_backend+portada_versiones} alt="Imagen Portada" className="img-fluid" />
         </div>
     </div>
 
@@ -251,7 +256,7 @@ export default function Cartslider() {
 </div>
 <div className="row" >
     <div className="col-6 " >
-        <img className="img-logo-marca img-fluid" src={logo_chr} alt="Logo versiones mobile" />
+        <img className="img-logo-marca img-fluid" src={url_backend+logo_versiones} alt="Logo versiones mobile" />
     </div>
     <div className="col-6 boton-cotizar-mobile" >
         <span>Cotizar</span>

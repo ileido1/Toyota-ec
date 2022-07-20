@@ -163,7 +163,7 @@ return (
 
                 </div>
                 <div className="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-                    <img id="imagen-auto-diseno" className=" img-fluid "  src={imagen_dc_vehiculo_color_1} alt="Auto Toyota Colores" />
+                    <img id="imagen-auto-diseno" className=" img-fluid imagen-auto-diseno"  src={imagen_dc_vehiculo_color_1} alt="Auto Toyota Colores" />
                 </div>
             </div>
 
@@ -192,13 +192,13 @@ return (
 
                 </div>
                 <div className="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-                    <img id="imagen-auto-diseno" className=" img-fluid "  src={imagen_dc_vehiculo_color_1} alt="" />
+                    <img id="imagen-auto-diseno2" className=" img-fluid "  src={imagen_dc_vehiculo_color_1} alt="" />
                 </div>
             </div>
             
             <div className="row">
                 <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <p className="text-color-diseno secciones-subtitulos " id="titulo-colores" >{nombre_color_1}</p>
+                    <p className="text-color-diseno secciones-subtitulos titulo-colores" id="titulo-colores" >{nombre_color_1}</p>
                 </div>
             </div>
 
@@ -270,17 +270,23 @@ export default Cartdiseno;
 function cambiarAuto(e){
     
     var imagen = e.target.dataset.auto
-    //var color = e.target.dataset.color
-    var nombre_color = e.target.dataset.nombre
-    var automovil = document.getElementById('imagen-auto-diseno')
+    let width = screen.width;
+    let pantalla = ""
 
+    if(width < 601){
+        pantalla = "2"
+    }
+
+    var nombre_color = e.target.dataset.nombre
+    var automovil = document.getElementById('imagen-auto-diseno'+pantalla)
     automovil.setAttribute('style', 'transition:all 0.5s 0s ease','-webkit-transition: all 0.5s 0s ease','-moz-transition: all 0.5s 0s ease','-o-transition: all 0.5s 0s ease');
     var titulo_colores = document.getElementById('titulo-colores')
     automovil.src = imagen
     //titulo_colores.setAttribute('style', 'color: '+color);
-    document.getElementById("titulo-colores").innerHTML = nombre_color; 
+    titulo_colores.innerHTML = nombre_color; 
     
 }
+
 
 function abrirModal(){
     // Get the modal
@@ -679,8 +685,7 @@ function nombreColor(color){
     if ( color ==  "#8a969c" ) {
         nombre_color = "Plomo"
     }
-
-    
+  
     return nombre_color
 
 }
@@ -693,3 +698,22 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+window.onscroll = function() {myFunction()};
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+
+    // Get the navbar
+    var navbar = document.getElementById("menu-producto")
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+    
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+    navbar.classList.remove("menu-sticky")
+  } else {
+    navbar.classList.remove("sticky")
+    navbar.classList.add("menu-sticky")
+  }
+} 
