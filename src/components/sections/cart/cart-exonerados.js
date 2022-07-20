@@ -17,14 +17,36 @@ export default function Cartexonerados() {
     let url_api = 'v1/vehicle_data_sheet'
     const [respuesta, error] = useFetch(url_api);
     let url_detalle = ''
+    const location = useLocation()
     
     let banner1 = ''
     let banner2 = ''
     let texto_cotizar = ''
     let link_cotizar = ''
+    let flag_clase = ''
     
-    const location = useLocation()
+    let contenedor = document.getElementById('content-auto-exonerados')
 
+    if(location.pathname == '/corolla-sedan'){
+       flag_clase = "none"
+    }
+
+    if(location.pathname == '/corolla-cross'){
+        flag_clase = "none"
+     }
+
+    if(location.pathname == '/c-hr'){
+        flag_clase = "none"
+     }
+
+     if(location.pathname == '/corolla-sedan'){
+        flag_clase = "none"
+     }
+
+     if(location.pathname == '/yaris-cross'){
+        flag_clase = "none"
+     }
+    
     if(respuesta){
                             
         respuesta.map(c => { 
@@ -32,10 +54,10 @@ export default function Cartexonerados() {
                 if ( ('/' + c.name_vehicle.toLowerCase()) == location.pathname ){
                     url_detalle = 'v1/exempt_vehicle/' + c.exempt_vehicle
                 }
-                                    
+
             }
         )
-        
+       
     }
 
     const [detalle, error_detalle] = useFetch(url_detalle);
@@ -57,7 +79,7 @@ export default function Cartexonerados() {
     return (
 
             <>
-                <div className="auto-individual container-fluid d-none d-sm-none d-md-block d-xl-block d-lg-block" >
+                <div id="content-auto-exonerados" className="auto-individual container-fluid ocultar-mobile " style={{ display: flag_clase }} >
                     <div className="row" id="auto-exonerados" >
 
                         <div className="col-12 col-sm-6"  >

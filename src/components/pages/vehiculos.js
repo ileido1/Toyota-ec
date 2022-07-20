@@ -18,6 +18,8 @@ export default function Vehiculos() {
     let array_suv = []
     let array_camionetas = []
     let array_hibridos = []
+    let array_exonerados = []
+    
     let url_api = 'v1/vehicles'
     const [respuesta, error] = useFetch(url_api);
 
@@ -39,6 +41,10 @@ export default function Vehiculos() {
 
                 if ( (d.type_vehicle) == "Híbridos" ){
                     array_hibridos.push(d)
+                }
+
+                if ( (d.type_vehicle) == "Exonerados" ){
+                    array_exonerados.push(d)
                 }
 
                 
@@ -223,6 +229,48 @@ export default function Vehiculos() {
                     </div>
                     </div>
 
+                    <div id="contenedor-autos-exonerados"  className="contenedor-secciones-autos"  >
+                    <div className="row" id="titulo-vehiculos" >
+                        <div classNme="col-12 col-sm-12">
+                            <p className="subtitulos-vehiculos">Exonerados</p>
+                        </div> 
+                    </div>
+
+                    <div className="row" >              
+              {
+                array_exonerados.length > 0 ? (
+                    <>
+                                 
+
+                        {                           
+                        array_exonerados.map(c => (
+                        
+                    <>
+                    
+                        <div className="col-6 col-sm-6 col-md-4 col-md-4" >
+                           <p className="titulo-autos-similares" >{c.name_vehicle}</p>
+                           <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend+c.image_vehicle} alt={c.name_vehicle} /></a>
+                           <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
+                           
+                        </div>
+
+                    </>
+                            )
+
+                            )
+                        }
+                                                
+                    </>
+                ) : (
+
+                    <span>Cargando...</span>
+
+                )
+                
+            }
+                    </div>
+                    </div>
+
 
                     
                 </div>
@@ -243,11 +291,32 @@ export default function Vehiculos() {
 function soloHibridos(){
 
     let hibridos = document.getElementById("contenedor-autos-hibridos");
+    let exonerados = document.getElementById("contenedor-autos-exonerados");
     let camionetas = document.getElementById("contenedor-autos-camionetas");
     let suv = document.getElementById("contenedor-autos-suv");
     let automoviles = document.getElementById("contenedor-autos-automoviles");
 
+
     hibridos.classList.remove("ocultar");
+    exonerados.classList.add("ocultar");
+    suv.classList.add("ocultar");
+    camionetas.classList.add("ocultar");
+    automoviles.classList.add("ocultar");
+
+return true;
+
+}
+
+function soloExonerados(){
+
+    let hibridos = document.getElementById("contenedor-autos-hibridos");
+    let exonerados = document.getElementById("contenedor-autos-exonerados");
+    let camionetas = document.getElementById("contenedor-autos-camionetas");
+    let suv = document.getElementById("contenedor-autos-suv");
+    let automoviles = document.getElementById("contenedor-autos-automoviles");
+
+    hibridos.classList.add("ocultar");
+    exonerados.classList.remove("ocultar");
     suv.classList.add("ocultar");
     camionetas.classList.add("ocultar");
     automoviles.classList.add("ocultar");

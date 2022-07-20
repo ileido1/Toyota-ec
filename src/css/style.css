@@ -2009,8 +2009,8 @@ ul.tabsnoticias>li {
     }
 
     .content-cart-texto-caracteristicas {
-        padding-left: 30px;
-    }
+        padding-top: 40px;
+      }
 
     .cart-titulo-caracteristicas {
         font-family: 'Radikal-Bold';
@@ -2186,8 +2186,8 @@ ul.tabsnoticias>li {
         padding-right: 0px;
     }
 
-    .mtopbanner {
-        margin-top: 100px;
+    .content-feature .mtopbanner {
+        margin-top: 30px;
         width: 90%;
     }
 
@@ -2247,6 +2247,31 @@ ul.tabsnoticias>li {
         padding: 30px !important;
       }
 
+      header nav div a img{
+        width: 160px;
+      }
+
+      .cart-titulo-caracteristicas{
+        margin-left: 0px;
+        }
+
+    .cart-texto-caracteristicas{
+        margin-left: 0px;
+    }
+
+    .ocultar-mobile{
+        display: none;
+    }
+        
+
+}
+
+.cart-texto-caracteristicas{
+    margin-left: 50px;
+}
+
+.cart-titulo-caracteristicas{
+    margin-left: 50px;
 }
 
 .mySwiperHome .mtopbanner {

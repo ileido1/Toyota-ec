@@ -115,7 +115,7 @@ export default function Sliderscars() {
                                             <div className="row" >
                                                 <div className="col-12 centrarbaseline">
                                                    <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro"></img>
-                                                    
+                                                   
                                                 </div>
                                                 <div className="col-12 logocarro">
                                                     <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo} className="logocarroprev"></img>
@@ -157,7 +157,7 @@ export default function Sliderscars() {
 
                                 </SwiperSlide>
 
-
+                                            
 
                             ))}
 

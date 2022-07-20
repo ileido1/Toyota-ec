@@ -2,9 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import useFetch from "../../../hooks/useFetch";
 import { useLocation } from 'react-router-dom';
 import Video from './cart-video-portada'
-import imagen_portada from '../../../images/portada-chr-1.jpg' 
-import logo_chr from '../../../images/logos/logo-chr-diseno_0.svg' 
-
 import { motion } from "framer-motion"
 import { faCircleRight } from "@fortawesome/free-regular-svg-icons";
 
