@@ -919,6 +919,17 @@ a#btn-cotizar {
     flex-direction: column;
 }
 
+.logoexo {
+    margin-right: 20px;
+}
+
+.centrarrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
 .centrarbaseline {
     display: flex;
     justify-content: flex-end;

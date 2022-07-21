@@ -23,6 +23,8 @@ export default function Sliderscars() {
 
 
     const [items, setItems] = useState('');
+    const [exo, setExo] = useState('');
+    const d = "Exonerados";
 
     const [selectedCategory, setSelectedCategory] = useState('');
     const [background, setBackground] = useState('');
@@ -47,6 +49,8 @@ export default function Sliderscars() {
     }
 
     useEffect(() => {
+
+
         const getItems = async () => {
 
             const result = await get(`${process.env.REACT_APP_URL_API}${endpoint}`);
@@ -63,7 +67,25 @@ export default function Sliderscars() {
                 setItems(categoryItems)
             }
         }
-        getItems()
+        const getExo = async () => {
+
+            const resultexo = await get(`${process.env.REACT_APP_URL_API}${endpoint}`);
+            const allItemsexo = resultexo.data;
+
+            setBackground(allItemsexo[0].fondo_vehiculo_exonerado);
+            setExo(allItemsexo)
+
+        }
+        if (selectedCategory == d) {
+            endpoint = 'v1/carousel_exonerados'
+            setItems('');
+            getExo()
+        } else {
+            endpoint = 'home/carousel'
+            setExo('');
+            getItems()
+        }
+
     }, [selectedCategory])
 
 
@@ -78,11 +100,18 @@ export default function Sliderscars() {
                         <h1 className="h1Conoce">CONOCE NUESTROS VEHÍCULOS</h1>
                         <ul className="nav nav-tabs ">
                             {
-                                [...new Set(categories.map((Val, i) => Val.categoria_del_vehiculo))].map((c, i) => (
 
-                                    <li className="nav-item">
-                                        <a className={selectedCategory == c || defecto == c ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{c}</a>
-                                    </li>
+                                [...new Set(categories.map((Val, i) => Val.categoria_del_vehiculo))].map((c, i) => (
+                                    <>
+                                        <li className="nav-item">
+                                            <a className={selectedCategory == c || defecto == c ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{c}</a>
+                                        </li>
+                                        {i == 3 &&
+                                            <li className="nav-item">
+                                                <a className={selectedCategory == d || defecto == d ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{d}</a>
+                                            </li>
+                                        }
+                                    </>
                                 ))}
 
 
@@ -110,8 +139,8 @@ export default function Sliderscars() {
                         <>
                             {items.map((c, i) => (
 
-                                 <SwiperSlide className="slider-cars" onClick={handleClick} data-url={c.enlace_ver_vehiculos}>
-                                
+                                <SwiperSlide className="slider-cars" onClick={handleClick} data-url={c.enlace_ver_vehiculos}>
+
                                     {({ isActive }) => (
 
 
@@ -120,8 +149,8 @@ export default function Sliderscars() {
 
                                             <div className="row" >
                                                 <div className="col-12 centrarbaseline">
-                                                   <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro"></img>
-                                                    
+                                                    <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro"></img>
+
                                                 </div>
                                                 <div className="col-12 logocarro">
                                                     <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo} className="logocarroprev"></img>
@@ -137,7 +166,7 @@ export default function Sliderscars() {
                                                         </div>
                                                         <div className="col-6 textoabajo align-items ">
                                                             <NavLink to={c.enlace_todos_los_vehiculos}> <p className="vertodos">{c.texto_ver_vehiculos} <i className="fa-solid fa-arrow-up-right-from-square"></i></p></NavLink>
-                                                       </div>
+                                                        </div>
                                                     </div>
                                                     <div className="row carddetallesslider">
                                                         <div className="col-4 textoabajo border-right-slider ">
@@ -154,6 +183,50 @@ export default function Sliderscars() {
                                                     </div>
 
                                                 </div>
+
+                                            </div>
+
+                                        </div>
+                                    )}
+
+
+                                </SwiperSlide>
+
+
+
+                            ))}
+
+                        </>) : (
+                        null
+                    )
+                }
+                {
+                    exo ? (
+                        <>
+                            {console.log(exo)}
+                            {exo.map((c, i) => (
+
+                                <SwiperSlide className="slider-cars" onClick={handleClick} data-url={c.url_todos_los_vehiculos_exonerado}>
+
+                                    {({ isActive }) => (
+
+
+                                        <div className="container-fluid  "  >
+
+
+                                            <div className="row" >
+                                                <div className="col-12 centrarbaseline">
+                                                    <img src={'https://backend-toyota.247.com.ec/' + c.imagen_vehiculo_exonerado} className="imagencarro"></img>
+
+                                                </div>
+                                                <div className="col-12 centrarrow">
+                                                    <img src={'https://backend-toyota.247.com.ec/' + c.icono_vehiculo_exonerado} className="logoexo"></img>
+                                                    <h2>{c.texto_vehiculo_exonerado}</h2>
+                                                </div>
+                                                <div className="col-12 textoabajo centrar ">
+                                                    <NavLink to={c.url_todos_los_vehiculos_exonerado}> <p className="vertodos">{c.texto_url_vehiculo_exonerado} <i className="fa-solid fa-arrow-up-right-from-square"></i></p></NavLink>
+                                                </div>
+
 
                                             </div>
 
