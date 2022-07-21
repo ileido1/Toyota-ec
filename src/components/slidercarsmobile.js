@@ -23,8 +23,14 @@ export default function Sliderscars() {
 
 
     const [items, setItems] = useState('');
+    const [exo, setExo] = useState('');
+    const d = "Exonerados";
+    const a = 'Automóviles';
+    const s = "SUV"
+    const c = "Camionetas"
+    const h = "Híbrido"
 
-    const [selectedCategory, setSelectedCategory] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState(a);
     const [background, setBackground] = useState('');
     const [defecto, setDefault] = useState('');
     function handleCategoryChange(event) {
@@ -47,6 +53,8 @@ export default function Sliderscars() {
     }
 
     useEffect(() => {
+
+
         const getItems = async () => {
 
             const result = await get(`${process.env.REACT_APP_URL_API}${endpoint}`);
@@ -63,36 +71,63 @@ export default function Sliderscars() {
                 setItems(categoryItems)
             }
         }
-        getItems()
+        const getExo = async () => {
+
+            const resultexo = await get(`${process.env.REACT_APP_URL_API}${endpoint}`);
+            const allItemsexo = resultexo.data;
+
+            setBackground(allItemsexo[0].fondo_vehiculo_exonerado);
+            setExo(allItemsexo)
+
+        }
+        if (selectedCategory == d) {
+            endpoint = 'v1/carousel_exonerados'
+            setItems('');
+            getExo()
+        } else {
+            endpoint = 'home/carousel'
+            setExo('');
+            getItems()
+        }
+
     }, [selectedCategory])
-
-
 
 
 
     return (
         <>
             <div className="supcarslider mobile">
-                {categories ? (
-                    <>
-                        <h1 className="h1Conoce">CONOCE NUESTROS VEHÍCULOS</h1>
-                        <ul className="nav nav-tabs ">
-                            {
-                                [...new Set(categories.map((Val, i) => Val.categoria_del_vehiculo))].map((c, i) => (
+                <>
+                    <h1 className="h1Conoce">CONOCE NUESTROS VEHÍCULOS</h1>
+                    <ul className="nav nav-tabs ">
+                        <li className="nav-item">
+                            <a className={selectedCategory == a || defecto == a ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{a}</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className={selectedCategory == s || defecto == s ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{s}</a>
+                        </li>
 
-                                    <li className="nav-item">
-                                        <a className={selectedCategory == c || defecto == c ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{c}</a>
-                                    </li>
-                                ))}
+                        <li className="nav-item">
+                            <a className={selectedCategory == h || defecto == h ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{h}</a>
+                        </li>
 
 
-                        </ul>
+                        <li className="nav-item">
+                            <a className={selectedCategory == c || defecto == c ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{c}</a>
+                        </li>
 
-                    </>
-                ) : (
-                    <span> </span>
-                )
-                }
+                        <li className="nav-item">
+                            <a className={selectedCategory == d || defecto == d ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{d}</a>
+                        </li>
+
+
+
+
+
+                    </ul>
+
+                </>
+
             </div>
             <Swiper
                 slidesPerView={1}
@@ -125,7 +160,7 @@ export default function Sliderscars() {
 
                                                 <div className="col-12 infocarro2">
                                                     <p className="pslidercarro">
-                                                       
+
                                                     </p>
                                                     <div className="row infosupslider">
                                                         <div className="col-6">
@@ -153,6 +188,50 @@ export default function Sliderscars() {
                                                     </div>
 
                                                 </div>
+
+                                            </div>
+
+                                        </div>
+                                    )}
+
+
+                                </SwiperSlide>
+
+
+
+                            ))}
+
+                        </>) : (
+                        null
+                    )
+                }
+                {
+                    exo ? (
+                        <>
+                            {console.log(exo)}
+                            {exo.map((c, i) => (
+
+                                <SwiperSlide className="slider-cars" onClick={handleClick} data-url={c.url_todos_los_vehiculos_exonerado}>
+
+                                    {({ isActive }) => (
+
+
+                                        <div className="container-fluid  "  >
+
+
+                                            <div className="row" >
+                                                <div className="col-12 centrarbaseline">
+                                                    <img src={'https://backend-toyota.247.com.ec/' + c.imagen_vehiculo_exonerado} className="imagencarro2"></img>
+
+                                                </div>
+                                                <div className="col-12 centrarrow">
+                                                    <img src={'https://backend-toyota.247.com.ec/' + c.icono_vehiculo_exonerado} className="logoexo"></img>
+                                                    <h2>{c.texto_vehiculo_exonerado}</h2>
+                                                </div>
+                                                <div className="col-12 textoabajo centrar ">
+                                                    <NavLink to={c.url_todos_los_vehiculos_exonerado}> <p className="vertodos">{c.texto_url_vehiculo_exonerado} <i className="fa-solid fa-arrow-up-right-from-square"></i></p></NavLink>
+                                                </div>
+
 
                                             </div>
 

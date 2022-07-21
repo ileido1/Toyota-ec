@@ -17,6 +17,7 @@ const Home = () => {
             <Sliderscars></Sliderscars>
             <Sliderscars2></Sliderscars2>
             <Slider></Slider>
+
             <MundoToyota></MundoToyota>
             <Noticias></Noticias>
 

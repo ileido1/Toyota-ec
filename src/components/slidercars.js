@@ -22,8 +22,12 @@ export default function Sliderscars() {
     const [items, setItems] = useState('');
     const [exo, setExo] = useState('');
     const d = "Exonerados";
+    const a = 'Automóviles';
+    const s = "SUV"
+    const c = "Camionetas"
+    const h = "Híbrido"
 
-    const [selectedCategory, setSelectedCategory] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState(a);
     const [background, setBackground] = useState('');
     const [defecto, setDefault] = useState('');
     function handleCategoryChange(event) {
@@ -89,33 +93,39 @@ export default function Sliderscars() {
     return (
         <>
             <div className="supcarslider destopk">
-                {categories ? (
-                    <>
-                        <h1 className="h1Conoce">CONOCE NUESTROS VEHÍCULOS</h1>
-                        <ul className="nav nav-tabs ">
-                            {
 
-                                [...new Set(categories.map((Val, i) => Val.categoria_del_vehiculo))].map((c, i) => (
-                                    <>
-                                        <li className="nav-item">
-                                            <a className={selectedCategory == c || defecto == c ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{c}</a>
-                                        </li>
-                                        {i == 3 &&
-                                            <li className="nav-item">
-                                                <a className={selectedCategory == d || defecto == d ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{d}</a>
-                                            </li>
-                                        }
-                                    </>
-                                ))}
+                <>
+                    <h1 className="h1Conoce">CONOCE NUESTROS VEHÍCULOS</h1>
+                    <ul className="nav nav-tabs ">
+                        <li className="nav-item">
+                            <a className={selectedCategory == a || defecto == a ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{a}</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className={selectedCategory == s || defecto == s ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{s}</a>
+                        </li>
+
+                        <li className="nav-item">
+                            <a className={selectedCategory == h || defecto == h ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{h}</a>
+                        </li>
 
 
-                        </ul>
+                        <li className="nav-item">
+                            <a className={selectedCategory == c || defecto == c ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{c}</a>
+                        </li>
 
-                    </>
-                ) : (
-                    <span> </span>
-                )
-                }
+                        <li className="nav-item">
+                            <a className={selectedCategory == d || defecto == d ? "nav-link active" : "nav-link"} aria-current="page" onClick={handleCategoryChange}  >{d}</a>
+                        </li>
+
+
+
+
+
+                    </ul>
+
+                </>
+
+
             </div>
             <Swiper
                 slidesPerView={3}
@@ -126,6 +136,7 @@ export default function Sliderscars() {
                 loop={true}
                 style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + background})` }}
                 className="mySwipercar destopk"
+
 
             >
                 {
@@ -143,13 +154,8 @@ export default function Sliderscars() {
 
                                             <div className="row" >
                                                 <div className="col-12 centrarbaseline">
-<<<<<<< HEAD
                                                     <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro"></img>
 
-=======
-                                                   <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro"></img>
-                                                   
->>>>>>> cdb3c33349945b54eaf080dc93316a2c1dc047d4
                                                 </div>
                                                 <div className="col-12 logocarro">
                                                     <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo} className="logocarroprev"></img>
@@ -157,7 +163,7 @@ export default function Sliderscars() {
                                                 </div>
                                                 <div className="col-12 infocarro">
                                                     <p className="pslidercarro">
-                                                       
+
                                                     </p>
                                                     <div className="row infosupslider">
                                                         <div className="col-6">
@@ -191,7 +197,7 @@ export default function Sliderscars() {
 
                                 </SwiperSlide>
 
-                                            
+
 
                             ))}
 
