@@ -201,7 +201,7 @@ return (
                         <div className="col-4" >
 
                             <div className="content-cotizar">
-                                <p data-auto="cotizar-auto" className="btn btn-cotizar " id="cotizar-vehiculo" onClick={abrirModal} >{texto_boton_dc_vehiculo}</p>
+                                <p data-auto="cotizar-auto" className="btn btn-cotizar " id="cotizar-vehiculo" >{texto_boton_dc_vehiculo}</p>
                             </div>
                             
                         </div>
@@ -602,7 +602,7 @@ function nombreColor(color){
         nombre_color = "Rojo"
     }
 
-    if ( color ==  "  #313272" ) {
+    if ( color ==  "#313272" ) {
         nombre_color = "Azul"
     }
 

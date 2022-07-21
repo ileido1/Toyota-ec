@@ -18,8 +18,10 @@ export default function Vehiculos() {
     let array_suv = []
     let array_camionetas = []
     let array_hibridos = []
-    let array_exonerados = []
-    
+    let array_discapacidad = []
+    let array_diplomaticos = []
+    let array_organismos = []
+
     let url_api = 'v1/vehicles'
     const [respuesta, error] = useFetch(url_api);
 
@@ -43,8 +45,16 @@ export default function Vehiculos() {
                     array_hibridos.push(d)
                 }
 
-                if ( (d.type_vehicle) == "Exonerados" ){
-                    array_exonerados.push(d)
+                if ( (d.type_vehicle) == "Personas con Discapacidad" ){
+                    array_discapacidad.push(d)
+                }
+
+                if ( (d.type_vehicle) == "Diplomáticos" ){
+                    array_diplomaticos.push(d)
+                }
+
+                if ( (d.type_vehicle) == "Organismos Internacionales - ONG&#039;S" ){
+                    array_organismos.push(d)
                 }
 
                 
@@ -229,21 +239,21 @@ export default function Vehiculos() {
                     </div>
                     </div>
 
-                    <div id="contenedor-autos-exonerados"  className="contenedor-secciones-autos"  >
+                    <div id="contenedor-autos-discapacidad"  className="contenedor-secciones-autos contenedor-autos-exonerados"  >
                     <div className="row" id="titulo-vehiculos" >
                         <div classNme="col-12 col-sm-12">
-                            <p className="subtitulos-vehiculos">Exonerados</p>
+                            <p className="subtitulos-vehiculos">PERSONAS CON DISCAPACIDAD</p>
                         </div> 
                     </div>
 
                     <div className="row" >              
               {
-                array_exonerados.length > 0 ? (
+                array_discapacidad.length > 0 ? (
                     <>
                                  
 
                         {                           
-                        array_exonerados.map(c => (
+                        array_discapacidad.map(c => (
                         
                     <>
                     
@@ -271,6 +281,89 @@ export default function Vehiculos() {
                     </div>
                     </div>
 
+                    <div id="contenedor-autos-diplomaticos"  className="contenedor-secciones-autos contenedor-autos-exonerados"  >
+                    <div className="row" id="titulo-vehiculos" >
+                        <div classNme="col-12 col-sm-12">
+                            <p className="subtitulos-vehiculos">Diplomáticos</p>
+                        </div> 
+                    </div>
+
+                    <div className="row" >              
+              {
+                array_diplomaticos.length > 0 ? (
+                    <>
+                                 
+
+                        {                           
+                        array_diplomaticos.map(c => (
+                        
+                    <>
+                    
+                        <div className="col-6 col-sm-6 col-md-4 col-md-4" >
+                           <p className="titulo-autos-similares" >{c.name_vehicle}</p>
+                           <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend+c.image_vehicle} alt={c.name_vehicle} /></a>
+                           <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
+                           
+                        </div>
+
+                    </>
+                            )
+
+                            )
+                        }
+                                                
+                    </>
+                ) : (
+
+                    <span>Cargando...</span>
+
+                )
+                
+            }
+                    </div>
+                    </div>
+
+                    <div id="contenedor-autos-organismos"  className="contenedor-secciones-autos"  >
+                    <div className="row" id="titulo-vehiculos" >
+                        <div classNme="col-12 col-sm-12">
+                            <p className="subtitulos-vehiculos">Organismos Internacionales - ONG'S</p>
+                        </div> 
+                    </div>
+
+                    <div className="row" >              
+              {
+                array_organismos.length > 0 ? (
+                    <>
+                                 
+
+                        {                           
+                        array_organismos.map(c => (
+                        
+                    <>
+                    
+                        <div className="col-6 col-sm-6 col-md-4 col-md-4" >
+                           <p className="titulo-autos-similares" >{c.name_vehicle}</p>
+                           <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend+c.image_vehicle} alt={c.name_vehicle} /></a>
+                           <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
+                           
+                        </div>
+
+                    </>
+                            )
+
+                            )
+                        }
+                                                
+                    </>
+                ) : (
+
+                    <span>Cargando...</span>
+
+                )
+                
+            }
+                    </div>
+                    </div>
 
                     
                 </div>
@@ -291,14 +384,17 @@ export default function Vehiculos() {
 function soloHibridos(){
 
     let hibridos = document.getElementById("contenedor-autos-hibridos");
-    let exonerados = document.getElementById("contenedor-autos-exonerados");
+    let exonerados1 = document.getElementById("contenedor-autos-discapacidad");
+    let exonerados2 = document.getElementById("contenedor-autos-diplomaticos");
+    let exonerados3 = document.getElementById("contenedor-autos-organismos");
     let camionetas = document.getElementById("contenedor-autos-camionetas");
     let suv = document.getElementById("contenedor-autos-suv");
     let automoviles = document.getElementById("contenedor-autos-automoviles");
 
-
     hibridos.classList.remove("ocultar");
-    exonerados.classList.add("ocultar");
+    exonerados1.classList.add("ocultar");
+    exonerados2.classList.add("ocultar");
+    exonerados3.classList.add("ocultar");
     suv.classList.add("ocultar");
     camionetas.classList.add("ocultar");
     automoviles.classList.add("ocultar");
@@ -310,16 +406,42 @@ return true;
 function soloExonerados(){
 
     let hibridos = document.getElementById("contenedor-autos-hibridos");
-    let exonerados = document.getElementById("contenedor-autos-exonerados");
+    let exonerados1 = document.getElementById("contenedor-autos-discapacidad");
+    let exonerados2 = document.getElementById("contenedor-autos-diplomaticos");
+    let exonerados3 = document.getElementById("contenedor-autos-organismos");
     let camionetas = document.getElementById("contenedor-autos-camionetas");
     let suv = document.getElementById("contenedor-autos-suv");
     let automoviles = document.getElementById("contenedor-autos-automoviles");
 
     hibridos.classList.add("ocultar");
-    exonerados.classList.remove("ocultar");
+    exonerados1.classList.remove("ocultar");
+    exonerados2.classList.remove("ocultar");
+    exonerados3.classList.remove("ocultar");
     suv.classList.add("ocultar");
     camionetas.classList.add("ocultar");
     automoviles.classList.add("ocultar");
+
+return true;
+
+}
+
+function todos(){
+
+    let hibridos = document.getElementById("contenedor-autos-hibridos");
+    let exonerados1 = document.getElementById("contenedor-autos-discapacidad");
+    let exonerados2 = document.getElementById("contenedor-autos-diplomaticos");
+    let exonerados3 = document.getElementById("contenedor-autos-organismos");
+    let camionetas = document.getElementById("contenedor-autos-camionetas");
+    let suv = document.getElementById("contenedor-autos-suv");
+    let automoviles = document.getElementById("contenedor-autos-automoviles");
+
+    hibridos.classList.remove("ocultar");
+    suv.classList.remove("ocultar");
+    exonerados1.classList.remove("ocultar");
+    exonerados2.classList.remove("ocultar");
+    exonerados3.classList.remove("ocultar");
+    camionetas.classList.remove("ocultar");
+    automoviles.classList.remove("ocultar");
 
 return true;
 

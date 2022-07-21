@@ -2277,6 +2277,10 @@ ul.tabsnoticias>li {
 
 }
 
+#myModal{
+    top: 57px;
+}
+
 .cart-texto-caracteristicas{
     margin-left: 50px;
 }

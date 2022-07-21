@@ -39,9 +39,14 @@ export default function Vehiculossidebar() {
                         <div className="iconos-sidebar" >
                             <img className="" src={url_backend+c.icono_sidebar_vehiculos} />
                         </div>
-                        <div className="titulo-botones-sidebar" >
+                        <div className="titulo-botones-sidebar d-none d-sm-none d-md-block d-xl-block d-lg-block" >
                             
                             <p onClick={abrirModal} >{c.texto_sidebar_vehiculos}</p>
+                            
+                        </div>
+                        <div className="titulo-botones-sidebar d-block d-sm-block d-md-none d-xl-none d-lg-none" >
+                            
+                            <p>{c.texto_sidebar_vehiculos}</p>
                             
                         </div>
                     </div>                        
@@ -110,7 +115,6 @@ function activarTestdrive(){
 
     cotizar.classList.add("ocultar");
     testdrive.classList.remove("ocultar");
-
     iconotestdrive.style.background = "#E20B2A";
 
     iconocotizar.style.background = "transparent"; 
@@ -124,13 +128,17 @@ function activarTestdrive(){
 function soloHibridos(){
 
     let hibridos = document.getElementById("contenedor-autos-hibridos");
-    let exonerados = document.getElementById("contenedor-autos-exonerados");
+    let exonerados1 = document.getElementById("contenedor-autos-discapacidad");
+    let exonerados2 = document.getElementById("contenedor-autos-diplomaticos");
+    let exonerados3 = document.getElementById("contenedor-autos-organismos");
     let camionetas = document.getElementById("contenedor-autos-camionetas");
     let suv = document.getElementById("contenedor-autos-suv");
     let automoviles = document.getElementById("contenedor-autos-automoviles");
 
     hibridos.classList.remove("ocultar");
-    exonerados.classList.add("ocultar");
+    exonerados1.classList.add("ocultar");
+    exonerados2.classList.add("ocultar");
+    exonerados3.classList.add("ocultar");
     suv.classList.add("ocultar");
     camionetas.classList.add("ocultar");
     automoviles.classList.add("ocultar");
@@ -142,13 +150,17 @@ return true;
 function soloExonerados(){
 
     let hibridos = document.getElementById("contenedor-autos-hibridos");
-    let exonerados = document.getElementById("contenedor-autos-exonerados");
+    let exonerados1 = document.getElementById("contenedor-autos-discapacidad");
+    let exonerados2 = document.getElementById("contenedor-autos-diplomaticos");
+    let exonerados3 = document.getElementById("contenedor-autos-organismos");
     let camionetas = document.getElementById("contenedor-autos-camionetas");
     let suv = document.getElementById("contenedor-autos-suv");
     let automoviles = document.getElementById("contenedor-autos-automoviles");
 
     hibridos.classList.add("ocultar");
-    exonerados.classList.remove("ocultar");
+    exonerados1.classList.remove("ocultar");
+    exonerados2.classList.remove("ocultar");
+    exonerados3.classList.remove("ocultar");
     suv.classList.add("ocultar");
     camionetas.classList.add("ocultar");
     automoviles.classList.add("ocultar");
@@ -160,12 +172,18 @@ return true;
 function todos(){
 
     let hibridos = document.getElementById("contenedor-autos-hibridos");
+    let exonerados1 = document.getElementById("contenedor-autos-discapacidad");
+    let exonerados2 = document.getElementById("contenedor-autos-diplomaticos");
+    let exonerados3 = document.getElementById("contenedor-autos-organismos");
     let camionetas = document.getElementById("contenedor-autos-camionetas");
     let suv = document.getElementById("contenedor-autos-suv");
     let automoviles = document.getElementById("contenedor-autos-automoviles");
 
     hibridos.classList.remove("ocultar");
     suv.classList.remove("ocultar");
+    exonerados1.classList.remove("ocultar");
+    exonerados2.classList.remove("ocultar");
+    exonerados3.classList.remove("ocultar");
     camionetas.classList.remove("ocultar");
     automoviles.classList.remove("ocultar");
 
