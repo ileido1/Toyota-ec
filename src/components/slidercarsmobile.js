@@ -145,10 +145,8 @@ export default function Sliderscars() {
                                                             <p className="rendimientoslidertitulo">{c.titulo_info_box_2}</p>
                                                             <p className="rendimientoslider">{c.texto_info_box_2}</p> </div>
                                                         <div className="col-4 textoabajo">
-                                                            <p onClick={abrirModal} ><button className="btnslider">{c.texto_cotizar_vehiculo}</button></p>
-                                                            <p onClick={abrirModal} ><button className="btnslider">{c.texto_test_drive_vehiculo}</button></p>
-
-
+                                                            <p><button className="btnslider">{c.texto_cotizar_vehiculo}</button></p>
+                                                            <p><button className="btnslider">{c.texto_test_drive_vehiculo}</button></p>
                                                         </div>
                                                     </div>
 
