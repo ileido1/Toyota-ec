@@ -19,7 +19,7 @@ export default function Cartmodelossimilares() {
     
     return (
         <>
-        <div className="auto-individual container-fluid d-none d-sm-none" >
+        <div className="auto-individual container-fluid d-none d-sm-none d-md-block d-xl-block d-lg-block" >
         
               <div className="row" id="autos-similares" >
               <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sinpadding"><p className="text-color-similares secciones-subtitulos">MODELOS SIMILARES</p></div>

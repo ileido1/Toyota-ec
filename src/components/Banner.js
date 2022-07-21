@@ -58,7 +58,7 @@ export default function Bannerhome() {
                     disableOnInteraction: false,
                 }}
                 modules={[Autoplay]}
-                className="mySwiper"
+                className="mySwiper mySwiperHome"
             >
                 {
                     banner ? (

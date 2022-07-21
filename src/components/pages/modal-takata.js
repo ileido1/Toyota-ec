@@ -1,6 +1,16 @@
+import {useState} from 'react';
+import useFetch2 from "../../hooks/useFetch2";
 import cerrar from '../../images/cotizacion/cerrar.svg'
 export default function Modaltakata() {
-        
+
+    const HandleClick = event => {
+        let chasis = document.getElementById("chasis").value;
+        console.log(chasis)
+        let url_api = 'v2/proceso/?chasis='+chasis
+        const [respuesta, error] = useFetch2(url_api);
+        return respuesta
+    };
+
     return (
         <>
             
@@ -21,14 +31,12 @@ export default function Modaltakata() {
                         <div className="row">
                             <div className='col-12' >
 
-                                <p className='mt40' >POR FAVOR INGRESE LOS 17 NUMEROS DEL CHASIS</p>
-                                <p>(PUEDE ENCONTRARLO EN SU MATRICULA)</p>
+                                <p className='mt40' >POR FAVOR INGRESE LOS 17 NÚMEROS DEL CHASIS</p>
+                                <p>(PUEDE ENCONTRARLO EN SU MATRÍCULA)</p>
 
-                                
+                                <input type="text" name="chasis" id="chasis" placeholder="ESCRIBIR NÚMERO DE CHASIS"  />
 
-                                <input type="text" name="chasis" placeholder="ESCRIBIR NÚMERO DE CHASIS" />
-
-                                <p className="boton-enviar" >ENVIAR</p>
+                                <p className="boton-enviar" onClick={HandleClick} >ENVIAR</p>
 
                             </div>
                         </div>
@@ -41,6 +49,7 @@ export default function Modaltakata() {
     );                  
 
 }
+
 
 function cerrarModal(){
     // Get the modal

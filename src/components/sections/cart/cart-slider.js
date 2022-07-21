@@ -94,7 +94,8 @@ export default function Cartslider() {
                                         
                                     </div>
                                 </div>  
-                                <div id="content-feature" className="container-fluid contenedor d-block d-sm-block d-md-none d-xl-none d-lg-none bg-features-mobile" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas + `` })`, paddingTop: `${padding_auto}` }}  >
+
+                            <div id="content-feature" className="container-fluid contenedor d-block d-sm-block d-md-none d-xl-none d-lg-none bg-features-mobile" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas + `` })` }}  >
                                 <div className="mtopbanner">
                                     <div className="row" >
 
@@ -140,7 +141,7 @@ export default function Cartslider() {
 
                             {({ isActive }) => (
                                 <>    
-                                <div className="container-fluid contenedor swiper-slide d-none d-sm-none d-md-block d-xl-block d-lg-block" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas})` }} >
+                                <div className="container-fluid contenedor swiper-slide d-none d-sm-none d-md-block d-xl-block d-lg-block" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas})`, paddingTop: `${padding_auto}` }} >
                                     <div className="mtopbanner">
                                         <div className="row" >
                                             <div className="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
@@ -167,7 +168,8 @@ export default function Cartslider() {
                                         
                                     </div>
                                 </div> 
-                                <div id="content-feature" className="container-fluid contenedor d-block d-sm-block d-md-none d-xl-none d-lg-none bg-features-mobile" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas + `` })`, paddingTop: `${padding_auto}` }}  >
+
+                                <div id="content-feature" className="container-fluid contenedor d-block d-sm-block d-md-none d-xl-none d-lg-none bg-features-mobile" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas + `` })` }}  >
                                 <div className="mtopbanner">
                                     <div className="row" >
 
@@ -213,7 +215,7 @@ export default function Cartslider() {
                             <SwiperSlide>
                             {({ isActive }) => (
                                 <>
-                                <div className="container-fluid contenedor swiper-slide d-none d-sm-none d-md-block d-xl-block d-lg-block" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas})` }} >
+                                <div className="container-fluid contenedor swiper-slide d-none d-sm-none d-md-block d-xl-block d-lg-block" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas})`, paddingTop: `${padding_auto}` }} >
                                     <div className="mtopbanner">
                                         <div className="row" >
                                             <div className="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
@@ -240,7 +242,7 @@ export default function Cartslider() {
                                         
                                     </div>
                                 </div>
-                                <div id="content-feature" className="container-fluid contenedor d-block d-sm-block d-md-none d-xl-none d-lg-none bg-features-mobile" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas + `` })`, paddingTop: `${padding_auto}` }}  >
+                                <div id="content-feature" className="container-fluid contenedor d-block d-sm-block d-md-none d-xl-none d-lg-none bg-features-mobile" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.fondo_caracteristicas + `` })` }}  >
                                 <div className="mtopbanner">
                                     <div className="row" >
 
@@ -285,7 +287,7 @@ export default function Cartslider() {
                             <SwiperSlide>
                             {({ isActive }) => (
                                 <>
-                                <div className="container-fluid contenedor swiper-slide d-none d-sm-none d-md-block d-xl-block d-lg-block" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.imagen_equipamento_interior})` }} >
+                                <div className="container-fluid contenedor swiper-slide d-none d-sm-none d-md-block d-xl-block d-lg-block" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.imagen_equipamento_interior})`, paddingTop: `${padding_auto}` }} >
                                     <div className="mtopbanner">
                                         <div className="row" >
                                             <div className="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
@@ -312,7 +314,7 @@ export default function Cartslider() {
                                         
                                     </div>
                                 </div> 
-                                <div id="content-feature" className="container-fluid contenedor d-block d-sm-block d-md-none d-xl-none d-lg-none bg-features-mobile" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.imagen_equipamento_interior + `` })`, paddingTop: `${padding_auto}` }}  >
+                                <div id="content-feature" className="container-fluid contenedor d-block d-sm-block d-md-none d-xl-none d-lg-none bg-features-mobile" style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + c.imagen_equipamento_interior + `` })` }}  >
                                 <div className="mtopbanner">
                                     <div className="row" >
 

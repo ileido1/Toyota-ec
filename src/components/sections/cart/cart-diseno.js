@@ -1,3 +1,4 @@
+import {useEffect, useState} from 'react';
 import useFetch from "../../../hooks/useFetch";
 import { useLocation } from 'react-router-dom';
 import Modalcotizacion from "./cart-modal-cotizacion"
@@ -59,6 +60,22 @@ let nombre_color_10 = ""
 
 const Cartdiseno = () => { 
 
+    const [windowSize, setWindowSize] = useState(getWindowSize());
+
+    useEffect(() => {
+        function handleWindowResize() {
+          setWindowSize(getWindowSize());
+        }
+    
+        window.addEventListener('resize', handleWindowResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleWindowResize);
+        };
+      }, []);
+
+    let ancho = windowSize.innerWidth  
+    
     let url_api = 'v1/vehicle_data_sheet'
     const [respuesta, error] = useFetch(url_api);
     let url_detalle = ''
@@ -163,7 +180,7 @@ return (
 
                 </div>
                 <div className="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-                    <img id="imagen-auto-diseno" className=" img-fluid "  src={imagen_dc_vehiculo_color_1} alt="Auto Toyota Colores" />
+                    <img id="imagen-auto-diseno" className=" img-fluid imagen-auto-diseno"  src={imagen_dc_vehiculo_color_1} alt="Auto Toyota Colores" />
                 </div>
             </div>
 
@@ -192,34 +209,34 @@ return (
 
                 </div>
                 <div className="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-                    <img id="imagen-auto-diseno" className=" img-fluid "  src={imagen_dc_vehiculo_color_1} alt="" />
+                    <img id="imagen-auto-diseno2" className=" img-fluid "  src={imagen_dc_vehiculo_color_1} alt="" />
                 </div>
             </div>
             
             <div className="row">
                 <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <p className="text-color-diseno secciones-subtitulos " id="titulo-colores" >{nombre_color_1}</p>
+                    <p className="text-color-diseno secciones-subtitulos titulo-colores" id="titulo-colores" >{nombre_color_1}</p>
                 </div>
             </div>
 
             <div className="row pd50 fila-colores"  >
                 <div className="col-1">
-                    <span className="circulo-color icono-color" data-nombre={nombre_color_1}  data-auto={imagen_dc_vehiculo_color_1} data-color={hex_dc_vehiculo_color_1} style={{background: hex_dc_vehiculo_color_1 }} onClick={cambiarAuto} ></span>                   
+                    <span className="circulo-color icono-color" data-ancho={ancho} data-nombre={nombre_color_1}  data-auto={imagen_dc_vehiculo_color_1} data-color={hex_dc_vehiculo_color_1} style={{background: hex_dc_vehiculo_color_1 }} onClick={CambiarAuto} ></span>                   
                 </div>
                 <div className="col-1">
-                    <span className="circulo-color icono-color" data-nombre={nombre_color_2} data-auto={imagen_dc_vehiculo_color_2} data-color={hex_dc_vehiculo_color_2} style={{background: hex_dc_vehiculo_color_2 }} onClick={cambiarAuto} ></span> 
+                    <span className="circulo-color icono-color" data-ancho={ancho}  data-nombre={nombre_color_2} data-auto={imagen_dc_vehiculo_color_2} data-color={hex_dc_vehiculo_color_2} style={{background: hex_dc_vehiculo_color_2 }} onClick={CambiarAuto} ></span> 
                 </div>
                 <div className="col-1">
-                    <span className="circulo-color icono-color" data-nombre={nombre_color_3} data-auto={imagen_dc_vehiculo_color_3} data-color={hex_dc_vehiculo_color_3} style={{background: hex_dc_vehiculo_color_3 }} onClick={cambiarAuto} ></span> 
+                    <span className="circulo-color icono-color" data-ancho={ancho}  data-nombre={nombre_color_3} data-auto={imagen_dc_vehiculo_color_3} data-color={hex_dc_vehiculo_color_3} style={{background: hex_dc_vehiculo_color_3 }} onClick={CambiarAuto} ></span> 
                 </div>
                 <div className="col-1">
-                    <span className="circulo-color icono-color" data-nombre={nombre_color_4} data-auto={imagen_dc_vehiculo_color_4}  data-color={hex_dc_vehiculo_color_4} style={{background: hex_dc_vehiculo_color_4 }} onClick={cambiarAuto} ></span> 
+                    <span className="circulo-color icono-color" data-ancho={ancho}  data-nombre={nombre_color_4} data-auto={imagen_dc_vehiculo_color_4}  data-color={hex_dc_vehiculo_color_4} style={{background: hex_dc_vehiculo_color_4 }} onClick={CambiarAuto} ></span> 
                 </div>
                 <div className="col-1">
-                    <span className="circulo-color icono-color" data-nombre={nombre_color_5} data-auto={imagen_dc_vehiculo_color_5}  data-color={hex_dc_vehiculo_color_5} style={{background: hex_dc_vehiculo_color_5 }} onClick={cambiarAuto} ></span> 
+                    <span className="circulo-color icono-color" data-ancho={ancho}  data-nombre={nombre_color_5} data-auto={imagen_dc_vehiculo_color_5}  data-color={hex_dc_vehiculo_color_5} style={{background: hex_dc_vehiculo_color_5 }} onClick={CambiarAuto} ></span> 
                 </div>
                 <div className="col-1">
-                    <span className="circulo-color icono-color" data-nombre={nombre_color_6} data-auto={imagen_dc_vehiculo_color_6}  data-color={hex_dc_vehiculo_color_6} style={{background: hex_dc_vehiculo_color_6 }} onClick={cambiarAuto} ></span> 
+                    <span className="circulo-color icono-color" data-ancho={ancho}  data-nombre={nombre_color_6} data-auto={imagen_dc_vehiculo_color_6}  data-color={hex_dc_vehiculo_color_6} style={{background: hex_dc_vehiculo_color_6 }} onClick={CambiarAuto} ></span> 
                 </div>
 
 
@@ -229,21 +246,21 @@ return (
 
             {hex_dc_vehiculo_color_7 &&
                 <div className="col-1">                  
-                <span className="circulo-color icono-color" data-nombre={nombre_color_7}  data-auto={imagen_dc_vehiculo_color_7} data-color={hex_dc_vehiculo_color_7} style={{background: hex_dc_vehiculo_color_7 }} onClick={cambiarAuto} >
+                <span className="circulo-color icono-color" data-ancho={ancho}  data-nombre={nombre_color_7}  data-auto={imagen_dc_vehiculo_color_7} data-color={hex_dc_vehiculo_color_7} style={{background: hex_dc_vehiculo_color_7 }} onClick={CambiarAuto} >
                 </span>                   
                 </div>
             }    
 
             {hex_dc_vehiculo_color_9 &&
                     <div className="col-1">                  
-                    <span className="circulo-color icono-color" data-nombre={nombre_color_9}  data-auto={imagen_dc_vehiculo_color_9} data-color={hex_dc_vehiculo_color_9} style={{background: hex_dc_vehiculo_color_9 }} onClick={cambiarAuto} >
+                    <span className="circulo-color icono-color" data-ancho={ancho}  data-nombre={nombre_color_9}  data-auto={imagen_dc_vehiculo_color_9} data-color={hex_dc_vehiculo_color_9} style={{background: hex_dc_vehiculo_color_9 }} onClick={CambiarAuto} >
                     </span>                   
                     </div>
             }
 
             {hex_dc_vehiculo_color_10 &&
                 <div className="col-1">                  
-                <span className="circulo-color icono-color" data-nombre={nombre_color_10}  data-auto={imagen_dc_vehiculo_color_10} data-color={hex_dc_vehiculo_color_10} style={{background: hex_dc_vehiculo_color_10 }} onClick={cambiarAuto} >
+                <span className="circulo-color icono-color" data-ancho={ancho}  data-nombre={nombre_color_10}  data-auto={imagen_dc_vehiculo_color_10} data-color={hex_dc_vehiculo_color_10} style={{background: hex_dc_vehiculo_color_10 }} onClick={CambiarAuto} >
                 </span>                   
                 </div>
             }
@@ -266,21 +283,6 @@ return (
 }
 
 export default Cartdiseno;
-
-function cambiarAuto(e){
-    
-    var imagen = e.target.dataset.auto
-    //var color = e.target.dataset.color
-    var nombre_color = e.target.dataset.nombre
-    var automovil = document.getElementById('imagen-auto-diseno')
-
-    automovil.setAttribute('style', 'transition:all 0.5s 0s ease','-webkit-transition: all 0.5s 0s ease','-moz-transition: all 0.5s 0s ease','-o-transition: all 0.5s 0s ease');
-    var titulo_colores = document.getElementById('titulo-colores')
-    automovil.src = imagen
-    //titulo_colores.setAttribute('style', 'color: '+color);
-    document.getElementById("titulo-colores").innerHTML = nombre_color; 
-    
-}
 
 function abrirModal(){
     // Get the modal
@@ -679,8 +681,7 @@ function nombreColor(color){
     if ( color ==  "#8a969c" ) {
         nombre_color = "Plomo"
     }
-
-    
+  
     return nombre_color
 
 }
@@ -693,3 +694,45 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+window.onscroll = function() {myFunction()};
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+
+    // Get the navbar
+    var navbar = document.getElementById("menu-producto")
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+    
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+    navbar.classList.remove("menu-sticky")
+  } else {
+    navbar.classList.remove("sticky")
+    navbar.classList.add("menu-sticky")
+  }
+}
+
+function CambiarAuto(e){
+    var ancho = e.target.dataset.ancho
+    var imagen = e.target.dataset.auto
+    let pantalla = ""
+
+    if(ancho < 601){pantalla="2"}
+
+    var nombre_color = e.target.dataset.nombre
+    var automovil = document.getElementById('imagen-auto-diseno'+pantalla)
+    automovil.setAttribute('style', 'transition:all 0.5s 0s ease','-webkit-transition: all 0.5s 0s ease','-moz-transition: all 0.5s 0s ease','-o-transition: all 0.5s 0s ease');
+    var titulo_colores = document.getElementById('titulo-colores')
+    automovil.src = imagen
+    //titulo_colores.setAttribute('style', 'color: '+color);
+    titulo_colores.innerHTML = nombre_color; 
+    
+}
+
+
+function getWindowSize() {
+    const {innerWidth, innerHeight} = window;
+    return {innerWidth, innerHeight};
+  }

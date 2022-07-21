@@ -17,7 +17,7 @@ export default function Campanaservicios() {
                             <div>
                                 <p className="texto-titulo-campanias">CAMPAÑAS DE SERVICIO</p>
                                 <p className="texto-campanias">Por definición, es una revisión técnica que está enfocada en solucionar cualquier inconveniente de manera preventiva.</p>
-                                <p className="texto-campanias">Estas campaña no tiene ningún costo para los propietarios del vehículo.</p>
+                                <p className="texto-campanias texto-rojo">Estas campaña no tiene ningún costo para los propietarios del vehículo.</p>
                             </div>
                         </div>
                     </div>          

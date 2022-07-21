@@ -5,14 +5,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import useFetch from "../hooks/useFetch";
 import { Navigation } from "swiper";
 
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import { NavLink, Navigate } from "react-router-dom";
-
 import Modalcotizacion from "./sections/cart/cart-modal-cotizacion"
-
 
 // import required modules
 
@@ -89,9 +86,6 @@ export default function Sliderscars() {
     }, [selectedCategory])
 
 
-
-
-
     return (
         <>
             <div className="supcarslider destopk">
@@ -149,8 +143,13 @@ export default function Sliderscars() {
 
                                             <div className="row" >
                                                 <div className="col-12 centrarbaseline">
+<<<<<<< HEAD
                                                     <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro"></img>
 
+=======
+                                                   <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro"></img>
+                                                   
+>>>>>>> cdb3c33349945b54eaf080dc93316a2c1dc047d4
                                                 </div>
                                                 <div className="col-12 logocarro">
                                                     <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo} className="logocarroprev"></img>
@@ -158,7 +157,7 @@ export default function Sliderscars() {
                                                 </div>
                                                 <div className="col-12 infocarro">
                                                     <p className="pslidercarro">
-                                                        {c.anio_del_vehiculo}
+                                                       
                                                     </p>
                                                     <div className="row infosupslider">
                                                         <div className="col-6">
@@ -192,7 +191,7 @@ export default function Sliderscars() {
 
                                 </SwiperSlide>
 
-
+                                            
 
                             ))}
 
