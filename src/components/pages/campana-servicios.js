@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { motion } from "framer-motion"
 import campa from "../../images/campanias/campania-airbag.png"
 import airbag from "../../images/campanias/campania-airbag-hover.png";
+import airbagHover from "../../images/campanias/campania-airbag-hover.png";
 import prius3 from '../../images/campanias/prius-3g.png';
 import prius3hover from '../../images/campanias/prius-3g_.png';
 import prius4 from '../../images/campanias/prius-4g_.png';
@@ -40,7 +41,7 @@ export default function Campanaservicios() {
                     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sinpadding ">
                         <div className="content-campanias-takata" onClick={abrirModal} >
                             <div>
-                                <img id="my-img" src={campa} onMouseOver={e => (e.currentTarget.src = airbag)} onMouseOut={e => (e.currentTarget.src = campa)} />
+                                <img id="my-img" src={campa} onMouseOver={e => (e.currentTarget.src = airbagHover)} onMouseOut={e => (e.currentTarget.src = campa)} />
                             </div>
                         </div>
                     </div>

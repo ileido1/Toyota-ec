@@ -2782,6 +2782,10 @@ ul.tabsnoticias>li {
         color: #000;
       }
 
+     .texto-rojo{
+        color: #e20b2a !important;
+     } 
+
 }
 
 @media only screen and (max-width: 385px) {
