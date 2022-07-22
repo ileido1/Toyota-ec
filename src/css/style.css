@@ -137,7 +137,7 @@
 
 .img-logo-feature {
     width: 160px;
-    width: 55%;
+    width: 52%;
 }
 
 .img-icono-feature {
@@ -181,7 +181,7 @@
 .subtext-feature {
     font-family: 'Radikal-Light';
     color: #ffffff;
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
     margin-top: -10px;
 }
@@ -1566,6 +1566,7 @@ ul.tabsnoticias>li {
     font-size: 40px;
     text-align: center;
     color: #FFFFFF;
+    justify-content: center;
 }
 
 .parrafo-formulario-cotizar {
@@ -2301,6 +2302,84 @@ ul.tabsnoticias>li {
         font-size: 12px;
     }
 
+    #myModal .modal-content {
+        width: 100% !important;
+    }
+
+    #myModal {
+        top: 0px !important;
+    }
+
+    .formulario-logo img {
+        width: 80px;
+        display: block;
+        margin: 0 auto;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .top-cerrar-modal {
+        background: #ddd;
+        display: flex;
+        align-items: center;
+        height: 70px;
+    }
+
+    .cerrar-modal {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: #e20b2a !important;
+    }
+
+    .boton-mobile-red {
+        background: #e20b2a;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        cursor: pointer;
+    }
+
+    .boton-mobile-white {
+        background: #ffffff;
+        color: #e20b2a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        cursor: pointer;
+    }
+
+    .boton-mobile-red p {
+        margin-bottom: 0px;
+        font-size: 18px;
+        font-family: 'Toyota-DisplayRegular';
+    }
+
+    .boton-mobile-white p {
+        margin-bottom: 0px;
+        font-size: 18px;
+        font-family: 'Toyota-DisplayRegular';
+    }
+
+    .parrafo-formulario-cotizar {
+        text-align: center;
+        margin: 20px 0px;
+        font-size: 18px;
+    }
+
+    .expansion-fondo-formulario {
+        display: grid !important;
+        width: 100% !important;
+    }
+
+    .content-formulario-campos select {
+        margin-bottom: 0px;
+        width: 100%;
+    }
+
 }
 
 @media only screen and (max-width: 385px) {
@@ -2405,8 +2484,10 @@ ul.tabsnoticias>li {
     -o-transition: all 1.5s 0s ease;
     transition: all 1.5s 0s ease;
     cursor: pointer;
+    height: 460px;
     background-size: contain;
     background-repeat: no-repeat;
+
 }
 
 .content-campanias-takata:hover {
@@ -2449,6 +2530,9 @@ ul.tabsnoticias>li {
     -o-transition: all 1.5s 0s ease;
     transition: all 1.5s 0s ease;
     cursor: pointer;
+    height: 460px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .content-campanias-prius3:hover {
@@ -2470,6 +2554,9 @@ ul.tabsnoticias>li {
     -o-transition: all 1.5s 0s ease;
     transition: all 1.5s 0s ease;
     cursor: pointer;
+    height: 460px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .content-campanias-rav4:hover {
@@ -2491,6 +2578,9 @@ ul.tabsnoticias>li {
     -o-transition: all 1.5s 0s ease;
     transition: all 1.5s 0s ease;
     cursor: pointer;
+    height: 460px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .content-campanias-global:hover {
@@ -2510,6 +2600,51 @@ ul.tabsnoticias>li {
     border-radius: 40px;
     top: 80px;
     padding: 20px 20px;
+}
+
+#myModalTakataResultado .modal-content {
+    width: 359px !important;
+    height: 220px;
+    margin: 0 auto;
+    background: rgb(224, 9, 9);
+    background-color: rgb(224, 9, 9) !important;
+    border-radius: 40px;
+    top: 80px;
+    padding: 20px 20px;
+}
+
+#myModalTakataResultadoNA .modal-content {
+    width: 359px !important;
+    height: 220px;
+    margin: 0 auto;
+    background: rgb(224, 9, 9);
+    background-color: rgb(224, 9, 9) !important;
+    border-radius: 40px;
+    top: 80px;
+    padding: 20px 20px;
+}
+
+.cerrar-modal-takata-resulta {
+    font-size: 18px !important;
+}
+
+#myModalTakataResultado p {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Radikal-Medium';
+    color: #ffffff;
+    line-height: 22px;
+    margin-bottom: 5px;
+}
+
+#myModalTakataResultadoNA p {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Radikal-Medium';
+    color: #ffffff;
+    line-height: 22px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
 }
 
 #myModalTakata p {
@@ -2548,12 +2683,60 @@ ul.tabsnoticias>li {
     border-radius: 10px;
 }
 
+#resultado-chasis input {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 36px;
+    border-radius: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+}
+
+#resultado-chasis p.mt_resultado_chasis {
+    margin-top: 10px;
+    font-size: 20px !important;
+    font-family: 'Radikal-Bold';
+    line-height: 22px;
+}
+
+#resultado-chasis .boton-enviar-chasis-datos {
+    margin-top: 20px;
+    background: #ffffff;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-family: 'Radikal-Medium';
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    color: #cc2132;
+    width: 200px;
+    border-radius: 10px;
+}
+
+#resultado-chasis p {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Radikal-Medium';
+    color: #ffffff;
+    line-height: 18px !important;
+    margin-bottom: 5px;
+}
+
+.boton-enviar-chasis-datos {
+    cursor: pointer;
+}
+
 .mt40 {
     margin-top: 40px;
 }
 
 .cerrar-modal-takata {
     font-size: 16px !important;
+    margin-top: -10px;
 }
 
 .react-player {
@@ -2588,4 +2771,8 @@ ul.tabsnoticias>li {
 
 .menu-portada-vehiculos {
     background: #000000;
+}
+
+.boton-enviar {
+    cursor: pointer;
 }

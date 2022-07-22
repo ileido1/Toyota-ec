@@ -1,3 +1,6 @@
+import { useState, useEffect} from 'react';
+import axios from 'axios';
+
 import icono_cotizacion_blanco from '../../../images/cotizacion/icono-cotizar-small.png'
 import icono_cotizacion_gris from '../../../images/cotizacion/icono-cotizar-gris.png'
 import isotipo from '../../../images/cotizacion/toyota-logo.png'
@@ -5,10 +8,28 @@ import icono_test_drive_blanco from '../../../images/cotizacion/icono-test-drive
 import icono_test_drive_gris from '../../../images/cotizacion/coche-gris.png'
 import cerrar from '../../../images/cotizacion/cerrar.svg'
 import link_externo from '../../../images/cotizacion/link-externo.svg'
+import cerrar_mobile from '../../../images/cotizacion/Icon ionic-ios-close-circle-outline.svg'
 
 
 export default function Modalcotizacion() {
+
+        //let nombres = document.getElementById("nombres").value;
+        //let cedula = document.getElementById("cedula").value;
         
+        axios.post('https://www.toyota.com.ec/api/v2/cotizar/', {
+            nombres: 'Adrian Gil',
+            cedula:'1757908163'
+          })
+          .then(function (response) {
+            return response;
+          })
+          .catch(function (error) {
+            return error;
+          });
+
+          
+
+    
     return (
         <>
             
@@ -19,7 +40,7 @@ export default function Modalcotizacion() {
                     <div  className="container-fluid expansion-fondo-formulario" >
                         <div className="row">
 
-                            <div className="barra-botones col-3 nopadding-cotizacion" >
+                            <div className="barra-botones col-sm-3 col-md-3 col-lg-3 col-xl-3 nopadding-cotizacion d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" >
 
                                 <div className="formulario-logo" ><img src={isotipo} alt="Icono cotizacion" /></div>
 
@@ -44,31 +65,53 @@ export default function Modalcotizacion() {
 
                             </div>
 
-                            <div className="barra-formulario col-9" >
-                                <div className="row" >
+                               <div className="barra-formulario col-12 col-sm-9 col-md-9 col-lg-9 col-xl-9" >
+                                <div className="row top-cerrar-modal" >
 
-                                    <div className="col-12" >
-                                        <p className="close cerrar-modal" onClick={cerrarModal} >MINIMIZAR PESTANA <img src={cerrar} /> </p>
+                                    <div className="col-12 d-none d-none d-sm-block d-md-block d-lg-block d-xl-block" >
+                                        <p className="close cerrar-modal" onClick={cerrarModal} >MINIMIZAR PESTAÑA <img src={cerrar} /> </p>
+                                    </div>
+
+                                    <div className="col-8 d-flex d-sm-none d-md-none d-lg-none d-xl-none" >
+                                        <div className="formulario-logo" ><img src={isotipo} alt="Icono cotizacion" /></div>
+                                    </div>
+                                    
+                                    <div className="col-4 d-flex d-sm-none d-md-none d-lg-none d-xl-none" >
+                                        <p className="close cerrar-modal" onClick={cerrarModal} >CERRAR <img src={cerrar_mobile} /> </p>
                                     </div>
 
                                 </div>
+
+                                <div className="row flex-botones-mobile" >
+
+                                    <div id='boton-mobile-cotizar' className="col-6 d-flex d-sm-none d-md-none d-lg-none d-xl-none boton-mobile-red" onClick={activarCotizarMobile} >
+                                        <p>COTIZAR</p>
+                                    </div>
+
+                                    <div id='boton-mobile-td' className="col-6 d-flex d-sm-none d-md-none d-lg-none d-xl-none boton-mobile-white"  onClick={activarTestdriveMobile} >
+                                        <p>TEST DRIVE</p>
+                                    </div>
+
+                                </div>
+
                                 <div className="row" >
 
                                     <div id='formulario-cotizar-contenedor' className="col-12" >
                                         
-                                        <p className="titulo-formulario-cotizar" >Cotizar</p>
-                                        <p className="parrafo-formulario-cotizar" >Solicita aquí la cotización de tu vehículo la cual enviaremos a tu correo</p>
+                                        <p className="titulo-formulario-cotizar d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" >Cotizar</p>
+                                        <p className="parrafo-formulario-cotizar d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" >Solicita aquí la cotización de tu vehículo la cual enviaremos a tu correo</p>
+                                        <p className="parrafo-formulario-cotizar d-block d-sm-none d-md-none d-lg-none d-xl-none" >Pide una cotización</p>
                                         <div className="content-formulario-campos" >
                                             <input type="text" name="nombres" id="nombres" placeholder="NOMBRE Y APELLIDO*" />
                                             <br></br>
-                                            <input type="text" name="nombres" id="nombres" placeholder="CÉDULA*" />
+                                            <input type="text" name="cedula" id="cedula" placeholder="CÉDULA*" />
                                             <br></br>
-                                            <input type="text" name="nombres" id="nombres" placeholder="CELULAR*" />
+                                            <input type="text" name="cedula" id="cedula" placeholder="CELULAR*" />
                                             <br></br>
-                                            <input type="text" name="nombres" id="nombres" placeholder="E-MAIL*" />
+                                            <input type="text" name="email" id="email" placeholder="E-MAIL*" />
                                             <br></br>
                                             <div className="content-selects" >
-                                                <label htmlFor="modelo">MODELO DE INTERÉS</label>
+                                                <label className='d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block' htmlFor="modelo">MODELO DE INTERÉS</label>
                                                 <select id="modelo" name="modelo" >
                                                 <option value="" selected="selected">- Seleccionar -</option>
                                                 <option value="Raize">Raize</option>
@@ -90,7 +133,7 @@ export default function Modalcotizacion() {
                                             </div>
                                             <br></br>
                                             <div className="content-selects" >
-                                                <label htmlFor="ciudad">CIUDAD Y CONCESIONARIO</label>
+                                                <label className='d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block' htmlFor="ciudad">CIUDAD Y CONCESIONARIO</label>
                                                 <select id="ciudad" name="ciudad" >
                                                 
                                                     <option value="" selected="selected">- Seleccionar -</option>
@@ -121,7 +164,7 @@ export default function Modalcotizacion() {
                                             </div>
 
                                             <br></br>
-                                            <p id='enviar-cotizar' className="btn formulario-boton-enviar btn-primary" onClick={enviarDatosCotizar} >ENVIAR</p>
+                                            <p id='enviar-cotizar' className="btn formulario-boton-enviar btn-primary" onClick={enviarDatosCotizar} >ENVÍAR</p>
                                             <p id='mensaje-cotizar'  className='ocultar-icono mensaje-formulario' >Datos enviados correctamente.</p>
                                         </div>
 
@@ -129,15 +172,16 @@ export default function Modalcotizacion() {
 
                                     <div id='formulario-testdrive-contenedor' className="col-12 ocultar" >
                                         
-                                        <p className="titulo-formulario-cotizar" >Test Drive</p>
-                                        <p className="parrafo-formulario-cotizar" >Compruébalo tu mismo y déjate encantar por un TOYOTA.</p>
+                                        <p className="titulo-formulario-cotizar d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" >Test Drive</p>
+                                        <p className="parrafo-formulario-cotizar d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" >Compruébalo tu mismo y déjate encantar por un TOYOTA.</p>
+                                        <p className="parrafo-formulario-cotizar d-block d-sm-none d-md-none d-lg-none d-xl-none" >Pide tu Test Drive</p>
                                         <div className="content-formulario-campos" >
                                             <input type="text" name="nombres" id="nombres" placeholder="NOMBRE Y APELLIDO*" />
                                             <br></br>
                                             <input type="text" name="nombres" id="nombres" placeholder="CELULAR*" />
                                             <br></br>
                                             <div className="content-selects" >
-                                                <label htmlFor="modelo">MODELO DE INTERÉS</label>
+                                                <label className='d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block'  htmlFor="modelo">MODELO DE INTERÉS</label>
                                                 <select id="modelo" name="modelo" >
                                                 <option value="" selected="selected">- Seleccionar -</option>
                                                 <option value="Raize">Raize</option>
@@ -159,7 +203,7 @@ export default function Modalcotizacion() {
                                             </div>                                            
                                             <br></br>
                                             <div className="content-selects" >
-                                                <label  htmlFor="ciudad">CIUDAD Y CONCESIONARIO</label>
+                                                <label className='d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block'  htmlFor="ciudad">CIUDAD Y CONCESIONARIO</label>
                                                 <select id="ciudad" name="ciudad" >
                                                 <option value="" selected="selected">- Seleccionar -</option>
                                                     <option value="Quito (Casabaca)">Quito (Casabaca)</option>
@@ -181,7 +225,7 @@ export default function Modalcotizacion() {
                                             </div>
 
                                             <br></br>
-                                            <p id='enviar-testdrive' className="btn formulario-boton-enviar btn-primary" onClick={enviarDatosTestDrive} >ENVIAR</p>
+                                            <p id='enviar-testdrive' className="btn formulario-boton-enviar btn-primary" onClick={enviarDatosTestDrive} >ENVÍAR</p>
                                             <br></br>
                                             <br></br>
                                             <p className="text-experiencia-testdrive" >Experiencia Test Drive</p>
@@ -203,6 +247,8 @@ export default function Modalcotizacion() {
                 </div>
 
             </div>
+
+            
 
         </>
     );                  
@@ -230,6 +276,43 @@ function enviarDatosTestDrive(){
 
     elemento.classList.add("ocultar-icono");
     mensaje.classList.remove("ocultar-icono");
+}
+
+function activarTestdriveMobile(){
+
+    var testdrive = document.getElementById("formulario-testdrive-contenedor");
+    var cotizar_c = document.getElementById("formulario-cotizar-contenedor");
+
+    var cotizar = document.getElementById("boton-mobile-cotizar");
+    var td = document.getElementById("boton-mobile-td");
+
+    cotizar.classList.remove("boton-mobile-red");
+    cotizar.classList.add("boton-mobile-white");
+    td.classList.remove("boton-mobile-white");
+    td.classList.add("boton-mobile-red");
+
+    cotizar_c.classList.add("ocultar");
+    testdrive.classList.remove("ocultar");
+    
+}
+
+function activarCotizarMobile(){
+
+    var testdrive = document.getElementById("formulario-testdrive-contenedor");
+    var cotizar_c = document.getElementById("formulario-cotizar-contenedor");
+
+    var cotizar = document.getElementById("boton-mobile-cotizar");
+    var td = document.getElementById("boton-mobile-td");
+
+    cotizar.classList.remove("boton-mobile-white");
+    cotizar.classList.add("boton-mobile-red");
+
+    td.classList.remove("boton-mobile-red");
+    td.classList.add("boton-mobile-white");
+
+    cotizar_c.classList.remove("ocultar");
+    testdrive.classList.add("ocultar");
+    
 }
 
 function activarTestdrive(){
