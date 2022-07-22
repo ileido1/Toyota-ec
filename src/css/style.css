@@ -1803,7 +1803,7 @@ ul.tabsnoticias>li {
     justify-content: center;
 }
 
-.btn-cotizat-menu-autos{
+.btn-cotizat-menu-autos {
     background: #E20B2A !important;
     background-color: #E20B2A !important;
     color: #ffffff !important;
@@ -1914,7 +1914,7 @@ ul.tabsnoticias>li {
         font-family: 'Novecentos-DemiBold';
         border-bottom: 2px solid #E50021 !important;
         padding-bottom: 5px;
-        
+
     }
 
     .noticia .nav-tabs .nav-item.show .nav-link,
@@ -2043,7 +2043,7 @@ ul.tabsnoticias>li {
 
     .content-cart-texto-caracteristicas {
         padding-top: 40px;
-      }
+    }
 
     .cart-titulo-caracteristicas {
         font-family: 'Radikal-Bold';
@@ -2232,70 +2232,70 @@ ul.tabsnoticias>li {
         background: #EDEDED;
         padding-left: 20px;
         padding-right: 20px;
-      }
+    }
 
-      .autos-similares {
+    .autos-similares {
         display: block;
         margin: 0 auto;
         margin-top: 0px;
         max-width: 160px !important;
-      }
+    }
 
-      .titulo-autos-similares {
+    .titulo-autos-similares {
         font-size: 18px;
         margin-top: 40px;
-      }
+    }
 
-      .enlace-vehiculos {
+    .enlace-vehiculos {
         font-size: 1em;
-      }
+    }
 
-      .subtitulos-vehiculos {
+    .subtitulos-vehiculos {
         margin-top: 40px;
-      }
+    }
 
-      .subtitulos-vehiculos {
+    .subtitulos-vehiculos {
 
         padding-left: 0px;
         font-size: 1.6em;
         text-align: center;
 
-      }
+    }
 
-      .h1Conoce {
+    .h1Conoce {
         font-size: 22px;
-      }
+    }
 
-      .abanner {
+    .abanner {
         margin-bottom: 60px;
         margin-top: -30px !important;
-      }
+    }
 
-      ul.tabsnoticias > li {
+    ul.tabsnoticias>li {
         padding-left: 0px;
-      }
+    }
 
-      .noticia {
+    .noticia {
         background: #000;
         padding: 30px !important;
-      }
+    }
 
-      header nav div a img{
+    header nav div a img {
         width: 160px;
-      }
+    }
 
-      .cart-titulo-caracteristicas{
-        margin-left: 0px;
-        }
-
-    .cart-texto-caracteristicas{
+    .cart-titulo-caracteristicas {
         margin-left: 0px;
     }
 
-    .ocultar-mobile{
+    .cart-texto-caracteristicas {
+        margin-left: 0px;
+    }
+
+    .ocultar-mobile {
         display: none;
     }
-        
+
     .nav-tabs .nav-link {
         margin-right: 8px;
         font-size: 12px;
@@ -2312,15 +2312,15 @@ ul.tabsnoticias>li {
 
 }
 
-#myModal{
+#myModal {
     top: 57px;
 }
 
-.cart-texto-caracteristicas{
+.cart-texto-caracteristicas {
     margin-left: 50px;
 }
 
-.cart-titulo-caracteristicas{
+.cart-titulo-caracteristicas {
     margin-left: 50px;
 }
 
@@ -2368,11 +2368,15 @@ ul.tabsnoticias>li {
 .content-campanias {
     padding: 0 20%;
     background: #ededed;
-    height: 460px;
+    height: 100%;
     display: flex;
     justify-items: center;
     align-items: center;
 
+}
+
+.pagina-campanias img {
+    width: 100%;
 }
 
 .texto-titulo-campanias {
@@ -2389,13 +2393,13 @@ ul.tabsnoticias>li {
     color: #000;
 }
 
-.texto-rojo{
-    color:red
+.texto-rojo {
+    color: red
 }
 
 .content-campanias-takata {
     background: url('../images/campanias/campania-airbag.png');
-    height: 100vh;
+
     -webkit-transition: all 1.5s 0s ease;
     -moz-transition: all 1.5s 0s ease;
     -o-transition: all 1.5s 0s ease;
@@ -2407,32 +2411,38 @@ ul.tabsnoticias>li {
 
 .content-campanias-takata:hover {
     background: url('../images/campanias/campania-airbag-hover.png');
-    height: 100vh;
+
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .content-campanias-prius4 {
     background: url('../images/campanias/prius-4g_.png');
-    height: 100vh;
+
     -webkit-transition: all 1.5s 0s ease;
     -moz-transition: all 1.5s 0s ease;
     -o-transition: all 1.5s 0s ease;
     transition: all 1.5s 0s ease;
     cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
 }
 
 .content-campanias-prius4:hover {
     background: url('../images/campanias/prius-4g.png');
-    height: 100vh;
+
     background-size: contain;
+
     background-repeat: no-repeat;
 }
 
 .content-campanias-prius3 {
     background: url('../images/campanias/prius-3g.png');
-    height: 100vh;
+
     background-size: contain;
+
     background-repeat: no-repeat;
     -webkit-transition: all 1.5s 0s ease;
     -moz-transition: all 1.5s 0s ease;
@@ -2443,15 +2453,17 @@ ul.tabsnoticias>li {
 
 .content-campanias-prius3:hover {
     background: url('../images/campanias/prius-3g_.png');
-    height: 100vh;
+
     background-size: contain;
+
     background-repeat: no-repeat;
 }
 
 .content-campanias-rav4 {
     background: url('../images/campanias/rav-4.png');
-    height: 100vh;
+
     background-size: contain;
+
     background-repeat: no-repeat;
     -webkit-transition: all 1.5s 0s ease;
     -moz-transition: all 1.5s 0s ease;
@@ -2462,15 +2474,17 @@ ul.tabsnoticias>li {
 
 .content-campanias-rav4:hover {
     background: url('../images/campanias/rav-4_.png');
-    height: 100vh;
+
     background-size: contain;
+
     background-repeat: no-repeat;
 }
 
 .content-campanias-global {
     background: url('../images/campanias/camapana-global.png');
-    height: 100vh;
+
     background-size: contain;
+
     background-repeat: no-repeat;
     -webkit-transition: all 1.5s 0s ease;
     -moz-transition: all 1.5s 0s ease;
@@ -2481,8 +2495,9 @@ ul.tabsnoticias>li {
 
 .content-campanias-global:hover {
     background: url('../images/campanias/camapana-global_.png');
-    height: 100vh;
+
     background-size: contain;
+
     background-repeat: no-repeat;
 }
 
@@ -2545,13 +2560,13 @@ ul.tabsnoticias>li {
     width: 1920px;
     height: 800px;
 }
-    
-  /* Page content */
-  .content {
+
+/* Page content */
+.content {
     padding: 16px;
-  }
-  
-  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
@@ -2560,17 +2575,17 @@ ul.tabsnoticias>li {
     z-index: 99999;
     top: 1px;
 }
-  
+
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
+.sticky+.content {
     padding-top: 0px;
 }
 
-.menu-sticky{
-position: absolute;
-width: 100%;   
+.menu-sticky {
+    position: absolute;
+    width: 100%;
 }
 
-.menu-portada-vehiculos{
+.menu-portada-vehiculos {
     background: #000000;
 }
