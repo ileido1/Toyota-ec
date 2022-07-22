@@ -1,5 +1,6 @@
 import useFetch from "../../../hooks/useFetch";
 import { useLocation } from 'react-router-dom';
+import logo
 
 import { motion } from "framer-motion"
 
@@ -24,27 +25,33 @@ export default function Cartexonerados() {
     let texto_cotizar = ''
     let link_cotizar = ''
     let flag_clase = ''
+    let flag_clase2 = ''
     
     let contenedor = document.getElementById('content-auto-exonerados')
 
     if(location.pathname == '/corolla-sedan'){
        flag_clase = "none"
+       flag_clase2 = 'block'
     }
 
     if(location.pathname == '/corolla-cross'){
         flag_clase = "none"
+        flag_clase2 = 'block'
      }
 
     if(location.pathname == '/c-hr'){
         flag_clase = "none"
+        flag_clase2 = 'block'
      }
 
      if(location.pathname == '/corolla-sedan'){
         flag_clase = "none"
+        flag_clase2 = 'block'
      }
 
      if(location.pathname == '/yaris-cross'){
         flag_clase = "none"
+        flag_clase2 = 'block'
      }
     
     if(respuesta){

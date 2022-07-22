@@ -137,7 +137,7 @@
 
 .img-logo-feature {
     width: 160px;
-    width: 52%;
+    width: 50%;
 }
 
 .img-icono-feature {
@@ -160,7 +160,7 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
-    width: 70%;
+    width: 60%;
 }
 
 .titulo-feature {
@@ -171,11 +171,13 @@
 }
 
 .text-feature {
-    font-family: 'Radikal-Medium';
-    color: #ffffff;
+    color: #fff;
+    font-family: Radikal-Medium;
     font-size: 14px;
-    margin-top: 20px;
     margin-bottom: 20px;
+    margin-top: 20px;
+    height: 35px;
+    line-height: 17px;
 }
 
 .subtext-feature {
@@ -1620,7 +1622,7 @@ ul.tabsnoticias>li {
     border: 1px solid #fff;
     margin-bottom: 15px;
     width: 160px;
-    text-align: right;
+    text-align: left;
 }
 
 #terminos {
