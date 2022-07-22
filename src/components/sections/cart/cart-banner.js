@@ -255,7 +255,7 @@ export default function Cartslider() {
     <div className="col-6 " >
         <img className="img-logo-marca img-fluid" src={url_backend+logo_versiones} alt="Logo versiones mobile" />
     </div>
-    <div className="col-6 boton-cotizar-mobile" >
+    <div className="col-6 boton-cotizar-mobile" onClick={abrirModal} >
         <span>Cotizar</span>
     </div>
 </div>
@@ -264,4 +264,13 @@ export default function Cartslider() {
     </>
 
     );
+}
+
+
+function abrirModal() {
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    // Get the button that opens the modal
+    var btn = document.getElementById("cotizar-vehiculo");
+    modal.style.display = "block";
 }

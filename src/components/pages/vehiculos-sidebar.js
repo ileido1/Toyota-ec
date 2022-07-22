@@ -39,16 +39,12 @@ export default function Vehiculossidebar() {
                         <div className="iconos-sidebar" >
                             <img className="" src={url_backend+c.icono_sidebar_vehiculos} />
                         </div>
-                        <div className="titulo-botones-sidebar d-none d-sm-none d-md-block d-xl-block d-lg-block" >
+                        <div className="titulo-botones-sidebar " >
                             
                             <p onClick={abrirModal} >{c.texto_sidebar_vehiculos}</p>
                             
                         </div>
-                        <div className="titulo-botones-sidebar d-block d-sm-block d-md-none d-xl-none d-lg-none" >
-                            
-                            <p>{c.texto_sidebar_vehiculos}</p>
-                            
-                        </div>
+
                     </div>                        
               
                     </>
