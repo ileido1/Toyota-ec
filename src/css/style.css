@@ -2274,6 +2274,19 @@ ul.tabsnoticias>li {
         display: none;
     }
         
+    .nav-tabs .nav-link {
+        margin-right: 8px;
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (max-width: 385px) {
+
+    .nav-tabs .nav-link {
+        margin-right: 8px;
+        font-size: 10px;
+    }
 
 }
 
