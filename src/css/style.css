@@ -1806,7 +1806,7 @@ ul.tabsnoticias>li {
     justify-content: center;
 }
 
-.btn-cotizat-menu-autos{
+.btn-cotizat-menu-autos {
     background: #E20B2A !important;
     background-color: #E20B2A !important;
     color: #ffffff !important;
@@ -1917,7 +1917,7 @@ ul.tabsnoticias>li {
         font-family: 'Novecentos-DemiBold';
         border-bottom: 2px solid #E50021 !important;
         padding-bottom: 5px;
-        
+
     }
 
     .noticia .nav-tabs .nav-item.show .nav-link,
@@ -2046,7 +2046,7 @@ ul.tabsnoticias>li {
 
     .content-cart-texto-caracteristicas {
         padding-top: 40px;
-      }
+    }
 
     .cart-titulo-caracteristicas {
         font-family: 'Radikal-Bold';
@@ -2235,106 +2235,106 @@ ul.tabsnoticias>li {
         background: #EDEDED;
         padding-left: 20px;
         padding-right: 20px;
-      }
+    }
 
-      .autos-similares {
+    .autos-similares {
         display: block;
         margin: 0 auto;
         margin-top: 0px;
         max-width: 160px !important;
-      }
+    }
 
-      .titulo-autos-similares {
+    .titulo-autos-similares {
         font-size: 18px;
         margin-top: 40px;
-      }
+    }
 
-      .enlace-vehiculos {
+    .enlace-vehiculos {
         font-size: 1em;
-      }
+    }
 
-      .subtitulos-vehiculos {
+    .subtitulos-vehiculos {
         margin-top: 40px;
-      }
+    }
 
-      .subtitulos-vehiculos {
+    .subtitulos-vehiculos {
 
         padding-left: 0px;
         font-size: 1.6em;
         text-align: center;
 
-      }
+    }
 
-      .h1Conoce {
+    .h1Conoce {
         font-size: 22px;
-      }
+    }
 
-      .abanner {
+    .abanner {
         margin-bottom: 60px;
         margin-top: -30px !important;
-      }
+    }
 
-      ul.tabsnoticias > li {
+    ul.tabsnoticias>li {
         padding-left: 0px;
-      }
+    }
 
-      .noticia {
+    .noticia {
         background: #000;
         padding: 30px !important;
-      }
+    }
 
-      header nav div a img{
+    header nav div a img {
         width: 160px;
-      }
+    }
 
-      .cart-titulo-caracteristicas{
-        margin-left: 0px;
-        }
-
-    .cart-texto-caracteristicas{
+    .cart-titulo-caracteristicas {
         margin-left: 0px;
     }
 
-    .ocultar-mobile{
+    .cart-texto-caracteristicas {
+        margin-left: 0px;
+    }
+
+    .ocultar-mobile {
         display: none;
     }
-        
+
     .nav-tabs .nav-link {
         margin-right: 8px;
         font-size: 12px;
     }
 
-    #myModal .modal-content{
+    #myModal .modal-content {
         width: 100% !important;
     }
 
     #myModal {
         top: 0px !important;
-      }
+    }
 
-      .formulario-logo img {
+    .formulario-logo img {
         width: 80px;
         display: block;
         margin: 0 auto;
         position: absolute;
         top: 10px;
         left: 10px;
-      }
+    }
 
-      .top-cerrar-modal{
+    .top-cerrar-modal {
         background: #ddd;
         display: flex;
         align-items: center;
         height: 70px;
-      }
+    }
 
-      .cerrar-modal {
+    .cerrar-modal {
         margin-top: 0px;
         margin-bottom: 0px;
         color: #e20b2a !important;
-      }
+    }
 
-      .boton-mobile-red{
+    .boton-mobile-red {
         background: #e20b2a;
         color: #fff;
         display: flex;
@@ -2342,9 +2342,9 @@ ul.tabsnoticias>li {
         justify-content: center;
         height: 60px;
         cursor: pointer;
-      }
+    }
 
-      .boton-mobile-white{
+    .boton-mobile-white {
         background: #ffffff;
         color: #e20b2a;
         display: flex;
@@ -2352,21 +2352,21 @@ ul.tabsnoticias>li {
         justify-content: center;
         height: 60px;
         cursor: pointer;
-      }
+    }
 
-      .boton-mobile-red p{
+    .boton-mobile-red p {
         margin-bottom: 0px;
         font-size: 18px;
         font-family: 'Toyota-DisplayRegular';
     }
 
-      .boton-mobile-white p{
-        margin-bottom: 0px;     
+    .boton-mobile-white p {
+        margin-bottom: 0px;
         font-size: 18px;
         font-family: 'Toyota-DisplayRegular';
     }
 
-    .parrafo-formulario-cotizar{
+    .parrafo-formulario-cotizar {
         text-align: center;
         margin: 20px 0px;
         font-size: 18px;
@@ -2380,7 +2380,7 @@ ul.tabsnoticias>li {
     .content-formulario-campos select {
         margin-bottom: 0px;
         width: 100%;
-      }
+    }
 
 }
 
@@ -2393,15 +2393,15 @@ ul.tabsnoticias>li {
 
 }
 
-#myModal{
+#myModal {
     top: 57px;
 }
 
-.cart-texto-caracteristicas{
+.cart-texto-caracteristicas {
     margin-left: 50px;
 }
 
-.cart-titulo-caracteristicas{
+.cart-titulo-caracteristicas {
     margin-left: 50px;
 }
 
@@ -2449,11 +2449,15 @@ ul.tabsnoticias>li {
 .content-campanias {
     padding: 0 20%;
     background: #ededed;
-    height: 460px;
+    height: 100%;
     display: flex;
     justify-items: center;
     align-items: center;
 
+}
+
+.pagina-campanias img {
+    width: 100%;
 }
 
 .texto-titulo-campanias {
@@ -2470,104 +2474,122 @@ ul.tabsnoticias>li {
     color: #000;
 }
 
-.texto-rojo{
-    color:red
+.texto-rojo {
+    color: red
 }
 
 .content-campanias-takata {
-    background: url('../images/campanias/campania-airbag-min.png');
+    background: url('../images/campanias/campania-airbag.png');
+
     -webkit-transition: all 1.5s 0s ease;
     -moz-transition: all 1.5s 0s ease;
     -o-transition: all 1.5s 0s ease;
     transition: all 1.5s 0s ease;
     cursor: pointer;
     height: 460px;
-    background-size: contain; 
+    background-size: contain;
     background-repeat: no-repeat;
-    
+
 }
 
 .content-campanias-takata:hover {
-    background: url('../images/campanias/campania-airbag-hover-min.png'); 
-    height: 460px;
-    background-size: contain; 
+    background: url('../images/campanias/campania-airbag-hover.png');
+
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
 .content-campanias-prius4 {
-    background: url('../images/campanias/prius-4g_-min.png');
+    background: url('../images/campanias/prius-4g_.png');
+
     -webkit-transition: all 1.5s 0s ease;
     -moz-transition: all 1.5s 0s ease;
     -o-transition: all 1.5s 0s ease;
     transition: all 1.5s 0s ease;
     cursor: pointer;
-    height: 460px;
-    background-size: contain; 
+    background-size: contain;
     background-repeat: no-repeat;
+
+
 }
 
 .content-campanias-prius4:hover {
-    background: url('../images/campanias/prius-4g-min.png');
-    height: 460px;
-    background-size: contain; 
+    background: url('../images/campanias/prius-4g.png');
+
+    background-size: contain;
+
     background-repeat: no-repeat;
 }
 
 .content-campanias-prius3 {
-    background: url('../images/campanias/prius-3g-min.png');
-    background-size: 100%; background-repeat: no-repeat;
+    background: url('../images/campanias/prius-3g.png');
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
     -webkit-transition: all 1.5s 0s ease;
     -moz-transition: all 1.5s 0s ease;
     -o-transition: all 1.5s 0s ease;
     transition: all 1.5s 0s ease;
     cursor: pointer;
     height: 460px;
-    background-size: contain; 
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
 .content-campanias-prius3:hover {
-    background: url('../images/campanias/prius-3g_-min.png');
-    height: 460px;
-    background-size: contain; 
+    background: url('../images/campanias/prius-3g_.png');
+
+    background-size: contain;
+
     background-repeat: no-repeat;
 }
 
 .content-campanias-rav4 {
-    background: url('../images/campanias/rav-4-min.png');
+    background: url('../images/campanias/rav-4.png');
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
     -webkit-transition: all 1.5s 0s ease;
     -moz-transition: all 1.5s 0s ease;
     -o-transition: all 1.5s 0s ease;
     transition: all 1.5s 0s ease;
     cursor: pointer;
     height: 460px;
-    background-size: contain; 
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
 .content-campanias-rav4:hover {
-    background: url('../images/campanias/rav-4_-min.png');
-    height: 460px;
-    background-size: contain; 
+    background: url('../images/campanias/rav-4_.png');
+
+    background-size: contain;
+
     background-repeat: no-repeat;
 }
 
 .content-campanias-global {
-    background: url('../images/campanias/camapana-global-min.png');
+    background: url('../images/campanias/camapana-global.png');
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
     -webkit-transition: all 1.5s 0s ease;
     -moz-transition: all 1.5s 0s ease;
     -o-transition: all 1.5s 0s ease;
     transition: all 1.5s 0s ease;
     cursor: pointer;
     height: 460px;
-    background-size: contain; 
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
 .content-campanias-global:hover {
-    background: url('../images/campanias/camapana-global_-min.png');
-    height: 460px;
+    background: url('../images/campanias/camapana-global_.png');
+
     background-size: contain;
+
     background-repeat: no-repeat;
 }
 
@@ -2604,11 +2626,11 @@ ul.tabsnoticias>li {
     padding: 20px 20px;
 }
 
-.cerrar-modal-takata-resulta{
+.cerrar-modal-takata-resulta {
     font-size: 18px !important;
 }
 
-#myModalTakataResultado p{
+#myModalTakataResultado p {
     text-align: center;
     font-size: 20px;
     font-family: 'Radikal-Medium';
@@ -2617,7 +2639,7 @@ ul.tabsnoticias>li {
     margin-bottom: 5px;
 }
 
-#myModalTakataResultadoNA p{
+#myModalTakataResultadoNA p {
     text-align: center;
     font-size: 20px;
     font-family: 'Radikal-Medium';
@@ -2676,7 +2698,7 @@ ul.tabsnoticias>li {
     border: 1px solid #fff;
 }
 
-#resultado-chasis p.mt_resultado_chasis{
+#resultado-chasis p.mt_resultado_chasis {
     margin-top: 10px;
     font-size: 20px !important;
     font-family: 'Radikal-Bold';
@@ -2706,7 +2728,7 @@ ul.tabsnoticias>li {
     margin-bottom: 5px;
 }
 
-.boton-enviar-chasis-datos{
+.boton-enviar-chasis-datos {
     cursor: pointer;
 }
 
@@ -2723,13 +2745,13 @@ ul.tabsnoticias>li {
     width: 1920px;
     height: 800px;
 }
-    
-  /* Page content */
-  .content {
+
+/* Page content */
+.content {
     padding: 16px;
-  }
-  
-  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
@@ -2738,21 +2760,21 @@ ul.tabsnoticias>li {
     z-index: 99999;
     top: 1px;
 }
-  
+
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
+.sticky+.content {
     padding-top: 0px;
 }
 
-.menu-sticky{
-position: absolute;
-width: 100%;   
+.menu-sticky {
+    position: absolute;
+    width: 100%;
 }
 
-.menu-portada-vehiculos{
+.menu-portada-vehiculos {
     background: #000000;
 }
 
-.boton-enviar{
+.boton-enviar {
     cursor: pointer;
 }
