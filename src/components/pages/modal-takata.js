@@ -1,15 +1,20 @@
-import {useState} from 'react';
-import useFetch2 from "../../hooks/useFetch2";
+import {useState, useEffect} from 'react';
+import axios from 'axios';
 import cerrar from '../../images/cotizacion/cerrar.svg'
+
+
 export default function Modaltakata() {
 
+    let endpoint = 'https://www.toyota.com.ec/api/v2/proceso/?chasis='
+
     const HandleClick = event => {
-        let chasis = document.getElementById("chasis").value;
+
+        let chasis = document.getElementById("chasis").value;    
         console.log(chasis)
-        let url_api = 'v2/proceso/?chasis='+chasis
-        const [respuesta, error] = useFetch2(url_api);
-        return respuesta
-    };
+        
+        
+    }
+
 
     return (
         <>
@@ -56,20 +61,4 @@ function cerrarModal(){
     var modal = document.getElementById("myModalTakata");
     var span = document.getElementsByClassName("close")[0];
     modal.style.display = "none";
-}
-
-function enviarDatosCotizar(){
-    var elemento = document.getElementById("enviar-cotizar");
-    var mensaje = document.getElementById("mensaje-cotizar");
-
-    elemento.classList.add("ocultar-icono");
-    mensaje.classList.remove("ocultar-icono");
-}
-
-function enviarDatosTestDrive(){
-    var elemento = document.getElementById("enviar-testdrive");
-    var mensaje = document.getElementById("mensaje-testdrive");
-
-    elemento.classList.add("ocultar-icono");
-    mensaje.classList.remove("ocultar-icono");
 }

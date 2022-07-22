@@ -69,7 +69,7 @@ export default function Vehiculos() {
         <div id="pagina-vehiculos" className="container-fluid" >
         
               <div className="row fila-vehiculos" >
-                <div className="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 sinpadding">
+                <div className="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 sinpadding order-1 order-sm-0">
                 <div id="contenedor-autos-automoviles" className="contenedor-secciones-autos" >
                     <div className="row" id="titulo-vehiculos" >
                         <div classNme="col-12 col-sm-12">
@@ -367,7 +367,7 @@ export default function Vehiculos() {
 
                     
                 </div>
-                <div id="sidebar-vehiculos" class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 sinpadding" >
+                <div id="sidebar-vehiculos" class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 sinpadding order-0  order-sm-1" >
                     <Vehiculossidebar />
                 </div>
             

@@ -19,6 +19,4 @@ const Posventa = () => {
     )
 }
 
-
-
 export default Posventa;

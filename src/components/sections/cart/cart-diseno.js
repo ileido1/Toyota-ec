@@ -563,7 +563,7 @@ function nombreColor(color){
     }
 
     if ( color ==  "#3365b5" ) {
-        nombre_color = "Azul"
+        nombre_color = "Azul Grisáceo"
     }
 
     if ( color ==  "#b0953d" ) {

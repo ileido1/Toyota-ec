@@ -137,7 +137,7 @@
 
 .img-logo-feature {
     width: 160px;
-    width: 60%;
+    width: 55%;
 }
 
 .img-icono-feature {
@@ -167,7 +167,7 @@
     font-family: 'Toyota-DisplayBold';
     color: #ffffff;
     text-decoration: underline;
-    font-size: 44px;
+    font-size: 42px;
 }
 
 .text-feature {
@@ -183,6 +183,7 @@
     color: #ffffff;
     font-size: 14px;
     text-align: center;
+    margin-top: -10px;
 }
 
 .text-feature-version {
@@ -1802,7 +1803,28 @@ ul.tabsnoticias>li {
     justify-content: center;
 }
 
+.btn-cotizat-menu-autos{
+    background: #E20B2A !important;
+    background-color: #E20B2A !important;
+    color: #ffffff !important;
+    border-radius: 0rem !important;
+    height: 56px;
+    align-items: center;
+    display: flex !important;
+    font-weight: bold !important;
+    justify-content: center !important;
+
+}
+
 @media only screen and (max-width: 600px) {
+
+    .subtext-feature {
+        font-family: 'Radikal-Light';
+        color: #ffffff;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 0px;
+    }
 
     .content_features {
         margin-top: -170px;
