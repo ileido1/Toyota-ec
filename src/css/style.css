@@ -2395,22 +2395,26 @@ ul.tabsnoticias>li {
 
 .content-campanias-takata {
     background: url('../images/campanias/campania-airbag.png');
-    height: 460px;
+    height: 100vh;
     -webkit-transition: all 1.5s 0s ease;
     -moz-transition: all 1.5s 0s ease;
     -o-transition: all 1.5s 0s ease;
     transition: all 1.5s 0s ease;
     cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .content-campanias-takata:hover {
     background: url('../images/campanias/campania-airbag-hover.png');
-    height: 460px;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .content-campanias-prius4 {
     background: url('../images/campanias/prius-4g_.png');
-    height: 460px;
+    height: 100vh;
     -webkit-transition: all 1.5s 0s ease;
     -moz-transition: all 1.5s 0s ease;
     -o-transition: all 1.5s 0s ease;
@@ -2420,12 +2424,16 @@ ul.tabsnoticias>li {
 
 .content-campanias-prius4:hover {
     background: url('../images/campanias/prius-4g.png');
-    height: 460px;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .content-campanias-prius3 {
     background: url('../images/campanias/prius-3g.png');
-    height: 460px;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
     -webkit-transition: all 1.5s 0s ease;
     -moz-transition: all 1.5s 0s ease;
     -o-transition: all 1.5s 0s ease;
@@ -2435,12 +2443,16 @@ ul.tabsnoticias>li {
 
 .content-campanias-prius3:hover {
     background: url('../images/campanias/prius-3g_.png');
-    height: 460px;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .content-campanias-rav4 {
     background: url('../images/campanias/rav-4.png');
-    height: 460px;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
     -webkit-transition: all 1.5s 0s ease;
     -moz-transition: all 1.5s 0s ease;
     -o-transition: all 1.5s 0s ease;
@@ -2450,12 +2462,16 @@ ul.tabsnoticias>li {
 
 .content-campanias-rav4:hover {
     background: url('../images/campanias/rav-4_.png');
-    height: 460px;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .content-campanias-global {
     background: url('../images/campanias/camapana-global.png');
-    height: 460px;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
     -webkit-transition: all 1.5s 0s ease;
     -moz-transition: all 1.5s 0s ease;
     -o-transition: all 1.5s 0s ease;
@@ -2465,7 +2481,9 @@ ul.tabsnoticias>li {
 
 .content-campanias-global:hover {
     background: url('../images/campanias/camapana-global_.png');
-    height: 460px;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 #myModalTakata .modal-content {
