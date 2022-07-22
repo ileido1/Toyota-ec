@@ -1,24 +1,31 @@
-import {useState, useEffect} from 'react';
-import axios from 'axios';
+import { useState, useEffect } from 'react';
+import { get } from 'axios';
+
 import cerrar from '../../images/cotizacion/cerrar.svg'
 
 
 export default function Modaltakata() {
 
-    let endpoint = 'https://www.toyota.com.ec/api/v2/proceso/?chasis='
+    let endpoint = 'https://www.toyota.com.ec/api/v2/proceso/?chasis=';
+    const [proceso, setProceso] = useState('');
 
-    const HandleClick = event => {
+    function handleClick(event) {
 
-        let chasis = document.getElementById("chasis").value;    
+        let chasis = document.getElementById("chasis").value;
         console.log(chasis)
-        
-        
+        const getproceso = async () => {
+            const resultexo = await get(`${endpoint + chasis}`);
+            const procesos = resultexo.data;
+            setProceso(procesos);
+        }
+        getproceso()
+
     }
 
 
     return (
         <>
-            
+
             <div id="myModalTakata" className="modal">
 
                 <div className="modal-content cuerpo-modal">
@@ -31,7 +38,7 @@ export default function Modaltakata() {
                         </div>
                     </div>
 
-                    <div  className="container-fluid " >
+                    <div className="container-fluid " >
 
                         <div className="row">
                             <div className='col-12' >
@@ -39,9 +46,9 @@ export default function Modaltakata() {
                                 <p className='mt40' >POR FAVOR INGRESE LOS 17 NÚMEROS DEL CHASIS</p>
                                 <p>(PUEDE ENCONTRARLO EN SU MATRÍCULA)</p>
 
-                                <input type="text" name="chasis" id="chasis" placeholder="ESCRIBIR NÚMERO DE CHASIS"  />
+                                <input type="text" name="chasis" id="chasis" placeholder="ESCRIBIR NÚMERO DE CHASIS" />
 
-                                <p className="boton-enviar" onClick={HandleClick} >ENVIAR</p>
+                                <p className="boton-enviar" onClick={handleClick} >ENVIAR</p>
 
                             </div>
                         </div>
@@ -51,12 +58,12 @@ export default function Modaltakata() {
             </div>
 
         </>
-    );                  
+    );
 
 }
 
 
-function cerrarModal(){
+function cerrarModal() {
     // Get the modal
     var modal = document.getElementById("myModalTakata");
     var span = document.getElementsByClassName("close")[0];
