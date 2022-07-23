@@ -1,6 +1,6 @@
 
 
-const Cartmenu = () => (
+const Cartmenu = ({ url }) => (
 
     <div className="auto-individual container-fluid video-cart d-none d-sm-none d-md-block d-xl-block d-lg-block menu-portada-vehiculos" id="menu-portada-vehiculos" >
         <div className="row menu-sticky" id="menu-producto" >
@@ -13,7 +13,7 @@ const Cartmenu = () => (
                 </ul>
             </div>
             <div className="col-1" >
-                <span className="btn btn-cotizat-menu-autos" onClick={abrirModal} >COTIZAR</span> 
+                <span className="btn btn-cotizat-menu-autos" onClick={abrirModal} >COTIZAR</span>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@ const Cartmenu = () => (
 
 export default Cartmenu
 
-function abrirModal(){
+function abrirModal() {
     // Get the modal
     var modal = document.getElementById("myModal");
     // Get the button that opens the modal
