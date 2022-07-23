@@ -89,7 +89,7 @@ export default function Cartexonerados() {
                     <div className="row" id="auto-exonerados" >
 
                         <div className="col-12 col-sm-6"  >
-                            <motion.img src={banner1} alt="logo auto exonerados" variants={variants} initial={{ x: -200, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.5, default: { duration: 1 } }} />
+                            <motion.img src={banner1} alt="logo auto exonerados" className="imagen-banner-exonerados" variants={variants} initial={{ x: -200, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.5, default: { duration: 1 } }} />
                         </div>
 
                         <div className="col-12 col-sm-6 logo-exonerados "  >                                  
