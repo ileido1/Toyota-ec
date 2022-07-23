@@ -21,6 +21,7 @@ export default function Sliderscars() {
 
     const [items, setItems] = useState('');
     const [exo, setExo] = useState('');
+    const [carroselect, setCarro] = useState('');
     const d = "Exonerados";
     const a = 'Automóviles';
     const s = "SUV"
@@ -36,17 +37,27 @@ export default function Sliderscars() {
 
     function handleClick(event) {
         const swiper = document.querySelector('.mySwipercar').swiper;
-        if (event.currentTarget.classList.contains('swiper-slide-next')) {
+        var padre = (event.currentTarget.parentElement.parentElement.parentElement.parentElement);
+        if (padre.classList.contains('swiper-slide-next')) {
             console.log(event.currentTarget.getAttribute("data-url"))
             window.location.href = event.currentTarget.getAttribute("data-url")
 
 
-        } else if (event.currentTarget.classList.contains('swiper-slide-active')) {
+        } else if (padre.classList.contains('swiper-slide-active')) {
             swiper.slidePrev();
 
         } else {
             swiper.slideNext()
         }
+    }
+
+    function abrirModal(event) {
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("cotizar-vehiculo");
+        var prueba = (event.currentTarget.getAttribute("data-url").replace('/', '').replace('-', ' '));
+
+        setCarro(prueba);
+        modal.style.display = "block";
     }
 
     useEffect(() => {
@@ -144,7 +155,7 @@ export default function Sliderscars() {
                         <>
                             {items.map((c, i) => (
 
-                                <SwiperSlide className="slider-cars" onClick={handleClick} data-url={c.enlace_ver_vehiculos}>
+                                <SwiperSlide className="slider-cars" >
 
                                     {({ isActive }) => (
 
@@ -154,7 +165,7 @@ export default function Sliderscars() {
 
                                             <div className="row" >
                                                 <div className="col-12 centrarbaseline">
-                                                    <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro"></img>
+                                                    <img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} onClick={handleClick} data-url={c.enlace_ver_vehiculos} className="imagencarro"></img>
 
                                                 </div>
                                                 <div className="col-12 logocarro">
@@ -182,8 +193,8 @@ export default function Sliderscars() {
                                                             <p className="rendimientoslidertitulo">{c.titulo_info_box_2}</p>
                                                             <p className="rendimientoslider">{c.texto_info_box_2}</p> </div>
                                                         <div className="col-4 textoabajo">
-                                                            <p onClick={abrirModal} ><button className="btnslider" onClick={abrirModal} >{c.texto_cotizar_vehiculo}</button></p>
-                                                            <p onClick={abrirModal} ><button className="btnslider" onClick={abrirModal} >{c.texto_test_drive_vehiculo}</button></p>
+                                                            <p onClick={abrirModal} data-url={c.enlace_ver_vehiculos} ><button className="btnslider" onClick={abrirModal} data-url={c.enlace_ver_vehiculos} >{c.texto_cotizar_vehiculo}</button></p>
+                                                            <p onClick={abrirModal} data-url={c.enlace_ver_vehiculos} ><button className="btnslider" onClick={abrirModal} data-url={c.enlace_ver_vehiculos} >{c.texto_test_drive_vehiculo}</button></p>
                                                         </div>
                                                     </div>
 
@@ -252,13 +263,8 @@ export default function Sliderscars() {
 
             </Swiper>
 
-            <Modalcotizacion />
+            <Modalcotizacion carro={carroselect} />
         </>
     );
 }
 
-function abrirModal() {
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementById("cotizar-vehiculo");
-    modal.style.display = "block";
-}

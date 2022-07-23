@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import icono_cotizacion_blanco from '../../../images/cotizacion/icono-cotizar-small.png'
@@ -11,31 +11,19 @@ import link_externo from '../../../images/cotizacion/link-externo.svg'
 import cerrar_mobile from '../../../images/cotizacion/Icon ionic-ios-close-circle-outline.svg'
 
 
-export default function Modalcotizacion() {
+export default function Modalcotizacion({ carro }) {
 
-        //let nombres = document.getElementById("nombres").value;
-        //let cedula = document.getElementById("cedula").value;
-        
-        axios.post('https://www.toyota.com.ec/api/v2/cotizar/', {
-            nombres: 'Adrian Gil',
-            cedula:'1757908163'
-          })
-          .then(function (response) {
-            return response;
-          })
-          .catch(function (error) {
-            return error;
-          });
 
-             
+
+
     return (
         <>
-            
+
             <div id="myModal" className="modal">
 
                 <div className="modal-content cuerpo-modal">
 
-                    <div  className="container-fluid expansion-fondo-formulario" >
+                    <div className="container-fluid expansion-fondo-formulario" >
                         <div className="row">
 
                             <div className="barra-botones col-sm-3 col-md-3 col-lg-3 col-xl-3 nopadding-cotizacion d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" >
@@ -43,27 +31,27 @@ export default function Modalcotizacion() {
                                 <div className="formulario-logo" ><img src={isotipo} alt="Icono cotizacion" /></div>
 
                                 <div className='flexbotones'  >
-                                   
+
                                     <div id="icono-cotizacion" className="icono-cotizacion" >
-                                        
+
                                         <img id='img-icono-cotizar-blanco' src={icono_cotizacion_blanco} alt="Icono cotizacion." onClick={activarCotizar} />
                                         <img id='img-icono-cotizar-gris' src={icono_cotizacion_gris} alt="Icono cotizacion." onClick={activarCotizar} className="ocultar-icono" />
                                         <p id="texto-icono-cotizar" className='texto-icono-cotizar' onClick={activarCotizar} >SOLICITAR COTIZACIÓN</p>
-                                    
+
                                     </div>
 
                                     <div id="icono-testdrive" className="icono-testdrive" >
 
                                         <img id="img-testdrive-cotizar-gris" src={icono_test_drive_gris} alt="Icono testdrive" onClick={activarTestdrive} />
                                         <img id="img-testdrive-cotizar-blanco" src={icono_test_drive_blanco} alt="Icono testdrive" className='ocultar-icono' onClick={activarTestdrive} />
-                                                                              
-                                        <p id="texto-icono-testdrive" className='texto-icono-testdrive' onClick={activarTestdrive} >QUIERO UN TEST DRIVE</p></div>  
-                                       
+
+                                        <p id="texto-icono-testdrive" className='texto-icono-testdrive' onClick={activarTestdrive} >QUIERO UN TEST DRIVE</p></div>
+
                                 </div>
 
                             </div>
 
-                               <div className="barra-formulario col-12 col-sm-9 col-md-9 col-lg-9 col-xl-9" >
+                            <div className="barra-formulario col-12 col-sm-9 col-md-9 col-lg-9 col-xl-9" >
                                 <div className="row top-cerrar-modal" >
 
                                     <div className="col-12 d-none d-none d-sm-block d-md-block d-lg-block d-xl-block" >
@@ -73,7 +61,7 @@ export default function Modalcotizacion() {
                                     <div className="col-8 d-flex d-sm-none d-md-none d-lg-none d-xl-none" >
                                         <div className="formulario-logo" ><img src={isotipo} alt="Icono cotizacion" /></div>
                                     </div>
-                                    
+
                                     <div className="col-4 d-flex d-sm-none d-md-none d-lg-none d-xl-none" >
                                         <p className="close cerrar-modal" onClick={cerrarModal} >CERRAR <img src={cerrar_mobile} /> </p>
                                     </div>
@@ -86,7 +74,7 @@ export default function Modalcotizacion() {
                                         <p>COTIZAR</p>
                                     </div>
 
-                                    <div id='boton-mobile-td' className="col-6 d-flex d-sm-none d-md-none d-lg-none d-xl-none boton-mobile-white"  onClick={activarTestdriveMobile} >
+                                    <div id='boton-mobile-td' className="col-6 d-flex d-sm-none d-md-none d-lg-none d-xl-none boton-mobile-white" onClick={activarTestdriveMobile} >
                                         <p>TEST DRIVE</p>
                                     </div>
 
@@ -95,7 +83,7 @@ export default function Modalcotizacion() {
                                 <div className="row" >
 
                                     <div id='formulario-cotizar-contenedor' className="col-12" >
-                                        
+
                                         <p className="titulo-formulario-cotizar d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" >Cotizar</p>
                                         <p className="parrafo-formulario-cotizar d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" >Solicita aquí la cotización de tu vehículo la cual enviaremos a tu correo</p>
                                         <p className="parrafo-formulario-cotizar d-block d-sm-none d-md-none d-lg-none d-xl-none" >Pide una cotización</p>
@@ -111,29 +99,29 @@ export default function Modalcotizacion() {
                                             <div className="content-selects" >
                                                 <label className='d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block' htmlFor="modelo">MODELO DE INTERÉS</label>
                                                 <select id="modelo" name="modelo" >
-                                                <option value="" selected="selected">- Seleccionar -</option>
-                                                <option value="Raize">Raize</option>
-                                                <option value="Yaris Sport">Yaris Sport</option>
-                                                <option value="Yaris Sedan">Yaris Sedán</option>                                               
-                                                <option value="Corolla Sedán">Corolla Sedán</option> 
-                                                <option value="Corolla Cross">Corolla Cross</option> 
-                                                <option value="C-HR Hibrido">C-HR Híbrido</option>
-                                                <option value="RAV 4">RAV 4</option>
-                                                <option value="Fortuner">Fortuner</option>
-                                                <option value="Land Cruiser Prado">Land Cruiser Prado</option>
-                                                <option value="Land Cruiser 200">Land Cruiser 300</option>
-                                                <option value="Rush">Rush</option>
-                                                <option value="Hilux 4X2 Cabina Doble">Hilux 4X2 Cabina Doble</option>
-                                                <option value="Hilux 4x4 Cabina Doble">Hilux 4x4 Cabina Doble</option>
-                                                <option value="Hilux Cabina Simple">Hilux Cabina Simple</option>
-                                                <option value="Hilux 4X4 Cabina Doble AT">Hilux 4X4 Cabina Doble AT</option>
+                                                    <option value="" selected="selected">{carro}</option>
+                                                    <option value="Raize">Raize</option>
+                                                    <option value="Yaris Sport">Yaris Sport</option>
+                                                    <option value="Yaris Sedan">Yaris Sedán</option>
+                                                    <option value="Corolla Sedán">Corolla Sedán</option>
+                                                    <option value="Corolla Cross">Corolla Cross</option>
+                                                    <option value="C-HR Hibrido">C-HR Híbrido</option>
+                                                    <option value="RAV 4">RAV 4</option>
+                                                    <option value="Fortuner">Fortuner</option>
+                                                    <option value="Land Cruiser Prado">Land Cruiser Prado</option>
+                                                    <option value="Land Cruiser 200">Land Cruiser 300</option>
+                                                    <option value="Rush">Rush</option>
+                                                    <option value="Hilux 4X2 Cabina Doble">Hilux 4X2 Cabina Doble</option>
+                                                    <option value="Hilux 4x4 Cabina Doble">Hilux 4x4 Cabina Doble</option>
+                                                    <option value="Hilux Cabina Simple">Hilux Cabina Simple</option>
+                                                    <option value="Hilux 4X4 Cabina Doble AT">Hilux 4X4 Cabina Doble AT</option>
                                                 </select>
                                             </div>
                                             <br></br>
                                             <div className="content-selects" >
                                                 <label className='d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block' htmlFor="ciudad">CIUDAD Y CONCESIONARIO</label>
                                                 <select id="ciudad" name="ciudad" >
-                                                
+
                                                     <option value="" selected="selected">- Seleccionar -</option>
                                                     <option value="Quito (Casabaca)">Quito (Casabaca)</option>
                                                     <option value="Santo Domingo (Casabaca)">Santo Domingo (Casabaca)</option>
@@ -150,26 +138,26 @@ export default function Modalcotizacion() {
                                                     <option value="Daule (Toyocosta)">Daule (Toyocosta)</option>
                                                     <option value="Quevedo (Toyocosta)">Quevedo (Toyocosta)</option>
                                                     <option value="Manta (Toyocosta)">Manta (Toyocosta)</option>
-                                 
-     
-                              
+
+
+
                                                 </select>
                                             </div>
                                             <br></br>
                                             <div className="content-checkbox" >
-                                                <input type="checkbox" name="terminos" id="terminos"  />
+                                                <input type="checkbox" name="terminos" id="terminos" />
                                                 <label htmlFor="terminos">Términos y condiciones <img src={link_externo} /> </label>
                                             </div>
 
                                             <br></br>
                                             <p id='enviar-cotizar' className="btn formulario-boton-enviar btn-primary" onClick={enviarDatosCotizar} >ENVÍAR</p>
-                                            <p id='mensaje-cotizar'  className='ocultar-icono mensaje-formulario' >Datos enviados correctamente.</p>
+                                            <p id='mensaje-cotizar' className='ocultar-icono mensaje-formulario' >Datos enviados correctamente.</p>
                                         </div>
 
                                     </div>
 
                                     <div id='formulario-testdrive-contenedor' className="col-12 ocultar" >
-                                        
+
                                         <p className="titulo-formulario-cotizar d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" >Test Drive</p>
                                         <p className="parrafo-formulario-cotizar d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" >Compruébalo tu mismo y déjate encantar por un TOYOTA.</p>
                                         <p className="parrafo-formulario-cotizar d-block d-sm-none d-md-none d-lg-none d-xl-none" >Pide tu Test Drive</p>
@@ -179,31 +167,31 @@ export default function Modalcotizacion() {
                                             <input type="text" name="nombres" id="nombres" placeholder="CELULAR*" />
                                             <br></br>
                                             <div className="content-selects" >
-                                                <label className='d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block'  htmlFor="modelo">MODELO DE INTERÉS</label>
+                                                <label className='d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block' htmlFor="modelo">MODELO DE INTERÉS</label>
                                                 <select id="modelo" name="modelo" >
-                                                <option value="" selected="selected">- Seleccionar -</option>
-                                                <option value="Raize">Raize</option>
-                                                <option value="Yaris Sport">Yaris Sport</option>
-                                                <option value="Yaris Sedan">Yaris Sedán</option>                                               
-                                                <option value="Corolla Sedán">Corolla Sedán</option> 
-                                                <option value="Corolla Cross">Corolla Cross</option> 
-                                                <option value="C-HR Hibrido">C-HR Híbrido</option>
-                                                <option value="RAV 4">RAV 4</option>
-                                                <option value="Fortuner">Fortuner</option>
-                                                <option value="Land Cruiser Prado">Land Cruiser Prado</option>
-                                                <option value="Land Cruiser 200">Land Cruiser 300</option>
-                                                <option value="Rush">Rush</option>
-                                                <option value="Hilux 4X2 Cabina Doble">Hilux 4X2 Cabina Doble</option>
-                                                <option value="Hilux 4x4 Cabina Doble">Hilux 4x4 Cabina Doble</option>
-                                                <option value="Hilux Cabina Simple">Hilux Cabina Simple</option>
-                                                <option value="Hilux 4X4 Cabina Doble AT">Hilux 4X4 Cabina Doble AT</option>
+                                                    <option value="" selected="selected">- Seleccionar -</option>
+                                                    <option value="Raize">Raize</option>
+                                                    <option value="Yaris Sport">Yaris Sport</option>
+                                                    <option value="Yaris Sedan">Yaris Sedán</option>
+                                                    <option value="Corolla Sedán">Corolla Sedán</option>
+                                                    <option value="Corolla Cross">Corolla Cross</option>
+                                                    <option value="C-HR Hibrido">C-HR Híbrido</option>
+                                                    <option value="RAV 4">RAV 4</option>
+                                                    <option value="Fortuner">Fortuner</option>
+                                                    <option value="Land Cruiser Prado">Land Cruiser Prado</option>
+                                                    <option value="Land Cruiser 200">Land Cruiser 300</option>
+                                                    <option value="Rush">Rush</option>
+                                                    <option value="Hilux 4X2 Cabina Doble">Hilux 4X2 Cabina Doble</option>
+                                                    <option value="Hilux 4x4 Cabina Doble">Hilux 4x4 Cabina Doble</option>
+                                                    <option value="Hilux Cabina Simple">Hilux Cabina Simple</option>
+                                                    <option value="Hilux 4X4 Cabina Doble AT">Hilux 4X4 Cabina Doble AT</option>
                                                 </select>
-                                            </div>                                            
+                                            </div>
                                             <br></br>
                                             <div className="content-selects" >
-                                                <label className='d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block'  htmlFor="ciudad">CIUDAD Y CONCESIONARIO</label>
+                                                <label className='d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block' htmlFor="ciudad">CIUDAD Y CONCESIONARIO</label>
                                                 <select id="ciudad" name="ciudad" >
-                                                <option value="" selected="selected">- Seleccionar -</option>
+                                                    <option value="" selected="selected">- Seleccionar -</option>
                                                     <option value="Quito (Casabaca)">Quito (Casabaca)</option>
                                                     <option value="Santo Domingo (Casabaca)">Santo Domingo (Casabaca)</option>
                                                     <option value="El Coca (Casabaca)">El Coca (Casabaca)</option>
@@ -229,38 +217,38 @@ export default function Modalcotizacion() {
                                             <p className="text-experiencia-testdrive" >Experiencia Test Drive</p>
                                             <p id='mensaje-testdrive' className='ocultar-icono mensaje-formulario' >Datos enviados correctamente.</p>
                                         </div>
-                                        
+
                                     </div>
 
                                 </div>
 
-                            </div>   
+                            </div>
 
-                        </div>                      
+                        </div>
                     </div>
- 
 
 
-                   
+
+
                 </div>
 
             </div>
 
-            
+
 
         </>
-    );                  
+    );
 
 }
 
-function cerrarModal(){
+function cerrarModal() {
     // Get the modal
     var modal = document.getElementById("myModal");
     var span = document.getElementsByClassName("close")[0];
     modal.style.display = "none";
 }
 
-function enviarDatosCotizar(){
+function enviarDatosCotizar() {
     var elemento = document.getElementById("enviar-cotizar");
     var mensaje = document.getElementById("mensaje-cotizar");
 
@@ -268,7 +256,7 @@ function enviarDatosCotizar(){
     mensaje.classList.remove("ocultar-icono");
 }
 
-function enviarDatosTestDrive(){
+function enviarDatosTestDrive() {
     var elemento = document.getElementById("enviar-testdrive");
     var mensaje = document.getElementById("mensaje-testdrive");
 
@@ -276,7 +264,7 @@ function enviarDatosTestDrive(){
     mensaje.classList.remove("ocultar-icono");
 }
 
-function activarTestdriveMobile(){
+function activarTestdriveMobile() {
 
     var testdrive = document.getElementById("formulario-testdrive-contenedor");
     var cotizar_c = document.getElementById("formulario-cotizar-contenedor");
@@ -291,10 +279,10 @@ function activarTestdriveMobile(){
 
     cotizar_c.classList.add("ocultar");
     testdrive.classList.remove("ocultar");
-    
+
 }
 
-function activarCotizarMobile(){
+function activarCotizarMobile() {
 
     var testdrive = document.getElementById("formulario-testdrive-contenedor");
     var cotizar_c = document.getElementById("formulario-cotizar-contenedor");
@@ -310,10 +298,10 @@ function activarCotizarMobile(){
 
     cotizar_c.classList.remove("ocultar");
     testdrive.classList.add("ocultar");
-    
+
 }
 
-function activarTestdrive(){
+function activarTestdrive() {
 
     var testdrive = document.getElementById("formulario-testdrive-contenedor");
     var cotizar = document.getElementById("formulario-cotizar-contenedor");
@@ -338,15 +326,15 @@ function activarTestdrive(){
 
     iconotestdrive.style.background = "#E20B2A";
 
-    iconocotizar.style.background = "transparent"; 
+    iconocotizar.style.background = "transparent";
     iconocotizar.style.borderTop = "1px solid #817F7F";
     iconotestdrive.style.borderBottom = "0px solid #817F7F";
     textoiconocotizar.style.color = "#817F7F";
     textoiconotestdrive.style.color = "#FFFFFF";
-    
+
 }
 
-function activarCotizar(){
+function activarCotizar() {
 
     var testdrive = document.getElementById("formulario-testdrive-contenedor");
     var cotizar = document.getElementById("formulario-cotizar-contenedor");
@@ -367,11 +355,11 @@ function activarCotizar(){
     img_testdrive_cotizarblanco.classList.add("ocultar-icono");
 
     cotizar.classList.remove("ocultar");
-    testdrive.classList.add("ocultar");   
+    testdrive.classList.add("ocultar");
 
     iconocotizar.style.background = "#E20B2A";
- 
-    iconotestdrive.style.background = "transparent"; 
+
+    iconotestdrive.style.background = "transparent";
     iconotestdrive.style.borderBottom = "1px solid #817F7F";
     iconocotizar.style.borderTop = "0px solid #817F7F";
     textoiconocotizar.style.color = "#FFFFFF";
