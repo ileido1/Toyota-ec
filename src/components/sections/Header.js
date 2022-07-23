@@ -36,8 +36,8 @@ function Header() {
 													return (
 														<>
 
-															<Nav.Link key={i} href={c.url_menu_principal} >{c.nombre_menu_superior}</Nav.Link>
-															{i === 2 &&
+															<Nav.Link key={i} href={c.url_menu_principal} className={i === 1 || i === 3 ? "d-none" : ""} >{c.nombre_menu_superior}</Nav.Link>
+															{i === 3 &&
 																<a className="d-none d-lg-block" href="https://toyota-ec.247.com.ec/"><img src={logo} /></a>
 															}
 														</>
