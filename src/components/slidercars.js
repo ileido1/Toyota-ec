@@ -229,7 +229,7 @@ export default function Sliderscars() {
                                                     <h2>{c.texto_vehiculo_exonerado}</h2>
                                                 </div>
                                                 <div className="col-12 textoabajo centrar ">
-                                                    <NavLink to={c.url_todos_los_vehiculos_exonerado}> <p className="vertodos">{c.texto_url_vehiculo_exonerado} <i className="fa-solid fa-arrow-up-right-from-square"></i></p></NavLink>
+                                                    <a href={c.url_todos_los_vehiculos_exonerado}> <p className="vertodos">{c.texto_url_vehiculo_exonerado} <i className="fa-solid fa-arrow-up-right-from-square"></i></p></a>
                                                 </div>
 
 
@@ -258,9 +258,7 @@ export default function Sliderscars() {
 }
 
 function abrirModal() {
-    // Get the modal
     var modal = document.getElementById("myModal");
-    // Get the button that opens the modal
     var btn = document.getElementById("cotizar-vehiculo");
     modal.style.display = "block";
 }

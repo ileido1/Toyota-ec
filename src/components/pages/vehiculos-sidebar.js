@@ -80,15 +80,6 @@ function abrirModal(){
 
 }
 
-function abrirModalTestDrive(){
-
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementById("cotizar-vehiculo");
-    modal.style.display = "block";
-    activarTestdrive()
-
-}
-
 function activarTestdrive(){
 
     var testdrive = document.getElementById("formulario-testdrive-contenedor");
@@ -124,9 +115,9 @@ function activarTestdrive(){
 function soloHibridos(){
 
     let hibridos = document.getElementById("contenedor-autos-hibridos");
-    let exonerados1 = document.getElementById("contenedor-autos-discapacidad");
-    let exonerados2 = document.getElementById("contenedor-autos-diplomaticos");
-    let exonerados3 = document.getElementById("contenedor-autos-organismos");
+    let exonerados1 = document.getElementById("discapacidad");
+    let exonerados2 = document.getElementById("diplomaticos");
+    let exonerados3 = document.getElementById("ong");
     let camionetas = document.getElementById("contenedor-autos-camionetas");
     let suv = document.getElementById("contenedor-autos-suv");
     let automoviles = document.getElementById("contenedor-autos-automoviles");
@@ -146,9 +137,9 @@ return true;
 function soloExonerados(){
 
     let hibridos = document.getElementById("contenedor-autos-hibridos");
-    let exonerados1 = document.getElementById("contenedor-autos-discapacidad");
-    let exonerados2 = document.getElementById("contenedor-autos-diplomaticos");
-    let exonerados3 = document.getElementById("contenedor-autos-organismos");
+    let exonerados1 = document.getElementById("discapacidad");
+    let exonerados2 = document.getElementById("diplomaticos");
+    let exonerados3 = document.getElementById("ong");
     let camionetas = document.getElementById("contenedor-autos-camionetas");
     let suv = document.getElementById("contenedor-autos-suv");
     let automoviles = document.getElementById("contenedor-autos-automoviles");
@@ -168,9 +159,9 @@ return true;
 function todos(){
 
     let hibridos = document.getElementById("contenedor-autos-hibridos");
-    let exonerados1 = document.getElementById("contenedor-autos-discapacidad");
-    let exonerados2 = document.getElementById("contenedor-autos-diplomaticos");
-    let exonerados3 = document.getElementById("contenedor-autos-organismos");
+    let exonerados1 = document.getElementById("discapacidad");
+    let exonerados2 = document.getElementById("diplomaticos");
+    let exonerados3 = document.getElementById("ong");
     let camionetas = document.getElementById("contenedor-autos-camionetas");
     let suv = document.getElementById("contenedor-autos-suv");
     let automoviles = document.getElementById("contenedor-autos-automoviles");

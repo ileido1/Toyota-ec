@@ -1873,7 +1873,7 @@ ul.tabsnoticias>li {
 /* Pagina de campanias */
 
 .content-campanias {
-    padding: 0 20%;
+    padding: 40px 20%;
     background: #ededed;
     height: 100%;
     display: flex;

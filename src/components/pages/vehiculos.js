@@ -239,7 +239,7 @@ export default function Vehiculos() {
                     </div>
                     </div>
 
-                    <div id="contenedor-autos-discapacidad"  className="contenedor-secciones-autos contenedor-autos-exonerados"  >
+                    <div id="discapacidad"  className="contenedor-secciones-autos contenedor-autos-exonerados"  >
                     <div className="row" id="titulo-vehiculos" >
                         <div classNme="col-12 col-sm-12">
                             <p className="subtitulos-vehiculos">PERSONAS CON DISCAPACIDAD</p>
@@ -281,7 +281,7 @@ export default function Vehiculos() {
                     </div>
                     </div>
 
-                    <div id="contenedor-autos-diplomaticos"  className="contenedor-secciones-autos contenedor-autos-exonerados"  >
+                    <div id="diplomaticos"  className="contenedor-secciones-autos contenedor-autos-exonerados"  >
                     <div className="row" id="titulo-vehiculos" >
                         <div classNme="col-12 col-sm-12">
                             <p className="subtitulos-vehiculos">Diplomáticos</p>
@@ -323,7 +323,7 @@ export default function Vehiculos() {
                     </div>
                     </div>
 
-                    <div id="contenedor-autos-organismos"  className="contenedor-secciones-autos"  >
+                    <div id="ong"  className="contenedor-secciones-autos"  >
                     <div className="row" id="titulo-vehiculos" >
                         <div classNme="col-12 col-sm-12">
                             <p className="subtitulos-vehiculos">Organismos Internacionales - ONG'S</p>
@@ -383,21 +383,7 @@ export default function Vehiculos() {
 
 function soloHibridos(){
 
-    let hibridos = document.getElementById("contenedor-autos-hibridos");
-    let exonerados1 = document.getElementById("contenedor-autos-discapacidad");
-    let exonerados2 = document.getElementById("contenedor-autos-diplomaticos");
-    let exonerados3 = document.getElementById("contenedor-autos-organismos");
-    let camionetas = document.getElementById("contenedor-autos-camionetas");
-    let suv = document.getElementById("contenedor-autos-suv");
-    let automoviles = document.getElementById("contenedor-autos-automoviles");
 
-    hibridos.classList.remove("ocultar");
-    exonerados1.classList.add("ocultar");
-    exonerados2.classList.add("ocultar");
-    exonerados3.classList.add("ocultar");
-    suv.classList.add("ocultar");
-    camionetas.classList.add("ocultar");
-    automoviles.classList.add("ocultar");
 
 return true;
 
@@ -405,21 +391,7 @@ return true;
 
 function soloExonerados(){
 
-    let hibridos = document.getElementById("contenedor-autos-hibridos");
-    let exonerados1 = document.getElementById("contenedor-autos-discapacidad");
-    let exonerados2 = document.getElementById("contenedor-autos-diplomaticos");
-    let exonerados3 = document.getElementById("contenedor-autos-organismos");
-    let camionetas = document.getElementById("contenedor-autos-camionetas");
-    let suv = document.getElementById("contenedor-autos-suv");
-    let automoviles = document.getElementById("contenedor-autos-automoviles");
 
-    hibridos.classList.add("ocultar");
-    exonerados1.classList.remove("ocultar");
-    exonerados2.classList.remove("ocultar");
-    exonerados3.classList.remove("ocultar");
-    suv.classList.add("ocultar");
-    camionetas.classList.add("ocultar");
-    automoviles.classList.add("ocultar");
 
 return true;
 
@@ -427,21 +399,7 @@ return true;
 
 function todos(){
 
-    let hibridos = document.getElementById("contenedor-autos-hibridos");
-    let exonerados1 = document.getElementById("contenedor-autos-discapacidad");
-    let exonerados2 = document.getElementById("contenedor-autos-diplomaticos");
-    let exonerados3 = document.getElementById("contenedor-autos-organismos");
-    let camionetas = document.getElementById("contenedor-autos-camionetas");
-    let suv = document.getElementById("contenedor-autos-suv");
-    let automoviles = document.getElementById("contenedor-autos-automoviles");
 
-    hibridos.classList.remove("ocultar");
-    suv.classList.remove("ocultar");
-    exonerados1.classList.remove("ocultar");
-    exonerados2.classList.remove("ocultar");
-    exonerados3.classList.remove("ocultar");
-    camionetas.classList.remove("ocultar");
-    automoviles.classList.remove("ocultar");
 
 return true;
 

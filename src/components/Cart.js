@@ -8,7 +8,6 @@ import Cartcta from "./sections/cart/cart-cta"
 import Cartslider from "./sections/cart/cart-slider"
 import Cartmodelossimilares from "./sections/cart/cart-modelos-similares"
 
-
 const Cart = () => (
     <>
        
