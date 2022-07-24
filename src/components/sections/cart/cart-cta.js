@@ -2,7 +2,7 @@ import useFetch from "../../../hooks/useFetch";
 import { useLocation } from 'react-router-dom';
 import Modalcotizacion from "./cart-modal-cotizacion"
 
-let url_backend = 'https://backend-toyota.247.com.ec'
+let url_backend = 'https://www.toyota.com.ec/admin/'
 
 const Cartcta = () => {
 
@@ -73,7 +73,7 @@ const Cartcta = () => {
                         </div>
                     </div>
 
-                    <div className="col-12 col-sm-6 contenedor-cta-cotizar"  >
+                    <div className="col-12 col-sm-6 contenedor-cta-cotizar" onClick={abrirModal} >
                         <div className='contenedor-cta'>
                             <img src={icono_2_cta_vehiculo} alt="Icono cotizar" className='iconos-cta' style={{ background: hexadecimal_2_cta_vehiculo }} />
                             <p>{texto_2_cta_vehiculo}</p>

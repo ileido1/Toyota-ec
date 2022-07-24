@@ -3,7 +3,7 @@
 export default function Banner() {
     return (
 
-        <div className="container-fluid contenedor " style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/'})` }} >
+        <div className="container-fluid contenedor " style={{ backgroundImage: `url(${'https://www.toyota.com.ec/admin//'})` }} >
 
             <div className='row'>
                 <div className='col-12 centrar'>

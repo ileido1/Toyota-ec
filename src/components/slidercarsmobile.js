@@ -138,7 +138,7 @@ export default function Sliderscars() {
                 modules={[Navigation]}
                 loop={true}
 
-                style={{ backgroundImage: `url(${'https://backend-toyota.247.com.ec/' + background})` }}
+                style={{ backgroundImage: `url(${'https://www.toyota.com.ec/admin//' + background})` }}
                 className="mySwipercar mobile"
 
             >
@@ -155,7 +155,7 @@ export default function Sliderscars() {
 
                                             <div className="row" >
                                                 <div className="col-12 centrarbaseline">
-                                                    <a href={c.enlace_ver_vehiculos}><img src={'https://backend-toyota.247.com.ec/' + c.imagen_del_vehiculo} className="imagencarro2"></img></a>
+                                                    <a href={c.enlace_ver_vehiculos}><img src={'https://www.toyota.com.ec/admin//' + c.imagen_del_vehiculo} className="imagencarro2"></img></a>
                                                 </div>
 
                                                 <div className="col-12 infocarro2">
@@ -164,7 +164,7 @@ export default function Sliderscars() {
                                                     </p>
                                                     <div className="row infosupslider">
                                                         <div className="col-6">
-                                                            <img src={'https://backend-toyota.247.com.ec/' + c.logo_del_vehiculo} className="logoslider"></img>
+                                                            <img src={'https://www.toyota.com.ec/admin//' + c.logo_del_vehiculo} className="logoslider"></img>
                                                         </div>
                                                         <div className="col-6 textoabajo align-items ">
                                                             <NavLink to={c.enlace_todos_los_vehiculos}> <p className="vertodos">{c.texto_ver_vehiculos} <i className="fa-solid fa-arrow-up-right-from-square"></i></p></NavLink>
@@ -219,11 +219,11 @@ export default function Sliderscars() {
 
                                             <div className="row" >
                                                 <div className="col-12 centrarbaseline">
-                                                    <img src={'https://backend-toyota.247.com.ec/' + c.imagen_vehiculo_exonerado} className="imagencarro2"></img>
+                                                    <img src={'https://www.toyota.com.ec/admin//' + c.imagen_vehiculo_exonerado} className="imagencarro2"></img>
 
                                                 </div>
                                                 <div className="col-12 centrarrow">
-                                                    <img src={'https://backend-toyota.247.com.ec/' + c.icono_vehiculo_exonerado} className="logoexo"></img>
+                                                    <img src={'https://www.toyota.com.ec/admin//' + c.icono_vehiculo_exonerado} className="logoexo"></img>
                                                     <h2>{c.texto_vehiculo_exonerado}</h2>
                                                 </div>
                                                 <div className="col-12 textoabajo centrar ">

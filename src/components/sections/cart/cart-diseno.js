@@ -5,7 +5,7 @@ import Modalcotizacion from "./cart-modal-cotizacion"
 
 import documento from "../../../images/diseno/icono-documento.svg"
 
-let url_backend = 'https://backend-toyota.247.com.ec'
+let url_backend = 'https://www.toyota.com.ec/admin/'
 
 let logo_dc_vehiculo = ''
 let texto_dc_vechiculo = ''

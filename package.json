@@ -22,7 +22,7 @@
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://toyota-ec.247.com.ec/",
+  "homepage": "https://www.toyota.com.ec/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

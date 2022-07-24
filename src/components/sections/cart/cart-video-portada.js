@@ -1,7 +1,7 @@
 import useFetch from "../../../hooks/useFetch";
 import { useLocation } from 'react-router-dom';
 import React, { useEffect, useRef, useState } from "react";
-let url_backend = 'https://backend-toyota.247.com.ec'
+let url_backend = 'https://www.toyota.com.ec/admin/'
 
 function Video(){
     

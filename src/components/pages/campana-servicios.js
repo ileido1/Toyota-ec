@@ -19,7 +19,7 @@ import campanaghover from '../../images/campanias/camapana-global_.png';
 import React, { useEffect, useRef, useState } from "react";
 import Modaltakata from "./modal-takata"
 
-let url_backend = 'https://backend-toyota.247.com.ec'
+let url_backend = 'https://www.toyota.com.ec/admin/'
 
 export default function Campanaservicios() {
 
