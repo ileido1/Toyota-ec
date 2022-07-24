@@ -145,7 +145,7 @@ export default function Sliderscars() {
                 speed={1000}
                 modules={[Navigation]}
                 loop={true}
-                style={{ backgroundImage: `url(${'https://www.toyota.com.ec/admin//' + background})` }}
+                style={{ backgroundImage: `url(${'https://www.toyota.com.ec/' + background})` }}
                 className="mySwipercar destopk"
 
 
@@ -165,11 +165,11 @@ export default function Sliderscars() {
 
                                             <div className="row" >
                                                 <div className="col-12 centrarbaseline">
-                                                    <img src={'https://www.toyota.com.ec/admin//' + c.imagen_del_vehiculo} onClick={handleClick} data-url={c.enlace_ver_vehiculos} className="imagencarro"></img>
+                                                    <img src={'https://www.toyota.com.ec/' + c.imagen_del_vehiculo} onClick={handleClick} data-url={c.enlace_ver_vehiculos} className="imagencarro"></img>
 
                                                 </div>
                                                 <div className="col-12 logocarro">
-                                                    <img src={'https://www.toyota.com.ec/admin//' + c.logo_del_vehiculo} className="logocarroprev"></img>
+                                                    <img src={'https://www.toyota.com.ec/' + c.logo_del_vehiculo} className="logocarroprev"></img>
 
                                                 </div>
                                                 <div className="col-12 infocarro">
@@ -178,10 +178,10 @@ export default function Sliderscars() {
                                                     </p>
                                                     <div className="row infosupslider">
                                                         <div className="col-6">
-                                                            <img src={'https://www.toyota.com.ec/admin//' + c.logo_del_vehiculo} className="logoslider"></img>
+                                                            <img src={'https://www.toyota.com.ec/' + c.logo_del_vehiculo} className="logoslider"></img>
                                                         </div>
                                                         <div className="col-6 textoabajo align-items ">
-                                                            <NavLink to={c.enlace_todos_los_vehiculos}> <p className="vertodos">{c.texto_ver_vehiculos} <i className="fa-solid fa-arrow-up-right-from-square"></i></p></NavLink>
+                                                            <a href="/vehiculos"> <p className="vertodos">{c.texto_ver_vehiculos} <i className="fa-solid fa-arrow-up-right-from-square"></i></p></a>
                                                         </div>
                                                     </div>
                                                     <div className="row carddetallesslider">
@@ -232,11 +232,11 @@ export default function Sliderscars() {
 
                                             <div className="row" >
                                                 <div className="col-12 centrarbaseline">
-                                                    <img src={'https://www.toyota.com.ec/admin//' + c.imagen_vehiculo_exonerado} className="imagencarro"></img>
+                                                    <img src={'https://www.toyota.com.ec/' + c.imagen_vehiculo_exonerado} className="imagencarro"></img>
 
                                                 </div>
                                                 <div className="col-12 centrarrow">
-                                                    <img src={'https://www.toyota.com.ec/admin//' + c.icono_vehiculo_exonerado} className="logoexo"></img>
+                                                    <img src={'https://www.toyota.com.ec/' + c.icono_vehiculo_exonerado} className="logoexo"></img>
                                                     <h2>{c.texto_vehiculo_exonerado}</h2>
                                                 </div>
                                                 <div className="col-12 textoabajo centrar ">

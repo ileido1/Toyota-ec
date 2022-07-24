@@ -10,7 +10,7 @@ const variants = {
     visible: { opacity: 1 },
 }
 
-let url_backend = 'https://www.toyota.com.ec/admin/'
+let url_backend = 'https://www.toyota.com.ec/'
 
 export default function Vehiculos() {
     

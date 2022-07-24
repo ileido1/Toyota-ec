@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { get } from 'axios';
 
 import icono_cotizacion_blanco from '../../../images/cotizacion/icono-cotizar-small.png'
 import icono_cotizacion_gris from '../../../images/cotizacion/icono-cotizar-gris.png'
@@ -13,8 +13,56 @@ import cerrar_mobile from '../../../images/cotizacion/Icon ionic-ios-close-circl
 
 export default function Modalcotizacion({ carro }) {
 
+    let endpoint = 'https://www.toyota.com.ec/api/v2/cotizar/?nombres=';
+    const [proceso, setProceso] = useState('');
 
+    function handleClick(event) {
 
+        let nombres = document.getElementById("nombres").value;
+        let cedula = document.getElementById("cedula").value;
+        let celular = document.getElementById("celular").value;
+        let email = document.getElementById("email").value;
+        let modelo = document.getElementById("modelo").value;
+        let ciudad = document.getElementById("ciudad").value;
+        
+        const getproceso = async () => {
+            const resultexo = await get(`${'https://www.toyota.com.ec/api/v2/cotizar/?nombres=' + nombres + '&cedula=' + cedula + '&celular=' + celular + '&email=' + email + '&modelo=' + modelo + '&ciudad=' + ciudad }`);
+            const procesos = resultexo.data;
+            setProceso(procesos);
+        }
+
+        getproceso()
+        
+    }
+
+    setTimeout(
+        function() {
+
+            if(proceso.status==200){
+
+                var elemento = document.getElementById("enviar-cotizar");
+                var mensaje = document.getElementById("mensaje-cotizar");
+            
+                elemento.classList.add("ocultar-icono");
+                mensaje.innerHTML = proceso.msj; 
+                mensaje.classList.remove("ocultar-icono");
+
+        
+            }else if(proceso.status==404){
+                
+                var elemento = document.getElementById("enviar-cotizar");
+                var mensaje = document.getElementById("mensaje-cotizar");
+            
+                elemento.classList.add("ocultar-icono");
+                mensaje.innerHTML = proceso.msj; 
+                mensaje.classList.remove("ocultar-icono");
+
+            }
+           
+        }
+        .bind(this),
+        800
+    );
 
     return (
         <>
@@ -92,7 +140,7 @@ export default function Modalcotizacion({ carro }) {
                                             <br></br>
                                             <input type="text" name="cedula" id="cedula" placeholder="CÉDULA*" />
                                             <br></br>
-                                            <input type="text" name="cedula" id="cedula" placeholder="CELULAR*" />
+                                            <input type="text" name="celular" id="celular" placeholder="CELULAR*" />
                                             <br></br>
                                             <input type="text" name="email" id="email" placeholder="E-MAIL*" />
                                             <br></br>
@@ -150,7 +198,7 @@ export default function Modalcotizacion({ carro }) {
                                             </div>
 
                                             <br></br>
-                                            <p id='enviar-cotizar' className="btn formulario-boton-enviar btn-primary" onClick={enviarDatosCotizar} >ENVÍAR</p>
+                                            <p id='enviar-cotizar' className="btn formulario-boton-enviar btn-primary" onClick={handleClick} >ENVÍAR</p>
                                             <p id='mensaje-cotizar' className='ocultar-icono mensaje-formulario' >Datos enviados correctamente.</p>
                                         </div>
 

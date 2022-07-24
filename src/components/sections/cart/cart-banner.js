@@ -5,7 +5,7 @@ import Video from './cart-video-portada'
 import { motion } from "framer-motion"
 import { faCircleRight } from "@fortawesome/free-regular-svg-icons";
 
-let url_backend = 'https://www.toyota.com.ec/admin/'
+let url_backend = 'https://www.toyota.com.ec/'
 
 let logo_modelo_1 = ""
 let texto_modelo_1 = ""

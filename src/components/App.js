@@ -70,7 +70,7 @@ const App = () => {
 
                 footer.map(c => {
                   let urls = c.logos_footer.split(',');
-                  return < Footer key='1' logotoyota={'https://www.toyota.com.ec/admin//' + urls[0]} toyotago={'https://www.toyota.com.ec/admin//' + urls[1].trim()} toyotasiempre={'https://www.toyota.com.ec/admin//' + urls[2].trim()}
+                  return < Footer key='1' logotoyota={'https://www.toyota.com.ec/' + urls[0]} toyotago={'https://www.toyota.com.ec/' + urls[1].trim()} toyotasiempre={'https://www.toyota.com.ec/' + urls[2].trim()}
                   />
                 }
                 )

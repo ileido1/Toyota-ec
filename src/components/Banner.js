@@ -3,8 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from 'framer-motion'
 import Spinner from 'react-bootstrap/Spinner';
-
-
 import banner_portada from '../images/bg-portada5.jpg'
 
 // Import Swiper styles
@@ -78,7 +76,7 @@ export default function Bannerhome() {
                                                             }}
                                                             initial={{ x: 200}} transition={{ delay: 0.2, default: { duration: 0.7 } }}
                                                             className="col-6">
-                                                            <img src={'https://www.toyota.com.ec/admin//' + c.imagen_vehiculo} className="carrobanner"></img>
+                                                            <img src={'https://www.toyota.com.ec/' + c.imagen_vehiculo} className="carrobanner"></img>
                                                         </motion.div>
                                                         <motion.div className="col-6 m20"
                                                             variants={boxVariant}
@@ -87,7 +85,7 @@ export default function Bannerhome() {
                                                             transition={{ delay: 0.2, default: { duration: 0.7 } }}
                                                         >
                                                             <h1 className="Tbanner">{c.texto_alternativo}</h1>
-                                                            <img src={'https://www.toyota.com.ec/admin//' + c.logo_del_vehiculo}></img>
+                                                            <img src={'https://www.toyota.com.ec/' + c.logo_del_vehiculo}></img>
 
                                                         </motion.div>
                                                     </div>
@@ -107,12 +105,12 @@ export default function Bannerhome() {
 
                                                         >
                                                             <h1 className="Tbanner">{c.texto_alternativo}</h1>
-                                                            <img src={'https://www.toyota.com.ec/admin//' + c.logo_del_vehiculo} className="w-100"></img>
+                                                            <img src={'https://www.toyota.com.ec/' + c.logo_del_vehiculo} className="w-100"></img>
 
                                                         </div>
                                                         <div
                                                             className="col-12">
-                                                            <img src={'https://www.toyota.com.ec/admin//' + c.imagen_vehiculo} className="carrobanner"></img>
+                                                            <img src={'https://www.toyota.com.ec/' + c.imagen_vehiculo} className="carrobanner"></img>
                                                         </div>
 
                                                     </div>

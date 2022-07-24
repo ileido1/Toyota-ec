@@ -100,7 +100,7 @@ export default function Noticias() {
 
                                         items.slice(0, 3).map(c => (
                                             <div className=" col-sm-4 col-4">
-                                                <img src={'https://www.toyota.com.ec/admin//' + c.image_post} className=""></img>
+                                                <img src={'https://www.toyota.com.ec/' + c.image_post} className=""></img>
                                                 <h4 className="titulo_post">{c.titulo_post}</h4>
                                                 <p className="body_post">{c.body_post}</p>
                                             </div>
@@ -134,7 +134,7 @@ export default function Noticias() {
                                         <SwiperSlide>
 
                                             <div className=" col-12">
-                                                <img src={'https://www.toyota.com.ec/admin//' + c.image_post} className=""></img>
+                                                <img src={'https://www.toyota.com.ec/' + c.image_post} className=""></img>
                                                 <h4 className="titulo_post">{c.titulo_post}</h4>
                                                 <p className="body_post">{c.body_post}</p>
                                             </div>

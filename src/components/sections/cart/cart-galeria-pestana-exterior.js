@@ -14,7 +14,7 @@ import {
 import { Autoplay,Navigation } from "swiper";
 import { useLocation } from 'react-router-dom';
 
-let url_backend = 'https://www.toyota.com.ec/admin/'
+let url_backend = 'https://www.toyota.com.ec/'
 
 const Cartgaleriapestanaexterior = () => { 
 

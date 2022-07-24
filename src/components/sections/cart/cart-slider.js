@@ -89,7 +89,7 @@ export default function Cartslider() {
                               <SwiperSlide>
                               {({ isActive }) => (
                                 <>
-                                <div id="content-feature" className="container-fluid contenedor d-none d-sm-none d-md-block d-xl-block d-lg-block" style={{ backgroundImage: `url(${'https://www.toyota.com.ec/admin//' + c.fondo_caracteristicas + `` })`, paddingTop: `${padding_auto}` }}  >
+                                <div id="content-feature" className="container-fluid contenedor d-none d-sm-none d-md-block d-xl-block d-lg-block" style={{ backgroundImage: `url(${'https://www.toyota.com.ec/' + c.fondo_caracteristicas + `` })`, paddingTop: `${padding_auto}` }}  >
                                     <div className="mtopbanner">
                                         <div className="row" >
                                             <div className="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
@@ -101,7 +101,7 @@ export default function Cartslider() {
                                             </div>
                                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
 
-                                            { isActive && <motion.img src={'https://www.toyota.com.ec/admin//' + c.imagen_potencia} className="cart-imagen-caracteristica img-fluid" variants={variants} transition={{ delay: 1, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} ></motion.img> }
+                                            { isActive && <motion.img src={'https://www.toyota.com.ec/' + c.imagen_potencia} className="cart-imagen-caracteristica img-fluid" variants={variants} transition={{ delay: 1, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} ></motion.img> }
                                                 
                                             </div>
                                             <div className="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
@@ -118,13 +118,13 @@ export default function Cartslider() {
                                     </div>
                                 </div>  
 
-                            <div id="content-feature" className="container-fluid contenedor d-block d-sm-block d-md-none d-xl-none d-lg-none bg-features-mobile" style={{ backgroundImage: `url(${'https://www.toyota.com.ec/admin//' + c.fondo_caracteristicas + `` })` }}  >
+                            <div id="content-feature" className="container-fluid contenedor d-block d-sm-block d-md-none d-xl-none d-lg-none bg-features-mobile" style={{ backgroundImage: `url(${'https://www.toyota.com.ec/' + c.fondo_caracteristicas + `` })` }}  >
                                 <div className="mtopbanner">
                                     <div className="row" >
 
                                         <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
 
-                                        { isActive && <motion.img src={'https://www.toyota.com.ec/admin//' + c.imagen_potencia} className="cart-imagen-caracteristica img-fluid" variants={variants} transition={{ delay: 1, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} ></motion.img> }
+                                        { isActive && <motion.img src={'https://www.toyota.com.ec/' + c.imagen_potencia} className="cart-imagen-caracteristica img-fluid" variants={variants} transition={{ delay: 1, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} ></motion.img> }
                                             
                                         </div>
 
@@ -164,7 +164,7 @@ export default function Cartslider() {
 
                             {({ isActive }) => (
                                 <>    
-                                <div className="container-fluid contenedor swiper-slide d-none d-sm-none d-md-block d-xl-block d-lg-block" style={{ backgroundImage: `url(${'https://www.toyota.com.ec/admin//' + c.fondo_caracteristicas})`, paddingTop: `${padding_auto}` }} >
+                                <div className="container-fluid contenedor swiper-slide d-none d-sm-none d-md-block d-xl-block d-lg-block" style={{ backgroundImage: `url(${'https://www.toyota.com.ec/' + c.fondo_caracteristicas})`, paddingTop: `${padding_auto}` }} >
                                     <div className="mtopbanner">
                                         <div className="row" >
                                             <div className="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
@@ -175,7 +175,7 @@ export default function Cartslider() {
                                             </div>
                                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
 
-                                            { isActive && <motion.img src={'https://www.toyota.com.ec/admin//' + c.imagen_seguridad} className="cart-imagen-caracteristica  img-fluid" variants={variants} transition={{ delay: 1, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }}  ></motion.img> }
+                                            { isActive && <motion.img src={'https://www.toyota.com.ec/' + c.imagen_seguridad} className="cart-imagen-caracteristica  img-fluid" variants={variants} transition={{ delay: 1, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }}  ></motion.img> }
                                                 
                                             </div>
                                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
@@ -192,13 +192,13 @@ export default function Cartslider() {
                                     </div>
                                 </div> 
 
-                                <div id="content-feature" className="container-fluid contenedor d-block d-sm-block d-md-none d-xl-none d-lg-none bg-features-mobile" style={{ backgroundImage: `url(${'https://www.toyota.com.ec/admin//' + c.fondo_caracteristicas + `` })` }}  >
+                                <div id="content-feature" className="container-fluid contenedor d-block d-sm-block d-md-none d-xl-none d-lg-none bg-features-mobile" style={{ backgroundImage: `url(${'https://www.toyota.com.ec/' + c.fondo_caracteristicas + `` })` }}  >
                                 <div className="mtopbanner">
                                     <div className="row" >
 
                                         <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
 
-                                        { isActive && <motion.img src={'https://www.toyota.com.ec/admin//' + c.imagen_seguridad} className="cart-imagen-caracteristica img-fluid" variants={variants} transition={{ delay: 1, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} ></motion.img> }
+                                        { isActive && <motion.img src={'https://www.toyota.com.ec/' + c.imagen_seguridad} className="cart-imagen-caracteristica img-fluid" variants={variants} transition={{ delay: 1, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} ></motion.img> }
                                             
                                         </div>
 
@@ -238,7 +238,7 @@ export default function Cartslider() {
                             <SwiperSlide>
                             {({ isActive }) => (
                                 <>
-                                <div className="container-fluid contenedor swiper-slide d-none d-sm-none d-md-block d-xl-block d-lg-block" style={{ backgroundImage: `url(${'https://www.toyota.com.ec/admin//' + c.fondo_caracteristicas})`, paddingTop: `${padding_auto}` }} >
+                                <div className="container-fluid contenedor swiper-slide d-none d-sm-none d-md-block d-xl-block d-lg-block" style={{ backgroundImage: `url(${'https://www.toyota.com.ec/' + c.fondo_caracteristicas})`, paddingTop: `${padding_auto}` }} >
                                     <div className="mtopbanner">
                                         <div className="row" >
                                             <div className="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
@@ -249,7 +249,7 @@ export default function Cartslider() {
                                             </div>
                                             <div className="col-12 col-sm-12 col-md-3 col-lg-6 col-xl-6">
 
-                                            { isActive && <motion.img src={'https://www.toyota.com.ec/admin//' + c.imagen_equipamento_exterior} className="cart-imagen-caracteristica img-fluid" variants={variants} transition={{ delay: 1, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} ></motion.img> }
+                                            { isActive && <motion.img src={'https://www.toyota.com.ec/' + c.imagen_equipamento_exterior} className="cart-imagen-caracteristica img-fluid" variants={variants} transition={{ delay: 1, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} ></motion.img> }
                                                 
                                             </div>
                                             <div className="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
@@ -265,13 +265,13 @@ export default function Cartslider() {
                                         
                                     </div>
                                 </div>
-                                <div id="content-feature" className="container-fluid contenedor d-block d-sm-block d-md-none d-xl-none d-lg-none bg-features-mobile" style={{ backgroundImage: `url(${'https://www.toyota.com.ec/admin//' + c.fondo_caracteristicas + `` })` }}  >
+                                <div id="content-feature" className="container-fluid contenedor d-block d-sm-block d-md-none d-xl-none d-lg-none bg-features-mobile" style={{ backgroundImage: `url(${'https://www.toyota.com.ec/' + c.fondo_caracteristicas + `` })` }}  >
                                 <div className="mtopbanner">
                                     <div className="row" >
 
                                         <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
 
-                                        { isActive && <motion.img src={'https://www.toyota.com.ec/admin//' + c.imagen_equipamento_exterior} className="cart-imagen-caracteristica img-fluid" variants={variants} transition={{ delay: 1, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} ></motion.img> }
+                                        { isActive && <motion.img src={'https://www.toyota.com.ec/' + c.imagen_equipamento_exterior} className="cart-imagen-caracteristica img-fluid" variants={variants} transition={{ delay: 1, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} ></motion.img> }
                                             
                                         </div>
 
@@ -310,7 +310,7 @@ export default function Cartslider() {
                             <SwiperSlide>
                             {({ isActive }) => (
                                 <>
-                                <div className="container-fluid contenedor swiper-slide d-none d-sm-none d-md-block d-xl-block d-lg-block" style={{ backgroundImage: `url(${'https://www.toyota.com.ec/admin//' + fondo_hilux })`, paddingTop: `${padding_auto}` }} >
+                                <div className="container-fluid contenedor swiper-slide d-none d-sm-none d-md-block d-xl-block d-lg-block" style={{ backgroundImage: `url(${'https://www.toyota.com.ec/' + fondo_hilux })`, paddingTop: `${padding_auto}` }} >
                                     <div className="mtopbanner">
                                         <div className="row" >
                                             <div className="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
@@ -321,7 +321,7 @@ export default function Cartslider() {
                                             </div>
                                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
 
-                                            { isActive && <motion.img  style={{display:estilo_hilux }} src={'https://www.toyota.com.ec/admin//' + c.imagen_equipamento_exterior} className="cart-imagen-caracteristica img-fluid" variants={variants} transition={{ delay: 1, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} ></motion.img> }
+                                            { isActive && <motion.img  style={{display:estilo_hilux }} src={'https://www.toyota.com.ec/' + c.imagen_equipamento_exterior} className="cart-imagen-caracteristica img-fluid" variants={variants} transition={{ delay: 1, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} ></motion.img> }
                                                 
                                             </div>
                                             <div className="ccol-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
@@ -338,12 +338,12 @@ export default function Cartslider() {
                                         
                                     </div>
                                 </div> 
-                                <div id="content-feature" className="container-fluid contenedor d-block d-sm-block d-md-none d-xl-none d-lg-none bg-features-mobile" style={{ backgroundImage: `url(${'https://www.toyota.com.ec/admin//' + fondo_hilux + `` })` }}  >
+                                <div id="content-feature" className="container-fluid contenedor d-block d-sm-block d-md-none d-xl-none d-lg-none bg-features-mobile" style={{ backgroundImage: `url(${'https://www.toyota.com.ec/' + fondo_hilux + `` })` }}  >
                                 <div className="mtopbanner">
                                     <div className="row" >
 
                                         <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            { isActive && <motion.img  style={{display:estilo_hilux }} src={'https://www.toyota.com.ec/admin//' + c.imagen_equipamento_exterior} className="cart-imagen-caracteristica img-fluid" variants={variants} transition={{ delay: 1, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} ></motion.img> }    
+                                            { isActive && <motion.img  style={{display:estilo_hilux }} src={'https://www.toyota.com.ec/' + c.imagen_equipamento_exterior} className="cart-imagen-caracteristica img-fluid" variants={variants} transition={{ delay: 1, default: { duration: 1 }, }} initial={{ x: 50, opacity: 0 }}  animate={{ x: 0, opacity: 1 }} ></motion.img> }    
                                         </div>
 
                                     </div>

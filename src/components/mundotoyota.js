@@ -33,8 +33,8 @@ export default function MundoToyota() {
                                         }}
 
                                             className="col-4">
-                                            <img src={'https://www.toyota.com.ec/admin//' + c.imagen_square_box_1} className="mundotoyotaimgsupi"></img>
-                                            <img src={'https://www.toyota.com.ec/admin//' + c.imagen_square_box_3} className="carrobanner"></img>
+                                            <img src={'https://www.toyota.com.ec/' + c.imagen_square_box_1} className="mundotoyotaimgsupi"></img>
+                                            <img src={'https://www.toyota.com.ec/' + c.imagen_square_box_3} className="carrobanner"></img>
 
                                         </div>
                                         <div ref={ref} style={{
@@ -53,8 +53,8 @@ export default function MundoToyota() {
                                                 transition: "all 2.5s cubic-bezier(0.17, 0.85, 0.85, 1) 1s"
                                             }}
                                         >
-                                            <img src={'https://www.toyota.com.ec/admin//' + c.imagen_square_box_2} className="mundotoyotaimgsupd"></img>
-                                            <img src={'https://www.toyota.com.ec/admin//' + c.imagen_square_box_4} className="carrobanner"></img>
+                                            <img src={'https://www.toyota.com.ec/' + c.imagen_square_box_2} className="mundotoyotaimgsupd"></img>
+                                            <img src={'https://www.toyota.com.ec/' + c.imagen_square_box_4} className="carrobanner"></img>
 
                                         </div>
                                     </div>

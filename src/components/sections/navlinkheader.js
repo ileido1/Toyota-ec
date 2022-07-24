@@ -8,7 +8,7 @@ function Navlinkheader({ uri, title, iteracion }) {
                 <NavLink to={uri} className="nav-link" key={iteracion}>{title}</NavLink>
             </li>
             {iteracion === 2 &&
-                <a className="d-none d-lg-block" href="https://toyota-ec.247.com.ec/"><img src={logo} /></a>
+                <a className="d-none d-lg-block" href="https://www.toyota.com.ec/"><img src={logo} /></a>
             }
         </>
     );

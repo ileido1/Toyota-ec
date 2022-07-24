@@ -4,7 +4,7 @@ import { motion,  useInView} from "framer-motion";
 import useFetch from "../../../hooks/useFetch";
 import { useLocation } from 'react-router-dom';
 
-let url_backend = 'https://www.toyota.com.ec/admin/'
+let url_backend = 'https://www.toyota.com.ec/'
 
 const variants = {
     hidden: { opacity: 0.1 },

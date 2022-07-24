@@ -2,7 +2,7 @@ import useFetch from "../../../hooks/useFetch";
 import { useLocation } from 'react-router-dom';
 import Modalcotizacion from "./cart-modal-cotizacion"
 
-let url_backend = 'https://www.toyota.com.ec/admin/'
+let url_backend = 'https://www.toyota.com.ec/'
 
 const Cartcta = () => {
 
