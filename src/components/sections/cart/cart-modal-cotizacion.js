@@ -147,7 +147,7 @@ export default function Modalcotizacion({ carro }) {
                                             <div className="content-selects" >
                                                 <label className='d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block' htmlFor="modelo">MODELO DE INTERÉS</label>
                                                 <select id="modelo" name="modelo" >
-                                                    <option value="" selected="selected">{carro}</option>
+                                                    <option value={carro} selected="selected">{carro}</option>
                                                     <option value="Raize">Raize</option>
                                                     <option value="Yaris Sport">Yaris Sport</option>
                                                     <option value="Yaris Sedan">Yaris Sedán</option>
