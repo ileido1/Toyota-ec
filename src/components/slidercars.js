@@ -54,7 +54,7 @@ export default function Sliderscars() {
     function abrirModal(event) {
         var modal = document.getElementById("myModal");
         var btn = document.getElementById("cotizar-vehiculo");
-        var prueba = (event.currentTarget.getAttribute("data-url").replace('/', '').replace('-', ' '));
+        var prueba = (event.currentTarget.getAttribute("data-url").replace('https://www.toyota.com.ec/', '')).replace('/', '').replace('-', ' ');
 
         setCarro(prueba);
         modal.style.display = "block";
