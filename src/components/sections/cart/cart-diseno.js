@@ -97,7 +97,7 @@ const Cartdiseno = ({ path }) => {
     const [detalle, error_detalle] = useFetch(url_detalle);
 
     if (detalle) {
-
+        console.log(detalle);
         detalle.map(v => {
 
             logo_dc_vehiculo = url_backend + v.logo_dc_vehiculo
@@ -239,18 +239,18 @@ const Cartdiseno = ({ path }) => {
                                 <span className="circulo-color icono-color" data-ancho={ancho} data-nombre={nombre_color_6} data-auto={imagen_dc_vehiculo_color_6} data-color={hex_dc_vehiculo_color_6} style={{ background: hex_dc_vehiculo_color_6 }} onClick={CambiarAuto} ></span>
                             </div>
 
-
-
-                        </div>
-                        <div className="row pd50 fila-colores" >
-
                             {hex_dc_vehiculo_color_7 &&
                                 <div className="col-1">
                                     <span className="circulo-color icono-color" data-ancho={ancho} data-nombre={nombre_color_7} data-auto={imagen_dc_vehiculo_color_7} data-color={hex_dc_vehiculo_color_7} style={{ background: hex_dc_vehiculo_color_7 }} onClick={CambiarAuto} >
                                     </span>
                                 </div>
                             }
-
+                            {hex_dc_vehiculo_color_8 &&
+                                <div className="col-1">
+                                    <span className="circulo-color icono-color" data-ancho={ancho} data-nombre={nombre_color_8} data-auto={imagen_dc_vehiculo_color_8} data-color={hex_dc_vehiculo_color_8} style={{ background: hex_dc_vehiculo_color_8 }} onClick={CambiarAuto} >
+                                    </span>
+                                </div>
+                            }
                             {hex_dc_vehiculo_color_9 &&
                                 <div className="col-1">
                                     <span className="circulo-color icono-color" data-ancho={ancho} data-nombre={nombre_color_9} data-auto={imagen_dc_vehiculo_color_9} data-color={hex_dc_vehiculo_color_9} style={{ background: hex_dc_vehiculo_color_9 }} onClick={CambiarAuto} >
@@ -265,7 +265,9 @@ const Cartdiseno = ({ path }) => {
                                 </div>
                             }
 
+
                         </div>
+
                         <div className="row d-block d-sm-block d-md-none d-xl-none d-lg-none" >
                             <div className="col-12 content-descarga">
                                 <img src={documento} className="icono-documento-descarga" alt="Boton descarga PDF" /> <span className="text-descargar-catalogo" ><a href={url_pdf_dc_vehiculo} target="_blank" className="cart-link" >{texto_pdf_dc_vehiculo}</a> </span>
