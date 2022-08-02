@@ -92,6 +92,7 @@
     height: 56px;
     display: flex;
     align-items: center;
+    z-index: 1000;
 }
 
 #menu-producto ul>li {
@@ -131,8 +132,10 @@
 }
 
 .content_features {
-    margin-top: -380px;
-    padding-left: 60px;
+    margin-top: -360px;
+    padding-left: 20px;
+    z-index: 999;
+    position: relative;
 }
 
 .img-logo-feature {
@@ -144,7 +147,7 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
-    width: 60%;
+    width: 43px;
 }
 
 .img-icono-feature-frenos {
@@ -152,7 +155,7 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
-    width: 60%;
+    width: 43px;
 }
 
 .img-icono-feature-motor {
@@ -160,7 +163,7 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
-    width: 60%;
+    width: 43px;
 }
 
 .titulo-feature {
@@ -183,7 +186,7 @@
 .subtext-feature {
     font-family: 'Radikal-Light';
     color: #ffffff;
-    font-size: 12px;
+    font-size: 11px;
     text-align: center;
     margin-top: -10px;
 }
@@ -193,6 +196,7 @@
     color: #fff;
     display: inline-block;
     padding-left: 10px;
+    font-size: 14px;
 }
 
 #menu-producto {
@@ -940,7 +944,6 @@ a#btn-cotizar {
     margin-top: 60%;
 }
 
-
 .form-check-input {
     position: absolute;
     margin-top: .4rem;
@@ -965,7 +968,7 @@ a#btn-cotizar {
 
 .cart-titulo-caracteristicas {
     font-family: 'Radikal-Bold';
-    font-size: 64px;
+    font-size: 48px;
     text-transform: uppercase;
     font-weight: bold;
     line-height: 60px;
@@ -2221,7 +2224,42 @@ ul.tabsnoticias>li {
     padding: 40px 0px;
 }
 
+.contenedor-terminos-condiciones{
+    padding: 80px 10%;
+}
+
+.contenedor-terminos-condiciones{
+   font-size: 18px;
+}
+
+.titulo-terminos{
+    font-size: 20px;
+    color: #cc2132;
+    margin-bottom: 40px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.link-terminos{
+    text-decoration: none;
+    color: #ffffff !important;
+    font-size: 16px;
+}
+
+.link-terminos:hover{
+    text-decoration: underline !important
+}
+
+.fila-colores .col-1{
+    margin-top: 10px;
+}
+
 @media only screen and (max-width: 600px) {
+
+    #imagen-auto-diseno2{
+        padding-top: 20px;
+    }
 
     .content-campanias{
         padding: 30px;

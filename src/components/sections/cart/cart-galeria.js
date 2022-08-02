@@ -14,6 +14,8 @@ const Cartgaleria = () => {
     let url_detalle = ''
     let titulo = ''
     let video = ''
+    let pestana_video = ''
+    let pestana_foto = ''
     const location = useLocation()
     const videoRef = useRef()
 
@@ -36,6 +38,15 @@ const Cartgaleria = () => {
 
         titulo = detalle_respuesta[0]['titulo_galeria_vehiculo']
         video = detalle_respuesta[0]['video_galeria_vehiculo'];
+
+        if(video === ''){
+            pestana_video = 'none'
+            pestana_foto = 'block'
+
+        }else{
+            pestana_video = 'block'
+            pestana_foto = 'none'
+        }
     }
 
     return (
@@ -54,27 +65,27 @@ const Cartgaleria = () => {
                         <ul id="menu-galeria" >
                             {video &&
                                 <li> <span id="automovil-video" onClick={videoGaleria} >VIDEO</span> </li>}
-                            <li> <span id="automovil-exterior cp " className="cp galeria-menu-padding" onClick={exteriorGaleria} >EXTERIOR</span> </li>
-                            <li> <span id="automovil-interior" className="cp galeria-menu-padding" onClick={interiorGaleria} >INTERIOR</span> </li>
+                                <li> <span id="automovil-exterior cp " className="cp galeria-menu-padding" onClick={exteriorGaleria} >EXTERIOR</span> </li>
+                                <li> <span id="automovil-interior" className="cp galeria-menu-padding" onClick={interiorGaleria} >INTERIOR</span> </li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="row">
 
-                    <div id="content-automovil-video" className="col-12 col-sm-12 content-automovil-video pestaba-cuerpo-galeria mostrar sinpadding" >
+                    <div id="content-automovil-video" className={video ? 'col-12 col-sm-12 content-automovil-video pestaba-cuerpo-galeria sinpadding mostrar' : 'col-12 col-sm-12 content-automovil-video pestaba-cuerpo-galeria sinpadding ocultar '}  >
 
                         <Cartgaleriapestanavideo />
 
                     </div>
 
-                    <div id="content-automovil-exterior" className="col-12 col-sm-12 content-automovil-exterior sinpadding ocultar"  >
+                    <div id="content-automovil-exterior" className={video ? 'col-12 col-sm-12 content-automovil-exterior sinpadding ocultar' : 'col-12 col-sm-12 content-automovil-exterior sinpadding'}  >
 
                         <Cartgaleriapestanaexterior />
 
                     </div>
 
-                    <div id="content-automovil-interior" className="col-12 col-sm-12 content-automovil-interior sinpadding ocultar" >
+                    <div id="content-automovil-interior" className="col-12 col-sm-12 content-automovil-interior sinpadding ocultar"   >
 
                         <Cartgaleriapestanaeinterior />
 
@@ -101,6 +112,10 @@ function videoGaleria() {
     element_exterior.classList.add("ocultar");
     element_interior.classList.add("ocultar");
 
+    element_video.style.display("block");
+    element_exterior.style.display("none");
+    element_interior.style.display("none");
+
 }
 
 function exteriorGaleria() {
@@ -113,6 +128,10 @@ function exteriorGaleria() {
     element_exterior.classList.remove("ocultar");
     element_interior.classList.add("ocultar");
 
+    element_video.style.display("none");
+    element_exterior.style.display("block");
+    element_interior.style.display("none");
+
 }
 
 function interiorGaleria() {
@@ -124,6 +143,10 @@ function interiorGaleria() {
     element_video.classList.add("ocultar");
     element_exterior.classList.add("ocultar");
     element_interior.classList.remove("ocultar");
+
+    element_video.style.display("none");
+    element_exterior.style.display("none");
+    element_interior.style.display("block");
 
 }
 

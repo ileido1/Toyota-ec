@@ -684,6 +684,14 @@ function nombreColor(color) {
         nombre_color = "Plomo"
     }
 
+    if(color == "#243852"){
+        nombre_color= "Azul"
+    }
+
+    if(color == "#f0f1f1"){
+        nombre_color = "Blanco Perla"
+    }
+
     return nombre_color
 
 }

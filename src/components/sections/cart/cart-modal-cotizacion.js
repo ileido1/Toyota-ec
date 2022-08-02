@@ -194,7 +194,7 @@ export default function Modalcotizacion({ carro }) {
                                             <br></br>
                                             <div className="content-checkbox" >
                                                 <input type="checkbox" name="terminos" id="terminos" />
-                                                <label htmlFor="terminos">Términos y condiciones <img src={link_externo} /> </label>
+                                                <label htmlFor="terminos"><a href="/terminos-y-condiciones" target="_blank" className='link-terminos' >Términos y condiciones <img src={link_externo}/></a>   </label>
                                             </div>
 
                                             <br></br>

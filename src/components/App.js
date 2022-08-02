@@ -7,6 +7,7 @@ import Vehiculos from './pages/vehiculos';
 import Footer from './sections/Footer';
 import Home from './pages/home'
 import Posventa from './pages/post-venta'
+import Terminosycondiciones from './pages/terminos'
 
 import {
   BrowserRouter,
@@ -19,6 +20,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from 'react';
 import LoadingSpinner from './sections/loading';
 import Campanaservicios from './pages/campana-servicios';
+import Terminos from './pages/campana-servicios';
 
 const App = () => {
   let peticion = "global/toyota-info"
@@ -61,6 +63,7 @@ const App = () => {
           <Route path="/corolla-hybrid" element={<Cart />} />
           <Route path="/vehiculos" element={<Vehiculos />} />
           <Route path="/post-venta" element={<Campanaservicios />} />
+          <Route path="/terminos-y-condiciones" element={<Terminosycondiciones />} />
           <Route path="/" element={<Home />} />
         </Routes>
         {
