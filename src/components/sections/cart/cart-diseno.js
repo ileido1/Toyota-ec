@@ -692,6 +692,10 @@ function nombreColor(color) {
         nombre_color = "Blanco Perla"
     }
 
+    if(color == "#DCE0DE"){
+        nombre_color = "Blanco Perla"
+    }
+    
     return nombre_color
 
 }

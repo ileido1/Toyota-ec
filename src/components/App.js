@@ -1,4 +1,3 @@
-
 import '../css/style.css';
 import '../css/all.css'
 import Header from './sections/Header'
@@ -27,6 +26,7 @@ const App = () => {
 
   const [footer, error] = useFetch(peticion);
   const [loading, setLoading] = useState(true);
+  
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -39,7 +39,6 @@ const App = () => {
         <Header></Header>
         <Routes>
           <Route path="/post-venta-en-stand-by" element={<Posventa />} />
-
           <Route path="/raize" element={<Cart />} />
           <Route path="/rav4" element={<Cart />} />
           <Route path="/hilux" element={<Cart />} />

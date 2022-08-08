@@ -3,7 +3,9 @@ import { useLocation } from 'react-router-dom';
 import { motion } from "framer-motion"
 import React, { useEffect, useRef, useState } from "react";
 import Vehiculossidebar from "./vehiculos-sidebar";
-import Modalcotizacion from "../sections/cart/cart-modal-cotizacion"
+import Modalcotizacion from "../sections/cart/cart-modal-cotizacion";
+
+const useMountEffect = fun => useEffect(fun, []);
 
 const variants = {
     hidden: { opacity: 0.1 },
@@ -24,6 +26,36 @@ export default function Vehiculos() {
 
     let url_api = 'v1/vehicles'
     const [respuesta, error] = useFetch(url_api);
+
+    const location = useLocation()
+
+    console.log(location)
+
+    const myRef = useRef(null);
+    const executeScroll = () => myRef.current.scrollIntoView(); // run this function from an event handler or pass it to useEffect to execute scroll
+    useMountEffect(executeScroll); // Scroll on mount
+
+    const myRef2 = useRef(null);
+    const executeScroll2 = () => myRef2.current.scrollIntoView(); // run this function from an event handler or pass it to useEffect to execute scroll
+    useMountEffect(executeScroll2); // Scroll on mount
+
+    const myRef3 = useRef(null);
+    const executeScroll3 = () => myRef3.current.scrollIntoView(); // run this function from an event handler or pass it to useEffect to execute scroll
+    useMountEffect(executeScroll3); // Scroll on mount
+
+    if(location.hash=="#discapacidad"){
+        setTimeout(() => {
+            executeScroll();
+          }, 2500);      
+    }else if(location.hash=="#diplomaticos"){
+        setTimeout(() => {
+            executeScroll2();
+          }, 2500); 
+    }else if(location.hash=="#ong"){
+        setTimeout(() => {
+            executeScroll3();
+          }, 2500); 
+    }
 
     if(respuesta){
                             
@@ -242,7 +274,7 @@ export default function Vehiculos() {
                     <div id="discapacidad"  className="contenedor-secciones-autos contenedor-autos-exonerados"  >
                     <div className="row" id="titulo-vehiculos" >
                         <div classNme="col-12 col-sm-12">
-                            <p className="subtitulos-vehiculos">PERSONAS CON DISCAPACIDAD</p>
+                            <p ref={myRef} className="subtitulos-vehiculos">PERSONAS CON DISCAPACIDAD</p>
                         </div> 
                     </div>
 
@@ -284,7 +316,7 @@ export default function Vehiculos() {
                     <div id="diplomaticos"  className="contenedor-secciones-autos contenedor-autos-exonerados"  >
                     <div className="row" id="titulo-vehiculos" >
                         <div classNme="col-12 col-sm-12">
-                            <p className="subtitulos-vehiculos">Diplomáticos</p>
+                            <p ref={myRef2} className="subtitulos-vehiculos">Diplomáticos</p>
                         </div> 
                     </div>
 
@@ -326,7 +358,7 @@ export default function Vehiculos() {
                     <div id="ong"  className="contenedor-secciones-autos"  >
                     <div className="row" id="titulo-vehiculos" >
                         <div classNme="col-12 col-sm-12">
-                            <p className="subtitulos-vehiculos">Organismos Internacionales - ONG'S</p>
+                            <p ref={myRef3} className="subtitulos-vehiculos">Organismos Internacionales - ONG'S</p>
                         </div> 
                     </div>
 
@@ -383,7 +415,21 @@ export default function Vehiculos() {
 
 function soloHibridos(){
 
+    let hibridos = document.getElementById("contenedor-autos-hibridos");
+    let exonerados1 = document.getElementById("discapacidad");
+    let exonerados2 = document.getElementById("diplomaticos");
+    let exonerados3 = document.getElementById("ong");
+    let camionetas = document.getElementById("contenedor-autos-camionetas");
+    let suv = document.getElementById("contenedor-autos-suv");
+    let automoviles = document.getElementById("contenedor-autos-automoviles");
 
+    hibridos.classList.remove("ocultar");
+    exonerados1.classList.add("ocultar");
+    exonerados2.classList.add("ocultar");
+    exonerados3.classList.add("ocultar");
+    suv.classList.add("ocultar");
+    camionetas.classList.add("ocultar");
+    automoviles.classList.add("ocultar");
 
 return true;
 
@@ -391,7 +437,21 @@ return true;
 
 function soloExonerados(){
 
+    let hibridos = document.getElementById("contenedor-autos-hibridos");
+    let exonerados1 = document.getElementById("discapacidad");
+    let exonerados2 = document.getElementById("diplomaticos");
+    let exonerados3 = document.getElementById("ong");
+    let camionetas = document.getElementById("contenedor-autos-camionetas");
+    let suv = document.getElementById("contenedor-autos-suv");
+    let automoviles = document.getElementById("contenedor-autos-automoviles");
 
+    hibridos.classList.add("ocultar");
+    exonerados1.classList.remove("ocultar");
+    exonerados2.classList.remove("ocultar");
+    exonerados3.classList.remove("ocultar");
+    suv.classList.add("ocultar");
+    camionetas.classList.add("ocultar");
+    automoviles.classList.add("ocultar");
 
 return true;
 
@@ -399,8 +459,23 @@ return true;
 
 function todos(){
 
+    let hibridos = document.getElementById("contenedor-autos-hibridos");
+    let exonerados1 = document.getElementById("discapacidad");
+    let exonerados2 = document.getElementById("diplomaticos");
+    let exonerados3 = document.getElementById("ong");
+    let camionetas = document.getElementById("contenedor-autos-camionetas");
+    let suv = document.getElementById("contenedor-autos-suv");
+    let automoviles = document.getElementById("contenedor-autos-automoviles");
 
+    hibridos.classList.remove("ocultar");
+    suv.classList.remove("ocultar");
+    exonerados1.classList.remove("ocultar");
+    exonerados2.classList.remove("ocultar");
+    exonerados3.classList.remove("ocultar");
+    camionetas.classList.remove("ocultar");
+    automoviles.classList.remove("ocultar");
 
 return true;
 
 }
+

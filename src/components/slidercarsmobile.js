@@ -219,7 +219,7 @@ export default function Sliderscars() {
 
                                             <div className="row" >
                                                 <div className="col-12 centrarbaseline">
-                                                    <img src={'https://www.toyota.com.ec/' + c.imagen_vehiculo_exonerado} className="imagencarro2"></img>
+                                                <a href={c.url_todos_los_vehiculos_exonerado}> <img src={'https://www.toyota.com.ec/' + c.imagen_vehiculo_exonerado} className="imagencarro2"></img> </a>
 
                                                 </div>
                                                 <div className="col-12 centrarrow">
