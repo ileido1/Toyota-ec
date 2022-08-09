@@ -146,24 +146,32 @@ export default function Modalcotizacion({ carro }) {
                                             <br></br>
                                             <div className="content-selects" >
                                                 <label className='d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block' htmlFor="modelo">MODELO DE INTERÉS</label>
+                                      { carro ?          
                                                 <select id="modelo" name="modelo" >
                                                     <option value={carro} selected="selected">{carro}</option>
-                                                    <option value="Raize">Raize</option>
-                                                    <option value="Yaris Sport">Yaris Sport</option>
-                                                    <option value="Yaris Sedan">Yaris Sedán</option>
-                                                    <option value="Corolla Sedán">Corolla Sedán</option>
-                                                    <option value="Corolla Cross">Corolla Cross</option>
-                                                    <option value="C-HR Hibrido">C-HR Híbrido</option>
-                                                    <option value="RAV 4">RAV 4</option>
-                                                    <option value="Fortuner">Fortuner</option>
-                                                    <option value="Land Cruiser Prado">Land Cruiser Prado</option>
-                                                    <option value="Land Cruiser 200">Land Cruiser 300</option>
-                                                    <option value="Rush">Rush</option>
-                                                    <option value="Hilux 4X2 Cabina Doble">Hilux 4X2 Cabina Doble</option>
-                                                    <option value="Hilux 4x4 Cabina Doble">Hilux 4x4 Cabina Doble</option>
-                                                    <option value="Hilux Cabina Simple">Hilux Cabina Simple</option>
-                                                    <option value="Hilux 4X4 Cabina Doble AT">Hilux 4X4 Cabina Doble AT</option>
                                                 </select>
+                                     : 
+                                     
+                                                <select id="modelo" name="modelo" >
+                                                <option value="" >-- Seleccione --</option>
+                                                <option value="Raize">Raize</option>
+                                                <option value="Yaris Sport">Yaris Sport</option>
+                                                <option value="Yaris Sedan">Yaris Sedán</option>
+                                                <option value="Corolla Sedán">Corolla Sedán</option>
+                                                <option value="Corolla Cross">Corolla Cross</option>
+                                                <option value="C-HR Hibrido">C-HR Híbrido</option>
+                                                <option value="RAV 4">RAV 4</option>
+                                                <option value="Fortuner">Fortuner</option>
+                                                <option value="Land Cruiser Prado">Land Cruiser Prado</option>
+                                                <option value="Land Cruiser 200">Land Cruiser 300</option>
+                                                <option value="Rush">Rush</option>
+                                                <option value="Hilux 4X2 Cabina Doble">Hilux 4X2 Cabina Doble</option>
+                                                <option value="Hilux 4x4 Cabina Doble">Hilux 4x4 Cabina Doble</option>
+                                                <option value="Hilux Cabina Simple">Hilux Cabina Simple</option>
+                                                <option value="Hilux 4X4 Cabina Doble AT">Hilux 4X4 Cabina Doble AT</option>
+                                            </select>
+                                     
+                                     }                       
                                             </div>
                                             <br></br>
                                             <div className="content-selects" >
