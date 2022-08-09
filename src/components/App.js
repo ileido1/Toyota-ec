@@ -26,7 +26,7 @@ const App = () => {
 
   const [footer, error] = useFetch(peticion);
   const [loading, setLoading] = useState(true);
-  
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);

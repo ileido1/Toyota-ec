@@ -178,7 +178,7 @@ export default function Sliderscars() {
                                                     </p>
                                                     <div className="row infosupslider">
                                                         <div className="col-6">
-                                                            <img src={'https://www.toyota.com.ec/' + c.logo_del_vehiculo} className="logoslider"></img>
+                                                            <a href={c.enlace_ver_vehiculos}><img src={'https://www.toyota.com.ec/' + c.logo_del_vehiculo} className="logoslider"></img></a>
                                                         </div>
                                                         <div className="col-6 textoabajo align-items ">
                                                             <a href="/vehiculos"> <p className="vertodos">{c.texto_ver_vehiculos} <i className="fa-solid fa-arrow-up-right-from-square"></i></p></a>

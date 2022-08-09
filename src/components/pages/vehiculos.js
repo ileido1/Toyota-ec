@@ -15,7 +15,7 @@ const variants = {
 let url_backend = 'https://www.toyota.com.ec/'
 
 export default function Vehiculos() {
-    
+
     let array_automoviles = []
     let array_suv = []
     let array_camionetas = []
@@ -42,378 +42,385 @@ export default function Vehiculos() {
     const myRef3 = useRef(null);
     const executeScroll3 = () => myRef3.current.scrollIntoView(); // run this function from an event handler or pass it to useEffect to execute scroll
     useMountEffect(executeScroll3); // Scroll on mount
+    const myRef4 = useRef(null);
+    const executeScroll4 = () => myRef4.current.scrollIntoView(); // run this function from an event handler or pass it to useEffect to execute scroll
+    useMountEffect(executeScroll4); // Scroll on mount
 
-    if(location.hash=="#discapacidad"){
+    if (location.hash == "#discapacidad") {
         setTimeout(() => {
             executeScroll();
-          }, 2500);      
-    }else if(location.hash=="#diplomaticos"){
+        }, 0);
+    } else if (location.hash == "#diplomaticos") {
         setTimeout(() => {
             executeScroll2();
-          }, 2500); 
-    }else if(location.hash=="#ong"){
+        }, 0);
+    } else if (location.hash == "#ong") {
         setTimeout(() => {
             executeScroll3();
-          }, 2500); 
+        }, 0);
+    } else if (location.hash == "") {
+        setTimeout(() => {
+            executeScroll4();
+        }, 0);
     }
 
-    if(respuesta){
-                            
-        respuesta.map(d => { 
-                
-                if ( (d.type_vehicle) == "Automóviles" ){
-                    array_automoviles.push(d)
-                }
+    if (respuesta) {
 
-                if ( (d.type_vehicle) == "SUV" ){
-                    array_suv.push(d)
-                }
+        respuesta.map(d => {
 
-                if ( (d.type_vehicle) == "Camionetas" ){
-                    array_camionetas.push(d)
-                }
-
-                if ( (d.type_vehicle) == "Híbridos" ){
-                    array_hibridos.push(d)
-                }
-
-                if ( (d.type_vehicle) == "Personas con Discapacidad" ){
-                    array_discapacidad.push(d)
-                }
-
-                if ( (d.type_vehicle) == "Diplomáticos" ){
-                    array_diplomaticos.push(d)
-                }
-
-                if ( (d.type_vehicle) == "Organismos Internacionales - ONG&#039;S" ){
-                    array_organismos.push(d)
-                }
-
-                
-                                    
+            if ((d.type_vehicle) == "Automóviles") {
+                array_automoviles.push(d)
             }
+
+            if ((d.type_vehicle) == "SUV") {
+                array_suv.push(d)
+            }
+
+            if ((d.type_vehicle) == "Camionetas") {
+                array_camionetas.push(d)
+            }
+
+            if ((d.type_vehicle) == "Híbridos") {
+                array_hibridos.push(d)
+            }
+
+            if ((d.type_vehicle) == "Personas con Discapacidad") {
+                array_discapacidad.push(d)
+            }
+
+            if ((d.type_vehicle) == "Diplomáticos") {
+                array_diplomaticos.push(d)
+            }
+
+            if ((d.type_vehicle) == "Organismos Internacionales - ONG&#039;S") {
+                array_organismos.push(d)
+            }
+
+
+
+        }
         )
-        
+
     }
-    
+
     return (
         <>
-        <div id="pagina-vehiculos" className="container-fluid" >
-        
-              <div className="row fila-vehiculos" >
-                <div className="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 sinpadding order-1 order-sm-0">
-                <div id="contenedor-autos-automoviles" className="contenedor-secciones-autos" >
-                    <div className="row" id="titulo-vehiculos" >
-                        <div classNme="col-12 col-sm-12">
-                            <p className="subtitulos-vehiculos">Automóviles</p>
-                        </div> 
-                    </div>
+            <div id="pagina-vehiculos" ref={myRef4} className="container-fluid" >
 
-                    <div className="row" >              
-              {
-                array_automoviles.length > 0 ? (
-                    <>
-                                 
+                <div className="row fila-vehiculos" >
+                    <div className="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 sinpadding order-1 order-sm-0">
+                        <div id="contenedor-autos-automoviles" className="contenedor-secciones-autos" >
+                            <div className="row" id="titulo-vehiculos" >
+                                <div classNme="col-12 col-sm-12">
+                                    <p className="subtitulos-vehiculos">Automóviles</p>
+                                </div>
+                            </div>
 
-                        {                           
-                        array_automoviles.map(c => (
-                        
-                    <>
-                    
-                        <div className="col-6 col-sm-6 col-md-4 col-md-4" >
-                           <p className="titulo-autos-similares" >{c.name_vehicle}</p>
-                           <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend+c.image_vehicle} alt={c.name_vehicle} /></a>
-                           <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
-                           
+                            <div className="row" >
+                                {
+                                    array_automoviles.length > 0 ? (
+                                        <>
+
+
+                                            {
+                                                array_automoviles.map(c => (
+
+                                                    <>
+
+                                                        <div className="col-6 col-sm-6 col-md-4 col-md-4" >
+                                                            <p className="titulo-autos-similares" >{c.name_vehicle}</p>
+                                                            <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend + c.image_vehicle} alt={c.name_vehicle} /></a>
+                                                            <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
+
+                                                        </div>
+
+                                                    </>
+                                                )
+
+                                                )
+                                            }
+
+                                        </>
+                                    ) : (
+
+                                        <span>Cargando...</span>
+
+                                    )
+
+                                }       </div>
                         </div>
 
-                    </>
-                            )
 
-                            )
-                        }
-                                                
-                    </>
-                ) : (
+                        <div id="contenedor-autos-suv" className="contenedor-secciones-autos"  >
+                            <div className="row" id="titulo-vehiculos" >
+                                <div classNme="col-12 col-sm-12">
+                                    <p className="subtitulos-vehiculos">Suv</p>
+                                </div>
+                            </div>
 
-                    <span>Cargando...</span>
-
-                )
-                
-            }       </div>
-                    </div>
+                            <div className="row" >
+                                {
+                                    array_suv.length > 0 ? (
+                                        <>
 
 
-                    <div id="contenedor-autos-suv"  className="contenedor-secciones-autos"  >
-                    <div className="row" id="titulo-vehiculos" >
-                        <div classNme="col-12 col-sm-12">
-                            <p className="subtitulos-vehiculos">Suv</p>
-                        </div> 
-                    </div>
+                                            {
+                                                array_suv.map(c => (
 
-                    <div className="row" >              
-              {
-                array_suv.length > 0 ? (
-                    <>
-                                 
+                                                    <>
 
-                        {                           
-                        array_suv.map(c => (
-                        
-                    <>
-                    
-                        <div className="col-6 col-sm-6 col-md-4 col-md-4" >
-                           <p className="titulo-autos-similares" >{c.name_vehicle}</p>
-                           <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend+c.image_vehicle} alt={c.name_vehicle} /></a>
-                           <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
-                           
+                                                        <div className="col-6 col-sm-6 col-md-4 col-md-4" >
+                                                            <p className="titulo-autos-similares" >{c.name_vehicle}</p>
+                                                            <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend + c.image_vehicle} alt={c.name_vehicle} /></a>
+                                                            <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
+
+                                                        </div>
+
+                                                    </>
+                                                )
+
+                                                )
+                                            }
+
+                                        </>
+                                    ) : (
+
+                                        <span>Cargando...</span>
+
+                                    )
+
+                                }
+                            </div>
                         </div>
 
-                    </>
-                            )
+                        <div id="contenedor-autos-camionetas" className="contenedor-secciones-autos"  >
+                            <div className="row" id="titulo-vehiculos" >
+                                <div classNme="col-12 col-sm-12">
+                                    <p className="subtitulos-vehiculos">Camionetas</p>
+                                </div>
+                            </div>
 
-                            )
-                        }
-                                                
-                    </>
-                ) : (
+                            <div className="row" >
+                                {
+                                    array_camionetas.length > 0 ? (
+                                        <>
 
-                    <span>Cargando...</span>
 
-                )
-                
-            }
-                    </div>  
-                    </div>                   
+                                            {
+                                                array_camionetas.map(c => (
 
-                <div id="contenedor-autos-camionetas"  className="contenedor-secciones-autos"  >
-                    <div className="row" id="titulo-vehiculos" >
-                        <div classNme="col-12 col-sm-12">
-                            <p className="subtitulos-vehiculos">Camionetas</p>
-                        </div> 
-                    </div>
+                                                    <>
 
-                    <div className="row" >              
-              {
-                array_camionetas.length > 0 ? (
-                    <>
-                                 
+                                                        <div className="col-6 col-sm-6 col-md-4 col-md-4" >
+                                                            <p className="titulo-autos-similares" >{c.name_vehicle}</p>
+                                                            <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend + c.image_vehicle} alt={c.name_vehicle} /></a>
+                                                            <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
 
-                        {                           
-                        array_camionetas.map(c => (
-                        
-                    <>
-                    
-                        <div className="col-6 col-sm-6 col-md-4 col-md-4" >
-                           <p className="titulo-autos-similares" >{c.name_vehicle}</p>
-                           <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend+c.image_vehicle} alt={c.name_vehicle} /></a>
-                           <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
-                           
+                                                        </div>
+
+                                                    </>
+                                                )
+
+                                                )
+                                            }
+
+                                        </>
+                                    ) : (
+
+                                        <span>Cargando...</span>
+
+                                    )
+
+                                }
+                            </div>
                         </div>
 
-                    </>
-                            )
 
-                            )
-                        }
-                                                
-                    </>
-                ) : (
+                        <div id="contenedor-autos-hibridos" className="contenedor-secciones-autos"  >
+                            <div className="row" id="titulo-vehiculos" >
+                                <div classNme="col-12 col-sm-12">
+                                    <p className="subtitulos-vehiculos">Híbridos</p>
+                                </div>
+                            </div>
 
-                    <span>Cargando...</span>
-
-                )
-                
-            }
-                    </div>
-                    </div>
+                            <div className="row" >
+                                {
+                                    array_hibridos.length > 0 ? (
+                                        <>
 
 
-                    <div id="contenedor-autos-hibridos"  className="contenedor-secciones-autos"  >
-                    <div className="row" id="titulo-vehiculos" >
-                        <div classNme="col-12 col-sm-12">
-                            <p className="subtitulos-vehiculos">Híbridos</p>
-                        </div> 
-                    </div>
+                                            {
+                                                array_hibridos.map(c => (
 
-                    <div className="row" >              
-              {
-                array_hibridos.length > 0 ? (
-                    <>
-                                 
+                                                    <>
 
-                        {                           
-                        array_hibridos.map(c => (
-                        
-                    <>
-                    
-                        <div className="col-6 col-sm-6 col-md-4 col-md-4" >
-                           <p className="titulo-autos-similares" >{c.name_vehicle}</p>
-                           <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend+c.image_vehicle} alt={c.name_vehicle} /></a>
-                           <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
-                           
+                                                        <div className="col-6 col-sm-6 col-md-4 col-md-4" >
+                                                            <p className="titulo-autos-similares" >{c.name_vehicle}</p>
+                                                            <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend + c.image_vehicle} alt={c.name_vehicle} /></a>
+                                                            <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
+
+                                                        </div>
+
+                                                    </>
+                                                )
+
+                                                )
+                                            }
+
+                                        </>
+                                    ) : (
+
+                                        <span>Cargando...</span>
+
+                                    )
+
+                                }
+                            </div>
                         </div>
 
-                    </>
-                            )
+                        <div id="discapacidad" className="contenedor-secciones-autos contenedor-autos-exonerados"  >
+                            <div className="row" id="titulo-vehiculos" >
+                                <div classNme="col-12 col-sm-12">
+                                    <p ref={myRef} className="subtitulos-vehiculos">PERSONAS CON DISCAPACIDAD</p>
+                                </div>
+                            </div>
 
-                            )
-                        }
-                                                
-                    </>
-                ) : (
+                            <div className="row" >
+                                {
+                                    array_discapacidad.length > 0 ? (
+                                        <>
 
-                    <span>Cargando...</span>
 
-                )
-                
-            }
-                    </div>
-                    </div>
+                                            {
+                                                array_discapacidad.map(c => (
 
-                    <div id="discapacidad"  className="contenedor-secciones-autos contenedor-autos-exonerados"  >
-                    <div className="row" id="titulo-vehiculos" >
-                        <div classNme="col-12 col-sm-12">
-                            <p ref={myRef} className="subtitulos-vehiculos">PERSONAS CON DISCAPACIDAD</p>
-                        </div> 
-                    </div>
+                                                    <>
 
-                    <div className="row" >              
-              {
-                array_discapacidad.length > 0 ? (
-                    <>
-                                 
+                                                        <div className="col-6 col-sm-6 col-md-4 col-md-4" >
+                                                            <p className="titulo-autos-similares" >{c.name_vehicle}</p>
+                                                            <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend + c.image_vehicle} alt={c.name_vehicle} /></a>
+                                                            <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
 
-                        {                           
-                        array_discapacidad.map(c => (
-                        
-                    <>
-                    
-                        <div className="col-6 col-sm-6 col-md-4 col-md-4" >
-                           <p className="titulo-autos-similares" >{c.name_vehicle}</p>
-                           <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend+c.image_vehicle} alt={c.name_vehicle} /></a>
-                           <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
-                           
+                                                        </div>
+
+                                                    </>
+                                                )
+
+                                                )
+                                            }
+
+                                        </>
+                                    ) : (
+
+                                        <span>Cargando...</span>
+
+                                    )
+
+                                }
+                            </div>
                         </div>
 
-                    </>
-                            )
+                        <div id="diplomaticos" className="contenedor-secciones-autos contenedor-autos-exonerados"  >
+                            <div className="row" id="titulo-vehiculos" >
+                                <div classNme="col-12 col-sm-12">
+                                    <p ref={myRef2} className="subtitulos-vehiculos">Diplomáticos</p>
+                                </div>
+                            </div>
 
-                            )
-                        }
-                                                
-                    </>
-                ) : (
+                            <div className="row" >
+                                {
+                                    array_diplomaticos.length > 0 ? (
+                                        <>
 
-                    <span>Cargando...</span>
 
-                )
-                
-            }
-                    </div>
-                    </div>
+                                            {
+                                                array_diplomaticos.map(c => (
 
-                    <div id="diplomaticos"  className="contenedor-secciones-autos contenedor-autos-exonerados"  >
-                    <div className="row" id="titulo-vehiculos" >
-                        <div classNme="col-12 col-sm-12">
-                            <p ref={myRef2} className="subtitulos-vehiculos">Diplomáticos</p>
-                        </div> 
-                    </div>
+                                                    <>
 
-                    <div className="row" >              
-              {
-                array_diplomaticos.length > 0 ? (
-                    <>
-                                 
+                                                        <div className="col-6 col-sm-6 col-md-4 col-md-4" >
+                                                            <p className="titulo-autos-similares" >{c.name_vehicle}</p>
+                                                            <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend + c.image_vehicle} alt={c.name_vehicle} /></a>
+                                                            <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
 
-                        {                           
-                        array_diplomaticos.map(c => (
-                        
-                    <>
-                    
-                        <div className="col-6 col-sm-6 col-md-4 col-md-4" >
-                           <p className="titulo-autos-similares" >{c.name_vehicle}</p>
-                           <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend+c.image_vehicle} alt={c.name_vehicle} /></a>
-                           <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
-                           
+                                                        </div>
+
+                                                    </>
+                                                )
+
+                                                )
+                                            }
+
+                                        </>
+                                    ) : (
+
+                                        <span>Cargando...</span>
+
+                                    )
+
+                                }
+                            </div>
                         </div>
 
-                    </>
-                            )
+                        <div id="ong" className="contenedor-secciones-autos"  >
+                            <div className="row" id="titulo-vehiculos" >
+                                <div classNme="col-12 col-sm-12">
+                                    <p ref={myRef3} className="subtitulos-vehiculos">Organismos Internacionales - ONG'S</p>
+                                </div>
+                            </div>
 
-                            )
-                        }
-                                                
-                    </>
-                ) : (
+                            <div className="row" >
+                                {
+                                    array_organismos.length > 0 ? (
+                                        <>
 
-                    <span>Cargando...</span>
 
-                )
-                
-            }
-                    </div>
-                    </div>
+                                            {
+                                                array_organismos.map(c => (
 
-                    <div id="ong"  className="contenedor-secciones-autos"  >
-                    <div className="row" id="titulo-vehiculos" >
-                        <div classNme="col-12 col-sm-12">
-                            <p ref={myRef3} className="subtitulos-vehiculos">Organismos Internacionales - ONG'S</p>
-                        </div> 
-                    </div>
+                                                    <>
 
-                    <div className="row" >              
-              {
-                array_organismos.length > 0 ? (
-                    <>
-                                 
+                                                        <div className="col-6 col-sm-6 col-md-4 col-md-4" >
+                                                            <p className="titulo-autos-similares" >{c.name_vehicle}</p>
+                                                            <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend + c.image_vehicle} alt={c.name_vehicle} /></a>
+                                                            <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
 
-                        {                           
-                        array_organismos.map(c => (
-                        
-                    <>
-                    
-                        <div className="col-6 col-sm-6 col-md-4 col-md-4" >
-                           <p className="titulo-autos-similares" >{c.name_vehicle}</p>
-                           <a className="enlace-vehiculos" href={c.url_vehicle} ><img className="img-fluid autos-similares" src={url_backend+c.image_vehicle} alt={c.name_vehicle} /></a>
-                           <p className="content-btn-vehiculos " ><a className="enlace-vehiculos" href={c.url_vehicle} >{c.cta_boton_vehicle}</a></p>
-                           
+                                                        </div>
+
+                                                    </>
+                                                )
+
+                                                )
+                                            }
+
+                                        </>
+                                    ) : (
+
+                                        <span>Cargando...</span>
+
+                                    )
+
+                                }
+                            </div>
                         </div>
 
-                    </>
-                            )
 
-                            )
-                        }
-                                                
-                    </>
-                ) : (
-
-                    <span>Cargando...</span>
-
-                )
-                
-            }
                     </div>
+                    <div id="sidebar-vehiculos" class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 sinpadding order-0  order-sm-1" >
+                        <Vehiculossidebar />
                     </div>
 
-                    
                 </div>
-                <div id="sidebar-vehiculos" class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 sinpadding order-0  order-sm-1" >
-                    <Vehiculossidebar />
-                </div>
-            
             </div>
-        </div>
 
-        <Modalcotizacion />
+            <Modalcotizacion />
 
         </>
-    );                  
+    );
 
 }
 
-function soloHibridos(){
+function soloHibridos() {
 
     let hibridos = document.getElementById("contenedor-autos-hibridos");
     let exonerados1 = document.getElementById("discapacidad");
@@ -431,11 +438,11 @@ function soloHibridos(){
     camionetas.classList.add("ocultar");
     automoviles.classList.add("ocultar");
 
-return true;
+    return true;
 
 }
 
-function soloExonerados(){
+function soloExonerados() {
 
     let hibridos = document.getElementById("contenedor-autos-hibridos");
     let exonerados1 = document.getElementById("discapacidad");
@@ -453,11 +460,11 @@ function soloExonerados(){
     camionetas.classList.add("ocultar");
     automoviles.classList.add("ocultar");
 
-return true;
+    return true;
 
 }
 
-function todos(){
+function todos() {
 
     let hibridos = document.getElementById("contenedor-autos-hibridos");
     let exonerados1 = document.getElementById("discapacidad");
@@ -475,7 +482,7 @@ function todos(){
     camionetas.classList.remove("ocultar");
     automoviles.classList.remove("ocultar");
 
-return true;
+    return true;
 
 }
 
