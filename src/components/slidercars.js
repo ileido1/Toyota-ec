@@ -18,7 +18,6 @@ export default function Sliderscars() {
 
     const [categories, error2] = useFetch(endpoint);
 
-
     const [items, setItems] = useState('');
     const [exo, setExo] = useState('');
     const [carroselect, setCarro] = useState('');
@@ -186,12 +185,12 @@ export default function Sliderscars() {
                                                     </div>
                                                     <div className="row carddetallesslider">
                                                         <div className="col-4 textoabajo border-right-slider ">
-                                                            <p className="rendimientoslidertitulo">{c.titulo_info_box_1}</p>
-                                                            <p className="rendimientoslider">{c.texto_info_box_1}</p>
+                                                            <a href={c.enlace_ver_vehiculos} > <p className="rendimientoslidertitulo">{c.titulo_info_box_1}</p></a>
+                                                            <a href={c.enlace_ver_vehiculos} > <p className="rendimientoslider">{c.texto_info_box_1}</p></a>
                                                         </div>
                                                         <div className="col-4 textoabajo border-right-slider ">
-                                                            <p className="rendimientoslidertitulo">{c.titulo_info_box_2}</p>
-                                                            <p className="rendimientoslider">{c.texto_info_box_2}</p> </div>
+                                                            <a href={c.enlace_ver_vehiculos} > <p className="rendimientoslidertitulo">{c.titulo_info_box_2}</p></a>
+                                                            <a href={c.enlace_ver_vehiculos} > <p className="rendimientoslider">{c.texto_info_box_2}</p></a> </div>
                                                         <div className="col-4 textoabajo">
                                                             <p onClick={abrirModal} data-url={c.enlace_ver_vehiculos} ><button className="btnslider" onClick={abrirModal} data-url={c.enlace_ver_vehiculos} >{c.texto_cotizar_vehiculo}</button></p>
                                                             <p onClick={abrirModal} data-url={c.enlace_ver_vehiculos} ><button className="btnslider" onClick={abrirModal} data-url={c.enlace_ver_vehiculos} >{c.texto_test_drive_vehiculo}</button></p>

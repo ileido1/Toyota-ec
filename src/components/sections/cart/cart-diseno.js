@@ -613,7 +613,7 @@ function nombreColor(color) {
     }
 
     if (color == "#617a8c") {
-        nombre_color = "Azul"
+        nombre_color = "Celeste"
     }
 
     if (color == "#3e3e3f") {
@@ -694,6 +694,10 @@ function nombreColor(color) {
 
     if(color == "#DCE0DE"){
         nombre_color = "Blanco Perla"
+    }
+
+    if(color == "#f55433"){
+        nombre_color = "Anaranjado"
     }
     
     return nombre_color

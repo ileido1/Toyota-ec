@@ -49,19 +49,19 @@ export default function Vehiculos() {
     if (location.hash == "#discapacidad") {
         setTimeout(() => {
             executeScroll();
-        }, 0);
+        }, 500);
     } else if (location.hash == "#diplomaticos") {
         setTimeout(() => {
             executeScroll2();
-        }, 0);
+        }, 500);
     } else if (location.hash == "#ong") {
         setTimeout(() => {
             executeScroll3();
-        }, 0);
+        }, 500);
     } else if (location.hash == "") {
         setTimeout(() => {
             executeScroll4();
-        }, 0);
+        }, 500);
     }
 
     if (respuesta) {
