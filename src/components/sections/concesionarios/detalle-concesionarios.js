@@ -6,7 +6,6 @@ import imgir from '../../../images/concesionarios/Group.png'
 const Detalleconcesionarios = ({ ciudad }) => {
 
     const [concesionarios, setConcesionarios] = useState();
-
     useEffect(() => {
         const getItems = async () => {
             let endpoint = 'v2/concesionarios/toyota/?q=' + ciudad;
@@ -31,11 +30,11 @@ const Detalleconcesionarios = ({ ciudad }) => {
                             <div className='row'>
                                 {
 
-                                    concesionarios.map(c => (
+                                    concesionarios.map((c, i) => (
                                         <>
 
 
-                                            <div className='col-4 borderdetalle margindetalle'>
+                                            <div className="col-4 borderdetalle margindetalle">
                                                 <div className='cuadrodetalle'>
                                                     <h1 className='nombreconcesionario'>{c.nombre}</h1>
                                                     <p className='ubicacionconce'>{c.ciudad},{c.provincia}</p>
