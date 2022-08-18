@@ -2115,6 +2115,11 @@ ul.tabsnoticias>li {
     background-repeat: no-repeat;
 }
 
+.selectconcesionario option {
+    font-family: 'Radikal-Medium', 'FontAwesome' !important;
+
+}
+
 .content-campanias-global:hover {
     background: url('../images/campanias/camapana-global_.png');
 
@@ -2360,6 +2365,39 @@ ul.tabsnoticias>li {
 
     #imagen-auto-diseno2 {
         padding-top: 20px;
+    }
+
+    .conceswiper .contenedor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: auto !important;
+        padding: 80px;
+    }
+
+    .selectconcesionario {
+
+        margin-top: 0px;
+
+    }
+
+    .selectconcesionario option {
+        font-family: 'Radikal-Medium', 'FontAwesome' !important;
+
+    }
+
+    .tituloconcesionarios {
+        font-family: 'Toyota-DisplayRegular';
+        font-size: 30px;
+        color: #fff;
+    }
+
+    .selectconcesionario {
+        font-size: 12px !important;
     }
 
     .content-campanias {

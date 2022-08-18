@@ -34,13 +34,13 @@ const Detalleconcesionarios = ({ ciudad }) => {
                                         <>
 
 
-                                            <div className="col-4 borderdetalle margindetalle">
+                                            <div className="col-sm-4 col-12 borderdetalle margindetalle">
                                                 <div className='cuadrodetalle'>
                                                     <h1 className='nombreconcesionario'>{c.nombre}</h1>
                                                     <p className='ubicacionconce'>{c.ciudad},{c.provincia}</p>
-                                                    <a className='detallecon' href={c.map}>{c.direccion} <img src={imgir}></img></a>
-                                                    <a className='detallecon' href={"tel:" + c.telefono}>{c.telefono}<img src={imgir}></img></a>
-                                                    <a href={c.web} className='detallecon'>{c.web}<img src={imgir}></img></a>
+                                                    <a className='detallecon' target="_blank" href={c.map}>{c.direccion} <img src={imgir}></img></a>
+                                                    <a className='detallecon' target="_blank" href={"tel:" + c.telefono}>{c.telefono}<img src={imgir}></img></a>
+                                                    <a href={c.web} target="_blank" className='detallecon'>{c.web}<img src={imgir}></img></a>
                                                     <p className='horariocon'>{c.horarios}</p>
                                                     <p className='slogancon'>{c.slogan}</p>
                                                 </div>

@@ -35,11 +35,16 @@ export default function BannerConcesionario() {
             scrollToElement();
         }, 500);
     }
+    function Eliminaropcion(event) {
+        console.log(event.currentTarget);
+        document.querySelector('.selectconcesionario option[value=firts]').remove();
+
+    }
     const scrollToElement = () => detalles.current.scrollIntoView();
     return (
         <>
             <Swiper
-                className="mySwiper "
+                className="mySwiper conceswiper"
             >
                 {
                     ciudades ? (
@@ -51,8 +56,8 @@ export default function BannerConcesionario() {
                                         <h1 className="titulotoyotaconsesionaro">TOYOTA</h1>
                                         <h1 className="tituloconcesionarios">CONCESIONARIOS</h1>
 
-                                        <select className="form-select selectconcesionario" onChange={handleChange}>
-                                            <option className=""><i class="fa-solid fa-location-dot">&#xf3c5; </i><span className="spanoption">  ¿En qué ciudad te encuentras?</span></option>
+                                        <select className="form-select selectconcesionario" onChange={handleChange} onClick={Eliminaropcion}>
+                                            <option value="firts">&#xf3c5;¿En qué ciudad te encuentras?</option>
 
                                             {
 
