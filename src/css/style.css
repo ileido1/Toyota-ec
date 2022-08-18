@@ -48,7 +48,7 @@
 }
 
 .selectconcesionario {
-    font-family: 'Radikal-Light' !important;
+    font-family: 'Radikal-Medium', 'FontAwesome' !important;
     font-weight: 500 !important;
     color: rgba(129, 127, 127, 0.8) !important;
     text-transform: uppercase;
@@ -72,11 +72,7 @@
     line-height: 43px;
 }
 
-select option {
-    font-family: 'Font Awesome 6 Free', 'Radikal-Medium' !important;
-    font-size: 16px; 
-    margin-right: 8px;
-}
+
 
 .ubicacionconce {
     font-family: 'Radikal-Regular';
@@ -84,6 +80,8 @@ select option {
     font-size: 18px;
     color: #817F7FCC;
 }
+
+
 
 .detallecon {
     font-family: 'Radikal-Medium';
@@ -232,6 +230,10 @@ select option {
 .img-logo-feature {
     width: 160px;
     width: 50%;
+}
+
+.icono {
+    color: red !important;
 }
 
 .img-icono-feature {

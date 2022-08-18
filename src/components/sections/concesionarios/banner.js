@@ -52,7 +52,7 @@ export default function BannerConcesionario() {
                                         <h1 className="tituloconcesionarios">CONCESIONARIOS</h1>
 
                                         <select className="form-select selectconcesionario" onChange={handleChange}>
-                                            <option data-before="&#xf26e;" className="fa">&#xf26e; ¿En qué ciudad te encuentras?</option>
+                                            <option className=""><i class="fa-solid fa-location-dot">&#xf3c5; </i><span className="spanoption">  ¿En qué ciudad te encuentras?</span></option>
 
                                             {
 
