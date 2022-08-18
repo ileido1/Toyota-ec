@@ -33,12 +33,12 @@ function Header() {
 
 
 												menu.map((c, i) => {
-													url_nav = c.url_menu_principal.replace("admin/","")
+													url_nav = c.url_menu_principal.replace("admin/", "")
 													return (
 														<>
 
-															<Nav.Link key={i} href={url_nav} className={i === 1 || i === 3 ? "d-none" : ""} >{c.nombre_menu_superior}</Nav.Link>
-															{i === 3 &&
+															<Nav.Link key={i} href={url_nav} className={""} >{c.nombre_menu_superior}</Nav.Link>
+															{i === 2 &&
 																<a className="d-none d-lg-block" href="https://www.toyota.com.ec/"><img src={logo} /></a>
 															}
 														</>

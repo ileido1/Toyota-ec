@@ -7,6 +7,7 @@ import Footer from './sections/Footer';
 import Home from './pages/home'
 import Posventa from './pages/post-venta'
 import Terminosycondiciones from './pages/terminos'
+import Concesionarios from './pages/concesionarios';
 
 import {
   BrowserRouter,
@@ -61,6 +62,7 @@ const App = () => {
           <Route path="/hilux-cd-4x4-mt" element={<Cart />} />
           <Route path="/corolla-hybrid" element={<Cart />} />
           <Route path="/vehiculos" element={<Vehiculos />} />
+          <Route path="/concesionarios" element={<Concesionarios />} />
           <Route path="/post-venta" element={<Campanaservicios />} />
           <Route path="/terminos-y-condiciones" element={<Terminosycondiciones />} />
           <Route path="/" element={<Home />} />

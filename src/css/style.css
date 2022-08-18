@@ -33,6 +33,11 @@
     src: local('Radikal-Medium'), url("../fonts/Nootype - Radikal-Medium.otf") format('opentype');
 }
 
+@font-face {
+    font-family: 'Radikal-Regular';
+    src: local('Radikal-Medium'), url("../fonts/Nootype\ -\ Radikal-Regular.otf") format('opentype');
+}
+
 .navbar .navbar-nav .nav-link {
     color: #817F7F;
     font-size: 1em;
@@ -40,6 +45,92 @@
     font-family: 'Novecentos-DemiBold';
     text-transform: uppercase;
 
+}
+
+.selectconcesionario {
+    font-family: 'Radikal-Light' !important;
+    font-weight: 500 !important;
+    color: rgba(129, 127, 127, 0.8) !important;
+    text-transform: uppercase;
+    margin-top: 40px;
+    background-image: url('../images/concesionarios/arrow.png') !important;
+    background-size: 23px 13px !important;
+}
+
+
+
+.titulotoyotaconsesionaro {
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+}
+
+.nombreconcesionario {
+    font-family: 'Radikal-Medium';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 43px;
+}
+
+select option {
+    font-family: 'Font Awesome 6 Free', 'Radikal-Medium' !important;
+    font-size: 16px; 
+    margin-right: 8px;
+}
+
+.ubicacionconce {
+    font-family: 'Radikal-Regular';
+    font-weight: 400;
+    font-size: 18px;
+    color: #817F7FCC;
+}
+
+.detallecon {
+    font-family: 'Radikal-Medium';
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: underline;
+    color: #000;
+    line-height: 28px;
+    margin-top: 20px;
+    display: block;
+}
+
+.detallecon img {
+    margin-left: 5px;
+}
+
+.horariocon {
+    font-family: 'Radikal-Medium';
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 20px;
+    color: #817F7FCC;
+}
+
+.concecesionariosdetalle {
+    margin-top: 80px;
+}
+
+.borderdetalle {
+    border-right: 1px solid;
+}
+
+.margindetalle {
+    margin-bottom: 40px;
+}
+
+.cuadrodetalle {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.slogancon {
+    font-family: 'Radikal-Regular';
+    font-weight: 400;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #817F7FCC;
 }
 
 .navbar-logo-centered .navbar-nav .nav-link {
@@ -321,6 +412,13 @@ ul#menu-galeria>li>span {
     color: #817F7F;
     font-size: 16px;
     margin-top: 40px;
+}
+
+.tituloconcesionarios {
+    font-family: 'Toyota-DisplayRegular';
+    font-size: 50px;
+    color: #fff;
+
 }
 
 #bwg_container1_1 #bwg_container2_1 .bwg-container-1.bwg-standard-thumbnails {
@@ -917,6 +1015,7 @@ a#btn-cotizar {
     right: 5px;
     top: 2px;
 }
+
 
 .centrar {
     display: flex;
@@ -2009,7 +2108,7 @@ ul.tabsnoticias>li {
     -o-transition: all 1.5s 0s ease;
     transition: all 1.5s 0s ease;
     cursor: pointer;
-   
+
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -2208,31 +2307,31 @@ ul.tabsnoticias>li {
     cursor: pointer;
 }
 
-.text-exonerados{
+.text-exonerados {
     display: block;
     text-align: center;
     max-width: 400px;
 }
 
-.imagen-banner-exonerados{
+.imagen-banner-exonerados {
     display: block;
     text-align: center;
     margin: 0 auto;
 }
 
-#content-auto-exonerados{
+#content-auto-exonerados {
     padding: 40px 0px;
 }
 
-.contenedor-terminos-condiciones{
+.contenedor-terminos-condiciones {
     padding: 80px 10%;
 }
 
-.contenedor-terminos-condiciones{
-   font-size: 18px;
+.contenedor-terminos-condiciones {
+    font-size: 18px;
 }
 
-.titulo-terminos{
+.titulo-terminos {
     font-size: 20px;
     color: #cc2132;
     margin-bottom: 40px;
@@ -2241,27 +2340,27 @@ ul.tabsnoticias>li {
     font-weight: bold;
 }
 
-.link-terminos{
+.link-terminos {
     text-decoration: none;
     color: #ffffff !important;
     font-size: 16px;
 }
 
-.link-terminos:hover{
+.link-terminos:hover {
     text-decoration: underline !important
 }
 
-.fila-colores .col-1{
+.fila-colores .col-1 {
     margin-top: 10px;
 }
 
 @media only screen and (max-width: 600px) {
 
-    #imagen-auto-diseno2{
+    #imagen-auto-diseno2 {
         padding-top: 20px;
     }
 
-    .content-campanias{
+    .content-campanias {
         padding: 30px;
     }
 
@@ -2499,6 +2598,8 @@ ul.tabsnoticias>li {
         font-weight: bold;
         line-height: 30px;
     }
+
+
 
     .cart-texto-caracteristicas {
         font-family: 'Radikal-Medium';
@@ -2827,7 +2928,7 @@ ul.tabsnoticias>li {
         width: 100%;
     }
 
-    .texto-titulo-campanias{
+    .texto-titulo-campanias {
         font-size: 18px !important;
     }
 
@@ -2836,11 +2937,11 @@ ul.tabsnoticias>li {
         text-align: center;
         font-size: 16px !important;
         color: #000;
-      }
+    }
 
-     .texto-rojo{
+    .texto-rojo {
         color: #e20b2a !important;
-     } 
+    }
 
 }
 
@@ -2860,8 +2961,6 @@ ul.tabsnoticias>li {
         text-align: center;
         font-size: 20px;
         color: #000;
-      }
+    }
 
 }
-
-
