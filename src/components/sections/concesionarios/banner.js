@@ -36,8 +36,7 @@ export default function BannerConcesionario() {
         }, 500);
     }
     function Eliminaropcion(event) {
-        console.log(event.currentTarget);
-        document.querySelector('.selectconcesionario option[value=firts]').remove();
+        document.querySelector('.selectconcesionario option[value=firts]').text = "";
 
     }
     const scrollToElement = () => detalles.current.scrollIntoView();
@@ -56,7 +55,7 @@ export default function BannerConcesionario() {
                                         <h1 className="titulotoyotaconsesionaro">TOYOTA</h1>
                                         <h1 className="tituloconcesionarios">CONCESIONARIOS</h1>
 
-                                        <select className="form-select selectconcesionario" onChange={handleChange} onClick={Eliminaropcion}>
+                                        <select className="form-select selectconcesionario" onChange={handleChange} onMouseDown={Eliminaropcion}>
                                             <option value="firts">&#xf3c5;¿En qué ciudad te encuentras?</option>
 
                                             {

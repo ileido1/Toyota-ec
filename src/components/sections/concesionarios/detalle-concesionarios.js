@@ -17,6 +17,9 @@ const Detalleconcesionarios = ({ ciudad }) => {
         getItems();
 
     }, [ciudad])
+    const [numero, setNumero] = useState([]);
+
+
 
 
 
