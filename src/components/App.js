@@ -21,7 +21,7 @@ import { useState, useEffect } from 'react';
 import LoadingSpinner from './sections/loading';
 import Campanaservicios from './pages/campana-servicios';
 import Terminos from './pages/campana-servicios';
-
+import SiempreNuevo from './pages/siempre-nuevo';
 const App = () => {
   let peticion = "global/toyota-info"
 
@@ -63,6 +63,7 @@ const App = () => {
           <Route path="/corolla-hybrid" element={<Cart />} />
           <Route path="/vehiculos" element={<Vehiculos />} />
           <Route path="/concesionarios" element={<Concesionarios />} />
+          <Route path="/siemprenuevo" element={<SiempreNuevo />} />
           <Route path="/post-venta" element={<Campanaservicios />} />
           <Route path="/terminos-y-condiciones" element={<Terminosycondiciones />} />
           <Route path="/" element={<Home />} />

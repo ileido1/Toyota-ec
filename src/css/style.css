@@ -429,6 +429,156 @@ ul#menu-galeria>li>span {
 
 }
 
+.bannersiemprenuevo {
+    width: 100%;
+}
+
+.carroestrenalo {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+}
+
+.imagencarroestranlo {
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.campanaestrenalo {
+    font-family: 'Radikal-Medium';
+    font-weight: 500;
+    color: #000;
+    font-size: 100px;
+}
+
+.comofuncionah1 {
+    font-family: 'Radikal-Medium';
+    font-weight: 500;
+    color: #000;
+    font-size: 80px;
+}
+
+.cuadricula {
+    border-top: 1px solid #000;
+    text-align: center;
+}
+
+.formcontainer {
+    background-color: #EDEDED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videotoyotanuevo {
+    width: 100%;
+    height: 100vh;
+}
+
+.bghover:hover {
+    background-color: #EDEDED;
+}
+
+.cuadriculamedio {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+
+}
+
+.cuadrointerno {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.listatoyotanuevo {
+    text-align: left;
+}
+
+.listatoyotanuevo .pcuadro {
+    font-size: 18px;
+}
+
+.pcuadro {
+    font-family: 'Radikal-Medium';
+    font-weight: 400;
+    font-size: 24px;
+    color: #000;
+}
+
+.cuadrointernolinea {
+    border-top: 1px solid;
+}
+
+.pcuadronumeros {
+    font-family: 'Radikal-Medium';
+    font-weight: 400;
+    font-size: 65px;
+    color: #ED1B2F;
+}
+
+.colorred {
+    color: #ED1B2F;
+}
+
+.colorblack {
+    color: #000;
+}
+
+.inmediata {
+    font-family: 'Radikal-Bold';
+    font-size: 40px;
+    color: #000;
+}
+
+.iconostoyotanueva {
+    align-self: flex-start;
+}
+
+.campanaestrenalo2 {
+    font-family: 'Radikal-Medium';
+    font-weight: 700;
+    color: #000;
+    font-size: 100px;
+}
+
+.flechaestrenalo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.campanaestrenalosub {
+    font-family: 'Radikal-Bold';
+    font-weight: 700;
+    font-size: 100px;
+    color: #EE0202;
+}
+
+.divsubestrenalo {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.estrenalodiv {
+
+    DISPLAY: FLEX;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
+
+}
+
+.padding0 {
+    padding: 0 !important;
+}
+
 #tecnologia {
     margin-top: 20px;
     margin-bottom: 0px;
@@ -2395,6 +2545,7 @@ ul.tabsnoticias>li {
         font-size: 30px;
         color: #fff;
     }
+
 
     .selectconcesionario {
         font-size: 12px !important;
