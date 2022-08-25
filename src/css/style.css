@@ -453,6 +453,18 @@ ul#menu-galeria>li>span {
     font-size: 100px;
 }
 
+.pupgrade {
+
+    font-family: 'Radikal-Medium';
+    font-weight: 500;
+    font-size: 100px;
+
+}
+
+.derecha {
+    text-align: right;
+}
+
 .comofuncionah1 {
     font-family: 'Radikal-Medium';
     font-weight: 500;
@@ -470,6 +482,68 @@ ul#menu-galeria>li>span {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.formcontainer h1 {
+    color: #EE0202;
+    font-family: 'Radikal-Bold';
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+}
+
+.formcuadro {
+    background-color: #FF0000;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.formcuadro h3 {
+    color: #fff;
+    font-family: 'Toyota-DisplayRegular';
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+}
+
+.formcuadro .form-control,
+.formcuadro select {
+    color: #B9BFC1 !important;
+    font-family: 'Novecentos-DemiBold' !important;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+}
+
+.formcuadro .form-check-label {
+    color: #FFF !important;
+    font-family: 'Novecentos-DemiBold' !important;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+}
+
+.formcuadro .formulario-boton-enviar {
+    color: #FF0000 !important;
+    font-family: 'Toyota-DisplayRegular';
+}
+
+.formcuadro p {
+    color: #fff !important;
+    font-family: 'Radikal-Medium';
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+
+.formcontainer p {
+    color: #000;
+    font-family: 'Radikal-Medium';
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
 }
 
 .videotoyotanuevo {
@@ -1174,6 +1248,34 @@ a#btn-cotizar {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.textos {
+    position: relative;
+}
+
+.circuloimg {
+
+    position: absolute;
+    top: -10px;
+    right: -50px;
+
+}
+
+.imgfortuner {
+    border-radius: 50px;
+    margin-left: 40px;
+}
+
+.drow {
+    flex-direction: row;
+    height: 100vh;
+}
+
+.flechaimg {
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
 }
 
 .logoexo {

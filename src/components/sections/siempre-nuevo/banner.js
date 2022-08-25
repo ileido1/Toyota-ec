@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 
 import useFetch from "../../../hooks/useFetch2";
 import banner_portada from "../../../images/siemprenuevo/banner.svg"
+import video from "../../../videos/portada-tsn.mp4"
 
 export default function BannerConcesionario() {
 
@@ -20,7 +21,10 @@ export default function BannerConcesionario() {
         <>
 
             <div className="container-fluid padding0"  >
-                <img src={banner_portada} className="bannersiemprenuevo"></img>
+                <video width="100%" autoPlay muted loop controls="false"  >
+                    <source src={video} type="video/mp4" />
+                    Your browser does not support HTML video.
+                </video>
             </div>
 
 
@@ -31,7 +35,6 @@ export default function BannerConcesionario() {
         </>
     );
 }
-
 
 
 
