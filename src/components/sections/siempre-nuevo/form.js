@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import useFetch from "../../../hooks/useFetch2";
+import link_externo from '../../../images/cotizacion/link-externo.svg'
 
 
 
@@ -40,13 +41,12 @@ export default function Form() {
 
                         </select>
                         <div className="centrar">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="terminos"></input>
-                                <label class="form-check-label" for="terminos">
-                                    acepto términos y condiciones
-                                </label>
+                            <div className="content-checkbox" >
+                                <input type="checkbox" name="terminos" id="terminos" />
+                                <label htmlFor="terminos"><a href="/terminos-y-condiciones" target="_blank" className='link-terminos' >Términos y condiciones <img src={link_externo} /></a>   </label>
                             </div>
                         </div>
+
 
 
                         <p id='enviar-cotizar' className="btn formulario-boton-enviar btn-primary" >ENVÍAR</p>
