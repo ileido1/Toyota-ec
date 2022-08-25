@@ -8,6 +8,8 @@ import Home from './pages/home'
 import Posventa from './pages/post-venta'
 import Terminosycondiciones from './pages/terminos'
 import Concesionarios from './pages/concesionarios';
+import SiempreNuevo from './pages/siempre-nuevo';
+import MundoHibrido from './pages/mundo-hibrido';
 
 import {
   BrowserRouter,
@@ -21,7 +23,7 @@ import { useState, useEffect } from 'react';
 import LoadingSpinner from './sections/loading';
 import Campanaservicios from './pages/campana-servicios';
 import Terminos from './pages/campana-servicios';
-import SiempreNuevo from './pages/siempre-nuevo';
+
 const App = () => {
   let peticion = "global/toyota-info"
 
@@ -64,6 +66,7 @@ const App = () => {
           <Route path="/vehiculos" element={<Vehiculos />} />
           <Route path="/concesionarios" element={<Concesionarios />} />
           <Route path="/siemprenuevo" element={<SiempreNuevo />} />
+          <Route path="/tempmundohibrido" element={<MundoHibrido />} />
           <Route path="/post-venta" element={<Campanaservicios />} />
           <Route path="/terminos-y-condiciones" element={<Terminosycondiciones />} />
           <Route path="/" element={<Home />} />
