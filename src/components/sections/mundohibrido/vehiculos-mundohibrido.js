@@ -6,7 +6,7 @@ import raize from '../../../images/mundohibrido/raize.png'
 
 const AmbientalVehiculos = () => (
 
-<div id="vehiculos-mundo-hibrido" className="vehiculos-mundo-hibrido container-fluid d-none d-sm-none d-md-block d-xl-block d-lg-block col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sinpadding" >
+<div id="vehiculos-mundo-hibrido" className="vehiculos-mundo-hibrido container-fluid d-block d-sm-block d-md-block d-xl-block d-lg-block col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sinpadding" >
 
    <div className="col-12 contenedor-seccion-vehiculos-h"  >
         
