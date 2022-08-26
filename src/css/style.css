@@ -1891,7 +1891,6 @@ img.autos-similares {
     border-radius: .3rem;
     outline: 0;
     left: 0px !important;
-    height: 100%;
 }
 
 /* The Close Button */
@@ -2477,23 +2476,21 @@ ul.tabsnoticias>li {
 
 
 #myModalExonerado .modal-content {
-    width: 633px !important;
-    height: 100%;
     margin: 0 auto;
-    background: rgb(224, 9, 9);
     background-color: rgb(224, 9, 9) !important;
     border-radius: 40px;
     top: 80px;
-    padding: 20px 20px;
+    padding: 40px;
 }
 
 
 
 
 
-#myModalExonerado p {
+#myModalExonerado p,
+#myModalExonerado label {
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Radikal-Medium';
     color: #ffffff;
     line-height: 22px;
@@ -2502,13 +2499,23 @@ ul.tabsnoticias>li {
 
 
 
-#myModalExonerado input,
-#myModalExonerado select {
-    width: 100%;
+#myModalExonerado .form-control,
+#myModalExonerado .form-control::placeholder {
     display: block;
     border-radius: 6px;
     margin-bottom: 20px;
     border: 1px solid #fff;
+    color: #B9BFC1 !important;
+    text-transform: uppercase;
+}
+
+.content-select-exo {
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+#myModalExonerado .content-checkbox {
+    margin-bottom: 20px;
 }
 
 #myModalExonerado .boton-enviar {
@@ -2667,19 +2674,19 @@ ul.tabsnoticias>li {
     margin-top: 10px;
 }
 
-.contenedor-seccion-tecnologia{
+.contenedor-seccion-tecnologia {
     margin: 0 auto;
     padding: 0 15%;
 }
 
-.subtitulo-mundo-hibrido{
+.subtitulo-mundo-hibrido {
     font-family: 'Radikal-Medium';
     font-size: 28px;
     text-align: center;
     padding: 0 15%;
 }
 
-.item-titulo-tecnologia{
+.item-titulo-tecnologia {
     font-family: 'Toyota-DisplayRegular';
     text-align: center;
     font-size: 26px;
@@ -2688,13 +2695,13 @@ ul.tabsnoticias>li {
     max-width: 520px;
 }
 
-.img-titulo-tecnologia{    
+.img-titulo-tecnologia {
     display: block;
     margin: 0 auto;
     margin-bottom: 60px;
 }
 
-.item-parrafo-tecnologia{
+.item-parrafo-tecnologia {
     font-family: 'Radikal-Medium';
     font-size: 22px;
     text-align: center;
@@ -2702,6 +2709,7 @@ ul.tabsnoticias>li {
     margin-bottom: 60px;
     line-height: 30px;
 }
+
 
 .fuente-blanco{
     color: #ffffff !important;
@@ -2731,6 +2739,16 @@ ul.tabsnoticias>li {
 
 .icono-ambiental{
     width: 60px;
+}
+
+.fuente-blanco {
+    color: red !important;
+}
+
+.seccion-ambiental .titulo-ambiental {
+    position: absolute;
+    top: 20;
+    z-index: 999999;
     display: block;
     margin: 0 auto;
 }
@@ -2883,6 +2901,105 @@ a.vehiculos-h-enlace:hover{
 
     #imagen-auto-diseno2 {
         padding-top: 20px;
+    }
+
+    .cuadriculamedio {
+        border: 0px;
+    }
+
+    .circuloimg {
+
+        width: 100px;
+        top: -5px;
+        right: -15px;
+    }
+
+    .flechaimg {
+        position: absolute;
+        bottom: -40px;
+        right: -80px;
+        width: 100%;
+    }
+
+    .ytp-cued-thumbnail-overlay-image {
+        background-size: contain;
+        -webkit-background-size: contain;
+
+    }
+
+    .drow {
+        flex-direction: row;
+        height: 400px;
+    }
+
+    .imgfortuner {
+
+        width: 200px;
+    }
+
+    .pupgrade {
+
+        font-size: inherit;
+    }
+
+    .cuadricula {
+        border-top: 1px solid #000;
+        text-align: center;
+    }
+
+    .campanaestrenalo {
+        font-family: 'Radikal-Medium';
+        font-weight: 500;
+        color: #000;
+        font-size: 24px;
+    }
+
+    .divsubestrenalo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .imagencarroestranlo {
+
+        width: 150px;
+    }
+
+    .campanaestrenalosub {
+
+        font-size: 24px;
+
+    }
+
+    .vectorflecha {
+        width: 100%;
+    }
+
+    .comofuncionah1 {
+        font-size: 24px;
+    }
+
+    .pcuadronumeros {
+        font-size: 30px;
+    }
+
+    .inmediata {
+        font-size: 30px;
+    }
+
+    .logotns {
+        width: auto;
+    }
+
+    .iconostoyotanueva {
+        width: 40px;
+        margin-bottom: 40px;
+    }
+
+
+
+    .campanaestrenalo2 {
+
+        font-size: 24px;
     }
 
     .conceswiper .contenedor {

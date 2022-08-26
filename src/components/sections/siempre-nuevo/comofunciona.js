@@ -28,9 +28,9 @@ export default function Comofunciona() {
 
             <div className="container-fluid "  >
                 <div className="row ">
-                    <div className="col-4 cuadricula bghover"> <h1 className="comofuncionah1">¿Cómo funciona?</h1>
-                        <img src={logo}></img></div>
-                    <div className="col-4 cuadricula cuadriculamedio">
+                    <div className="col-12 col-sm-4 cuadricula bghover"> <h1 className="comofuncionah1">¿Cómo funciona?</h1>
+                        <img src={logo} className="logotns" ></img></div>
+                    <div className="col-12 col-sm-4 cuadricula cuadriculamedio">
                         <div className="row">
                             <div className="col-12 cuadrointerno bghover">
                                 <img src={iconodinero} className="iconostoyotanueva"></img>
@@ -46,7 +46,7 @@ export default function Comofunciona() {
 
                     </div>
 
-                    <div className="col-4 cuadricula">
+                    <div className="col-12 col-sm-4  cuadricula">
                         <div className="row">
                             <div className="col-12 cuadrointerno bghover">
                                 <img src={iconotiempo} className="iconostoyotanueva"></img>
