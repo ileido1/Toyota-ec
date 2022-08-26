@@ -2725,7 +2725,7 @@ ul.tabsnoticias>li {
 }
 
 .ambiental-content-1 {
-    margin-top: 80px;
+    margin-top: 96px;
 }
 
 .ambiental-content-2 img {
@@ -2742,14 +2742,16 @@ ul.tabsnoticias>li {
 
 .icono-ambiental {
     width: 60px;
+    display: block;
+    margin: 0 auto;
 }
 
 .fuente-blanco {
-    color: red !important;
+    color: #fff !important;
 }
 
 .seccion-ambiental .titulo-ambiental {
-    position: absolute;
+    position: relative;
     top: 20;
     z-index: 999999;
     display: block;
@@ -2881,6 +2883,22 @@ a.vehiculos-h-enlace:hover {
     color: #000;
 }
 
+#faqs-mundo-hibrido .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%230c63e4%27%3e%3cpath fill-rule=%27evenodd%27 d=%27M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e") !important;
+    transform: rotate(-180deg);
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACISURBVHgB7ZhRCoAgEETXTtT9L2E30JuYRhMSWbhoGcyD8cOP5QkuK4romGNsTMji9v3XcCeBXKQaIzpCy5qTDAAlACUAJQAlwDASaeiUZkEpd9TUOYZerUDrWCPPJ+sOLyZIEot8i0+LpjtaZesOvqwAJQAlACUAJcCvJXzlfheuhp4V5f/ECofdbwxE8m8NAAAAAElFTkSuQmCC) !important;
+      background-size: auto !important;
+    background-size: contain !important;
+}
+
+#faqs-mundo-hibrido .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%230c63e4%27%3e%3cpath fill-rule=%27evenodd%27 d=%27M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e") !important;
+    transform: rotate(-180deg);
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACISURBVHgB7ZhRCoAgEETXTtT9L2E30JuYRhMSWbhoGcyD8cOP5QkuK4romGNsTMji9v3XcCeBXKQaIzpCy5qTDAAlACUAJQAlwDASaeiUZkEpd9TUOYZerUDrWCPPJ+sOLyZIEot8i0+LpjtaZesOvqwAJQAlACUAJcCvJXzlfheuhp4V5f/ECofdbwxE8m8NAAAAAElFTkSuQmCC) !important;
+      background-size: auto !important;
+    background-size: contain !important;
+}
+
 .faqs-acordeon {
     background: #F5F5F5;
 }
@@ -2888,6 +2906,11 @@ a.vehiculos-h-enlace:hover {
 .faqs-acordeon .accordion-collapse {
     background: #F5F5F5 !important;
 }
+
+.faqs-acordeon .accordion-item {
+    border: 0px solid rgba(0,0,0,.125) !important;
+    border-top: 1px solid #707070 !important;
+  }
 
 .titulo-faqs button {
     font-family: 'Radikal-Medium';
@@ -2898,6 +2921,110 @@ a.vehiculos-h-enlace:hover {
     font-size: 18px;
 }
 
+.faqs-acordeon .accordion-button {
+    background: transparent !important;
+    color: #000 !important;
+}
+
+.faqs-acordeon .accordion-item {
+    color: #000 !important;
+    text-align: justify;
+}
+
+.contenedor-seccion-vehiculos-h {
+    margin: 0 auto;
+    padding: 0 5%;
+      padding-bottom: 0px;
+    padding-bottom: 80px;
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    .contenedor-seccion-vehiculos-h {
+        padding: 0 5%;
+    }
+
+    .subtitulo-h-vehiculos {
+        max-width: 80%;
+    }
+
+    .subtitulo-mundo-hibrido {
+        font-family: 'Radikal-Medium';
+        font-size: 20px;
+        text-align: center;
+    }      
+
+    .titulo-galeria {
+        margin-top: 20px !important;
+
+      }
+
+      .subtitulo-mundo-hibrido {
+        padding: 0 5%;
+      }
+
+      .contenedor-seccion-tecnologia {
+        padding: 0 5%;
+      }
+      .img-h-vehiculo {
+        width: 120px;
+      }
+
+      .vehiculos-h-nombre {
+        font-size: 18px;
+      }
+
+      .pd40{
+        padding-bottom: 40px;
+      }
+
+      .h-tit{
+        font-size: 26px;
+      }
+
+      .ambiental-content-2 img {
+        margin-top: -180px;
+      }
+
+      .ambiental-items-mobile{
+        background: #1750F1;
+      }
+
+      .swipper-mundohibrido .swiper-button-prev, .swipper-automovil .swiper-button-next {
+       
+      }
+
+      .ambiental-items-mobile{
+        margin-top: 180px;
+        padding-bottom: 40px;
+      }
+
+      .ambiental-content-3 .item-ambiental {
+        margin-top: 0px;
+        z-index: 8888;
+        position: relative;
+      }
+
+      .texto-ambiental {
+
+        font-size: 20px;
+        max-width: 80%;
+
+      }
+
+      .icono-ambiental {
+        margin-top: 40px;
+      }
+
+      .ambiental-content-1 {
+        margin-top: 84px;
+      }
+
+      .seccion-ambiental .titulo-ambiental {
+        top: 40px;
+      }
+
+  }
 
 @media only screen and (max-width: 1299px) {
 

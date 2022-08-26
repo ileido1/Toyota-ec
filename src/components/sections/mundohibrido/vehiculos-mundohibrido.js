@@ -14,9 +14,9 @@ const AmbientalVehiculos = () => (
         <p className='subtitulo-h-vehiculos' >Reserva un Test Drive en tu concesionario más cercano y lleva tu experiencia
 de conducción al siguiente nivel con el rendimiento híbrido.</p>
 
-        <div className='row' >
+        <div className='row pd40' >
 
-            <div className='col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 h-content-vehiculo' >
+            <div className='col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 h-content-vehiculo' >
                 <img src={corolla} alt="Corolla Sedan" className='img-h-vehiculo' />
                 <div className='textos-h-vehiculo' >
                     <p className='vehiculos-h-nombre' >Corolla Sédan</p>
@@ -25,7 +25,7 @@ de conducción al siguiente nivel con el rendimiento híbrido.</p>
                 
             </div>
 
-            <div className='col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 h-content-vehiculo' >
+            <div className='col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 h-content-vehiculo' >
                 <img src={yaris} alt="Yaris Cross" className='img-h-vehiculo' />
                 <div className='textos-h-vehiculo' >
                     <p className='vehiculos-h-nombre' >Yaris Cross</p>
@@ -33,7 +33,7 @@ de conducción al siguiente nivel con el rendimiento híbrido.</p>
                 </div>
             </div>
 
-            <div className='col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 h-content-vehiculo' >
+            <div className='col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 h-content-vehiculo' >
                 <img src={chr} alt="C-HR" className='img-h-vehiculo' />
                 <div className='textos-h-vehiculo' >
                     <p className='vehiculos-h-nombre' >C-HR</p>
