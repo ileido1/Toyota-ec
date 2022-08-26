@@ -35,7 +35,7 @@ export default function Form() {
                         <input type="text" class="form-control" id="nombreyapellido" placeholder="Nombre y apellido"></input>
                         <input type="email" class="form-control" id="email" placeholder="E-mail"></input>
                         <input type="tel" class="form-control" id="celular" placeholder="Celular"></input>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select class="form-select" id="exampleFormControlSelect1">
                             <option>ciudad ó concesionario</option>
                             <option>ciudad ó concesionario</option>
 
