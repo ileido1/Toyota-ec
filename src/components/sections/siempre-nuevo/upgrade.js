@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import { motion } from 'framer-motion'
 
 
 // Import Swiper styles
@@ -15,7 +14,7 @@ import fortuner from "../../../images/siemprenuevo/fortuner.png"
 import useFetch from "../../../hooks/useFetch2";
 
 
-
+import { motion, useScroll } from "framer-motion"
 
 
 
@@ -26,20 +25,20 @@ export default function Upgrade() {
     return (
         <>
 
-            <div className="container-fluid "  >
 
-                <div className="centrar drow">
-                    <div className="textos">
-                        <p className="pupgrade" >Haz un UPGRADE
-                        </p>
-                        <img src={circulo} className="circuloimg"></img>
-                        <p className="pupgrade derecha"> de tu vehículo </p>
-                        <img src={flecha} className="flechaimg"></img>
-                    </div>
-                    <img src={fortuner} className="imgfortuner"></img>
+            <motion.div initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2, default: { duration: 0.7 } }}
+                className="centrar drow">
+                <div className="textos">
+                    <p className="pupgrade" >Haz un UPGRADE
+                    </p>
+                    <img src={circulo} className="circuloimg"></img>
+                    <p className="pupgrade derecha"> de tu vehículo </p>
+                    <img src={flecha} className="flechaimg"></img>
                 </div>
-
-            </div>
+                <img src={fortuner} className="imgfortuner"></img>
+            </motion.div>
 
 
 
