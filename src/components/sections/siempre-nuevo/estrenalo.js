@@ -10,7 +10,9 @@ import "swiper/css/navigation";
 
 import useFetch from "../../../hooks/useFetch2";
 import corolla from "../../../images/siemprenuevo/corrolla.png"
-import vector from "../../../images/siemprenuevo/Vector.png"
+import rav4 from "../../../images/siemprenuevo/rav4.png"
+
+import vector from "../../../images/siemprenuevo/flecha2.png"
 
 
 export default function Estrenalo() {
@@ -31,14 +33,14 @@ export default function Estrenalo() {
                         <h1 className="campanaestrenalosub">CADA 3 AÑOS</h1>
                     </div>
                     <div className="carroestrenalo">
-                        <img src={corolla} className="imagencarroestranlo"></img>
+                        <img src={rav4} className="imagencarroestranlo"></img>
                         <h1 className="campanaestrenalo2">
                             1 Sola entrada
                         </h1>
 
                     </div>
                     <div className="flechaestrenalo">
-                        <img src={vector} className=""></img>
+                        <img src={vector} className="vectorflecha"></img>
 
 
                     </div>

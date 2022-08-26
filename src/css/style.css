@@ -2674,19 +2674,19 @@ ul.tabsnoticias>li {
     margin-top: 10px;
 }
 
-.contenedor-seccion-tecnologia{
+.contenedor-seccion-tecnologia {
     margin: 0 auto;
     padding: 0 15%;
 }
 
-.subtitulo-mundo-hibrido{
+.subtitulo-mundo-hibrido {
     font-family: 'Radikal-Medium';
     font-size: 28px;
     text-align: center;
     padding: 0 15%;
 }
 
-.item-titulo-tecnologia{
+.item-titulo-tecnologia {
     font-family: 'Toyota-DisplayRegular';
     text-align: center;
     font-size: 26px;
@@ -2695,13 +2695,13 @@ ul.tabsnoticias>li {
     max-width: 520px;
 }
 
-.img-titulo-tecnologia{    
+.img-titulo-tecnologia {
     display: block;
     margin: 0 auto;
     margin-bottom: 60px;
 }
 
-.item-parrafo-tecnologia{
+.item-parrafo-tecnologia {
     font-family: 'Radikal-Medium';
     font-size: 22px;
     text-align: center;
@@ -2709,11 +2709,11 @@ ul.tabsnoticias>li {
     margin-bottom: 60px;
 }
 
-.fuente-blanco{
+.fuente-blanco {
     color: red !important;
 }
 
-.seccion-ambiental .titulo-ambiental{
+.seccion-ambiental .titulo-ambiental {
     position: absolute;
     top: 20;
     z-index: 999999;
@@ -2724,6 +2724,105 @@ ul.tabsnoticias>li {
 
     #imagen-auto-diseno2 {
         padding-top: 20px;
+    }
+
+    .cuadriculamedio {
+        border: 0px;
+    }
+
+    .circuloimg {
+
+        width: 100px;
+        top: -5px;
+        right: -15px;
+    }
+
+    .flechaimg {
+        position: absolute;
+        bottom: -40px;
+        right: -80px;
+        width: 100%;
+    }
+
+    .ytp-cued-thumbnail-overlay-image {
+        background-size: contain;
+        -webkit-background-size: contain;
+
+    }
+
+    .drow {
+        flex-direction: row;
+        height: 400px;
+    }
+
+    .imgfortuner {
+
+        width: 200px;
+    }
+
+    .pupgrade {
+
+        font-size: inherit;
+    }
+
+    .cuadricula {
+        border-top: 1px solid #000;
+        text-align: center;
+    }
+
+    .campanaestrenalo {
+        font-family: 'Radikal-Medium';
+        font-weight: 500;
+        color: #000;
+        font-size: 24px;
+    }
+
+    .divsubestrenalo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .imagencarroestranlo {
+
+        width: 150px;
+    }
+
+    .campanaestrenalosub {
+
+        font-size: 24px;
+
+    }
+
+    .vectorflecha {
+        width: 100%;
+    }
+
+    .comofuncionah1 {
+        font-size: 24px;
+    }
+
+    .pcuadronumeros {
+        font-size: 30px;
+    }
+
+    .inmediata {
+        font-size: 30px;
+    }
+
+    .logotns {
+        width: auto;
+    }
+
+    .iconostoyotanueva {
+        width: 40px;
+        margin-bottom: 40px;
+    }
+
+
+
+    .campanaestrenalo2 {
+
+        font-size: 24px;
     }
 
     .conceswiper .contenedor {
