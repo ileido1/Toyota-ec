@@ -2700,17 +2700,183 @@ ul.tabsnoticias>li {
     text-align: center;
     max-width: 520px;
     margin-bottom: 60px;
+    line-height: 30px;
 }
 
 .fuente-blanco{
-    color: red !important;
+    color: #ffffff !important;
 }
 
 .seccion-ambiental .titulo-ambiental{
-    position: absolute;
-    top: 20;
-    z-index: 999999;
+    text-align: center;
+    z-index: 200;
+    position: relative;
+}
+
+.ambiental-content-1{
+    margin-top: 80px;
+}
+
+.ambiental-content-2 img{
+    z-index: 100;
+    position: relative;
+    margin-top: -165px;
+}
+
+.ambiental-content-3 .item-ambiental{
+    margin-top: -300px;
+    z-index: 8888;
+    position: relative;
+}
+
+.icono-ambiental{
+    width: 60px;
     display: block;
+    margin: 0 auto;
+}
+
+.texto-ambiental{
+    font-family: 'Radikal-Medium';
+    display: block;
+    margin: 0 auto;
+    max-width: 60%;
+    color: #fff;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+/* vehiculos */
+
+.contenedor-seccion-vehiculos-h{
+    margin: 0 auto;
+    padding: 0 15%;
+    padding-bottom: 80px;
+
+}
+
+#vehiculos-mundo-hibrido{
+    padding-top: 80px;
+    background: #EDEDED;
+}
+
+.fuente-azul{
+    color: #1750F1;
+}
+
+.subtitulo-h-vehiculos{
+    font-family: 'Radikal-Medium';
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 40px;
+    max-width: 60%;
+    margin-bottom: 80px;
+    line-height: 30px;
+}
+
+.vehiculos-h-nombre{
+    font-family: 'Radikal-Medium';
+    font-weight: 500;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+a.vehiculos-h-enlace{
+    font-family: 'Radikal-Medium';
+    font-weight: 500;
+    color: #000000;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+a.vehiculos-h-enlace:hover{
+
+    color: #000000;
+
+}
+
+.img-h-vehiculo{
+    width: 180px;
+    display: block;
+    margin: 0 auto;
+}
+
+.textos-h-vehiculo{
+    width: 180px;
+    display: block;
+    margin: 0 auto;
+}
+
+.h-content-vehiculo{
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px !important;
+}
+
+.fuente-rojo{
+    color: #E20B2A !important;
+}
+
+#btn-cotizar-hibrido{
+    background: transparent;
+    padding: 4px 10px;
+    text-transform: uppercase;
+    font-size: 24px;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 auto;
+    display: block;
+    width: 300px;
+    position: relative;
+    bottom: -60px;
+    font-family: 'Radikal-Medium';
+}
+
+.h-content-vehiculo{
+
+}
+
+/* faqs  */
+
+#faqs-mundo-hibrido{
+    background: #F5F5F5;
+    background: #F5F5F5;
+    padding-top: 100px;
+}
+
+.titulo-faqs{
+    margin-bottom: 60px;
+}
+
+#faqs-mundo-hibrido .accordion-button {
+    background: #F5F5F5;
+    border: 0px solid transparent !important;
+    color: #000;
+}
+
+.faqs-acordeon{
+    background: #F5F5F5;
+}
+
+.faqs-acordeon .accordion-collapse{
+    background: #F5F5F5 !important;
+}
+
+.titulo-faqs button{
+    font-family: 'Radikal-Medium';
+    font-size: 20px;
+}
+
+.parrafo-faqs{
+    font-size: 18px;
 }
 
 @media only screen and (max-width: 600px) {

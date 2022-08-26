@@ -18,14 +18,14 @@ const MundoHibridoTecnologia = () => (
             <div className="row contenedor-seccion-tecnologia" >
                 <div className='col-12 col-sm-12 col-md-6' >
 
-                    <img className='img-titulo-tecnologia' src={pic1} alt="HYBRID SYNERGY DRIVE " />
+                    <img className='img-titulo-tecnologia img-fluid' src={pic1} alt="HYBRID SYNERGY DRIVE " />
                     <p className='item-titulo-tecnologia' >HYBRID SYNERGY DRIVE</p>
                     <p className='item-parrafo-tecnologia' >El Toyota HSD (Hybrid Synergy Drive) combina la potencia de los motores: eléctrico y de combustión; el desempeño de este sistema es equivalente a un automóvil de 2.400 cc, altamente eficiente. </p>
                     
                 </div>
                 <div className='col-12 col-sm-12 col-md-6' >
 
-                    <img className='img-titulo-tecnologia' src={pic2} alt="FRENADO REGENERATIVO " />
+                    <img className='img-titulo-tecnologia img-fluid' src={pic2} alt="FRENADO REGENERATIVO " />
                     <p className='item-titulo-tecnologia' >FRENADO REGENERATIVO</p>
                     <p className='item-parrafo-tecnologia' >Al presionar el freno, el motor eléctrico entra en
 ‘modo de marcha atrás’, Mientras esto ocurre,
@@ -35,7 +35,7 @@ produciendo energía que recargará las baterías.</p>
                 </div>
                 <div className='col-12 col-sm-12 col-md-6' >
 
-                    <img className='img-titulo-tecnologia' src={pic3} alt="AMIGABLE CON EL AMBIENTE" />
+                    <img className='img-titulo-tecnologia img-fluid' src={pic3} alt="AMIGABLE CON EL AMBIENTE" />
                     <p className='item-titulo-tecnologia' >AMIGABLE CON EL AMBIENTE</p>
                     <p className='item-parrafo-tecnologia' >Al combinar dos tipos de generadores de energía:
 uno de combustión y un motor eléctrico, se requiere
@@ -45,7 +45,7 @@ que se traduce en menos emisiones al ambiente. </p>
                 </div>
                 <div className='col-12 col-sm-12 col-md-6' >
 
-                    <img className='img-titulo-tecnologia' src={pic4} alt="BATERÍA CON 8 AÑOS DE GARANTÍA" />
+                    <img className='img-titulo-tecnologia img-fluid' src={pic4} alt="BATERÍA CON 8 AÑOS DE GARANTÍA" />
                     <p className='item-titulo-tecnologia' >BATERÍA CON 8 AÑOS DE GARANTÍA</p>
                     <p className='item-parrafo-tecnologia' >Toyota utiliza dos tipos de baterías: unas son de
 ion-litio y otras, de níquel-metal, ambas con
