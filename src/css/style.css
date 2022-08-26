@@ -1894,6 +1894,7 @@ img.autos-similares {
     border-radius: .3rem;
     outline: 0;
     left: 0px !important;
+    height: 100%;
 }
 
 /* The Close Button */
@@ -2484,6 +2485,7 @@ ul.tabsnoticias>li {
     border-radius: 40px;
     top: 80px;
     padding: 40px;
+    height: auto;
 }
 
 
