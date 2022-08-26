@@ -19,8 +19,12 @@ const MundoHibridoTecnologia = () => (
                 <div className='col-12 col-sm-12 col-md-6' >
 
                     <img className='img-titulo-tecnologia img-fluid' src={pic1} alt="HYBRID SYNERGY DRIVE " />
+                    <div className='h-tec-textos' >
+ 
                     <p className='item-titulo-tecnologia' >HYBRID SYNERGY DRIVE</p>
                     <p className='item-parrafo-tecnologia' >El Toyota HSD (Hybrid Synergy Drive) combina la potencia de los motores: eléctrico y de combustión; el desempeño de este sistema es equivalente a un automóvil de 2.400 cc, altamente eficiente. </p>
+                        
+                    </div>
                     
                 </div>
                 <div className='col-12 col-sm-12 col-md-6' >

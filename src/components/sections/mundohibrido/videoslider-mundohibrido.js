@@ -41,7 +41,7 @@ export default function VideoliderMundoHibrido() {
                                             className='react-player'
                                             width='1920px'
                                             height='800px'
-                                            url="https://www.youtube.com/watch?v=eiZHs4hzRMA&list=PLPNYBLHyUz21BSHAy-DrRuDcOpztSxZLh&index=3"
+                                            url="https://youtu.be/eiZHs4hzRMA"
                                         />
 
                                     </div>
@@ -51,7 +51,7 @@ export default function VideoliderMundoHibrido() {
                                             className='react-player'
                                             width='480px'
                                             height='260px'
-                                            url="https://www.youtube.com/watch?v=eiZHs4hzRMA&list=PLPNYBLHyUz21BSHAy-DrRuDcOpztSxZLh&index=3"
+                                            url="https://youtu.be/eiZHs4hzRMA"
                                         />
 
                                     </div>
@@ -68,7 +68,7 @@ export default function VideoliderMundoHibrido() {
                                             className='react-player'
                                             width='1920px'
                                             height='800px'
-                                            url="https://www.youtube.com/watch?v=cIDaVP3DUuI&list=PLPNYBLHyUz21BSHAy-DrRuDcOpztSxZLh&index=4"
+                                            url="https://youtu.be/cIDaVP3DUuI"
                                         />
 
                                     </div>
@@ -79,7 +79,7 @@ export default function VideoliderMundoHibrido() {
                                             className='react-player'
                                             width='480px'
                                             height='260px'
-                                            url="https://www.youtube.com/watch?v=cIDaVP3DUuI&list=PLPNYBLHyUz21BSHAy-DrRuDcOpztSxZLh&index=4"
+                                            url="https://youtu.be/cIDaVP3DUuI"
                                         />
 
                                     </div>
@@ -96,7 +96,7 @@ export default function VideoliderMundoHibrido() {
                                         className='react-player'
                                         width='1920px'
                                         height='800px'
-                                        url="https://www.youtube.com/watch?v=zoHCKD-u9Ms&list=PLPNYBLHyUz21BSHAy-DrRuDcOpztSxZLh&index=5"
+                                        url="https://youtu.be/zoHCKD-u9Ms"
                                     />
 
                                 </div>
@@ -106,7 +106,7 @@ export default function VideoliderMundoHibrido() {
                                             className='react-player'
                                             width='480px'
                                             height='260px'
-                                            url="https://www.youtube.com/watch?v=zoHCKD-u9Ms&list=PLPNYBLHyUz21BSHAy-DrRuDcOpztSxZLh&index=5"
+                                            url="https://youtu.be/zoHCKD-u9Ms"
                                         />
 
                                     </div>
@@ -123,7 +123,7 @@ export default function VideoliderMundoHibrido() {
                                             className='react-player'
                                             width='1920px'
                                             height='800px'
-                                            url="https://www.youtube.com/watch?v=V5P3rioNz6Y&list=PLPNYBLHyUz21BSHAy-DrRuDcOpztSxZLh&index=6"
+                                            url="https://youtu.be/V5P3rioNz6Y"
                                         />
 
                                     </div>
@@ -133,7 +133,7 @@ export default function VideoliderMundoHibrido() {
                                             className='react-player'
                                             width='480px'
                                             height='260px'
-                                            url="https://www.youtube.com/watch?v=V5P3rioNz6Y&list=PLPNYBLHyUz21BSHAy-DrRuDcOpztSxZLh&index=6"
+                                            url="https://youtu.be/V5P3rioNz6Y"
                                         />
 
                                     </div>
@@ -150,7 +150,7 @@ export default function VideoliderMundoHibrido() {
                                             className='react-player'
                                             width='1920px'
                                             height='800px'
-                                            url="https://www.youtube.com/watch?v=FYcBnxEwmvA&list=PLPNYBLHyUz21BSHAy-DrRuDcOpztSxZLh&index=7"
+                                            url="https://youtu.be/FYcBnxEwmvA"
                                         />
 
                                     </div>
@@ -160,7 +160,7 @@ export default function VideoliderMundoHibrido() {
                                             className='react-player'
                                             width='480px'
                                             height='260px'
-                                            url="https://www.youtube.com/watch?v=FYcBnxEwmvA&list=PLPNYBLHyUz21BSHAy-DrRuDcOpztSxZLh&index=7"
+                                            url="https://youtu.be/FYcBnxEwmvA"
                                         />
 
                                     </div>

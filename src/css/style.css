@@ -2717,6 +2717,7 @@ ul.tabsnoticias>li {
     color: #FF0000;
     text-align: center;
     max-width: 520px;
+    margin: 0 auto;
 }
 
 .img-titulo-tecnologia {
@@ -2727,11 +2728,13 @@ ul.tabsnoticias>li {
 
 .item-parrafo-tecnologia {
     font-family: 'Radikal-Medium';
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
     max-width: 520px;
-    margin-bottom: 60px;
+    margin-top: 20px !important;
+    margin-bottom: 60px !important;
     line-height: 30px;
+    margin: 0 auto;
 }
 
 
@@ -2884,7 +2887,10 @@ a.vehiculos-h-enlace:hover {
     font-family: 'Radikal-Medium';
 }
 
-.h-content-vehiculo {}
+.h-tec-textos{
+    display: block;
+    margin: 0 auto;
+}
 
 /* faqs */
 
