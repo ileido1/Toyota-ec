@@ -2897,6 +2897,49 @@ a.vehiculos-h-enlace:hover{
     font-size: 18px;
 }
 
+
+
+@media only screen and (max-width: 1299px) {
+
+    .content_features {
+        margin-top: -300px;
+        padding-left: 20px;
+        z-index: 999;
+        position: relative;
+    }
+
+    .titulo-feature {
+        font-family: 'Toyota-DisplayBold';
+        color: #ffffff;
+        text-decoration: underline;
+        font-size: 32px;
+      }
+
+      .subtext-feature {
+        font-family: 'Radikal-Light';
+        color: #ffffff;
+        font-size: 10px;
+        text-align: center;
+        margin-top: -10px;
+      }
+
+      .padding-logo-versiones {
+        padding-top: 60px;
+      }
+
+      .img-icono-feature {
+        width: 38px;
+      }
+
+      .img-icono-feature-frenos {
+        width: 38px;
+      }
+
+      .img-icono-feature-motor {    
+        width: 38px;
+      }
+}
+
 @media only screen and (max-width: 600px) {
 
     #imagen-auto-diseno2 {
