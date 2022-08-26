@@ -1,8 +1,9 @@
 import Accordion from 'react-bootstrap/Accordion';
+import plus from '../../../images/plus.png'
 
 const FaqsVehiculos = () => (
 
-<div id="faqs-mundo-hibrido" className="vehiculos-mundo-hibrido container-fluid d-none d-sm-none d-md-block d-xl-block d-lg-block col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sinpadding" >
+<div id="faqs-mundo-hibrido" className="vehiculos-mundo-hibrido container-fluid d-block d-sm-block d-md-block d-xl-block d-lg-block col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sinpadding" >
 
    <div className="col-12 contenedor-seccion-vehiculos-h"  >
         
@@ -12,7 +13,7 @@ const FaqsVehiculos = () => (
 
             <Accordion className="d-block faqs-acordeon">
                 <Accordion.Item eventKey="1" >
-                    <Accordion.Header className='titulo-faqs' >¿Cómo funciona un vehículo híbrido?</Accordion.Header>
+                    <Accordion.Header className='titulo-faqs h-tit' >¿Cómo funciona un vehículo híbrido?</Accordion.Header>
                     <Accordion.Body>
                             <p className='parrafo-faqs' >
                             Un vehículo híbrido funciona gracias a la energía que le proveen sus dos motores: por un lado, un eficiente motor de combustión y por otro, un potente motor eléctrico. El exclusivo sistema híbrido Toyota HSD (Hybrid Synergy Drive) combina o alterna la potencia de ambos, moviéndose de una forma más económica y sostenible sin perder las prestaciones de un vehículo convencional.

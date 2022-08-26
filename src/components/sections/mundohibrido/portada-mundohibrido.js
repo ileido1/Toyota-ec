@@ -10,7 +10,7 @@ export default function PortadaMundoHibrido() {
     return (
     <> 
 
-        <div id="portada-mundo-hibrido" className="mundo-hibrido container-fluid video-cart d-none d-sm-none d-md-block d-xl-block d-lg-block" >
+        <div id="portada-mundo-hibrido" className="mundo-hibrido container-fluid video-cart d-block d-sm-block d-md-block d-xl-block d-lg-block" >
 
             <div className="row" >
 
