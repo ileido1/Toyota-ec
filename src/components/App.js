@@ -65,7 +65,7 @@ const App = () => {
           <Route path="/corolla-hybrid" element={<Cart />} />
           <Route path="/vehiculos" element={<Vehiculos />} />
           <Route path="/concesionarios" element={<Concesionarios />} />
-          <Route path="/siemprenuevo" element={<SiempreNuevo />} />
+          <Route path="/tempsiemprenuevo" element={<SiempreNuevo />} />
           <Route path="/tempmundohibrido" element={<MundoHibrido />} />
           <Route path="/post-venta" element={<Campanaservicios />} />
           <Route path="/terminos-y-condiciones" element={<Terminosycondiciones />} />

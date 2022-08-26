@@ -4,10 +4,10 @@ const MundoHibridoMenu = () => (
         <div className="row menu-sticky" id="menu-producto" >
             <div className="col-10"  >
                 <ul >
-                    <li><a href="#tec" >TECNOLOGÍA HÍBRIDA</a></li>
-                    <li className="plmenu" ><a href="#garantia" >GARANTÍA</a></li>
-                    <li className="plmenu" ><a href="#plan-ambiental" >PLAN AMBIENTAL TOYOTA</a></li>
-                    <li className="plmenu" ><a href="#faqs">PREGUNTAS FRECUENTES</a></li>
+                    <li><a href="#tecnologia-mundo-hibrido" >TECNOLOGÍA HÍBRIDA</a></li>
+                    <li className="plmenu" ><a href="#garantia-mundo-hibrido" >GARANTÍA</a></li>
+                    <li className="plmenu" ><a href="#ambiental-mundo-hibrido" >PLAN AMBIENTAL TOYOTA</a></li>
+                    <li className="plmenu" ><a href="#faqs-mundo-hibrido">PREGUNTAS FRECUENTES</a></li>
                 </ul>
             </div>
         </div>
