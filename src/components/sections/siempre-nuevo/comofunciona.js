@@ -34,8 +34,11 @@ export default function Comofunciona() {
                         <div className="row">
                             <div className="col-12 cuadrointerno bghover">
                                 <img src={iconodinero} className="iconostoyotanueva"></img>
+
                                 <p className="pcuadro">Entrada única del</p>
                                 <p className="pcuadronumeros">25% <span className="pcuadro">al</span> 40%</p>
+
+
                             </div>
                             <div className="col-12 cuadrointerno cuadrointernolinea bghover">
                                 <img src={iconoauto} className="iconostoyotanueva"></img>
