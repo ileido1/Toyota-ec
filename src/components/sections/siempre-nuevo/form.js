@@ -26,7 +26,7 @@ export default function Form() {
             <div className="container-fluid formcontainer"  >
                 <h1>CUMPLE EL SUEÑO DE<br></br>
                     TENER UN TOYOTA</h1>
-                <p>Te ofrecemos flexibilidad para que al final del ciclo tu decidas si deseas<br></br>
+                <p className="infoformtns">Te ofrecemos flexibilidad para que al final del ciclo tu decidas si deseas<br></br>
                     Ronavar, hacer un Upgrade ó Cancelar tu cuota final</p>
                 <div className="formcuadro">
                     <h3>¿QUISIERAS MÁS INFORMACIÓN?</h3>

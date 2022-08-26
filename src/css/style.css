@@ -484,14 +484,18 @@ ul#menu-galeria>li>span {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 40px;
+    padding: 100px;
+}
+
+.infoformtns {
+    margin-bottom: 80px;
 }
 
 .formcontainer h1 {
     color: #EE0202;
     font-family: 'Radikal-Bold';
     font-weight: 700;
-    font-size: 40px;
+    font-size: 60px;
     text-align: center;
 }
 
@@ -2887,7 +2891,7 @@ a.vehiculos-h-enlace:hover {
     font-family: 'Radikal-Medium';
 }
 
-.h-tec-textos{
+.h-tec-textos {
     display: block;
     margin: 0 auto;
 }
