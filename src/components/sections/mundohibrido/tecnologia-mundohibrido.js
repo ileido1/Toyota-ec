@@ -5,7 +5,7 @@ import pic4 from '../../../images/seccion-tecnologia/tec4.png'
 
 const MundoHibridoTecnologia = () => (
 
-    <div id="tecnologia-mundo-hibrido" className="tecnologia-mundo-hibrido container-fluid d-block d-sm-block d-md-block d-xl-block d-lg-block col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-galeria sinpadding" >
+    <div id="tecnologia-mundo-hibrido" className="tecnologia-mundo-hibrido container-fluid d-block d-sm-block d-md-block d-xl-block d-lg-block col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-galeria-h sinpadding" >
         
         <div className="col-12"  >
             <p class="text-color-diseno2 secciones-subtitulos h-tit">TECNOLOGÍA HÍBRIDA</p>

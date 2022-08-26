@@ -23,7 +23,7 @@ export default function VideoliderMundoHibrido() {
 
     return (
         <>
-        <div id="garantia-mundo-hibrido" className="tecnologia-mundo-hibrido container-fluid d-flex d-flex d-md-block d-xl-block d-lg-block col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-galeria sinpadding" >
+        <div id="garantia-mundo-hibrido" className="tecnologia-mundo-hibrido container-fluid d-flex d-flex d-md-block d-xl-block d-lg-block col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-galeria-h sinpadding" >
          <Swiper spaceBetween={30}
                 centeredSlides={true}
                 navigation={true}

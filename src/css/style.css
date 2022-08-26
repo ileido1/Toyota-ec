@@ -2684,10 +2684,24 @@ ul.tabsnoticias>li {
 
 .subtitulo-mundo-hibrido {
     font-family: 'Radikal-Medium';
-    font-size: 28px;
+    font-size: 24px;
     text-align: center;
     padding: 0 15%;
+    margin-bottom: 80px;
+  }
+
+#tecnologia-mundo-hibrido,#portada-mundo-hibrido,#garantia-mundo-hibrido{
+    background: #EDEDED;
 }
+
+.titulo-galeria-h {
+    padding-top: 120px !important;
+
+  }
+
+  .hmtop40{
+    margin-top: 80px !important;
+  }
 
 .item-titulo-tecnologia {
     font-family: 'Toyota-DisplayRegular';
@@ -2883,6 +2897,14 @@ a.vehiculos-h-enlace:hover {
     color: #000;
 }
 
+#faqs-mundo-hibrido .accordion-button {
+    background-color: #f5f5f5 !important;
+}
+
+#faqs-mundo-hibrido .accordion-button:not(.collapsed) {
+    background-color: #f5f5f5 !important;
+}
+
 #faqs-mundo-hibrido .accordion-button::after {
     background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%230c63e4%27%3e%3cpath fill-rule=%27evenodd%27 d=%27M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e") !important;
     transform: rotate(-180deg);
@@ -3022,6 +3044,20 @@ a.vehiculos-h-enlace:hover {
 
       .seccion-ambiental .titulo-ambiental {
         top: 40px;
+      }
+
+      .h-content-vehicul{
+        margin: 0;
+      }
+
+      a.vehiculos-h-enlace {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .vehiculos-h-nombre { 
+        text-align: center;
       }
 
   }
