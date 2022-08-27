@@ -11,6 +11,7 @@ const variants = {
 }
 
 let url_backend = 'https://www.toyota.com.ec/'
+let estilo_link = "none"
 
 export default function Vehiculossidebar() {
     
@@ -40,9 +41,13 @@ export default function Vehiculossidebar() {
                             <img className="" src={url_backend+c.icono_sidebar_vehiculos} />
                         </div>
                         <div className="titulo-botones-sidebar " >
-                            
+                        { c.texto_sidebar_vehiculos == "Mundo híbrido" ? ( 
+                            <a style={{textDecoration:estilo_link}} href="/mundohibrido" >MUNDO HÍBRIDO</a>
+                        ) : (
                             <p onClick={abrirModal} >{c.texto_sidebar_vehiculos}</p>
                             
+                            )    
+                        }  
                         </div>
 
                     </div>                        

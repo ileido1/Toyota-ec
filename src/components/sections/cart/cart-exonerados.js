@@ -31,31 +31,26 @@ export default function Cartexonerados() {
     let texto_cotizar = ''
     let link_cotizar = ''
     let flag_clase = ''
-    let flag_clase2 = ''
+    let flag_clase2 = 'none'
 
     let contenedor = document.getElementById('content-auto-exonerados')
 
-    if (location.pathname == '/corolla-sedannnn') {
+    if (location.pathname == '/corolla-sedan') {
         flag_clase = "none"
         flag_clase2 = 'block'
     }
 
-    if (location.pathname == '/corolla-crossnnn') {
+    if (location.pathname == '/corolla-cross') {
         flag_clase = "none"
         flag_clase2 = 'block'
     }
 
-    if (location.pathname == '/c-hrnnn') {
+    if (location.pathname == '/c-hr') {
         flag_clase = "none"
         flag_clase2 = 'block'
     }
 
-    if (location.pathname == '/corolla-sedannnn') {
-        flag_clase = "none"
-        flag_clase2 = 'block'
-    }
-
-    if (location.pathname == '/yaris-crossnnnn') {
+    if (location.pathname == '/yaris-cross') {
         flag_clase = "none"
         flag_clase2 = 'block'
     }
@@ -92,7 +87,7 @@ export default function Cartexonerados() {
     return (
 
         <>
-            <div id="content-auto-exonerados" className="auto-individual container-fluid ocultar-mobile " style={{ display: flag_clase }} >
+            <div id="content-auto-exonerados" className="auto-individual container-fluid ocultar-mobile " >
                 <div className="row" id="auto-exonerados" >
 
                     <div className="col-12 col-sm-6"  >
@@ -103,7 +98,11 @@ export default function Cartexonerados() {
                         <div className='contenedor-logo-exonerados'>
 
                             <motion.img src={banner2} variants={variants} initial={{ x: 200, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.5, default: { duration: 1 } }} />
-                            <motion.p className='text-exonerados' variants={variants} initial={{ x: 200, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.5, default: { duration: 1 } }} > <a className="cart-link" onClick={abrirModal}>{texto_cotizar}</a></motion.p>
+                            <motion.p className='text-exonerados' variants={variants} initial={{ x: 200, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.5, default: { duration: 1 } }}  > 
+                            <a className="cart-link" onClick={abrirModal} style={{ display: flag_clase }}   >{texto_cotizar}</a>
+                            <a className="cart-link" href="/mundohibrido" style={{ display: flag_clase2 }} >{texto_cotizar}</a>
+                            
+                            </motion.p>
 
                         </div>
                     </div>
