@@ -1777,7 +1777,7 @@ a.cart-link:hover {
 
 .content-botones-sidebar-general {
     background: #ffffff;
-    padding-left: 15px;
+    padding-left: 0px;
 }
 
 .content-botones-sidebar {
@@ -1791,23 +1791,11 @@ a.cart-link:hover {
     align-items: center;
 }
 
-.titulo-botones-sidebar {
-    flex-basis: 80%;
-}
-
-.iconos-sidebar {
-    flex-basis: 20%;
-}
-
-.abanner {
-    text-align: center;
-}
-
 .titulo-botones-sidebar a {
 
     font-family: 'Radikal-Medium';
     text-align: left;
-    color: #817f7f !important;
+    color: #817f7f;
     font-size: 1.1em;
     line-height: 1.4em;
     cursor: pointer;
@@ -1819,13 +1807,34 @@ a.cart-link:hover {
 
     font-family: 'Radikal-Medium';
     text-align: left;
-    color: #817f7f !important;
+    color: #817f7f;
     font-size: 1.1em;
     line-height: 1.4em;
     cursor: pointer;
     text-transform: uppercase;
     margin-bottom: 0px;
 
+}
+
+.content-botones-sidebar:hover {
+    background: #e50021;
+    border-bottom: 2px solid #e50021;
+}
+
+.content-botones-sidebar:hover .titulo-botones-sidebar p, .content-botones-sidebar:hover .titulo-botones-sidebar a {
+    color: #fff;
+}
+
+.titulo-botones-sidebar {
+    flex-basis: 80%;
+}
+
+.iconos-sidebar {
+    flex-basis: 20%;
+}
+
+.abanner {
+    text-align: center;
 }
 
 #pagina-vehiculos {
@@ -1994,6 +2003,11 @@ ul.tabsnoticias>li {
 }
 
 #terminos {
+    height: 20px;
+    width: 20px;
+}
+
+#terminos2 {
     height: 20px;
     width: 20px;
 }

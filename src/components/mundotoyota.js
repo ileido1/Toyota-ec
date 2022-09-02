@@ -40,9 +40,9 @@ export default function MundoToyota() {
                                         <div ref={ref} style={{
                                             transform: isInView ? "none" : "translateY(200px)",
                                             opacity: isInView ? 1 : 0,
-                                            transition: "all 2.5s cubic-bezier(0.17, 0.85, 0.85, 1) 1s"
+                                            transition: "all 2.5s cubic-bezier(0.17, 0.85, 0.85, 1) 1s",
+                                            zIndex: 9999
                                         }}
-
                                             className="col-4 centrar" >
                                             <h1 className="mundotoyota">{c.title_square_box}</h1>
                                         </div>

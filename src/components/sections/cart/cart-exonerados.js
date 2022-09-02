@@ -99,7 +99,7 @@ export default function Cartexonerados() {
 
                             <motion.img src={banner2} variants={variants} initial={{ x: 200, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.5, default: { duration: 1 } }} />
                             <motion.p className='text-exonerados' variants={variants} initial={{ x: 200, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.5, default: { duration: 1 } }}  > 
-                            <a className="cart-link" onClick={abrirModal} style={{ display: flag_clase }}   >{texto_cotizar}</a>
+                            <a className="cart-link" onClick={abrirModal} style={{ display: flag_clase }} >{texto_cotizar}</a>
                             <a className="cart-link" href="/mundohibrido" style={{ display: flag_clase2 }} >{texto_cotizar}</a>
                             
                             </motion.p>

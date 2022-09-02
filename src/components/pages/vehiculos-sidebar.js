@@ -40,11 +40,11 @@ export default function Vehiculossidebar() {
                         <div className="iconos-sidebar" >
                             <img className="" src={url_backend+c.icono_sidebar_vehiculos} />
                         </div>
-                        <div className="titulo-botones-sidebar " >
+                        <div className="titulo-botones-sidebar" >
                         { c.texto_sidebar_vehiculos == "Mundo híbrido" ? ( 
-                            <a style={{textDecoration:estilo_link}} href="/mundohibrido" >MUNDO HÍBRIDO</a>
+                            <a style={{textDecoration:estilo_link}} href="/mundohibrido" className="ag" >MUNDO HÍBRIDO</a>
                         ) : (
-                            <p onClick={abrirModal} >{c.texto_sidebar_vehiculos}</p>
+                            <p onClick={abrirModal} className="ag" >{c.texto_sidebar_vehiculos}</p>
                             
                             )    
                         }  

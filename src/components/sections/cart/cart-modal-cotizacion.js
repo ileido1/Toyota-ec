@@ -19,20 +19,33 @@ export default function Modalcotizacion({ carro }) {
     function handleClick(event) {
 
         let nombres = document.getElementById("nombres").value;
-        let cedula = document.getElementById("cedula").value;
-        let celular = document.getElementById("celular").value;
-        let email = document.getElementById("email").value;
-        let modelo = document.getElementById("modelo").value;
-        let ciudad = document.getElementById("ciudad").value;
-        
-        const getproceso = async () => {
-            const resultexo = await get(`${'https://www.toyota.com.ec/api/v2/cotizar/?nombres=' + nombres + '&cedula=' + cedula + '&celular=' + celular + '&email=' + email + '&modelo=' + modelo + '&ciudad=' + ciudad }`);
-            const procesos = resultexo.data;
-            setProceso(procesos);
-        }
+        let cedula = document.getElementById("cedula2").value;
+        let celular = document.getElementById("celular2").value;
+        let email = document.getElementById("email2").value;
 
-        getproceso()
+        var select = document.getElementById('modelo');
+        var modelo = select.options[select.selectedIndex].value;
         
+        let ciudad = document.getElementById("ciudad").value;
+        let terminos = document.getElementById('terminos2').checked;
+
+        //console.log(document.getElementById('terminos2'))
+        console.log(nombres,cedula,celular,email,modelo,ciudad,terminos)
+
+        if(nombres == '' || cedula == '' || celular == '' || email == '' || modelo == '' || ciudad == '' || terminos != true ){
+            alert ('Todos los campos son obligatorios.')
+        }else{
+
+            const getproceso = async () => {
+                const resultexo = await get(`${'https://www.toyota.com.ec/api/v2/cotizar/?nombres=' + nombres + '&cedula=' + cedula + '&celular=' + celular + '&email=' + email + '&modelo=' + modelo + '&ciudad=' + ciudad }`);
+                const procesos = resultexo.data;
+                setProceso(procesos);
+            }
+    
+            getproceso()
+
+        }
+                
     }
 
     setTimeout(
@@ -138,11 +151,11 @@ export default function Modalcotizacion({ carro }) {
                                         <div className="content-formulario-campos" >
                                             <input type="text" name="nombres" id="nombres" placeholder="NOMBRE Y APELLIDO*" />
                                             <br></br>
-                                            <input type="text" name="cedula" id="cedula" placeholder="CÉDULA*" />
+                                            <input type="text" name="cedula" id="cedula2" placeholder="CÉDULA*" />
                                             <br></br>
-                                            <input type="text" name="celular" id="celular" placeholder="CELULAR*" />
+                                            <input type="text" name="celular" id="celular2" placeholder="CELULAR*" />
                                             <br></br>
-                                            <input type="text" name="email" id="email" placeholder="E-MAIL*" />
+                                            <input type="text" name="email" id="email2" placeholder="E-MAIL*" />
                                             <br></br>
                                             <div className="content-selects" >
                                                 <label className='d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block' htmlFor="modelo">MODELO DE INTERÉS</label>
@@ -152,7 +165,7 @@ export default function Modalcotizacion({ carro }) {
                                                 </select>
                                      : 
                                      
-                                                <select id="modelo" name="modelo" >
+                                                <select id="modelo" name="modelo" className='modelo' >
                                                 <option value="" >-- Seleccione --</option>
                                                 <option value="Raize">Raize</option>
                                                 <option value="Yaris Sport">Yaris Sport</option>
@@ -201,7 +214,7 @@ export default function Modalcotizacion({ carro }) {
                                             </div>
                                             <br></br>
                                             <div className="content-checkbox" >
-                                                <input type="checkbox" name="terminos" id="terminos" />
+                                                <input type="checkbox" name="terminos" id="terminos2" />
                                                 <label htmlFor="terminos"><a href="/terminos-y-condiciones" target="_blank" className='link-terminos' >Términos y condiciones <img src={link_externo}/></a>   </label>
                                             </div>
 
