@@ -19,61 +19,62 @@ export default function Modalcotizacion({ carro }) {
     function handleClick(event) {
 
         let nombres = document.getElementById("nombres").value;
+        let apellidos = document.getElementById("apellidos").value;
         let cedula = document.getElementById("cedula2").value;
         let celular = document.getElementById("celular2").value;
         let email = document.getElementById("email2").value;
 
         var select = document.getElementById('modelo');
         var modelo = select.options[select.selectedIndex].value;
-        
+
         let ciudad = document.getElementById("ciudad").value;
         let terminos = document.getElementById('terminos2').checked;
 
         //console.log(document.getElementById('terminos2'))
-        console.log(nombres,cedula,celular,email,modelo,ciudad,terminos)
+        console.log(nombres, apellidos, cedula, celular, email, modelo, ciudad, terminos)
 
-        if(nombres == '' || cedula == '' || celular == '' || email == '' || modelo == '' || ciudad == '' || terminos != true ){
-            alert ('Todos los campos son obligatorios.')
-        }else{
+        if (nombres == '' || cedula == '' || celular == '' || email == '' || modelo == '' || ciudad == '' || terminos != true) {
+            alert('Todos los campos son obligatorios.')
+        } else {
 
             const getproceso = async () => {
-                const resultexo = await get(`${'https://www.toyota.com.ec/api/v2/cotizar/?nombres=' + nombres + '&cedula=' + cedula + '&celular=' + celular + '&email=' + email + '&modelo=' + modelo + '&ciudad=' + ciudad }`);
+                const resultexo = await get(`${'https://www.toyota.com.ec/api/v2/cotizar/?nombre=' + nombres + '&apellido=' + apellidos + '&cedula=' + cedula + '&celular=' + celular + '&email=' + email + '&modelo=' + modelo + '&ciudad=' + ciudad}`);
                 const procesos = resultexo.data;
                 setProceso(procesos);
             }
-    
+
             getproceso()
 
         }
-                
+
     }
 
     setTimeout(
-        function() {
+        function () {
 
-            if(proceso.status==200){
+            if (proceso.status == 200) {
 
                 var elemento = document.getElementById("enviar-cotizar");
                 var mensaje = document.getElementById("mensaje-cotizar");
-            
+
                 elemento.classList.add("ocultar-icono");
-                mensaje.innerHTML = proceso.msj; 
+                mensaje.innerHTML = proceso.msj;
                 mensaje.classList.remove("ocultar-icono");
 
-        
-            }else if(proceso.status==404){
-                
+
+            } else if (proceso.status == 404) {
+
                 var elemento = document.getElementById("enviar-cotizar");
                 var mensaje = document.getElementById("mensaje-cotizar");
-            
+
                 elemento.classList.add("ocultar-icono");
-                mensaje.innerHTML = proceso.msj; 
+                mensaje.innerHTML = proceso.msj;
                 mensaje.classList.remove("ocultar-icono");
 
             }
-           
+
         }
-        .bind(this),
+            .bind(this),
         800
     );
 
@@ -149,7 +150,9 @@ export default function Modalcotizacion({ carro }) {
                                         <p className="parrafo-formulario-cotizar d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" >Solicita aquí la cotización de tu vehículo la cual enviaremos a tu correo</p>
                                         <p className="parrafo-formulario-cotizar d-block d-sm-none d-md-none d-lg-none d-xl-none" >Pide una cotización</p>
                                         <div className="content-formulario-campos" >
-                                            <input type="text" name="nombres" id="nombres" placeholder="NOMBRE Y APELLIDO*" />
+                                            <input type="text" name="nombres" id="nombres" placeholder="NOMBRES*" />
+                                            <br></br>
+                                            <input type="text" name="apellidos" id="apellidos" placeholder="APELLIDOS*" />
                                             <br></br>
                                             <input type="text" name="cedula" id="cedula2" placeholder="CÉDULA*" />
                                             <br></br>
@@ -159,32 +162,32 @@ export default function Modalcotizacion({ carro }) {
                                             <br></br>
                                             <div className="content-selects" >
                                                 <label className='d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block' htmlFor="modelo">MODELO DE INTERÉS</label>
-                                      { carro ?          
-                                                <select id="modelo" name="modelo" >
-                                                    <option value={carro} selected="selected">{carro}</option>
-                                                </select>
-                                     : 
-                                     
-                                                <select id="modelo" name="modelo" className='modelo' >
-                                                <option value="" >-- Seleccione --</option>
-                                                <option value="Raize">Raize</option>
-                                                <option value="Yaris Sport">Yaris Sport</option>
-                                                <option value="Yaris Sedan">Yaris Sedán</option>
-                                                <option value="Corolla Sedán">Corolla Sedán</option>
-                                                <option value="Corolla Cross">Corolla Cross</option>
-                                                <option value="C-HR Hibrido">C-HR Híbrido</option>
-                                                <option value="RAV 4">RAV 4</option>
-                                                <option value="Fortuner">Fortuner</option>
-                                                <option value="Land Cruiser Prado">Land Cruiser Prado</option>
-                                                <option value="Land Cruiser 200">Land Cruiser 300</option>
-                                                <option value="Rush">Rush</option>
-                                                <option value="Hilux 4X2 Cabina Doble">Hilux 4X2 Cabina Doble</option>
-                                                <option value="Hilux 4x4 Cabina Doble">Hilux 4x4 Cabina Doble</option>
-                                                <option value="Hilux Cabina Simple">Hilux Cabina Simple</option>
-                                                <option value="Hilux 4X4 Cabina Doble AT">Hilux 4X4 Cabina Doble AT</option>
-                                            </select>
-                                     
-                                     }                       
+                                                {carro ?
+                                                    <select id="modelo" name="modelo" >
+                                                        <option value={carro} selected="selected">{carro}</option>
+                                                    </select>
+                                                    :
+
+                                                    <select id="modelo" name="modelo" className='modelo' >
+                                                        <option value="" >-- Seleccione --</option>
+                                                        <option value="Raize">Raize</option>
+                                                        <option value="Yaris Sport">Yaris Sport</option>
+                                                        <option value="Yaris Sedan">Yaris Sedán</option>
+                                                        <option value="Corolla Sedán">Corolla Sedán</option>
+                                                        <option value="Corolla Cross">Corolla Cross</option>
+                                                        <option value="C-HR Hibrido">C-HR Híbrido</option>
+                                                        <option value="RAV 4">RAV 4</option>
+                                                        <option value="Fortuner">Fortuner</option>
+                                                        <option value="Land Cruiser Prado">Land Cruiser Prado</option>
+                                                        <option value="Land Cruiser 200">Land Cruiser 300</option>
+                                                        <option value="Rush">Rush</option>
+                                                        <option value="Hilux 4X2 Cabina Doble">Hilux 4X2 Cabina Doble</option>
+                                                        <option value="Hilux 4x4 Cabina Doble">Hilux 4x4 Cabina Doble</option>
+                                                        <option value="Hilux Cabina Simple">Hilux Cabina Simple</option>
+                                                        <option value="Hilux 4X4 Cabina Doble AT">Hilux 4X4 Cabina Doble AT</option>
+                                                    </select>
+
+                                                }
                                             </div>
                                             <br></br>
                                             <div className="content-selects" >
@@ -215,7 +218,7 @@ export default function Modalcotizacion({ carro }) {
                                             <br></br>
                                             <div className="content-checkbox" >
                                                 <input type="checkbox" name="terminos" id="terminos2" />
-                                                <label htmlFor="terminos"><a href="/terminos-y-condiciones" target="_blank" className='link-terminos' >Términos y condiciones <img src={link_externo}/></a>   </label>
+                                                <label htmlFor="terminos"><a href="/terminos-y-condiciones" target="_blank" className='link-terminos' >Términos y condiciones <img src={link_externo} /></a>   </label>
                                             </div>
 
                                             <br></br>

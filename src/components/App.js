@@ -10,6 +10,7 @@ import Terminosycondiciones from './pages/terminos'
 import Concesionarios from './pages/concesionarios';
 import SiempreNuevo from './pages/siempre-nuevo';
 import MundoHibrido from './pages/mundo-hibrido';
+import Blog from './pages/blog';
 
 import {
   BrowserRouter,
@@ -72,6 +73,7 @@ const App = () => {
           <Route path="/post-venta" element={<Campanaservicios />} />
           <Route path="/terminos-y-condiciones" element={<Terminosycondiciones />} />
           <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
         {
           footer ? (
