@@ -4,7 +4,7 @@ import LoadingSpinner from '../loading';
 
 export default function Pagination({ postPerPage, totalPages, paginate }) {
     const pageNumbers = [];
-
+    console.log(totalPages)
     for (let i = 1; i <= Math.ceil(totalPages / postPerPage); i++) {
         pageNumbers.push(i);
     }

@@ -13,8 +13,7 @@ export default function BlogNoticias() {
     const [currentPage, setCurrentPage] = useState(1);
     const [postPerPage, setPostPerPage] = useState(10);
     const [search, setSearch] = useState("");
-
-
+    const [totalPages, setTotalpages] = useState(post);
     useEffect(() => {
         const getPosts = async () => {
             setLoading(true);
@@ -36,10 +35,10 @@ export default function BlogNoticias() {
     const indexOfFirstPost = indexOfLastPost - postPerPage;
     const currentPosts = () => {
         if (search.length === 0) {
-            return post.slice(indexOfFirstPost, indexOfLastPost)
+            return post
         }
         else {
-            return (post.filter(c => c.title.includes(search)).slice(indexOfFirstPost, indexOfLastPost))
+            return (post.filter(c => c.title.includes(search)))
         }
     }
 
@@ -49,7 +48,7 @@ export default function BlogNoticias() {
     return (
         <>
             <input type="text" className="form-control" placeholder="buscar" value={search} onChange={onSearchChange}></input>
-            <BlogPost post={currentPosts()} loading={loading} ></BlogPost>
+            <BlogPost post={currentPosts().slice(indexOfFirstPost, indexOfLastPost)} loading={loading} ></BlogPost>
             <Pagination postPerPage={postPerPage} totalPages={currentPosts().length} paginate={paginate}></Pagination>
         </>
     );
