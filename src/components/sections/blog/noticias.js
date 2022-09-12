@@ -49,7 +49,6 @@ export default function BlogNoticias() {
     return (
         <>
             <BannerNoticias></BannerNoticias>
-
             <BlogPost post={currentPosts().slice(indexOfFirstPost, indexOfLastPost)} loading={loading} search={search} onSearchChange={onSearchChange} ></BlogPost>
             <Pagination postPerPage={postPerPage} totalPages={currentPosts().length} paginate={paginate}></Pagination>
         </>
