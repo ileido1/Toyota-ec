@@ -4190,3 +4190,85 @@ a.vehiculos-h-enlace:hover {
     }
 
 }
+
+.mant-texto-portada{
+    margin-top: -600px !important;
+}
+
+.mant-texto-portada .mant-portada-titulo-1{
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.mant-texto-portada .mant-portada-titulo-2{
+    font-family: 'Toyota-DisplayBold';
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.mant-texto-portada label{
+    color:#ffffff;
+}
+
+.mant-texto-portada select{
+    color:#ffffff;
+}
+
+.mant-contenedor-texto{
+    margin-bottom: 150px !important;
+}
+
+.mant-contenedor-buscador{
+    padding: 0 25%;
+}
+
+.mant-campo-buscador{
+    display: grid;
+}
+
+.carroestrenalo2 {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+
+}
+
+.campanaestrenalo2 {
+    font-family: 'Radikal-Medium';
+    font-weight: 500;
+    color: #E20B2A;
+    font-size: 100px;
+  }
+
+.estrenalodiv2 {
+
+    DISPLAY: FLEX;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 30%;
+    padding-right: 30%;
+    font-family: 'Toyota-DisplayRegular';
+
+}
+
+.tranquilidad-texto{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+
+.tranquilidad-texto p{
+    flex-basis: 50%;
+    margin-top: 20px;
+    font-weight: bold;
+}
