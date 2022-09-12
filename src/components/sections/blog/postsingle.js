@@ -11,8 +11,8 @@ export default function Postsingle({ blog_image, blog_title, blog_created }) {
 
             <img src={'https://www.toyota.com.ec/' + blog_image} className="imagenpost"></img>
 
-            <p>{blog_title}</p>
-            <p>{blog_created}</p>
+            <p className='ppost'>{blog_title}</p>
+            <p className='ppost'>{blog_created}</p>
 
 
 

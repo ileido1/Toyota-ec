@@ -509,6 +509,91 @@ ul#menu-galeria>li>span {
     width: 100%;
 }
 
+.tbannerpost {
+    font-family: 'Radikal-Bold';
+    font-weight: 700;
+    font-size: 60px;
+    color: #fff;
+}
+
+.pbannerpost {
+    font-family: 'Radikal-Bold';
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+
+}
+
+.ppost {
+    font-family: 'Radikal-Medium';
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+
+}
+
+.m-20 {
+    margin-bottom: 20px;
+}
+
+.p-40 {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+}
+
+.buscador {
+    margin-bottom: 40px;
+}
+
+.bannerpromo {
+    width: 372px;
+    height: 724px;
+}
+
+.bg-post {
+    background-color: #000;
+    padding: 40px;
+}
+
+.bg-post .tabsnoticias {
+    justify-content: flex-start;
+    margin-top: 0px;
+}
+
+.paginadordiv {
+    display: flex;
+    justify-content: center;
+
+}
+
+.page-link {
+    border: none !important;
+    color: #fff !important;
+    background-color: transparent !important;
+    text-decoration: none;
+    font-family: 'Radikal-Medium' !important;
+    font-weight: 700 !important;
+}
+
+.page-link.active {
+    background-color: #FF0000 !important;
+}
+
+.page-link-new:hover {
+    cursor: pointer;
+}
+
+.contenedorpost {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
 .formcuadro h3 {
     color: #fff;
     font-family: 'Toyota-DisplayRegular';

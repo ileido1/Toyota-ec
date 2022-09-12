@@ -40,9 +40,14 @@ export default function BannerNoticias() {
                                 banner.map(c => (
                                     <>
                                         <SwiperSlide>
-                                            <div className="container-fluid contenedor " style={{ backgroundImage: `url(${'https://www.toyota.com.ec/' + c.blog_banner})` }} >
-                                                <h1>{c.blog_label_1}</h1>
-                                                <p>{c.blog_label_2}</p>
+                                            <div className="container-fluid contenedorpost " style={{ backgroundImage: `url(${'https://www.toyota.com.ec/' + c.blog_banner})` }} >
+                                                <div className="row">
+                                                    <div className="col-6">
+                                                        <h1 className="tbannerpost">{c.blog_label_1}</h1>
+                                                        <p className="pbannerpost">{c.blog_label_2}</p>
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </SwiperSlide>
                                     </>
