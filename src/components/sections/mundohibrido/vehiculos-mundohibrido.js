@@ -42,10 +42,10 @@ de conducción al siguiente nivel con el rendimiento híbrido.</p>
             </div>
 
             <div className='col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 h-content-vehiculo hmtop40' >
-            <a href="/raize" className='vehiculos-h-enlace' ><img src={raize} alt="Raize" className='img-h-vehiculo' /> </a>
+            <a href="/corolla-cross" className='vehiculos-h-enlace' ><img src={raize} alt="Corolla Cross" className='img-h-vehiculo' /> </a>
                 <div className='textos-h-vehiculo' >
-                    <a href="/raize" className='vehiculos-h-enlace' ><p className='vehiculos-h-nombre' >Raize</p> </a>
-                    <a href="/raize" className='vehiculos-h-enlace' >Saber más <span className='fuente-rojo' >></span> </a>
+                    <a href="/corolla-cross" className='vehiculos-h-enlace' ><p className='vehiculos-h-nombre' >Corolla Cross</p> </a>
+                    <a href="/corolla-cross" className='vehiculos-h-enlace' >Saber más <span className='fuente-rojo' >></span> </a>
                 </div>
             </div>
 

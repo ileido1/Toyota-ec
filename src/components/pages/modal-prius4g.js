@@ -82,7 +82,7 @@ export default function ModalPrius4g(){
                                 <input type="text" name="email" id="email" placeholder="E-MAIL" />
                                 <input type="text" name="celular" id="celular" placeholder="CELULAR" />
                                 <input type="text" name="ciudad_concesionario" id="ciudad_concesionario" placeholder="CIUDAD O CONCESIONARIO" />
-                                <p>prius 4g</p>
+                                
 
                                 <p className="boton-enviar-chasis-datos" onClick={EnviarDatosPrius4g} >ENVIAR</p>
 

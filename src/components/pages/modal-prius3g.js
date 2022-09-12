@@ -82,7 +82,7 @@ export default function ModalPrius3g(){
                                 <input type="text" name="email" id="email" placeholder="E-MAIL" />
                                 <input type="text" name="celular" id="celular" placeholder="CELULAR" />
                                 <input type="text" name="ciudad_concesionario" id="ciudad_concesionario" placeholder="CIUDAD O CONCESIONARIO" />
-                                <p>prius 3g</p>
+                                
 
                                 <p className="boton-enviar-chasis-datos" onClick={EnviarDatosPrius3g} >ENVIAR</p>
 
