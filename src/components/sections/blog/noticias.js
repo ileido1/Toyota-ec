@@ -3,6 +3,7 @@ import { get } from 'axios';
 import BlogPost from './posts';
 import Pagination from './paginador';
 import Buscador from './buscador';
+import BannerNoticias from './banner';
 
 
 
@@ -17,8 +18,7 @@ export default function BlogNoticias() {
     useEffect(() => {
         const getPosts = async () => {
             setLoading(true);
-            let endpoint = 'v2/concesionarios/toyota/?q=';
-            const result = await get('https://jsonplaceholder.typicode.com/posts');
+            const result = await get('https://www.toyota.com.ec/admin/api/v1/blog');
             setPosts(result.data);
             setLoading(false);
         }
@@ -26,9 +26,10 @@ export default function BlogNoticias() {
 
     }, [])
 
-    const onSearchChange = ({ target }) => {
+    const onSearchChange = (event) => {
         setCurrentPage(1);
-        setSearch(target.value)
+        console.log(event);
+        setSearch(event.currentTarget.value)
     }
 
     const indexOfLastPost = currentPage * postPerPage;
@@ -38,7 +39,7 @@ export default function BlogNoticias() {
             return post
         }
         else {
-            return (post.filter(c => c.title.includes(search)))
+            return (post.filter(c => c.blog_title.includes(search)))
         }
     }
 
@@ -47,8 +48,9 @@ export default function BlogNoticias() {
     const paginate = (pagenumber) => setCurrentPage(pagenumber);
     return (
         <>
-            <input type="text" className="form-control" placeholder="buscar" value={search} onChange={onSearchChange}></input>
-            <BlogPost post={currentPosts().slice(indexOfFirstPost, indexOfLastPost)} loading={loading} ></BlogPost>
+            <BannerNoticias></BannerNoticias>
+
+            <BlogPost post={currentPosts().slice(indexOfFirstPost, indexOfLastPost)} loading={loading} search={search} onSearchChange={onSearchChange} ></BlogPost>
             <Pagination postPerPage={postPerPage} totalPages={currentPosts().length} paginate={paginate}></Pagination>
         </>
     );

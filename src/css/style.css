@@ -505,6 +505,10 @@ ul#menu-galeria>li>span {
     border-radius: 20px;
 }
 
+.imagenpost {
+    width: 100%;
+}
+
 .formcuadro h3 {
     color: #fff;
     font-family: 'Toyota-DisplayRegular';
@@ -1821,7 +1825,8 @@ a.cart-link:hover {
     border-bottom: 2px solid #e50021;
 }
 
-.content-botones-sidebar:hover .titulo-botones-sidebar p, .content-botones-sidebar:hover .titulo-botones-sidebar a {
+.content-botones-sidebar:hover .titulo-botones-sidebar p,
+.content-botones-sidebar:hover .titulo-botones-sidebar a {
     color: #fff;
 }
 
