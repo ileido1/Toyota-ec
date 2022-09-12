@@ -18,6 +18,9 @@ import campanaghover from '../../images/campanias/camapana-global_.png';
 
 import React, { useEffect, useRef, useState } from "react";
 import Modaltakata from "./modal-takata"
+import ModalPrius4g from "./modal-prius4g"
+import ModalPrius3g from "./modal-prius3g"
+import ModalRav4 from "./modal-rav4"
 
 let url_backend = 'https://www.toyota.com.ec/'
 
@@ -48,7 +51,7 @@ export default function Campanaservicios() {
                 </div>
                 <div className="row" >
                     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sinpadding ">
-                        <div className="content-campanias-prius4" >
+                        <div className="content-campanias-prius4" onClick={abrirModalPrius4g} >
                             <div>
                                 <img id="my-img" src={prius4} onMouseOver={e => (e.currentTarget.src = prius4hover)} onMouseOut={e => (e.currentTarget.src = prius4)} />
 
@@ -58,7 +61,7 @@ export default function Campanaservicios() {
                 </div>
                 <div className="row" >
                     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sinpadding ">
-                        <div className="content-campanias-prius3" >
+                        <div className="content-campanias-prius3" onClick={abrirModalPrius3g} >
                             <div>
                                 <img id="my-img" src={prius3} onMouseOver={e => (e.currentTarget.src = prius3hover)} onMouseOut={e => (e.currentTarget.src = prius3)} />
 
@@ -68,7 +71,7 @@ export default function Campanaservicios() {
                 </div>
                 <div className="row" >
                     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sinpadding ">
-                        <div className="content-campanias-rav4" >
+                        <div className="content-campanias-rav4" onClick={abrirModalRav4} >
                             <div>
                                 <img id="my-img" src={rav4} onMouseOver={e => (e.currentTarget.src = rav4hover)} onMouseOut={e => (e.currentTarget.src = rav4)} />
 
@@ -89,6 +92,9 @@ export default function Campanaservicios() {
 
             </div>
             <Modaltakata />
+            <ModalPrius4g />
+            <ModalPrius3g />
+            <ModalRav4 />
         </>
     );
 
@@ -99,3 +105,17 @@ function abrirModal() {
     modal.style.display = "block";
 }
 
+function abrirModalPrius4g() {
+    var modal = document.getElementById("myModalPrius4g");
+    modal.style.display = "block";
+}
+
+function abrirModalPrius3g() {
+    var modal = document.getElementById("myModalPrius3g");
+    modal.style.display = "block";
+}
+
+function abrirModalRav4() {
+    var modal = document.getElementById("myModalRav4");
+    modal.style.display = "block";
+}
