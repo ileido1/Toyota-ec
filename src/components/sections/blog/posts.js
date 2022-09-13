@@ -17,12 +17,12 @@ export default function BlogPost({ post, loading, search, onSearchChange }) {
             <div className='row'>
 
 
-                <div className='col-8 p-40 '>
+                <div className='col-9 p-40 '>
                     <div className='row m-20'>
                         {post.map(c => (
                             <>
                                 {c.blog_destacado === '1' ? <div className='col-12'>
-                                    <Postsingle blog_image={c.blog_image} blog_title={c.blog_title} blog_created={c.blog_created}  ></Postsingle>    </div> : null}
+                                    <Postsingle blog_image={c.blog_image} blog_title={c.blog_title} blog_created={c.blog_created} blog_url={c.blog_url} ></Postsingle>    </div> : null}
 
 
 
@@ -35,7 +35,7 @@ export default function BlogPost({ post, loading, search, onSearchChange }) {
                         {post.map(c => (
                             <>
                                 <div className='col-6'>
-                                    <Postsingle blog_image={c.blog_image} blog_title={c.blog_title} blog_created={c.blog_created}  ></Postsingle>
+                                    <Postsingle blog_image={c.blog_image} blog_title={c.blog_title} blog_created={c.blog_created} blog_url={c.blog_url}  ></Postsingle>
                                 </div>
 
 
@@ -50,10 +50,14 @@ export default function BlogPost({ post, loading, search, onSearchChange }) {
                     </div>
 
                 </div>
-                <div className='col-4 p-40 '>
+                <div className='col-3 p-40 buscadorinput'>
                     <p className='ppost'>Buscador</p>
-                    <input type="text" className="form-control buscador" value={search} onChange={onSearchChange}></input>
-                    <img src={bannerpromo} className="bannerpromo"></img>
+                    <div className="input-wrapper">
+                        <input type="text" className="form-control buscador" value={search} onChange={onSearchChange}></input>
+
+                    </div>
+
+                    <img src={bannerpromo} className="w-100"></img>
                 </div>
             </div>
 
