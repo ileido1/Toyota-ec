@@ -22,7 +22,7 @@ export default function BlogPost({ post, loading, search, onSearchChange }) {
                         {post.map(c => (
                             <>
                                 {c.blog_destacado === '1' ? <div className='col-12'>
-                                    <Postsingle blog_image={c.blog_image} blog_title={c.blog_title} blog_created={c.blog_created}  ></Postsingle>    </div> : null}
+                                    <Postsingle blog_image={c.blog_image} blog_title={c.blog_title} blog_created={c.blog_created} blog_url={c.blog_url} ></Postsingle>    </div> : null}
 
 
 
@@ -35,7 +35,7 @@ export default function BlogPost({ post, loading, search, onSearchChange }) {
                         {post.map(c => (
                             <>
                                 <div className='col-6'>
-                                    <Postsingle blog_image={c.blog_image} blog_title={c.blog_title} blog_created={c.blog_created}  ></Postsingle>
+                                    <Postsingle blog_image={c.blog_image} blog_title={c.blog_title} blog_created={c.blog_created} blog_url={c.blog_url}  ></Postsingle>
                                 </div>
 
 

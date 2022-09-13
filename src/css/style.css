@@ -507,6 +507,39 @@ ul#menu-galeria>li>span {
 
 .imagenpost {
     width: 100%;
+    margin-bottom: 20px;
+}
+
+.volverpost {
+    font-family: 'Radikal-Light';
+    font-size: 16px;
+    text-decoration: none !important;
+    color: #fff;
+
+}
+
+.btn-post {
+    background-color: #E20B2A;
+    margin-bottom: 20px;
+    border: 0px;
+    /* padding: 20px; */
+    font-family: 'Radikal-Regular';
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.bannerpost2 {
+    margin-top: 400px;
+    margin-bottom: 40px;
+}
+
+.volverpost p {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .tbannerpost {
