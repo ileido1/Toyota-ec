@@ -4272,3 +4272,58 @@ a.vehiculos-h-enlace:hover {
     margin-top: 20px;
     font-weight: bold;
 }
+
+.formcontainer-mant {
+    background-color: #EDEDED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px;
+      padding-right: 100px;
+      padding-left: 100px;
+  }
+
+.formcontainer-mant .subtitulo-form-mant{
+    color: #000;
+    font-family: 'Radikal-Medium';
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    max-width: 50%;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.formcuadro-mant{
+    width: 40%;
+}
+
+.formcontainer-mant h2{
+    color: #E50B21;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.formcuadro-mant h3{
+
+    margin-bottom: 50px;
+    margin-top: 40px;
+  
+}
+
+.campo-select{
+    height: 50px;
+}
+
+.contenedor-bottom{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.texto-terminos-mant{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 22px;
+}

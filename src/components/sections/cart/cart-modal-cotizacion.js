@@ -31,7 +31,7 @@ export default function Modalcotizacion({ carro }) {
         let terminos = document.getElementById('terminos2').checked;
 
         //console.log(document.getElementById('terminos2'))
-        console.log(nombres, apellidos, cedula, celular, email, modelo, ciudad, terminos)
+        //console.log(nombres, apellidos, cedula, celular, email, modelo, ciudad, terminos)
 
         if (nombres == '' || cedula == '' || celular == '' || email == '' || modelo == '' || ciudad == '' || terminos != true) {
             alert('Todos los campos son obligatorios.')

@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { motion } from "framer-motion";
 import MenuMantenimiento from './menu-mantenimiento'
 import imagen_portada from '../../../images/mantenimiento/portada.png'
+import Cascada from './dropdown.js';
 
 export default function PortadaMantenimiento() {
  
@@ -19,7 +20,7 @@ export default function PortadaMantenimiento() {
             </div>
 
             <div className="row">
-                <div className="col-12 col-sm-12 content-video"  >
+                <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 content-video"  >
 
                     <img src={imagen_portada} alt="Imagen portada mantenimiento"  />
 
@@ -27,7 +28,7 @@ export default function PortadaMantenimiento() {
             </div>
 
             <div className="row">
-                <div className="col-12 col-sm-12 mant-texto-portada"  >
+                <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mant-texto-portada"  >
 
                     <div className="row mant-contenedor-texto" >
                         <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" >
@@ -38,26 +39,9 @@ export default function PortadaMantenimiento() {
 
                     <div className="row mant-contenedor-buscador" >
 
-                        <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mant-campo-buscador" >
+                        
+                        <Cascada />
 
-                            <label for="mant_modelo">Seleccione el modelo</label>
-                            <select id="mant_modelo" name="mant_modelo" >MODELO</select>
-                            
-                        </div>
-
-                        <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mant-campo-buscador" >
-
-                            <label for="mant_versiones">Versiones</label>
-                            <select>VERSIONES</select>
-                            
-                        </div>
-
-                        <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mant-campo-buscador" >
-
-                            <label for="mant_tipo">Tipo de Mantenimiento ó Km</label>
-                            <select id="mant_tipo" name="mant_tipo" >MODELO</select>
-                            
-                        </div>
                         
                     </div>
 
