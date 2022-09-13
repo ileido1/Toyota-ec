@@ -4,6 +4,7 @@ import BlogPost from '../posts';
 import Buscador from '../buscador';
 import useFetch from '../../../../hooks/useFetch';
 import { Routes, Route, useParams, NavLink, Link } from 'react-router-dom';
+
 import bannerpromo from '../../../../images/blog/blog.png'
 
 
@@ -61,7 +62,7 @@ export default function DetalleNoticias() {
                             <div className='col-3  p-40'>
                                 <img src={bannerpromo} className="w-100 bannerpost2"></img>
 
-                                {c.tags_blog.split(',').map(c => (<button className="btn-post">{c}</button>))}
+                                {c.tags_blog.split(',').map(c => (<a href={"tag/" + c}> <button className="btn-post" >{c}</button></a>))}
 
                             </div>
 

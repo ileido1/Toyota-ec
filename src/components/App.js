@@ -26,6 +26,7 @@ import LoadingSpinner from './sections/loading';
 import Campanaservicios from './pages/campana-servicios';
 import Terminos from './pages/campana-servicios';
 import BlogDetail from './pages/blog-detail';
+import BlogTags from './pages/blog-tags';
 
 const App = () => {
   let peticion = "global/toyota-info"
@@ -45,6 +46,7 @@ const App = () => {
         <Header></Header>
         <Routes>
           <Route path="/blog/:slug" element={< BlogDetail />} />
+          <Route path="/blog/tag/:slug" element={< BlogTags />} />
           <Route path="/post-venta-en-stand-by" element={<Posventa />} />
           <Route path="/raize" element={<Cart />} />
           <Route path="/rav4" element={<Cart />} />
