@@ -12,9 +12,8 @@ import bannerpromo from '../../../../images/blog/blog.png'
 export default function DetalleNoticias() {
     const endpoint = 'v1/blog'
     const [post, setPosts] = useState([]);
+    const [postrelations, SetPostRelationals] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [categories, setCategories] = useState('');
-    const [search, setSearch] = useState("");
     let { slug } = useParams();
     const postdetail = "\/blog\/" + slug;
     useEffect(() => {
@@ -29,6 +28,15 @@ export default function DetalleNoticias() {
         }
         getPosts()
     }, [])
+    useEffect(() => {
+        const getPostsR = async () => {
+            const result = await get(`${process.env.REACT_APP_URL_API}${endpoint}`);
+            const allItems = result.data;
+            const categoryItems = allItems.filter(item => item.blog_category === post[0].blog_category);
+            SetPostRelationals(categoryItems)
+        }
+        getPostsR()
+    }, [post])
 
     return (
         <>
@@ -63,6 +71,35 @@ export default function DetalleNoticias() {
 
 
                     ))}
+                </div>
+                <div className='row'>
+                    <div className='col-9  p-40'>
+                        <div className='row'>
+                            {postrelations.slice(0, 3).map(c => (
+                                <>
+
+                                    <div className='col-4 '>
+                                        <div className='box-post'>
+                                            <img src={'https://www.toyota.com.ec/' + c.blog_image} className="imagenpost"></img>
+                                            <div className='box-post-content'>
+                                                <h1 className='tbannerpost'>{c.blog_title}</h1>
+                                                <div className="box-re">
+                                                    <p className='ppost'>{c.blog_body}</p>
+                                                    <a href={c.blog_url} ><p className='ppost'>Más informacion...</p></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </>
+                            ))}
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </>

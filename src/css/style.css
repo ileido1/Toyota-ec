@@ -505,6 +505,38 @@ ul#menu-galeria>li>span {
     border-radius: 20px;
 }
 
+.box-post {
+    background-color: #fff;
+}
+
+.box-post-content {
+    padding: 10px;
+}
+
+.box-post-content .tbannerpost {
+    font-family: 'Radikal-Bold';
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+}
+
+.box-post-content .ppost {
+    font-family: 'Radikal-Ligth';
+    font-weight: 700;
+    font-size: 12px;
+    color: #000;
+}
+
+.box-post-content a {
+    text-decoration: none !important;
+}
+
+.box-re {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .imagenpost {
     width: 100%;
     margin-bottom: 20px;
@@ -4224,17 +4256,18 @@ a.vehiculos-h-enlace:hover {
 
 }
 
-.mant-texto-portada{
+.mant-texto-portada {
     margin-top: -600px !important;
 }
 
-.mant-texto-portada .mant-portada-titulo-1{
+.mant-texto-portada .mant-portada-titulo-1 {
     color: #ffffff;
     text-align: center;
     font-weight: bold;
     font-size: 1.5em;
 }
-.mant-texto-portada .mant-portada-titulo-2{
+
+.mant-texto-portada .mant-portada-titulo-2 {
     font-family: 'Toyota-DisplayBold';
     color: #ffffff;
     text-align: center;
@@ -4242,23 +4275,23 @@ a.vehiculos-h-enlace:hover {
     font-size: 2em;
 }
 
-.mant-texto-portada label{
-    color:#ffffff;
+.mant-texto-portada label {
+    color: #ffffff;
 }
 
-.mant-texto-portada select{
-    color:#ffffff;
+.mant-texto-portada select {
+    color: #ffffff;
 }
 
-.mant-contenedor-texto{
+.mant-contenedor-texto {
     margin-bottom: 150px !important;
 }
 
-.mant-contenedor-buscador{
+.mant-contenedor-buscador {
     padding: 0 25%;
 }
 
-.mant-campo-buscador{
+.mant-campo-buscador {
     display: grid;
 }
 
@@ -4275,7 +4308,7 @@ a.vehiculos-h-enlace:hover {
     font-weight: 500;
     color: #E20B2A;
     font-size: 100px;
-  }
+}
 
 .estrenalodiv2 {
 
@@ -4292,7 +4325,7 @@ a.vehiculos-h-enlace:hover {
 
 }
 
-.tranquilidad-texto{
+.tranquilidad-texto {
     display: flex;
     justify-content: end;
     align-items: end;
@@ -4300,7 +4333,7 @@ a.vehiculos-h-enlace:hover {
     flex-wrap: nowrap;
 }
 
-.tranquilidad-texto p{
+.tranquilidad-texto p {
     flex-basis: 50%;
     margin-top: 20px;
     font-weight: bold;
@@ -4313,11 +4346,11 @@ a.vehiculos-h-enlace:hover {
     align-items: center;
     flex-direction: column;
     padding: 100px;
-      padding-right: 100px;
-      padding-left: 100px;
-  }
+    padding-right: 100px;
+    padding-left: 100px;
+}
 
-.formcontainer-mant .subtitulo-form-mant{
+.formcontainer-mant .subtitulo-form-mant {
     color: #000;
     font-family: 'Radikal-Medium';
     font-weight: 500;
@@ -4328,33 +4361,33 @@ a.vehiculos-h-enlace:hover {
     margin-bottom: 80px;
 }
 
-.formcuadro-mant{
+.formcuadro-mant {
     width: 40%;
 }
 
-.formcontainer-mant h2{
+.formcontainer-mant h2 {
     color: #E50B21;
     font-size: 30px;
     font-weight: 700;
 }
 
-.formcuadro-mant h3{
+.formcuadro-mant h3 {
 
     margin-bottom: 50px;
     margin-top: 40px;
-  
+
 }
 
-.campo-select{
+.campo-select {
     height: 50px;
 }
 
-.contenedor-bottom{
+.contenedor-bottom {
     margin-top: 30px;
     margin-bottom: 20px;
 }
 
-.texto-terminos-mant{
+.texto-terminos-mant {
     margin-top: 30px;
     margin-bottom: 30px;
     color: #fff;
