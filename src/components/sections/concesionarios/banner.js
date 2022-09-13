@@ -21,24 +21,23 @@ import { Autoplay } from "swiper";
 import useFetch from "../../../hooks/useFetch2";
 
 export default function BannerConcesionario() {
-    let endpoint = 'v2/concesionarios/'
+
+    let endpoint = 'v2/concesionarios/';
     const [ciudades, error] = useFetch(endpoint);
     const [ciudad, setCiudad] = useState(null);
-
-
     const detalles = useRef(null);
 
-
-    function handleChange(event) {
+    function handleChange(event){
         setCiudad(event.currentTarget.value);
         setTimeout(() => {
             scrollToElement();
         }, 500);
     }
+
     function Eliminaropcion(event) {
         document.querySelector('.selectconcesionario option[value=firts]').text = "";
-
     }
+
     const scrollToElement = () => detalles.current.scrollIntoView();
     return (
         <>
