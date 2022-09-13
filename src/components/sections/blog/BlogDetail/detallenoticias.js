@@ -49,7 +49,7 @@ export default function DetalleNoticias() {
                             <div className='col-9  p-40'>
                                 <Link className='volverpost' to={"/blog"} >
 
-                                    <p >Todas las entradas | {c.blog_category} </p>
+                                    <p > <i class="fa-solid fa-caret-left iconoatras"></i>Todas las entradas | {c.blog_category} </p>
 
 
                                 </Link>
@@ -62,9 +62,25 @@ export default function DetalleNoticias() {
                             <div className='col-3  p-40'>
                                 <img src={bannerpromo} className="w-100 bannerpost2"></img>
 
-                                {c.tags_blog.split(',').map(c => (<a href={"tag/" + c}> <button className="btn-post" >{c}</button></a>))}
+                                {c.tags_blog.split(',').map(c => (<a href={"tag/" + c} className="ntd"> <button className="btn-post" >{c}</button></a>))}
 
+                                <div className='inputpost'>
+                                    <p className='suscribete'>Recibe más noticias</p>
+                                    <div className="input-wrapper">
+                                        <input type="text" className="inputemail" placeholder="E-mail" />
+
+                                    </div>
+
+                                    <div className="form-check">
+                                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                        <label className="form-check-label" htmlFor="flexCheckDefault">
+                                            Acepto <span className="spanckeck">aviso de privacidad</span>
+                                        </label>
+                                    </div>
+                                    <button className="btn-post"> Enviar </button>
+                                </div>
                             </div>
+
 
 
 

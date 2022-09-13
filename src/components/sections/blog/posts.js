@@ -17,7 +17,7 @@ export default function BlogPost({ post, loading, search, onSearchChange }) {
             <div className='row'>
 
 
-                <div className='col-8 p-40 '>
+                <div className='col-9 p-40 '>
                     <div className='row m-20'>
                         {post.map(c => (
                             <>
@@ -50,10 +50,14 @@ export default function BlogPost({ post, loading, search, onSearchChange }) {
                     </div>
 
                 </div>
-                <div className='col-4 p-40 '>
+                <div className='col-3 p-40 buscadorinput'>
                     <p className='ppost'>Buscador</p>
-                    <input type="text" className="form-control buscador" value={search} onChange={onSearchChange}></input>
-                    <img src={bannerpromo} className="bannerpromo"></img>
+                    <div className="input-wrapper">
+                        <input type="text" className="form-control buscador" value={search} onChange={onSearchChange}></input>
+
+                    </div>
+
+                    <img src={bannerpromo} className="w-100"></img>
                 </div>
             </div>
 

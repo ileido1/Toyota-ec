@@ -522,9 +522,35 @@ ul#menu-galeria>li>span {
 
 .box-post-content .ppost {
     font-family: 'Radikal-Ligth';
-    font-weight: 700;
+    font-weight: 500;
     font-size: 12px;
     color: #000;
+}
+
+.inputpost .suscribete {
+    font-family: 'Radikal-Bold';
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFF;
+}
+
+.ntd {
+    text-decoration: none;
+}
+
+.inputpost .form-check {
+    margin-top: 10px;
+}
+
+.inputpost .form-check-label {
+    font-family: 'Radikal-Regular';
+    font-weight: 400;
+    font-size: 12px;
+    color: #FFF;
+}
+
+.inputpost .spanckeck {
+    color: #E50021;
 }
 
 .box-post-content a {
@@ -551,7 +577,8 @@ ul#menu-galeria>li>span {
 }
 
 .btn-post {
-    background-color: #E20B2A;
+    background-color: #ED0000;
+
     border: 0px;
     /* padding: 20px; */
     font-family: 'Radikal-Regular';
@@ -560,7 +587,21 @@ ul#menu-galeria>li>span {
     font-size: 14px;
     margin-right: 10px;
     margin-top: 20px;
+    align-self: center;
     border-radius: 5px;
+}
+
+.inputpost {
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.iconoatras {
+    margin-right: 10px;
 }
 
 .bannerpost2 {
@@ -574,23 +615,37 @@ ul#menu-galeria>li>span {
 }
 
 .tbannerpost {
-    font-family: 'Radikal-Bold';
+    font-family: 'Radikal-Medium';
     font-weight: 700;
-    font-size: 60px;
+    font-size: 50px;
     color: #fff;
 }
 
+.bannerinput {
+    display: flex;
+    flex-direction: row;
+}
+
+.bannerinput .inputemail {
+    width: 60%;
+}
+
+.bannerinput .btn-post {
+    margin-top: 0;
+    margin-left: 10px;
+}
+
 .pbannerpost {
-    font-family: 'Radikal-Bold';
-    font-weight: 700;
-    font-size: 24px;
+    font-family: 'Radikal-Medium';
+    font-weight: 500;
+    font-size: 18px;
     color: #fff;
 
 }
 
 .ppost {
     font-family: 'Radikal-Medium';
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     color: #fff;
 
@@ -633,6 +688,7 @@ ul#menu-galeria>li>span {
 .page-link {
     border: none !important;
     color: #fff !important;
+    border-radius: 0 !important;
     background-color: transparent !important;
     text-decoration: none;
     font-family: 'Radikal-Medium' !important;
@@ -1393,6 +1449,12 @@ a#btn-cotizar {
     color: #fff;
 }
 
+.inputpost .inputemail::placeholder,
+.bannerinput .inputemail::placeholder {
+    color: #B9BFC1;
+}
+
+
 .form-check {
     align-self: baseline;
 }
@@ -1404,6 +1466,15 @@ a#btn-cotizar {
     position: absolute;
     right: 5px;
     top: 2px;
+}
+
+.buscadorinput .input-wrapper:after {
+    font-family: 'FontAwesome';
+    content: '\f002';
+    color: #817F7F;
+    position: absolute;
+    right: 6px;
+    top: 6px;
 }
 
 
