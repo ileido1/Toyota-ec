@@ -7,10 +7,11 @@ export default function ModalPrius4g(){
 
     let endpoint = 'https://www.toyota.com.ec/api/v2/campaigns/service_prius_4g/?chasis=';
     const [proceso, setProceso] = useState('');
+    const [proceso_campana, setProcesoCampana] = useState('');
 
     function handleClick(event) {
 
-        let chasis = document.getElementById("chasis-prius4g").value;
+        let chasis = document.getElementById("chasis2").value;
         
         const getproceso = async () => {
             const resultexo = await get(`${endpoint + chasis}`);
@@ -22,22 +23,86 @@ export default function ModalPrius4g(){
         
     }
 
+    function EnviarDatosCampanaPrius4g(){
+ 
+        let chasis = document.getElementById("chasis2").value;
+        let nombre_apellido = document.getElementById("nombre_apellido2").value;
+        let email1 = document.getElementById("email2").value;
+        let celular1 = document.getElementById("celular2").value;
+        let cedula1 = document.getElementById("cedula2").value;
+        var select = document.getElementById('ciudadoconcesionario2');
+        var ciudadoconcesionario = select.options[select.selectedIndex].value;
+
+        let endpoint_campana = "https://www.toyota.com.ec/api/v2/campaigns_contacted/?nombre="+nombre_apellido+"&cedula="+cedula1+"&email="+email1+"&celular="+celular1+"&ciudad="+ciudadoconcesionario+"&chasis="+chasis;
+        
+        const getproceso_campana = async () => {
+            const resultexo = await get(`${endpoint_campana}`);
+            const procesos_campana = resultexo.data;
+            setProcesoCampana(procesos_campana);
+        }
+
+        getproceso_campana()
+
+    }
+
     setTimeout(
         function() {
 
             if(proceso.status==200){
 
-                var resultado_chasis = document.getElementById("resultado-chasis-prius4g")
-                var consulta_chasis = document.getElementById("consulta-chasis-prius4g")
-            
-                resultado_chasis.classList.remove("ocultar")
-                consulta_chasis.classList.add("ocultar")
+                console.log(proceso_campana)
+
+                if(proceso.msj == 'Tú solicitud ya fue atentida.'){
+                    
+                    var mensaje_atendido = document.getElementById("mensaje-atendido-prius4g")
+                    mensaje_atendido.innerHTML = proceso.msj
+                    mensaje_atendido.classList.add('mostrar')
+
+                }else if(proceso.msj == 'Su vehículo aplica a esta campaña de servicio.'){
+
+                    var resultado_chasis = document.getElementById("resultado-chasis-prius4g")
+                    var consulta_chasis = document.getElementById("consulta-chasis-prius4g")
+                    var mensaje_atendido = document.getElementById("mensaje-atendido-prius4g")
+
+                    mensaje_atendido.innerHTML = ''              
+                    resultado_chasis.classList.remove("ocultar")
+                    consulta_chasis.classList.add("ocultar")
+
+                }else if(proceso_campana.msj == 'Ya tenemos tus datos, muy pronto uno de nuestros asesores se comunicará.'){
+                    alert('entra');
+                    var mensaje_atendido = document.getElementById("mensaje-atendido-prius4g")
+                    mensaje_atendido.innerHTML = proceso_campana.msj
+
+                }
+                else{
+
+                    var resultado_chasis = document.getElementById("resultado-chasis-prius4g")
+                    var consulta_chasis = document.getElementById("consulta-chasis-prius4g")
+                    var mensaje_atendido = document.getElementById("mensaje-atendido-prius4g")
+                    mensaje_atendido.innerHTML = ''
+                
+                    resultado_chasis.classList.remove("ocultar")
+                    consulta_chasis.classList.add("ocultar")
+
+                }
+
+
         
             }else if(proceso.status==404){
 
                 ResultadoNA()
 
             }
+
+            if(proceso_campana.status==200){
+
+        
+            }else if(proceso_campana.status==404){
+
+
+            }
+
+
            
         }
         .bind(this),
@@ -48,9 +113,9 @@ export default function ModalPrius4g(){
     return (
         <>
 
-            <div id="myModalPrius4g" className="modal modal-campana">
+            <div id="myModalPrius4g" className="modal modal-campana ">
 
-                <div className="modal-content cuerpo-modal">
+                <div className="modal-content cuerpo-modal alto-modal">
 
                     <div className='container-fluid' >
                         <div className="row" >
@@ -62,29 +127,51 @@ export default function ModalPrius4g(){
 
                     <div className="container-fluid " >
 
-                        <div className="row">
+                    <div className="row">
                             <div id='consulta-chasis-prius4g' className='col-12' >
 
                                 <p className='mt40' >POR FAVOR INGRESE LOS 17 NÚMEROS DEL CHASIS</p>
                                 <p>(PUEDE ENCONTRARLO EN SU MATRÍCULA)</p>
 
-                                <input type="text" name="chasis-prius4g" id="chasis-prius4g" placeholder="ESCRIBIR NÚMERO DE CHASIS" />
-
+                                <input type="text" name="chasis2" id="chasis2" placeholder="ESCRIBIR NÚMERO DE CHASIS" />
+                                <p id='mensaje-atendido-prius4g' ></p>
                                 <p className="boton-enviar" onClick={handleClick} >ENVIAR</p>
 
                             </div>
-                            <div id='resultado-chasis-prius4g' className='col-12 ocultar resultado-chasis-prius4g' >
+                            <div id='resultado-chasis-prius4g' className='col-12 ocultar' >
 
                                 <p className='mt_resultado_chasis' >SU VEHÍCULO APLICA A ESTA CAMPAÑA DE SERVICIO</p>
                                 <p >Por favor complete el formulario a continuación. Tras su envío será contactado.</p>
                                 <br></br>
-                                <input type="text" name="nombre_apellido" id="nombre_apellido" placeholder="NOMBRE Y APELLIDO" />
-                                <input type="text" name="email" id="email" placeholder="E-MAIL" />
-                                <input type="text" name="celular" id="celular" placeholder="CELULAR" />
-                                <input type="text" name="ciudad_concesionario" id="ciudad_concesionario" placeholder="CIUDAD O CONCESIONARIO" />
-                                
+                                <input type="text" name="nombre_apellido" id="nombre_apellido2" placeholder="NOMBRE Y APELLIDO" />
+                                <input type="text" name="email" id="email2" placeholder="E-MAIL" />
+                                <input type="text" name="celular" id="celular2" placeholder="CELULAR" />
+                                <input type="text" name="cedula" id="cedula2" placeholder="CEDULA" />
 
-                                <p className="boton-enviar-chasis-datos" onClick={EnviarDatosPrius4g} >ENVIAR</p>
+                                <select class="form-select campo-select" id="ciudadoconcesionario2">
+
+                                    <option selected>CIUDAD O CONCESIONARIO</option>
+                                    <option value="Quito (Casabaca)">Quito (Casabaca)</option>
+                                    <option value="Santo Domingo (Casabaca)">Santo Domingo (Casabaca)</option>
+                                    <option value="El Coca (Casabaca)">El Coca (Casabaca)</option>
+                                    <option value="Ambato (Automotores Carlos Larrea)">Ambato (Automotores Carlos Larrea)</option>
+                                    <option value="Ibarra (Comercial Hidrobo)">Ibarra (Comercial Hidrobo)</option>
+                                    <option value="Riobamba (Importadora Tomebamba)">Riobamba (Importadora Tomebamba)</option>
+                                    <option value="Azogues (Importadora Tomebamba)">Azogues (Importadora Tomebamba)</option>
+                                    <option value="Cuenca (Importadora Tomebamba)">Cuenca (Importadora Tomebamba)</option>
+                                    <option value="Loja (Importadora Tomebamba)">Loja (Importadora Tomebamba)</option>
+                                    <option value="Macas (Importadora Tomebamba)">Macas (Importadora Tomebamba)</option>
+                                    <option value="Machala (Importadora Tomebamba)">Machala (Importadora Tomebamba)</option>
+                                    <option value="Guayaquil (Toyocosta)">Guayaquil (Toyocosta)</option>
+                                    <option value="Daule (Toyocosta)">Daule (Toyocosta)</option>
+                                    <option value="Quevedo (Toyocosta)">Quevedo (Toyocosta)</option>
+                                    <option value="Manta (Toyocosta)">Manta (Toyocosta)</option>
+
+                                </select>
+
+                                <p id='mensaje-atendido-prius4g' ></p>
+
+                                <p className="boton-enviar-chasis-datos" onClick={EnviarDatosCampanaPrius4g} >ENVIAR</p>
 
                             </div>
                         </div>

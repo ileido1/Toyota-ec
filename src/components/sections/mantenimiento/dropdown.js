@@ -90,7 +90,7 @@ return (
 
     <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mant-campo-buscador" >
 
-        <label for="mant_versiones">Seleccione la version</label>
+        <label for="mant_versiones">Versiones</label>
         <select id="mant_versiones" name="state" value={this.state.id} onChange={this.ChangeCity} >
 
         {this.state.StateData.map((e, key) => {  
