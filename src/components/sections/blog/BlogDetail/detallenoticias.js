@@ -57,7 +57,8 @@ export default function DetalleNoticias() {
                                 <h1 className='tbannerpost'>{c.blog_title}</h1>
                                 <p className='ppost'>{c.blog_created}</p>
                                 <img src={'https://www.toyota.com.ec/' + c.blog_image} className="imagenpost"></img>
-                                <p className='ppost'>{c.blog_body}</p>
+                                <div className='ppost' dangerouslySetInnerHTML={{ __html: c.blog_body }}></div>
+
                             </div>
                             <div className='col-3  p-40'>
                                 <img src={bannerpromo} className="w-100 bannerpost2"></img>
@@ -101,7 +102,8 @@ export default function DetalleNoticias() {
                                             <div className='box-post-content'>
                                                 <h1 className='tbannerpost'>{c.blog_title}</h1>
                                                 <div className="box-re">
-                                                    <p className='ppost'>{c.blog_body}</p>
+                                                    <div className='ppost' dangerouslySetInnerHTML={{ __html: c.blog_body }}></div>
+
                                                     <a href={c.blog_url} ><p className='ppost'>Más informacion...</p></a>
                                                 </div>
                                             </div>
