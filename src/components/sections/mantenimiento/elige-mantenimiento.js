@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion'
+import { useInView } from 'framer-motion'
 import useFetch from "../../../hooks/useFetch";
 
 // Import Swiper styles
@@ -36,30 +36,31 @@ export default function Estrenalo() {
         
     }
 
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true });
+
 
     return (
         <>
             <div className="container-fluid "  >
                 <div className="estrenalodiv">
                     <div className="carroestrenalo">
-                        <h1 className="campanaestrenalo">
+
+                      <h1 ref={ref} className="campanaestrenalo" style={{ opacity: isInView ? 1 : 0, transition: " all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 1s" }}  >
                             {texto1}
-                        </h1>
-                        <img src={imagen1} className="imagencarroestranlo"></img>
+                      </h1>
+                      
+                        <img ref={ref} src={imagen1} className="imagencarroestranlo"  style={{ opacity: isInView ? 1 : 0, transition: " all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 1.5s" }}  ></img>
+
                     </div>
                     <div className="divsubestrenalo">
-                        <h1 className="campanaestrenalosub">{texto2}</h1>
+                        <h1  style={{ opacity: isInView ? 1 : 0, transition: " all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 2s", duration: "3s" }}  className="campanaestrenalosub">{texto2}</h1>
                     </div>
                     <div className="carroestrenalo">
-                        <img src={imagen2} className="imagencarroestranlo"></img>
-                        <h1 className="campanaestrenalo2">
+                        <img  style={{ opacity: isInView ? 1 : 0, transition: " all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 2.3s" }}  src={imagen2} className="imagencarroestranlo"></img>
+                        <h1  style={{ opacity: isInView ? 1 : 0, transition: " all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 2.5s" }}  className="campanaestrenalo2">
                             {texto3}
                         </h1>
-
-                    </div>
-                    <div className="flechaestrenalo">
-                        
-
 
                     </div>
 

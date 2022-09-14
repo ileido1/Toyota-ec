@@ -30,9 +30,16 @@ export default function GenuinosMantenimiento() {
         <div id="portada-mantenimiento-genuinos" className="mundo-hibrido container-fluid video-cart d-block d-sm-block d-md-block d-xl-block d-lg-block" >
 
             <div className="row">
-                <div className="col-12 col-sm-12 content-video"  >
+                <div className="col-12 col-sm-12 content-video seccion-genuinos"  >
 
-                    <img src={imagen4} alt="Imagen portada mantenimiento genuinos"  />
+                    <div className='ambiental-content-1 d-block d-sm-block' >
+                        <p class="fuente-rojo titulo-mant-genuinos">TOYOTA</p>
+                        <p class="fuente-rojo subtitulo-mant-genuinos">REPUESTOS GENUINOS TOYOTA</p>
+                    </div>
+
+                    <div className='ambiental-content-2' >
+                        <img src={imagen4} alt="Imagen portada mantenimiento genuinos"  />
+                    </div>    
 
                 </div>
             </div>
