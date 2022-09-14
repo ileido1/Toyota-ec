@@ -3,6 +3,7 @@ import axios from 'axios';
 import cerrar from '../../../images/cotizacion/cerrar.svg'
 
 let valor_modelo = ''
+let valor_version = ''
 export class CascadingDropdown extends Component {
 
     constructor(props) {
@@ -56,7 +57,7 @@ ChangeCity = (e) => {
     var select = document.getElementById('mant_modelo');
     var modelo = select.options[select.selectedIndex].value;
 
-    axios.get('https://www.toyota.com.ec/api/v2/mantenimiento/tipo_mantenimiento/?q='+e.target.value+'&model='+modelo+'' + e.target.value).then(response => {
+    axios.get('https://www.toyota.com.ec/api/v2/mantenimiento/tipo_mantenimiento/?q='+e.target.value+'&model='+modelo).then(response => {
     //console.log(response.data);
     this.setState({
     CityData: response.data
@@ -73,20 +74,21 @@ ChangeKm = (e) => {
     var select = document.getElementById('mant_modelo');
     var modelo = select.options[select.selectedIndex].value;
 
-    var select_km = document.getElementById('mant_km');
-    var km = select_km.options[select_km.selectedIndex].value;
+    var select_versiones = document.getElementById('mant_versiones');
+    var valor_version = select_versiones.options[select_versiones.selectedIndex].value;
     
-    console.log(modelo)
-    console.log(km)
+    //console.log(modelo)
+    //console.log(valor_version)
+    //console.log(e.target.value)
 
-    axios.get('https://www.toyota.com.ec/api/v2/mantenimiento/tipo_mantenimiento/?q='+modelo+'&model='+e.target.value+'' + e.target.value).then(response => {   
-        
     this.setState({
 
-    ModalPdfData: km
+        ModalPdfData: e.target.value
+    
+    });
 
-    });
-    });
+    abrirModalKm()
+
 }
 
 render() {  
