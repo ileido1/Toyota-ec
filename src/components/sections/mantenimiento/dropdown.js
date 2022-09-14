@@ -1,6 +1,6 @@
 import React, {Component } from 'react'
 import axios from 'axios';
-
+import cerrar from '../../../images/cotizacion/cerrar.svg'
 export class CascadingDropdown extends Component {
     constructor(props) {
         super(props)
@@ -9,7 +9,8 @@ export class CascadingDropdown extends Component {
         CountryId: '',
         CountryData: [],
         StateData: [],
-        CityData: []
+        CityData: [],
+        ModalPdfData: []
     }
 }
 
@@ -59,13 +60,18 @@ ChangeKm = (e) => {
 
     var select = document.getElementById('mant_modelo');
     var modelo = select.options[select.selectedIndex].value;
-    
-        console.log(e.target.value)
-        console.log(modelo)
 
-        axios.get('https://www.toyota.com.ec/api/v2/mantenimiento/tipo_mantenimiento/?q='+e.target.value+'&model='+modelo+'' + e.target.value).then(response => {   
-        this.setState({
-        ModalPdfData: response.data
+    var select_km = document.getElementById('mant_km');
+    var km = select_km.options[select_km.selectedIndex].value;
+    
+    console.log(e.target.value)
+    console.log(km)
+
+    axios.get('https://www.toyota.com.ec/api/v2/mantenimiento/tipo_mantenimiento/?q='+e.target.value+'&model='+modelo+'' + e.target.value).then(response => {   
+        
+    this.setState({
+
+    ModalPdfData: km
 
     });
     });
@@ -106,18 +112,43 @@ return (
         <label for="mant_km">Tipo de Mantenimiento ó Km</label>
         <select id="mant_km" name="city" value={this.state.CityData} onChange={this.ChangeKm} >  
             {this.state.CityData.map((e, key) => {  
-            return <option data-pdf={e.pdf} key={key} value={e.id}>{e.km}</option>;  
+            return <option data-pdf={e.pdf} key={key} value={e.pdf}>{e.km}</option>;  
             })}  
         </select>
                             
     </div>
 
+    <p onClick={abrirModalKm} > Abrir modal </p>
+
     <div>
 
+          
 
-        {this.state.ModalPdfData.map((e, key) => {  
-            return  <p>{e.pdf}</p>  ;  
-        })}  
+        <div id="myModalKm" className="modal">
+
+        <div className="modal-content cuerpo-modal">
+
+            <div className='container-fluid' >
+                <div className="row" >
+                    <div className="col-12" >
+                        <p className="close cerrar-modal-km" onClick={cerrarModalKm} >CERRAR <img src={cerrar} /> </p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="container-fluid " >
+
+                <div className="row">
+                    <div className='col-12' >
+                        
+                        <iframe src={this.state.ModalPdfData} width="100%" height="600px" />
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
 
         
     </div>
@@ -130,6 +161,12 @@ return (
 }  
 export default CascadingDropdown
 
-function abrirModalMantenimiento(id){
-    console.log(id);
+function cerrarModalKm() {
+    var modal = document.getElementById("myModalKm");
+    modal.style.display = "none";
+}
+
+function abrirModalKm() {
+    var modal = document.getElementById("myModalKm");
+    modal.style.display = "block";
 }
