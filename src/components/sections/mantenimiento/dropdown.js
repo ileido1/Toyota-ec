@@ -1,20 +1,26 @@
 import React, {Component } from 'react'
 import axios from 'axios';
 import cerrar from '../../../images/cotizacion/cerrar.svg'
+
+let valor_modelo = ''
 export class CascadingDropdown extends Component {
+
     constructor(props) {
         super(props)
         this.state = {
         StateId: '',
         CountryId: '',
+        CityId: '',
         CountryData: [],
         StateData: [],
         CityData: [],
         ModalPdfData: []
     }
+
 }
 
 componentDidMount() {
+
 axios.get('https://www.toyota.com.ec/api/v2/mantenimiento/modelos/').then(response => {
         //console.log(response.data);
         this.setState({
@@ -28,17 +34,23 @@ ChangeteState = (e) => {
         CountryId: e.target.value
         });
 
+        valor_modelo = e.target.selectedOptions[0].text
+        var select_modelo = document.getElementById('mant_modelo');
+        //select_modelo.innerHTML = '<option value="'+e.target.value+'" selected="selected">' + valor_modelo + '</option>'
+
         axios.get('https://www.toyota.com.ec/api/v2/mantenimiento/versiones/?q=' + e.target.value).then(response => {
         //console.log(response.data);
         this.setState({
         StateData: response.data,
         });
+
     });
 }
 
 ChangeCity = (e) => {
+    
     this.setState({
-    StateId: e.target.value
+        StateId: e.target.value
     });
 
     var select = document.getElementById('mant_modelo');
@@ -64,10 +76,10 @@ ChangeKm = (e) => {
     var select_km = document.getElementById('mant_km');
     var km = select_km.options[select_km.selectedIndex].value;
     
-    console.log(e.target.value)
+    console.log(modelo)
     console.log(km)
 
-    axios.get('https://www.toyota.com.ec/api/v2/mantenimiento/tipo_mantenimiento/?q='+e.target.value+'&model='+modelo+'' + e.target.value).then(response => {   
+    axios.get('https://www.toyota.com.ec/api/v2/mantenimiento/tipo_mantenimiento/?q='+modelo+'&model='+e.target.value+'' + e.target.value).then(response => {   
         
     this.setState({
 
@@ -84,7 +96,7 @@ return (
     <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mant-campo-buscador" >
 
         <label for="mant_modelo">Seleccione el modelo</label>
-        <select id="mant_modelo" name="country" value={this.state.id} onChange={this.ChangeteState} >
+        <select id="mant_modelo" name="country" class="form-control" value={this.state.id} onChange={this.ChangeteState} >
 
         {this.state.CountryData.map((e, key) => {  
             return <option key={key} value={e.id}>{e.name}</option>;  
@@ -97,7 +109,7 @@ return (
     <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mant-campo-buscador" >
 
         <label for="mant_versiones">Versiones</label>
-        <select id="mant_versiones" name="state" value={this.state.id} onChange={this.ChangeCity} >
+        <select id="mant_versiones" name="state" class="form-control" value={this.state.id} onChange={this.ChangeCity} >
 
         {this.state.StateData.map((e, key) => {  
             return <option key={key} value={e.id}>{e.name}</option>;  
@@ -110,7 +122,7 @@ return (
     <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mant-campo-buscador" >
 
         <label for="mant_km">Tipo de Mantenimiento ó Km</label>
-        <select id="mant_km" name="city" value={this.state.CityData} onChange={this.ChangeKm} >  
+        <select id="mant_km" class="form-control" name="city" value={this.state.CityData} onChange={this.ChangeKm} >  
             {this.state.CityData.map((e, key) => {  
             return <option data-pdf={e.pdf} key={key} value={e.pdf}>{e.km}</option>;  
             })}  
