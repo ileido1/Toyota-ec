@@ -4520,3 +4520,13 @@ a.vehiculos-h-enlace:hover {
 #mensaje-atendido{
     height: 40px;
 }
+
+#myModalKm .modal-content{
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 40px;
+    top: 80px;
+    padding: 40px;
+    height: auto;
+    width: 60% !important;
+}
