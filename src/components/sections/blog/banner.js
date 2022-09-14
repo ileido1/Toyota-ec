@@ -33,10 +33,18 @@ export default function BannerNoticias() {
         e.preventDefault();
         const el2 = ref.current;
         SetDatos({ email: el2.value, terms: "si" });
-        axios.post("https://www.toyota.com.ec/api/v2/blog/boletin", Datos).then((response) => {
-            console.log(response.status);
-            SetRespuesta(response.data);
-        });
+        // axios.get("https://www.toyota.com.ec/api/v2/blog/boletin", Datos).then((response) => {
+        //     console.log(response.status);
+        //     SetRespuesta(response.data);
+        // });
+        const getproceso = async () => {
+            const resultexo = await axios.get(`${'https://www.toyota.com.ec/api/v2/blog/boletin/?email=' + el2.value + '&terms=' + "si"}`);
+            const procesos = resultexo.data;
+            SetRespuesta(procesos);
+            alert(Respuesta.msj)
+        }
+
+        getproceso()
     };
 
     const handlecheck = (e) => {
@@ -78,7 +86,7 @@ export default function BannerNoticias() {
 
 
 
-                                                            <button className="btn-post" ref={btn} onClick={enviaremail} > Suscribirme </button>
+                                                            <button className="btn-post" ref={btn} onClick={enviaremail}  > Suscribirme </button>
                                                         </div>
                                                         <div className="form-check">
                                                             <input className="form-check-input" type="checkbox" id="flexCheckDefault" onClick={handlecheck} />

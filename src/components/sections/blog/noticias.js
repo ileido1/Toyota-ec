@@ -52,7 +52,6 @@ export default function BlogNoticias() {
             return a[p_key] > b[p_key];
         });
         p_array_json.reverse();
-        console.log(p_array_json)
     }
 
     const onSearchChange = (event) => {
