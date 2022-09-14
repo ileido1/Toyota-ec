@@ -17,7 +17,7 @@ export default function BlogPost({ post, loading, search, onSearchChange }) {
             <div className='row'>
 
 
-                <div className='col-9 p-40 '>
+                <div className='col-12 col-md-9 p-40 '>
                     <div className='row m-20'>
                         {post.map(c => (
                             <>
@@ -50,7 +50,7 @@ export default function BlogPost({ post, loading, search, onSearchChange }) {
                     </div>
 
                 </div>
-                <div className='col-3 p-40 buscadorinput'>
+                <div className='col-12 col-md-3 p-40 buscadorinput'>
                     <p className='ppost'>Buscador</p>
                     <div className="input-wrapper">
                         <input type="text" className="form-control buscador" value={search} onChange={onSearchChange}></input>

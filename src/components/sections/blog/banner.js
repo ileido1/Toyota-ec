@@ -76,7 +76,7 @@ export default function BannerNoticias() {
                                         <SwiperSlide>
                                             <div className="container-fluid contenedorpost p-40 " style={{ backgroundImage: `url(${'https://www.toyota.com.ec/' + c.blog_banner})` }} >
                                                 <div className="row">
-                                                    <div className="col-6">
+                                                    <div className="col-md-6 col-8">
                                                         <h1 className="tbannerpost">{c.blog_label_1}</h1>
                                                         <p className="pbannerpost">{c.blog_label_2}</p>
                                                         <div className='bannerinput'>

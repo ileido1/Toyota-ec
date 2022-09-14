@@ -57,6 +57,10 @@
     background-size: 23px 13px !important;
 }
 
+.bg-post a {
+    text-decoration: none !important;
+}
+
 
 
 .titulotoyotaconsesionaro {
@@ -557,10 +561,21 @@ ul#menu-galeria>li>span {
     text-decoration: none !important;
 }
 
+
+
 .box-re {
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
+    /* text-overflow: ellipsis; */
+    height: 150px;
+    width: 100%;
+    white-space: normal;
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+.moreinfo {
+    margin-top: 20px;
 }
 
 .imagenpost {
@@ -3508,6 +3523,82 @@ a.vehiculos-h-enlace:hover {
         padding: 0 5%;
     }
 
+    .buscadorinput {
+        order: 1;
+    }
+
+    .box-post {
+        margin-top: 20px;
+    }
+
+    .box-re {
+        /* overflow: hidden; */
+        /* white-space: nowrap; */
+        /* text-overflow: ellipsis; */
+        height: 150px;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .tbannerpost {
+        font-family: 'Radikal-Medium';
+        font-weight: 700;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    .pbannerpost {
+        font-family: 'Radikal-Medium';
+        font-weight: 500;
+        font-size: 12px;
+        color: #fff;
+    }
+
+    .bannerinput .inputemail {
+        background: no-repeat;
+        border: 0;
+        border-bottom: 1px solid #fff;
+        font-family: 'Toyota-DisplayRegular';
+        color: #fff;
+        font-size: 12px;
+
+        width: 100%;
+    }
+
+    .btn-post {
+        background-color: #ED0000;
+        border: 0px;
+        /* padding: 20px; */
+        font-family: 'Radikal-Regular';
+        padding: 5px 5px;
+        color: #fff;
+        font-size: 10px;
+        margin-left: 10px;
+        margin-top: 20px;
+        align-self: center;
+        border-radius: 5px;
+    }
+
+    .contenedorpost .form-check-label {
+        font-family: 'Radikal-Bold' !important;
+        font-weight: 700 !important;
+        font-size: 10px;
+    }
+
+    .contenedorpost {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        padding: 40px;
+    }
+
+
     .subtitulo-h-vehiculos {
         max-width: 80%;
     }
@@ -4529,7 +4620,7 @@ a.vehiculos-h-enlace:hover {
     height: 40px;
 }
 
-#myModalKm .modal-content{
+#myModalKm .modal-content {
     margin: 0 auto;
     background-color: #ffffff !important;
     border-radius: 0px;
@@ -4539,7 +4630,8 @@ a.vehiculos-h-enlace:hover {
     width: 60% !important;
 }
 
-.seccion-genuinos .titulo-mant-genuinos, .seccion-genuinos .subtitulo-mant-genuinos {
+.seccion-genuinos .titulo-mant-genuinos,
+.seccion-genuinos .subtitulo-mant-genuinos {
     position: relative;
     top: 20;
     z-index: 999999;
@@ -4560,29 +4652,29 @@ a.vehiculos-h-enlace:hover {
     text-align: center;
 }
 
-.label-mant-buscador{   
-    
+.label-mant-buscador {
+
     font-family: 'Radikal-Medium';
     font-size: 22px;
     color: #ffffff;
     margin-bottom: 20px;
 }
 
-.label-alin-left{
+.label-alin-left {
     text-align: left;
 }
 
-.label-alin-center{
-    text-align: center; 
+.label-alin-center {
+    text-align: center;
 }
 
-.cerrar-modal-km{
+.cerrar-modal-km {
     margin-top: -60px;
     color: #fff !important;
     font-size: 22px;
 }
 
-.mant-enlace-descargar{
+.mant-enlace-descargar {
     background-color: #FF0000;
     padding: 5px 5px;
     text-decoration: none;
@@ -4590,11 +4682,11 @@ a.vehiculos-h-enlace:hover {
     margin-bottom: 40px;
 }
 
-.content-btn-descargar{
+.content-btn-descargar {
     padding: 10px;
 }
 
-.mant-enlace-descargar:hover{
+.mant-enlace-descargar:hover {
     background-color: #FF0000;
     padding: 5px 5px;
     text-decoration: none;

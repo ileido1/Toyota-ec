@@ -1,4 +1,5 @@
-import { useState, useEffect, ChangeEvent } from 'react';
+import React, { useEffect, useRef, useState } from "react";
+
 import { get } from 'axios';
 import BlogPost from '../posts';
 import Buscador from '../buscador';
@@ -17,6 +18,11 @@ export default function DetalleNoticias() {
     const [loading, setLoading] = useState(false);
     let { slug } = useParams();
     const postdetail = "\/blog\/" + slug;
+    const ref2 = useRef(null);
+    const btn2 = useRef(null);
+    const [Datos, SetDatos] = useState({ email: '', terms: 'si' })
+    const [Respuesta, SetRespuesta] = useState('')
+
     useEffect(() => {
         const getPosts = async () => {
             setLoading(true);
@@ -29,6 +35,26 @@ export default function DetalleNoticias() {
         }
         getPosts()
     }, [])
+
+    const enviaremail = (e) => {
+        e.preventDefault();
+        const el2 = ref2.current;
+
+        const getproceso = async () => {
+            const resultexo = await get(`${'https://www.toyota.com.ec/api/v2/blog/boletin/?email=' + el2.value + '&terms=' + "si"}`);
+            const procesos = resultexo.data;
+            SetRespuesta(procesos);
+            alert(Respuesta.msj)
+        }
+
+        getproceso()
+    };
+    const handlecheck = (e) => {
+        const enviar = btn2.current;
+        if (e.target.checked === true)
+            enviar.disabled = false;
+        else enviar.disabled = true;
+    }
     useEffect(() => {
         const getPostsR = async () => {
             const result = await get(`${process.env.REACT_APP_URL_API}${endpoint}`);
@@ -46,7 +72,7 @@ export default function DetalleNoticias() {
                 <div className='row'>
                     {post.map(c => (
                         <>
-                            <div className='col-9  p-40'>
+                            <div className='col-md-9 col-12  p-40'>
                                 <Link className='volverpost' to={"/blog"} >
 
                                     <p > <i class="fa-solid fa-caret-left iconoatras"></i>Todas las entradas | {c.blog_category} </p>
@@ -60,7 +86,7 @@ export default function DetalleNoticias() {
                                 <div className='ppost' dangerouslySetInnerHTML={{ __html: c.blog_body }}></div>
 
                             </div>
-                            <div className='col-3  p-40'>
+                            <div className='col-md-3 col-12  p-40'>
                                 <img src={bannerpromo} className="w-100 bannerpost2"></img>
 
                                 {c.tags_blog.split(',').map(c => (<a href={"tag/" + c} className="ntd"> <button className="btn-post" >{c}</button></a>))}
@@ -68,17 +94,17 @@ export default function DetalleNoticias() {
                                 <div className='inputpost'>
                                     <p className='suscribete'>Recibe más noticias</p>
                                     <div className="input-wrapper">
-                                        <input type="text" className="inputemail" placeholder="E-mail" />
+                                        <input type="text" className="inputemail" placeholder="E-mail" ref={ref2} />
 
                                     </div>
 
                                     <div className="form-check">
-                                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" onClick={handlecheck} />
                                         <label className="form-check-label" htmlFor="flexCheckDefault">
                                             Acepto <span className="spanckeck">aviso de privacidad</span>
                                         </label>
                                     </div>
-                                    <button className="btn-post"> Enviar </button>
+                                    <button className="btn-post" ref={btn2} onClick={enviaremail}> Enviar </button>
                                 </div>
                             </div>
 
@@ -91,7 +117,7 @@ export default function DetalleNoticias() {
                     ))}
                 </div>
                 <div className='row'>
-                    <div className='col-9  p-40'>
+                    <div className='col-md-9 col-12  p-40'>
                         <div className='row'>
                             {postrelations.slice(0, 3).map(c => (
                                 <>
@@ -104,8 +130,9 @@ export default function DetalleNoticias() {
                                                 <div className="box-re">
                                                     <div className='ppost' dangerouslySetInnerHTML={{ __html: c.blog_body }}></div>
 
-                                                    <a href={c.blog_url} ><p className='ppost'>Más informacion...</p></a>
+
                                                 </div>
+                                                <a href={c.blog_url} ><p className='ppost moreinfo'>Más informacion...</p></a>
                                             </div>
 
                                         </div>
