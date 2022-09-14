@@ -12,18 +12,19 @@ export default function GarantiaMantenimiento() {
         let cedula = document.getElementById("cedula").value;
         let celular = document.getElementById("celular").value;
         let email = document.getElementById("email").value;
+        let mensaje = document.getElementById("mensaje").value;
         var select = document.getElementById('ciudadoconcesionario');
         var ciudadoconcesionario = select.options[select.selectedIndex].value;
         let terminos = document.getElementById('terminos-mant').checked;
 
-        if ( nombre == '' || apellido == '' || cedula == '' || celular == '' || email == '' || ciudadoconcesionario == '' || terminos != true ){
+        if ( nombre == '' || apellido == '' || cedula == '' || celular == '' || email == '' || ciudadoconcesionario == '' || mensaje == '' || terminos != true ){
 
             alert('Todos los campos son obligatorios.')
 
         }else{
 
             const getproceso = async () => {
-            const resulttexto = await get(`${'https://www.toyota.com.ec/api/v2/mantenimiento/contacto/?nombre=' + nombre + '&apellido=' + apellido + '&cedula=' + cedula + '&celular=' + celular + '&email=' + email + '&ciudad=' + ciudadoconcesionario}`);
+            const resulttexto = await get(`${'https://www.toyota.com.ec/api/v2/mantenimiento/contacto/?nombre=' + nombre + '&apellido=' + apellido + '&cedula=' + cedula + '&celular=' + celular + '&email=' + email + '&ciudad=' + ciudadoconcesionario + '&mensaje=' + mensaje }`);
             const procesos_mant = resulttexto.data;
             setProceso(procesos_mant);
 
@@ -102,7 +103,7 @@ export default function GarantiaMantenimiento() {
                             
                         </select>
 
-                        <textarea rows="7" cols="1"  class="form-control" placeholder="DEJE SU MENSAJE" id="mensaje" ></textarea>
+                        <textarea rows="7" cols="1"  class="form-control" placeholder="DEJE SU MENSAJE" id="mensaje" name="mensaje" ></textarea>
                         
                         <div className="centrar contenedor-bottom">
                             <div className="content-checkbox" >

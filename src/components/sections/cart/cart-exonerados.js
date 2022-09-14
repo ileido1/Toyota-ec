@@ -19,8 +19,6 @@ export default function Cartexonerados() {
         modal.style.display = "block";
     }
 
-
-
     let url_api = 'v1/vehicle_data_sheet'
     const [respuesta, error] = useFetch(url_api);
     let url_detalle = ''

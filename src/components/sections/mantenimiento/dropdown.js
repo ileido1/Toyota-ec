@@ -34,10 +34,10 @@ ChangeteState = (e) => {
     this.setState({
         CountryId: e.target.value
         });
-
-        valor_modelo = e.target.selectedOptions[0].text
-        var select_modelo = document.getElementById('mant_modelo');
-        //select_modelo.innerHTML = '<option value="'+e.target.value+'" selected="selected">' + valor_modelo + '</option>'
+        
+        this.setState({
+            StateData: []
+            });
 
         axios.get('https://www.toyota.com.ec/api/v2/mantenimiento/versiones/?q=' + e.target.value).then(response => {
         //console.log(response.data);
@@ -60,7 +60,7 @@ ChangeCity = (e) => {
     axios.get('https://www.toyota.com.ec/api/v2/mantenimiento/tipo_mantenimiento/?q='+e.target.value+'&model='+modelo).then(response => {
     //console.log(response.data);
     this.setState({
-    CityData: response.data
+        CityData: response.data
     });
     });
 }
@@ -77,10 +77,6 @@ ChangeKm = (e) => {
     var select_versiones = document.getElementById('mant_versiones');
     var valor_version = select_versiones.options[select_versiones.selectedIndex].value;
     
-    //console.log(modelo)
-    //console.log(valor_version)
-    //console.log(e.target.value)
-
     this.setState({
 
         ModalPdfData: e.target.value
@@ -97,8 +93,9 @@ return (
 
     <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mant-campo-buscador" >
 
-        <label for="mant_modelo">Seleccione el modelo</label>
+        <label for="mant_modelo" className='label-mant-buscador label-alin-left' >Seleccione el modelo</label>
         <select id="mant_modelo" name="country" class="form-control" value={this.state.id} onChange={this.ChangeteState} >
+        <option value=""  selected="true">Seleccione el modelo</option>
 
         {this.state.CountryData.map((e, key) => {  
             return <option key={key} value={e.id}>{e.name}</option>;  
@@ -110,8 +107,9 @@ return (
 
     <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mant-campo-buscador" >
 
-        <label for="mant_versiones">Versiones</label>
+        <label for="mant_versiones"  className='label-mant-buscador label-alin-center'  >Versiones</label>
         <select id="mant_versiones" name="state" class="form-control" value={this.state.id} onChange={this.ChangeCity} >
+        <option value=""  selected="true">Versiones</option>
 
         {this.state.StateData.map((e, key) => {  
             return <option key={key} value={e.id}>{e.name}</option>;  
@@ -123,10 +121,12 @@ return (
 
     <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mant-campo-buscador" >
 
-        <label for="mant_km">Tipo de Mantenimiento ó Km</label>
+        <label for="mant_km"  className='label-mant-buscador label-alin-left' >Tipo de Mantenimiento ó Km</label>
         <select id="mant_km" class="form-control" name="city" value={this.state.CityData} onChange={this.ChangeKm} >  
+        <option value="" selected="true">Tipo de Mantenimiento ó Km</option>
+        
             {this.state.CityData.map((e, key) => {  
-            return <option data-pdf={e.pdf} key={key} value={e.pdf}>{e.km}</option>;  
+                return <option data-pdf={e.pdf} key={key} value={e.pdf}>{e.km}</option>;  
             })}  
         </select>
                             
@@ -139,8 +139,8 @@ return (
           
 
         <div id="myModalKm" className="modal">
-
-        <div className="modal-content cuerpo-modal">
+            
+        <div className="modal-content cuerpo-modal">       
 
             <div className='container-fluid' >
                 <div className="row" >
@@ -159,6 +159,16 @@ return (
                         
                     </div>
                 </div>
+
+                <div className="row">
+                    <div className='col-12 content-btn-descargar' >
+                         
+                        <a href={this.state.ModalPdfData} download="true" className='mant-enlace-descargar' target="_blank" >DESCARGAR</a>
+                        
+                    </div>
+                </div>
+
+
             </div>
         </div>
 

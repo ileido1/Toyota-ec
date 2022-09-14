@@ -4399,7 +4399,7 @@ a.vehiculos-h-enlace:hover {
 }
 
 .mant-texto-portada .mant-portada-titulo-2 {
-    font-family: 'Toyota-DisplayBold';
+    font-family: 'Toyota-DisplayRegular';
     color: #ffffff;
     text-align: center;
     font-weight: bold;
@@ -4531,10 +4531,73 @@ a.vehiculos-h-enlace:hover {
 
 #myModalKm .modal-content{
     margin: 0 auto;
-    background-color: #fff;
-    border-radius: 40px;
-    top: 80px;
-    padding: 40px;
+    background-color: #ffffff !important;
+    border-radius: 0px;
+    top: 120px;
+    padding-top: 20px;
     height: auto;
     width: 60% !important;
+}
+
+.seccion-genuinos .titulo-mant-genuinos, .seccion-genuinos .subtitulo-mant-genuinos {
+    position: relative;
+    top: 20;
+    z-index: 999999;
+    display: block;
+    margin: 0 auto;
+}
+
+.titulo-mant-genuinos {
+    color: #FF0000;
+    font-size: 22px;
+    text-align: center;
+}
+
+.subtitulo-mant-genuinos {
+    font-family: 'Toyota-DisplayRegular';
+    color: #FF0000;
+    font-size: 40px;
+    text-align: center;
+}
+
+.label-mant-buscador{   
+    
+    font-family: 'Radikal-Medium';
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.label-alin-left{
+    text-align: left;
+}
+
+.label-alin-center{
+    text-align: center; 
+}
+
+.cerrar-modal-km{
+    margin-top: -60px;
+    color: #fff !important;
+    font-size: 22px;
+}
+
+.mant-enlace-descargar{
+    background-color: #FF0000;
+    padding: 5px 5px;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.content-btn-descargar{
+    padding: 10px;
+}
+
+.mant-enlace-descargar:hover{
+    background-color: #FF0000;
+    padding: 5px 5px;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 40px;
 }

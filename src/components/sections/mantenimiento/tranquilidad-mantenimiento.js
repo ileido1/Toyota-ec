@@ -3,6 +3,8 @@ import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion'
 import useFetch from "../../../hooks/useFetch";
 
+import { useInView } from 'framer-motion'
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -33,24 +35,26 @@ export default function Tranquilidad() {
         
     }
 
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true });
 
     return (
         <>
             <div className="container-fluid "  >
                 <div className="estrenalodiv2">
                     <div className="carroestrenalo">
-                        <h2 className="campanaestrenalo2">
+                        <h2 ref={ref} style={{ opacity: isInView ? 1 : 0, transition: " all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 1s" }} className="campanaestrenalo2">
                             TRANQUILIDAD
                         </h2>                        
                     </div>
                     <div className="carroestrenalo">
-                        <h2 className="campanaestrenalo2">
+                        <h2 ref={ref} style={{ opacity: isInView ? 1 : 0, transition: " all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 1.3s" }} className="campanaestrenalo2">
                             TOTAL
                         </h2>
-                        <img src={imagen5} className="imagencarroestranlo"></img>
+                        <img ref={ref} style={{ opacity: isInView ? 1 : 0, transition: " all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 1.5s" }} src={imagen5} className="imagencarroestranlo"></img>
                         
                     </div>
-                    <div className="tranquilidad-texto">
+                    <div ref={ref} style={{ opacity: isInView ? 1 : 0, transition: " all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 1.5s" }} className="tranquilidad-texto">
                         <p>{texto7}</p>
                     </div>
                     
