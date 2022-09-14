@@ -624,6 +624,7 @@ ul#menu-galeria>li>span {
 .bannerinput {
     display: flex;
     flex-direction: row;
+    margin-bottom: 20px;
 }
 
 .bannerinput .inputemail {
@@ -683,6 +684,13 @@ ul#menu-galeria>li>span {
     display: flex;
     justify-content: center;
 
+}
+
+.contenedorpost .form-check-label {
+
+    font-family: 'Radikal-Bold' !important;
+    font-weight: 700 !important;
+    font-size: 16px;
 }
 
 .page-link {
@@ -2862,7 +2870,7 @@ ul.tabsnoticias>li {
 
 /* campanas rav4 */
 
-.alto-modal{
+.alto-modal {
     height: 420px !important;
 }
 
@@ -4517,6 +4525,6 @@ a.vehiculos-h-enlace:hover {
     font-size: 22px;
 }
 
-#mensaje-atendido{
+#mensaje-atendido {
     height: 40px;
 }
