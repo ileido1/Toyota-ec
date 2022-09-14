@@ -1,4 +1,4 @@
-import { useState, useEffect, ChangeEvent } from 'react';
+import { useState, useEffect, ChangeEvent, useRef } from 'react';
 import { get } from 'axios';
 import BlogPost from './posts';
 import Pagination from './paginador';
@@ -18,7 +18,7 @@ export default function BlogNoticias() {
     const [totalPages, setTotalpages] = useState(post);
     const [categories, error2] = useFetch(endpoint);
     const [defecto, setDefault] = useState('');
-
+    const nav = useRef(null);
 
     const [selectedCategory, setSelectedCategory] = useState('');
 
@@ -74,11 +74,14 @@ export default function BlogNoticias() {
 
 
     //cambiar pagina
-    const paginate = (pagenumber) => setCurrentPage(pagenumber);
+    const paginate = (pagenumber) => {
+        setCurrentPage(pagenumber)
+        nav.current.scrollIntoView()
+    };
     return (
         <>
             <BannerNoticias></BannerNoticias>
-            <div className='container-fluid bg-post'>
+            <div className='container-fluid bg-post' ref={nav}>
                 <ul className="nav nav-tabs tabsnoticias ">
                     <>
                         {
