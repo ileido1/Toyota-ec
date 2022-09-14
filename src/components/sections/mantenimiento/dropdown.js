@@ -132,8 +132,6 @@ return (
                             
     </div>
 
-    <p onClick={abrirModalKm} > Abrir modal </p>
-
     <div>
 
           
@@ -164,7 +162,7 @@ return (
                     <div className='col-12 content-btn-descargar' >
                          
                         <a href={this.state.ModalPdfData} download="true" className='mant-enlace-descargar' target="_blank" >DESCARGAR</a>
-                        
+                        <a href="https://api.whatsapp.com/send?phone=593992475060&text=Hola" target="_blank" class="compartir-ws">COMPARTIR</a>
                     </div>
                 </div>
 
