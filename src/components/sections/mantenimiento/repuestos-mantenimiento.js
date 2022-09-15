@@ -32,7 +32,7 @@ export default function RepuestosMantenimiento() {
             <div className="row">
                 <div className="col-12 col-sm-12 content-video"  >
 
-                    <img src={imagen3} alt="Imagen portada mantenimiento repuestos"  />
+                    <img src={imagen3} className="img-fluid" alt="Imagen portada mantenimiento repuestos"  />
 
                 </div>
             </div>

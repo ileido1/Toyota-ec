@@ -4,9 +4,9 @@ const MantenimientoMenu = () => (
         <div className="row menu-sticky" id="menu-producto" >
             <div className="col-10"  >
                 <ul >
-                    <li><a href="#tecnologia-mundo-hibrido" >MANTENIMIENTOS</a></li>
-                    <li className="plmenu" ><a href="#garantia-mundo-hibrido" >REPUESTOS Y LUBRICANTES</a></li>
-                    <li className="plmenu" ><a href="#ambiental-mundo-hibrido" >GARANTÍA EXTENDIDA TOYOTA</a></li>
+                    <li><a href="#portada-mantenimiento" >MANTENIMIENTOS</a></li>
+                    <li className="plmenu" ><a href="#portada-mantenimiento-repuestos" >REPUESTOS Y LUBRICANTES</a></li>
+                    <li className="plmenu" ><a href="#mantenimiento-garantia-formulario" >GARANTÍA EXTENDIDA TOYOTA</a></li>
                 </ul>
             </div>
         </div>

@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-
-import { motion } from 'framer-motion'
-
+import { useInView } from 'framer-motion'
 
 // Import Swiper styles
 import "swiper/css";
@@ -16,12 +14,10 @@ import iconotiempo from "../../../images/siemprenuevo/icono-tiempo 1.png"
 import iconotoyota from "../../../images/siemprenuevo/icono-toyota.png"
 
 
-
-
-
-
 export default function Comofunciona() {
 
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true });
 
     return (
         <>

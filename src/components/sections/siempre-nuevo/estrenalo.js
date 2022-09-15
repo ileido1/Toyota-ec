@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-
-import { motion } from 'framer-motion'
-
+import { motion,useInView } from 'framer-motion'
 
 // Import Swiper styles
 import "swiper/css";
@@ -17,6 +15,8 @@ import vector from "../../../images/siemprenuevo/flecha2.png"
 
 export default function Estrenalo() {
 
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true });
 
     return (
         <>
@@ -24,23 +24,35 @@ export default function Estrenalo() {
             <div className="container-fluid "  >
                 <div className="estrenalodiv">
                     <div className="carroestrenalo">
-                        <h1 className="campanaestrenalo">
+                        <motion.h1 initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2, default: { duration: 0.7 } }} className="campanaestrenalo">
                             Estrénalo
-                        </h1>
-                        <img src={corolla} className="imagencarroestranlo"></img>
+                        </motion.h1>
+                        <motion.img initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.6, default: { duration: 0.7 } }}  src={corolla} className="imagencarroestranlo"></motion.img>
                     </div>
                     <div className="divsubestrenalo">
-                        <h1 className="campanaestrenalosub">CADA 3 AÑOS</h1>
+                        <motion.h1 initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 1, default: { duration: 0.7 } }}  className="campanaestrenalosub">CADA 3 AÑOS</motion.h1>
                     </div>
                     <div className="carroestrenalo">
-                        <img src={rav4} className="imagencarroestranlo"></img>
-                        <h1 className="campanaestrenalo2">
+                        <motion.img initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 1.2, default: { duration: 0.7 } }} src={rav4} className="imagencarroestranlo"></motion.img>
+                        <motion.h1 initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 1.4, default: { duration: 0.7 } }}  className="campanaestrenalo2">
                             1 Sola entrada
-                        </h1>
+                        </motion.h1>
 
                     </div>
                     <div className="flechaestrenalo">
-                        <img src={vector} className="vectorflecha"></img>
+                        <motion.img  initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 1.6, default: { duration: 0.7 } }} src={vector} className="vectorflecha"></motion.img>
 
 
                     </div>

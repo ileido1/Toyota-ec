@@ -1,6 +1,7 @@
 import React, {Component } from 'react'
 import axios from 'axios';
 import cerrar from '../../../images/cotizacion/cerrar.svg'
+import imagen_portada_mobile from '../../../images/mantenimiento/whatsapp_icon_cb.png'
 
 let valor_modelo = ''
 let valor_version = ''
@@ -76,10 +77,17 @@ ChangeKm = (e) => {
 
     var select_versiones = document.getElementById('mant_versiones');
     var valor_version = select_versiones.options[select_versiones.selectedIndex].value;
+ 
+    if(e.target.value){
+        var link_ws = e.target.value
+        var link_ws = link_ws.replace(/ /g, "%20")
+    }
+    
+    console.log(link_ws)
     
     this.setState({
 
-        ModalPdfData: e.target.value
+        ModalPdfData: link_ws
     
     });
 
@@ -128,6 +136,7 @@ return (
             {this.state.CityData.map((e, key) => {  
                 return <option data-pdf={e.pdf} key={key} value={e.pdf}>{e.km}</option>;  
             })}  
+
         </select>
                             
     </div>
@@ -159,10 +168,10 @@ return (
                 </div>
 
                 <div className="row">
-                    <div className='col-12 content-btn-descargar' >
+                    <div className='col-12 content-btn-descargar' >                 
                          
                         <a href={this.state.ModalPdfData} download="true" className='mant-enlace-descargar' target="_blank" >DESCARGAR</a>
-                        <a href="https://api.whatsapp.com/send?phone=593992475060&text=Hola" target="_blank" class="compartir-ws">COMPARTIR</a>
+
                     </div>
                 </div>
 

@@ -32,13 +32,13 @@ export default function GenuinosMantenimiento() {
             <div className="row">
                 <div className="col-12 col-sm-12 content-video seccion-genuinos"  >
 
-                    <div className='ambiental-content-1 d-block d-sm-block' >
+                    <div className='mant-content-1 ' >
                         <p class="fuente-rojo titulo-mant-genuinos">TOYOTA</p>
                         <p class="fuente-rojo subtitulo-mant-genuinos">REPUESTOS GENUINOS TOYOTA</p>
                     </div>
 
-                    <div className='ambiental-content-2' >
-                        <img src={imagen4} alt="Imagen portada mantenimiento genuinos"  />
+                    <div className='mant-content-2' >
+                        <img src={imagen4} className="img-fluid" alt="Imagen portada mantenimiento genuinos"  />
                     </div>    
 
                 </div>
