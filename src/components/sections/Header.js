@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../../images/logo.png'
 import Container from 'react-bootstrap/Container';
-
+import Dropdown from 'react-bootstrap/Dropdown';
 function Header() {
 	let llenar_header = 'v1/global/menu-principal'
 	let url_nav = ''
@@ -36,11 +36,26 @@ function Header() {
 													url_nav = c.url_menu_principal.replace("admin/", "")
 													return (
 														<>
+															{i === 2 ?
+																<Dropdown>
+																	<Dropdown.Toggle variant="" id="dropdown-basic">
+																		{c.nombre_menu_superior}
+																	</Dropdown.Toggle>
 
-															<Nav.Link key={i} href={url_nav} className={""} >{c.nombre_menu_superior}</Nav.Link>
+																	<Dropdown.Menu>
+																		<Dropdown.Item href="/postventa">Postventa</Dropdown.Item>
+																		<Dropdown.Item href="/mantenimiento">Mantenimiento</Dropdown.Item>
+																	</Dropdown.Menu>
+																</Dropdown>
+																: <Nav.Link key={i} href={url_nav} className={""} >{c.nombre_menu_superior}</Nav.Link>
+															}
+
+
+
 															{i === 2 &&
 																<a className="d-none d-lg-block" href="https://www.toyota.com.ec/"><img src={logo} /></a>
 															}
+
 														</>
 
 													)

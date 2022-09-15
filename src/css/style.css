@@ -38,13 +38,19 @@
     src: local('Radikal-Medium'), url("../fonts/Nootype\ -\ Radikal-Regular.otf") format('opentype');
 }
 
-.navbar .navbar-nav .nav-link {
+.navbar .navbar-nav .nav-link,
+.dropdown-toggle.btn,
+.dropdown-item {
     color: #817F7F;
     font-size: 1em;
     padding: 20px;
     font-family: 'Novecentos-DemiBold';
     text-transform: uppercase;
 
+}
+
+.dropdown-toggle:hover {
+    border: 0;
 }
 
 .selectconcesionario {
