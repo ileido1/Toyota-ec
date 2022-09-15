@@ -38,25 +38,38 @@ export default function Tranquilidad() {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true });
 
+    <motion.p initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay: 0.2, default: { duration: 0.7 } }} className="pupgrade" >Haz un UPGRADE
+        </motion.p>
+
     return (
         <>
             <div className="container-fluid "  >
-                <div className="estrenalodiv2">
+                <div className="estrenalodivmant2">
                     <div className="carroestrenalo">
-                        <h2 ref={ref} style={{ opacity: isInView ? 1 : 0, transition: " all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 1s" }} className="campanaestrenalo2">
+                        <motion.h2 initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay: 0.2, default: { duration: 0.7 } }} className="campanaestrenalo2">
                             TRANQUILIDAD
-                        </h2>                        
+                        </motion.h2>                        
                     </div>
                     <div className="carroestrenalo">
-                        <h2 ref={ref} style={{ opacity: isInView ? 1 : 0, transition: " all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 1.3s" }} className="campanaestrenalo2">
+                        <motion.h2 initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay: 0.6, default: { duration: 0.7 } }}  className="campanaestrenalo2">
                             TOTAL
-                        </h2>
-                        <img ref={ref} style={{ opacity: isInView ? 1 : 0, transition: " all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 1.5s" }} src={imagen5} className="imagencarroestranlo"></img>
+                        </motion.h2>
+                        <motion.img initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay: 1, default: { duration: 0.7 } }}  src={imagen5} className="imagencarroestranlo"></motion.img>
                         
                     </div>
-                    <div ref={ref} style={{ opacity: isInView ? 1 : 0, transition: " all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 1.5s" }} className="tranquilidad-texto">
+                    <motion.div initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay: 1.2, default: { duration: 0.7 } }}  className="tranquilidad-texto">
                         <p>{texto7}</p>
-                    </div>
+                    </motion.div>
                     
 
                 </div>

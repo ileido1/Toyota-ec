@@ -32,7 +32,7 @@ export default function RecuperaMantenimiento() {
             <div className="row">
                 <div className="col-12 col-sm-12 content-video"  >
 
-                    <img src={imagen6} alt="Imagen portada mantenimiento recupera"  />
+                    <img src={imagen6} className="img-fluid" alt="Imagen portada mantenimiento recupera"  />
 
                 </div>
             </div>

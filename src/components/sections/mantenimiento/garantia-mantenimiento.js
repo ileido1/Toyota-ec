@@ -69,7 +69,7 @@ export default function GarantiaMantenimiento() {
     return (
         <>
 
-            <div className="container-fluid formcontainer-mant"  >
+            <div id="mantenimiento-garantia-formulario" className="container-fluid formcontainer-mant"  >
                 <h2>GARANTÍA EXTENDIDA TOYOTA</h2>
                 <p className="subtitulo-form-mant">Extiende 2 años o 40.000km, lo que ocurra primero, la Garantía original de tu vehículo contra cobertura a nivel nacional. Esta Garantía aplica a todos los vehículos que tengan hasta  5 años ó 100.000km.</p>
                 <div className="formcuadro formcuadro-mant">

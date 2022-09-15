@@ -3310,6 +3310,10 @@ ul.tabsnoticias>li {
     position: relative;
 }
 
+.mant-content-1 {
+    margin-top: 96px;
+}
+
 .ambiental-content-1 {
     margin-top: 96px;
 }
@@ -3533,6 +3537,248 @@ a.vehiculos-h-enlace:hover {
     padding: 0 5%;
     padding-bottom: 0px;
     padding-bottom: 80px;
+}
+
+.mant-texto-portada {
+    margin-top: -600px !important;
+}
+
+.mant-texto-portada .mant-portada-titulo-1 {
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.mant-texto-portada .mant-portada-titulo-2 {
+    font-family: 'Toyota-DisplayRegular';
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.4em;
+}
+
+.mant-texto-portada label {
+    color: #ffffff;
+}
+
+.mant-texto-portada select {
+    color: #000;
+}
+
+.mant-contenedor-texto {
+    margin-bottom: 90px !important;
+}
+
+.mant-contenedor-buscador {
+    padding: 0 25%;
+}
+
+.mant-campo-buscador {
+    display: grid;
+}
+
+.carroestrenalo2 {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+
+}
+
+.campanaestrenalo2 {
+    font-family: 'Radikal-Medium';
+    font-weight: 500;
+    color: #E20B2A;
+    font-size: 100px;
+}
+
+.estrenalodiv2 {
+
+    DISPLAY: FLEX;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    padding: 180px 80px 180px 80px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 30%;
+    padding-right: 30%;
+    font-family: 'Toyota-DisplayRegular';
+
+}
+
+.estrenalodivmant2 {
+
+    DISPLAY: FLEX;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 30%;
+    padding-right: 30%;
+    font-family: 'Toyota-DisplayRegular';
+
+}
+
+.tranquilidad-texto {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+
+.tranquilidad-texto p {
+    flex-basis: 50%;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.formcontainer-mant {
+    background-color: #EDEDED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.formcontainer-mant .subtitulo-form-mant {
+    color: #000;
+    font-family: 'Radikal-Medium';
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    max-width: 50%;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.formcuadro-mant {
+    width: 40%;
+}
+
+.formcontainer-mant h2 {
+    color: #E50B21;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.formcuadro-mant h3 {
+
+    margin-bottom: 50px;
+    margin-top: 40px;
+
+}
+
+.campo-select {
+    height: 50px;
+}
+
+.contenedor-bottom {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.texto-terminos-mant {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 22px;
+}
+
+#mensaje-atendido {
+    height: 40px;
+}
+
+#myModalKm .modal-content {
+    margin: 0 auto;
+    background-color: #ffffff !important;
+    border-radius: 0px;
+    top: 120px;
+    padding-top: 20px;
+    height: auto;
+    width: 60% !important;
+}
+
+.seccion-genuinos .titulo-mant-genuinos,
+.seccion-genuinos .subtitulo-mant-genuinos {
+    position: relative;
+    top: 20;
+    z-index: 999999;
+    display: block;
+    margin: 0 auto;
+}
+
+.titulo-mant-genuinos {
+    color: #FF0000;
+    font-size: 22px;
+    text-align: center;
+}
+
+.subtitulo-mant-genuinos {
+    font-family: 'Toyota-DisplayRegular';
+    color: #FF0000;
+    font-size: 40px;
+    text-align: center;
+}
+
+.label-mant-buscador {
+
+    font-family: 'Radikal-Medium';
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.label-alin-left {
+    text-align: left;
+}
+
+.label-alin-center {
+    text-align: center;
+}
+
+.cerrar-modal-km {
+    margin-top: -60px;
+    color: #fff !important;
+    font-size: 22px;
+}
+
+.mant-enlace-descargar {
+    background-color: #FF0000;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 40px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.content-btn-descargar {
+    padding: 10px;
+}
+
+.mant-enlace-descargar:hover {
+    background-color: #FF0000;
+    padding: 5px 5px;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.icono-wsp{
+    margin-left: 10px;
+    max-width: 30px;
+}
+
+.mant-content-2 img {
+    margin-top: -180px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -4474,6 +4720,112 @@ a.vehiculos-h-enlace:hover {
         color: #e20b2a !important;
     }
 
+    .mant-contenedor-texto {
+        margin-bottom: 0px !important;
+    }
+
+    .label-mant-buscador {
+        font-size: 17px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .mant-campo-buscador .form-control {
+        font-size: 0.8rem;
+    }    
+
+    .mant-texto-portada {
+        margin-top: -360px !important;
+    }
+
+    .mant-texto-portada .mant-portada-titulo-2 {
+        font-size: 1.2em;
+        line-height: 1.4em;
+    }
+    .mant-contenedor-buscador {
+        padding: 0 10%;
+      }
+
+
+
+    .subtitulo-mant-genuinos {
+
+        font-size: 20px;
+        
+      }
+
+      .mant-content-1 {
+        margin-top: 18px;
+      }
+      
+    .mant-content-2 img {
+        margin-top: -70px;
+    }
+
+    .estrenalodivmant2 {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding-left: 10%;
+
+    }
+
+    .tranquilidad-texto p {
+        flex-basis: 100%;
+    }
+
+    .formcontainer-mant h2 {
+        text-align: center;
+    }
+
+    .formcontainer-mant .subtitulo-form-mant {
+        color: #000;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+        max-width: 90%;
+        margin-top: 30px;
+        margin-bottom: 80px;
+    }
+
+    .formcuadro-mant {
+        width: 90%;
+    }
+
+    .formcuadro p {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #myModalKm .modal-content {
+        margin: 0 auto;
+        background-color: #ffffff !important;
+        border-radius: 0px;
+        top: 110px;
+        padding-top: 20px;
+        height: auto;
+        width: 100% !important;
+      }
+
+      .estrenalodiv2 {
+
+        DISPLAY: FLEX;
+        /* justify-content: center; */
+        flex-direction: column;
+        align-items: center;
+        padding: 80px 80px 80px 80px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding-left: 30%;
+        padding-right: 30%;
+        font-family: 'Toyota-DisplayRegular';
+    
+    }
+
 }
 
 @media only screen and (max-width: 385px) {
@@ -4496,218 +4848,3 @@ a.vehiculos-h-enlace:hover {
 
 }
 
-.mant-texto-portada {
-    margin-top: -600px !important;
-}
-
-.mant-texto-portada .mant-portada-titulo-1 {
-    color: #ffffff;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-.mant-texto-portada .mant-portada-titulo-2 {
-    font-family: 'Toyota-DisplayRegular';
-    color: #ffffff;
-    text-align: center;
-    font-weight: bold;
-    font-size: 2.4em;
-}
-
-.mant-texto-portada label {
-    color: #ffffff;
-}
-
-.mant-texto-portada select {
-    color: #000;
-}
-
-.mant-contenedor-texto {
-    margin-bottom: 150px !important;
-}
-
-.mant-contenedor-buscador {
-    padding: 0 25%;
-}
-
-.mant-campo-buscador {
-    display: grid;
-}
-
-.carroestrenalo2 {
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    display: flex;
-
-}
-
-.campanaestrenalo2 {
-    font-family: 'Radikal-Medium';
-    font-weight: 500;
-    color: #E20B2A;
-    font-size: 100px;
-}
-
-.estrenalodiv2 {
-
-    DISPLAY: FLEX;
-    /* justify-content: center; */
-    flex-direction: column;
-    align-items: center;
-    padding: 80px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding-left: 30%;
-    padding-right: 30%;
-    font-family: 'Toyota-DisplayRegular';
-
-}
-
-.tranquilidad-texto {
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    text-align: center;
-    flex-wrap: nowrap;
-}
-
-.tranquilidad-texto p {
-    flex-basis: 50%;
-    margin-top: 20px;
-    font-weight: bold;
-}
-
-.formcontainer-mant {
-    background-color: #EDEDED;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 100px;
-    padding-right: 100px;
-    padding-left: 100px;
-}
-
-.formcontainer-mant .subtitulo-form-mant {
-    color: #000;
-    font-family: 'Radikal-Medium';
-    font-weight: 500;
-    font-size: 24px;
-    text-align: center;
-    max-width: 50%;
-    margin-top: 30px;
-    margin-bottom: 80px;
-}
-
-.formcuadro-mant {
-    width: 40%;
-}
-
-.formcontainer-mant h2 {
-    color: #E50B21;
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.formcuadro-mant h3 {
-
-    margin-bottom: 50px;
-    margin-top: 40px;
-
-}
-
-.campo-select {
-    height: 50px;
-}
-
-.contenedor-bottom {
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-
-.texto-terminos-mant {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    color: #fff;
-    font-size: 22px;
-}
-
-#mensaje-atendido {
-    height: 40px;
-}
-
-#myModalKm .modal-content {
-    margin: 0 auto;
-    background-color: #ffffff !important;
-    border-radius: 0px;
-    top: 120px;
-    padding-top: 20px;
-    height: auto;
-    width: 60% !important;
-}
-
-.seccion-genuinos .titulo-mant-genuinos,
-.seccion-genuinos .subtitulo-mant-genuinos {
-    position: relative;
-    top: 20;
-    z-index: 999999;
-    display: block;
-    margin: 0 auto;
-}
-
-.titulo-mant-genuinos {
-    color: #FF0000;
-    font-size: 22px;
-    text-align: center;
-}
-
-.subtitulo-mant-genuinos {
-    font-family: 'Toyota-DisplayRegular';
-    color: #FF0000;
-    font-size: 40px;
-    text-align: center;
-}
-
-.label-mant-buscador {
-
-    font-family: 'Radikal-Medium';
-    font-size: 22px;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.label-alin-left {
-    text-align: left;
-}
-
-.label-alin-center {
-    text-align: center;
-}
-
-.cerrar-modal-km {
-    margin-top: -60px;
-    color: #fff !important;
-    font-size: 22px;
-}
-
-.mant-enlace-descargar {
-    background-color: #FF0000;
-    padding: 5px 5px;
-    text-decoration: none;
-    color: #fff;
-    margin-bottom: 40px;
-}
-
-.content-btn-descargar {
-    padding: 10px;
-}
-
-.mant-enlace-descargar:hover {
-    background-color: #FF0000;
-    padding: 5px 5px;
-    text-decoration: none;
-    color: #fff;
-    margin-bottom: 40px;
-}

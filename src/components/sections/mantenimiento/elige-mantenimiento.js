@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from 'react-router-dom';
-import { useInView } from 'framer-motion'
+import { motion,useInView } from 'framer-motion'
 import useFetch from "../../../hooks/useFetch";
 
 // Import Swiper styles
@@ -39,28 +39,37 @@ export default function Estrenalo() {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true });
 
-
     return (
         <>
             <div className="container-fluid "  >
                 <div className="estrenalodiv">
                     <div className="carroestrenalo">
 
-                      <h1 ref={ref} className="campanaestrenalo" style={{ opacity: isInView ? 1 : 0, transition: " all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 1s" }}  >
+                      <motion.h1 initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay: 0.2, default: { duration: 0.7 } }}   >
                             {texto1}
-                      </h1>
+                      </motion.h1>
                       
-                        <img ref={ref} src={imagen1} className="imagencarroestranlo"  style={{ opacity: isInView ? 1 : 0, transition: " all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 1.5s" }}  ></img>
+                        <motion.img ref={ref} src={imagen1} className="imagencarroestranlo"  initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay: 0.6, default: { duration: 0.7 } }}  ></motion.img>
 
                     </div>
                     <div className="divsubestrenalo">
-                        <h1  style={{ opacity: isInView ? 1 : 0, transition: " all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 2s", duration: "3s" }}  className="campanaestrenalosub">{texto2}</h1>
+                        <motion.h1  initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay: 1, default: { duration: 0.7 } }}   className="campanaestrenalosub">{texto2}</motion.h1>
                     </div>
                     <div className="carroestrenalo">
-                        <img  style={{ opacity: isInView ? 1 : 0, transition: " all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 2.3s" }}  src={imagen2} className="imagencarroestranlo"></img>
-                        <h1  style={{ opacity: isInView ? 1 : 0, transition: " all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 2.5s" }}  className="campanaestrenalo2">
+                        <motion.img  initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay: 1.2, default: { duration: 0.7 } }}   src={imagen2} className="imagencarroestranlo"></motion.img>
+                        <motion.h1  initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay: 1.6, default: { duration: 0.7 } }}   className="campanaestrenalo2">
                             {texto3}
-                        </h1>
+                        </motion.h1>
 
                     </div>
 
