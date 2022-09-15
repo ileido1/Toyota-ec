@@ -81,7 +81,7 @@ export default function DetalleNoticias() {
                                 </Link>
 
                                 <h1 className='tbannerpost'>{c.blog_title}</h1>
-                                <p className='ppost'>{c.blog_created}</p>
+                                <p className='ppost pfecha'>{c.blog_created}</p>
                                 <img src={'https://www.toyota.com.ec/' + c.blog_image} className="imagenpost"></img>
                                 <div className='ppost' dangerouslySetInnerHTML={{ __html: c.blog_body }}></div>
 
@@ -122,7 +122,7 @@ export default function DetalleNoticias() {
                             {postrelations.slice(0, 3).map(c => (
                                 <>
 
-                                    <div className='col-4 '>
+                                    <div className='col-12 col-md-4 '>
                                         <div className='box-post'>
                                             <img src={'https://www.toyota.com.ec/' + c.blog_image} className="imagenpost"></img>
                                             <div className='box-post-content'>
