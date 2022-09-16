@@ -43,7 +43,7 @@ function Header() {
 																	</Dropdown.Toggle>
 
 																	<Dropdown.Menu>
-																		<Dropdown.Item href="/postventa">Postventa</Dropdown.Item>
+																		<Dropdown.Item href="/post-venta">Postventa</Dropdown.Item>
 																		<Dropdown.Item href="/mantenimiento">Mantenimiento</Dropdown.Item>
 																	</Dropdown.Menu>
 																</Dropdown>
