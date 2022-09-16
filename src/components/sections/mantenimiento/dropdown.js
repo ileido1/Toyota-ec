@@ -2,6 +2,7 @@ import React, {Component } from 'react'
 import axios from 'axios';
 import cerrar from '../../../images/cotizacion/cerrar.svg'
 import imagen_portada_mobile from '../../../images/mantenimiento/whatsapp_icon_cb.png'
+import arrow_down from '../../../images/mantenimiento/arrow-down.png'
 
 let valor_modelo = ''
 let valor_version = ''
@@ -102,8 +103,8 @@ return (
     <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mant-campo-buscador" >
 
         <label for="mant_modelo" className='label-mant-buscador label-alin-left' >Seleccione el modelo</label>
-        <select id="mant_modelo" name="country" class="form-control" value={this.state.id} onChange={this.ChangeteState} >
-        <option value=""  selected="true">Seleccione el modelo</option>
+        <select id="mant_modelo" name="country" class="form-control " value={this.state.id} onChange={this.ChangeteState} >
+        <option value=""  selected="true">Seleccione el modelo <img src={arrow_down} alt="Icono selector" /> </option>
 
         {this.state.CountryData.map((e, key) => {  
             return <option key={key} value={e.id}>{e.name}</option>;  

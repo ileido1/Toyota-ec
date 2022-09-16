@@ -3997,6 +3997,23 @@ a.vehiculos-h-enlace:hover {
     }
 }
 
+#mant_modelo,#mant_versiones,#mant_km{
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACvSURBVHgBjY9BDsIgEEWnEAxxxRFgV3f1BnIDPaFH6RVYmriQ6AXY1YCA0ESjFWz/ajL898IApNxou7vQlsPC5O51vdnnuclwxKhPs/Y+SHE/6TkYo9RvgHvrtuhBqYoAKr1xnET/fvIJR4hKuLNCwigTyErOSaZwIIMcT3gXWMeQs31adNNzSrAw2nwJapK8r8E/gpIE4tgqwkVBQQI1uCp4SbC1R2gi82Q4lOCcJyAaeuV21Di7AAAAAElFTkSuQmCC");
+    background-color: rgba(0, 0, 0, 0);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-position-x: right;
+    background-position-y: center;
+    padding-right: 4px;
+}
+
+#mant_modelo option,#mant_versiones option,#mant_km option{
+padding-right: 4px;
+}
+
 @media only screen and (max-width: 600px) {
 
     #imagen-auto-diseno2 {
@@ -4848,3 +4865,11 @@ a.vehiculos-h-enlace:hover {
 
 }
 
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+    z-index: 9999;
+}
+
+.dropdown-item {
+    padding: 10px 30px 10px 30px;
+  }

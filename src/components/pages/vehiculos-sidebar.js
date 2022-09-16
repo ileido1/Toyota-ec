@@ -41,13 +41,44 @@ export default function Vehiculossidebar() {
                             <img className="" src={url_backend+c.icono_sidebar_vehiculos} />
                         </div>
                         <div className="titulo-botones-sidebar" >
+
                         { c.texto_sidebar_vehiculos == "Mundo híbrido" ? ( 
                             <a style={{textDecoration:estilo_link}} href="/mundohibrido" className="ag" >MUNDO HÍBRIDO</a>
                         ) : (
-                            <p onClick={abrirModal} className="ag" >{c.texto_sidebar_vehiculos}</p>
+                            
+                            <p></p>
                             
                             )    
-                        }  
+                        }
+
+                        { c.texto_sidebar_vehiculos == "Buscar concesionario" ? ( 
+                            <a style={{textDecoration:estilo_link}} href="/concesionarios" className="ag" >Buscar concesionario</a>
+                        ) : (
+                            
+                            <p></p>
+                            
+                            )    
+                        }
+
+                        { c.texto_sidebar_vehiculos == "Cotizar" ? ( 
+                            <p onClick={abrirModal} className="ag" >{c.texto_sidebar_vehiculos}</p>
+                        ) : (
+                            
+                            <p></p>
+                            
+                            )    
+                        }
+
+
+                        { c.texto_sidebar_vehiculos == "Test Drive" ? ( 
+                            <p onClick={abrirModal} className="ag" >{c.texto_sidebar_vehiculos}</p>
+                        ) : (
+                            
+                            <p></p>
+                            
+                            )    
+                        }
+                    
                         </div>
 
                     </div>                        
