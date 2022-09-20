@@ -26,7 +26,7 @@ export default function Modaltakata(){
     function EnviarDatosCampana(){
  
         let chasis = document.getElementById("chasis").value;
-        let nombre_apellido = document.getElementById("nombre_apellido").value;
+        let nombre_apellido = document.getElementById("nombre_apellido1").value;
         let email1 = document.getElementById("email1").value;
         let celular1 = document.getElementById("celular1").value;
         let cedula1 = document.getElementById("cedula1").value;
@@ -48,9 +48,7 @@ export default function Modaltakata(){
     setTimeout(
         function() {
 
-            if(proceso.status==200){
-
-                console.log(proceso)
+            if(proceso.status==200){             
 
                 if(proceso.msj == 'Tú solicitud ya fue atentida.'){
                     
@@ -89,8 +87,27 @@ export default function Modaltakata(){
 
             }
 
+
             if(proceso_campana.status==200){
 
+                if(proceso_campana.msj == 'Ya tenemos tus datos, muy pronto uno de nuestros asesores se comunicará.'){
+                    
+                    var campos_form = document.getElementById("campos-form")
+                    var div_mensaje = document.getElementById("mensaje-takata")
+                    div_mensaje.innerHTML = proceso_campana.msj
+                    campos_form.classList.add("ocultar")
+
+                }else if(proceso_campana.msj == 'Información recibida, muy pronto uno de nuestros asesores se comunicará.' ){
+
+                    console.log(3)
+                    
+                    var campos_form = document.getElementById("campos-form")
+                    var div_mensaje = document.getElementById("mensaje-takata")
+                    div_mensaje.innerHTML = proceso_campana.msj
+                    campos_form.classList.add("ocultar")
+
+
+                }
         
             }else if(proceso_campana.status==404){
 
@@ -135,36 +152,42 @@ export default function Modaltakata(){
                             </div>
                             <div id='resultado-chasis' className='col-12 ocultar' >
 
-                                <p className='mt_resultado_chasis' >SU VEHÍCULO APLICA A ESTA CAMPAÑA DE SERVICIO</p>
-                                <p >Por favor complete el formulario a continuación. Tras su envío será contactado.</p>
-                                <br></br>
-                                <input type="text" name="nombre_apellido" id="nombre_apellido" placeholder="NOMBRE Y APELLIDO" />
-                                <input type="text" name="email" id="email1" placeholder="E-MAIL" />
-                                <input type="text" name="celular" id="celular1" placeholder="CELULAR" />
-                                <input type="text" name="cedula" id="cedula1" placeholder="CEDULA" />
+                                <div id='campos-form' className='campos-form' >
 
-                                <select class="form-select campo-select" id="ciudadoconcesionario1">
+                                    <p className='mt_resultado_chasis' >SU VEHÍCULO APLICA A ESTA CAMPAÑA DE SERVICIO</p>
+                                    <p >Por favor complete el formulario a continuación. Tras su envío será contactado.</p>
+                                    <br></br>
+                                    <input type="text" name="nombre_apellido" id="nombre_apellido1" placeholder="NOMBRE Y APELLIDO" />
+                                    <input type="text" name="email" id="email1" placeholder="E-MAIL" />
+                                    <input type="text" name="celular" id="celular1" placeholder="CELULAR" maxLength="10" />
+                                    <input type="text" name="cedula" id="cedula1" placeholder="CEDULA" maxLength="13" />
 
-                                    <option selected>CIUDAD O CONCESIONARIO</option>
-                                    <option value="Quito (Casabaca)">Quito (Casabaca)</option>
-                                    <option value="Santo Domingo (Casabaca)">Santo Domingo (Casabaca)</option>
-                                    <option value="El Coca (Casabaca)">El Coca (Casabaca)</option>
-                                    <option value="Ambato (Automotores Carlos Larrea)">Ambato (Automotores Carlos Larrea)</option>
-                                    <option value="Ibarra (Comercial Hidrobo)">Ibarra (Comercial Hidrobo)</option>
-                                    <option value="Riobamba (Importadora Tomebamba)">Riobamba (Importadora Tomebamba)</option>
-                                    <option value="Azogues (Importadora Tomebamba)">Azogues (Importadora Tomebamba)</option>
-                                    <option value="Cuenca (Importadora Tomebamba)">Cuenca (Importadora Tomebamba)</option>
-                                    <option value="Loja (Importadora Tomebamba)">Loja (Importadora Tomebamba)</option>
-                                    <option value="Macas (Importadora Tomebamba)">Macas (Importadora Tomebamba)</option>
-                                    <option value="Machala (Importadora Tomebamba)">Machala (Importadora Tomebamba)</option>
-                                    <option value="Guayaquil (Toyocosta)">Guayaquil (Toyocosta)</option>
-                                    <option value="Daule (Toyocosta)">Daule (Toyocosta)</option>
-                                    <option value="Quevedo (Toyocosta)">Quevedo (Toyocosta)</option>
-                                    <option value="Manta (Toyocosta)">Manta (Toyocosta)</option>
+                                    <select class="form-select campo-select" id="ciudadoconcesionario1">
 
-                                </select>
+                                        <option selected>CIUDAD O CONCESIONARIO</option>
+                                        <option value="Quito (Casabaca)">Quito (Casabaca)</option>
+                                        <option value="Santo Domingo (Casabaca)">Santo Domingo (Casabaca)</option>
+                                        <option value="El Coca (Casabaca)">El Coca (Casabaca)</option>
+                                        <option value="Ambato (Automotores Carlos Larrea)">Ambato (Automotores Carlos Larrea)</option>
+                                        <option value="Ibarra (Comercial Hidrobo)">Ibarra (Comercial Hidrobo)</option>
+                                        <option value="Riobamba (Importadora Tomebamba)">Riobamba (Importadora Tomebamba)</option>
+                                        <option value="Azogues (Importadora Tomebamba)">Azogues (Importadora Tomebamba)</option>
+                                        <option value="Cuenca (Importadora Tomebamba)">Cuenca (Importadora Tomebamba)</option>
+                                        <option value="Loja (Importadora Tomebamba)">Loja (Importadora Tomebamba)</option>
+                                        <option value="Macas (Importadora Tomebamba)">Macas (Importadora Tomebamba)</option>
+                                        <option value="Machala (Importadora Tomebamba)">Machala (Importadora Tomebamba)</option>
+                                        <option value="Guayaquil (Toyocosta)">Guayaquil (Toyocosta)</option>
+                                        <option value="Daule (Toyocosta)">Daule (Toyocosta)</option>
+                                        <option value="Quevedo (Toyocosta)">Quevedo (Toyocosta)</option>
+                                        <option value="Manta (Toyocosta)">Manta (Toyocosta)</option>
 
-                                <p className="boton-enviar-chasis-datos" onClick={EnviarDatosCampana} >ENVIAR</p>
+                                    </select>
+
+                                    <p className="boton-enviar-chasis-datos" onClick={EnviarDatosCampana} >ENVIAR</p>
+
+                                </div>
+
+                                <p id='mensaje-takata' ></p>
 
                             </div>
                         </div>

@@ -4011,7 +4011,31 @@ a.vehiculos-h-enlace:hover {
 }
 
 #mant_modelo option,#mant_versiones option,#mant_km option{
-padding-right: 4px;
+    padding-right: 4px;
+}
+
+#mensaje-takata{
+    display: flex;
+    align-items: center;
+    height: 300px;
+}
+
+#mensaje-prius4g{
+    display: flex;
+    align-items: center;
+    height: 300px;
+}
+
+#mensaje-prius3g{
+    display: flex;
+    align-items: center;
+    height: 300px;
+}
+
+#mensaje-rav4{
+    display: flex;
+    align-items: center;
+    height: 300px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -4112,8 +4136,6 @@ padding-right: 4px;
         width: 40px;
         margin-bottom: 40px;
     }
-
-
 
     .campanaestrenalo2 {
 
@@ -4392,8 +4414,6 @@ padding-right: 4px;
         font-weight: bold;
         line-height: 30px;
     }
-
-
 
     .cart-texto-caracteristicas {
         font-family: 'Radikal-Medium';
@@ -4872,4 +4892,4 @@ padding-right: 4px;
 
 .dropdown-item {
     padding: 10px 30px 10px 30px;
-  }
+}

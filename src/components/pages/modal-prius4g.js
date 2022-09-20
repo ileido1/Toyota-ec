@@ -50,8 +50,6 @@ export default function ModalPrius4g(){
 
             if(proceso.status==200){
 
-                console.log(proceso_campana)
-
                 if(proceso.msj == 'Tú solicitud ya fue atentida.'){
                     
                     var mensaje_atendido = document.getElementById("mensaje-atendido-prius4g")
@@ -68,13 +66,7 @@ export default function ModalPrius4g(){
                     resultado_chasis.classList.remove("ocultar")
                     consulta_chasis.classList.add("ocultar")
 
-                }else if(proceso_campana.msj == 'Ya tenemos tus datos, muy pronto uno de nuestros asesores se comunicará.'){
-                    alert('entra');
-                    var mensaje_atendido = document.getElementById("mensaje-atendido-prius4g")
-                    mensaje_atendido.innerHTML = proceso_campana.msj
-
-                }
-                else{
+                }else{
 
                     var resultado_chasis = document.getElementById("resultado-chasis-prius4g")
                     var consulta_chasis = document.getElementById("consulta-chasis-prius4g")
@@ -85,9 +77,7 @@ export default function ModalPrius4g(){
                     consulta_chasis.classList.add("ocultar")
 
                 }
-
-
-        
+       
             }else if(proceso.status==404){
 
                 ResultadoNA()
@@ -96,6 +86,28 @@ export default function ModalPrius4g(){
 
             if(proceso_campana.status==200){
 
+                console.log(1)
+
+                if(proceso_campana.msj == 'Ya tenemos tus datos, muy pronto uno de nuestros asesores se comunicará.'){
+
+                    console.log(2)
+                    
+                    var campos_form = document.getElementById("campos-form-prius4g")
+                    var div_mensaje = document.getElementById("mensaje-prius4g")
+                    div_mensaje.innerHTML = proceso_campana.msj
+                    campos_form.classList.add("ocultar")
+
+                }else if(proceso_campana.msj == 'Información recibida, muy pronto uno de nuestros asesores se comunicará.' ){
+
+                    console.log(3)
+                    
+                    var campos_form = document.getElementById("campos-form-prius4g")
+                    var div_mensaje = document.getElementById("mensaje-prius4g")
+                    div_mensaje.innerHTML = proceso_campana.msj
+                    campos_form.classList.add("ocultar")
+
+
+                }
         
             }else if(proceso_campana.status==404){
 
@@ -140,13 +152,15 @@ export default function ModalPrius4g(){
                             </div>
                             <div id='resultado-chasis-prius4g' className='col-12 ocultar' >
 
+                                <div id='campos-form-prius4g' className='campos-form' >
+
                                 <p className='mt_resultado_chasis' >SU VEHÍCULO APLICA A ESTA CAMPAÑA DE SERVICIO</p>
                                 <p >Por favor complete el formulario a continuación. Tras su envío será contactado.</p>
                                 <br></br>
                                 <input type="text" name="nombre_apellido" id="nombre_apellido2" placeholder="NOMBRE Y APELLIDO" />
                                 <input type="text" name="email" id="email2" placeholder="E-MAIL" />
-                                <input type="text" name="celular" id="celular2" placeholder="CELULAR" />
-                                <input type="text" name="cedula" id="cedula2" placeholder="CEDULA" />
+                                <input type="text" name="celular" id="celular2" placeholder="CELULAR" maxLength="10" />
+                                <input type="text" name="cedula" id="cedula2" placeholder="CEDULA" maxLength="13" />
 
                                 <select class="form-select campo-select" id="ciudadoconcesionario2">
 
@@ -169,9 +183,11 @@ export default function ModalPrius4g(){
 
                                 </select>
 
-                                <p id='mensaje-atendido-prius4g' ></p>
-
                                 <p className="boton-enviar-chasis-datos" onClick={EnviarDatosCampanaPrius4g} >ENVIAR</p>
+
+                                </div>
+
+                                <p id='mensaje-prius4g' ></p>
 
                             </div>
                         </div>
