@@ -62,6 +62,8 @@ let doce_titulo_versiones = ''
 let logo_versiones = ''
 let portada_versiones = ''
 
+let txt_versiones_mobile = ''
+
 export default function Cartslider() {
 
     let url_api = 'v1/vehicle_data_sheet'
@@ -151,6 +153,12 @@ export default function Cartslider() {
 
             doce_icono_versiones = url_backend+v.doce_icono_versiones
             doce_titulo_versiones = v.doce_titulo_versiones
+
+            if(location.pathname == '/fortuner'){
+                txt_versiones_mobile = diez_titulo_versiones
+            }else{
+                txt_versiones_mobile = a_subtitulo_versiones
+            }
             
             }
         )
@@ -342,6 +350,7 @@ export default function Cartslider() {
                         <div className="col-2 mtopft">
                             <img className="img-fluid iconos-features" src={uno_icono_versiones} alt={uno_titulo_versiones} />
                         </div>
+
                         <div className="col-10 mtopft">
                             <p className="subtext-feature " >{uno_titulo_versiones}</p>
                         </div>
@@ -350,7 +359,7 @@ export default function Cartslider() {
                             <img className="img-fluid iconos-features" src={dos_icono_versiones} alt={dos_titulo_versiones} />
                         </div>
                         <div className="col-10 mtopft">
-                            <p className="subtext-feature " >{dos_titulo_versiones}</p>
+                            <p className="subtext-feature " >{txt_versiones_mobile}</p>
                         </div>
                         
                         <div className="col-2 mtopft">
@@ -363,9 +372,6 @@ export default function Cartslider() {
                     </div>
                 </motion.div>
             </div>
-
-
-
         </div>
     </div>
 </div>
@@ -383,7 +389,6 @@ export default function Cartslider() {
 
     );
 }
-
 
 function abrirModal() {
     // Get the modal
