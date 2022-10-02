@@ -6,13 +6,14 @@ import Sliderscars from "../slidercars";
 import MundoToyota from "../mundotoyota";
 import Noticias from "../noticias";
 import Sliderscars2 from "../slidercarsmobile";
-
+import SeoHome from "../seo/home";
 
 const Home = () => {
 
 
     return (
         <>
+            <SeoHome></SeoHome>
             <Bannerhome></Bannerhome>
             <Sliderscars></Sliderscars>
             <Sliderscars2></Sliderscars2>

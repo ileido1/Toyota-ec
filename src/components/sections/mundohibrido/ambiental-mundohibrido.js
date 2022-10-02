@@ -3,8 +3,6 @@ import icono1 from '../../../images/seccion-tecnologia/icono-ambiental.png'
 import icono2 from '../../../images/seccion-tecnologia/icono-ambiental-2.png'
 import icono3 from '../../../images/seccion-tecnologia/icon-reciclar-2.svg'
 
-
-
 const AmbientalTecnologia = () => (
 
 <div id="ambiental-mundo-hibrido" className="ambiental-mundo-hibrido container-fluid d-block d-sm-block d-md-block d-xl-block d-lg-block col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sinpadding" >
