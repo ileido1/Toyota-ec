@@ -57,11 +57,12 @@ const App = () => {
           <Route path="/yaris-cross" element={<Cart />} />
           <Route path="/yaris-sport" element={<Cart />} />
           <Route path="/rush" element={<Cart />} />
-          <Route path="/rush" element={<Cart />} />
+          <Route path="/yaris-fastback" element={<Cart />} />
           <Route path="/land-cruiser-prado" element={<Cart />} />
           <Route path="/land-cruiser-300" element={<Cart />} />
           <Route path="/corolla-sedan" element={<Cart />} />
           <Route path="/corolla-cross" element={<Cart />} />
+          <Route path="/c-hr" element={<Cart />} />
           <Route path="/c-hr" element={<Cart />} />
           <Route path="/fortuner" element={<Cart />} />
           <Route path="/hilux-cd-4x2" element={<Cart />} />

@@ -1,8 +1,22 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useLocation } from 'react-router-dom';
 import { get } from 'axios';
 import link_externo from '../../../images/cotizacion/link-externo.svg';
 
+const useMountEffect = fun => useEffect(fun, []);
+
 export default function GarantiaMantenimiento() {
+
+    const location = useLocation()
+    const myRefGarantia = useRef(null);
+    const executeScroll = () => myRefGarantia.current.scrollIntoView();
+    useMountEffect(executeScroll);
+
+    if (location.hash == "#mantenimiento-garantia-formulario") {
+        setTimeout(() => {
+            executeScroll();
+        }, 1500);
+    }
 
     const [proceso, setProceso] = useState('');
     function handleClick(event){
@@ -69,7 +83,7 @@ export default function GarantiaMantenimiento() {
     return (
         <>
 
-            <div id="mantenimiento-garantia-formulario" className="container-fluid formcontainer-mant"  >
+            <div id="mantenimiento-garantia-formulario" ref={myRefGarantia}  className="container-fluid formcontainer-mant"  >
                 <h2>GARANTÍA EXTENDIDA TOYOTA</h2>
                 <p className="subtitulo-form-mant">Extiende 2 años o 40.000km, lo que ocurra primero, la Garantía original de tu vehículo contra cobertura a nivel nacional. Esta Garantía aplica a todos los vehículos que tengan hasta  5 años ó 100.000km.</p>
                 <div className="formcuadro formcuadro-mant">

@@ -8,7 +8,7 @@ import imagen_portada_mobile from '../../../images/mantenimiento/portada-mobile.
 import Cascada from './dropdown.js';
 
 export default function PortadaMantenimiento() {
- 
+
     return (
     <> 
 

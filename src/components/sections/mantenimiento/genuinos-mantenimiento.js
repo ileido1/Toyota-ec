@@ -43,8 +43,7 @@ export default function GenuinosMantenimiento() {
 
                 </div>
             </div>
-
-            
+          
         </div>
 
     </>
